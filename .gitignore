@@ -1,0 +1,22 @@
+node_modules/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Editor caches
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+*.swo
+*~
+
+# Build artefacts — css/styles.css is COMMITTED; do not ignore it
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.*

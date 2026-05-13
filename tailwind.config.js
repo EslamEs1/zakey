@@ -1,0 +1,77 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './index.html',
+    './pages/**/*.html',
+    './js/**/*.js',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'bg-deep':       'var(--color-bg-deep)',
+        'bg-elevated':   'var(--color-bg-elevated)',
+        'bg-light':      'var(--color-bg-light)',
+        'surface-muted': 'var(--color-surface-muted)',
+        glass:           'var(--color-glass)',
+        'glass-strong':  'var(--color-glass-strong)',
+        'text-primary':  'var(--color-text-primary)',
+        'text-muted':    'var(--color-text-muted)',
+        'text-ink':      'var(--color-text-ink)',
+        accent:          'var(--color-accent)',
+        'accent-strong': 'var(--color-accent-strong)',
+        'accent-soft':   'var(--color-accent-soft)',
+        luxe:            'var(--color-luxe)',
+        border:          'var(--color-border)',
+        success:         'var(--color-success)',
+        error:           'var(--color-error)',
+      },
+      fontFamily: {
+        display: 'var(--font-display)',
+        body:    'var(--font-body)',
+      },
+      fontSize: {
+        hero:       'var(--font-hero)',
+        section:    'var(--font-section)',
+        eyebrow:    'var(--font-eyebrow)',
+        'card-title': 'var(--font-card-title)',
+        'body-base': 'var(--font-body-base)',
+        'body-lg':  'var(--font-body-lg)',
+        caption:    'var(--font-caption)',
+      },
+      spacing: {
+        '3xs': 'var(--space-1)',
+        '2xs': 'var(--space-2)',
+        xs:    'var(--space-3)',
+        sm:    'var(--space-4)',
+        md:    'var(--space-5)',
+        lg:    'var(--space-6)',
+        xl:    'var(--space-7)',
+        '2xl': 'var(--space-8)',
+        '3xl': 'var(--space-9)',
+        '4xl': 'var(--space-10)',
+        '5xl': 'var(--space-11)',
+      },
+      borderRadius: {
+        sm:   'var(--radius-sm)',
+        md:   'var(--radius-md)',
+        lg:   'var(--radius-lg)',
+        xl:   'var(--radius-xl)',
+        pill: 'var(--radius-pill)',
+      },
+      boxShadow: {
+        card:        'var(--shadow-card)',
+        elevated:    'var(--shadow-elevated)',
+        glass:       'var(--shadow-glass)',
+        'glow-cyan': 'var(--shadow-glow-cyan)',
+      },
+      backdropBlur: {
+        glass: '16px',
+        xs:    '4px',
+      },
+    },
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+  ],
+};

@@ -1,0 +1,21 @@
+{
+  "name": "zakey-frontend",
+  "version": "1.0.0",
+  "description": "Zakey — Premium Smart Living website (Phase 01: Design System, App Shell, Navigation & Homepage)",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./css/styles.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./css/styles.css --watch",
+    "check:shell":   "bash scripts/check-shell-consistency.sh",
+    "check:content": "bash scripts/check-content-rules.sh",
+    "check:links":   "bash scripts/check-links.sh",
+    "check": "bash scripts/check-shell-consistency.sh && bash scripts/check-content-rules.sh && bash scripts/check-links.sh"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.13",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3"
+  }
+}

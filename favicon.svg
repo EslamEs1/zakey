@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0f17"/>
+      <stop offset="100%" stop-color="#05070d"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="url(#bg)"/>
+  <!-- "Z" lettermark -->
+  <text x="16" y="23" font-family="Manrope,Inter,system-ui,sans-serif" font-size="20" font-weight="800"
+        fill="#22d3ee" text-anchor="middle" dominant-baseline="auto" letter-spacing="-0.5">Z</text>
+  <!-- Accent dot -->
+  <circle cx="24" cy="10" r="2.5" fill="#22d3ee" fill-opacity="0.70"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <defs>
+    <linearGradient id="bg-ENERGY METER" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05070d"/>
+      <stop offset="100%" stop-color="#0c0f17"/>
+    </linearGradient>
+    <radialGradient id="gl-ENERGY METER" cx="240" cy="185" r="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="360" fill="url(#bg-ENERGY METER)"/>
+  <ellipse cx="240" cy="185" rx="180" ry="140" fill="url(#gl-ENERGY METER)"/>
+  <rect x="155" y="115" width="170" height="130" rx="10" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><path d="M200 200 A60 60 0 0 1 280 200" fill="none" stroke="#22d3ee" stroke-width="2" stroke-opacity="0.5"/><line x1="240" y1="200" x2="240" y2="150" stroke="#22d3ee" stroke-width="2" stroke-opacity="0.7" stroke-linecap="round"/>
+  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">ENERGY METER</text>
+</svg>

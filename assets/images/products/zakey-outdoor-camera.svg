@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <defs>
+    <linearGradient id="bg-OUTDOOR CAMERA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05070d"/>
+      <stop offset="100%" stop-color="#0c0f17"/>
+    </linearGradient>
+    <radialGradient id="gl-OUTDOOR CAMERA" cx="220" cy="180" r="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="360" fill="url(#bg-OUTDOOR CAMERA)"/>
+  <ellipse cx="220" cy="180" rx="180" ry="140" fill="url(#gl-OUTDOOR CAMERA)"/>
+  <rect x="155" y="130" width="170" height="120" rx="12" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><circle cx="240" cy="190" r="34" fill="#05070d" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.5"/><circle cx="240" cy="190" r="18" fill="#22d3ee" fill-opacity="0.12"/><circle cx="240" cy="190" r="8" fill="#22d3ee" fill-opacity="0.25"/>
+  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">OUTDOOR CAMERA</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <defs>
+    <linearGradient id="bg-BRACKET SET" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05070d"/>
+      <stop offset="100%" stop-color="#0c0f17"/>
+    </linearGradient>
+    <radialGradient id="gl-BRACKET SET" cx="240" cy="185" r="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="360" fill="url(#bg-BRACKET SET)"/>
+  <ellipse cx="240" cy="185" rx="180" ry="140" fill="url(#gl-BRACKET SET)"/>
+  <rect x="100" y="140" width="280" height="12" rx="6" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><rect x="100" y="208" width="280" height="12" rx="6" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.5"/><rect x="175" y="140" width="14" height="80" rx="4" fill="#22d3ee" fill-opacity="0.2"/><rect x="291" y="140" width="14" height="80" rx="4" fill="#22d3ee" fill-opacity="0.15"/>
+  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">BRACKET SET</text>
+</svg>
