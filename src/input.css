@@ -2795,6 +2795,431 @@
     border-top: 1px solid var(--color-border);
     text-align: center;
   }
+
+  /* ============================================================
+     Phase 03 — Solutions Overview & Detail Pages
+     ============================================================ */
+
+  /* T010 — solution-hero + solution-grid + solution-card -------- */
+  /* Shared hero base (solutions overview + detail pages) */
+  .solution-hero,
+  .detail-hero {
+    padding-block: var(--space-20) var(--space-16);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .solution-hero {
+    background: linear-gradient(160deg, var(--color-bg-deep) 0%, var(--color-bg-base) 60%);
+  }
+
+  .solution-hero::before,
+  .detail-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .solution-hero::before {
+    background: radial-gradient(ellipse 70% 60% at 50% -10%, rgb(var(--color-accent-ch) / 0.08) 0%, transparent 70%);
+  }
+
+  .solution-hero__inner,
+  .detail-hero__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    .solution-hero__inner,
+    .detail-hero__inner {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .solution-hero__content,
+  .detail-hero__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .solution-hero__content { gap: var(--space-5); }
+
+  .solution-hero__heading {
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+  }
+
+  .solution-hero__sub {
+    font-size: var(--font-body-lg);
+    color: var(--color-text-muted);
+    max-width: 52ch;
+    line-height: 1.65;
+  }
+
+  .solution-hero__ctas,
+  .detail-hero__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .solution-hero__visual,
+  .detail-hero__visual {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+  }
+
+  .solution-hero__visual img,
+  .detail-hero__visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Category toolbar reuses .catalog-toolbar from Phase 02 */
+
+  .solution-grid-section {
+    background: var(--color-bg-base);
+  }
+
+  .solution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-8);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: var(--space-10);
+  }
+
+  .solution-card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 200ms ease, box-shadow 200ms ease;
+  }
+
+  .solution-card:hover {
+    border-color: rgb(var(--color-accent-ch) / 0.40);
+    box-shadow: 0 8px 32px rgb(var(--color-accent-ch) / 0.08);
+  }
+
+  .solution-card__visual {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: var(--color-bg-deep);
+  }
+
+  .solution-card__visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 300ms ease;
+  }
+
+  .solution-card:hover .solution-card__visual img {
+    transform: scale(1.04);
+  }
+
+  .solution-card__body {
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    flex: 1;
+  }
+
+  .solution-card__eyebrow {
+    font-size: var(--font-caption);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  .solution-card__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    line-height: 1.2;
+  }
+
+  .solution-card__desc {
+    font-size: var(--font-body);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  .solution-card__for {
+    font-size: var(--font-caption);
+    color: var(--color-text-muted);
+  }
+
+  .solution-card__benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .solution-card__benefit {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    background: var(--color-bg-deep);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    padding: 0.2rem 0.65rem;
+  }
+
+  .solution-card__cta {
+    align-self: flex-start;
+    margin-top: var(--space-2);
+  }
+
+  /* T011 — detail-hero + problem-list + solution-narrative ------ */
+  .detail-hero {
+    background: linear-gradient(160deg, var(--color-bg-deep) 0%, var(--color-bg-base) 65%);
+  }
+
+  .detail-hero::before {
+    background: radial-gradient(ellipse 60% 50% at 50% -5%, rgb(var(--color-accent-ch) / 0.07) 0%, transparent 70%);
+  }
+
+  .detail-hero__content {
+    gap: var(--space-4);
+    position: relative;
+    z-index: 1;
+  }
+
+  .detail-hero__tagline {
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  .detail-hero__lead {
+    font-size: var(--font-body-lg);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    max-width: 54ch;
+  }
+
+  .detail-hero__ctas {
+    margin-top: var(--space-2);
+  }
+
+  .detail-hero__visual {
+    position: relative;
+    z-index: 1;
+  }
+
+  .problem-list {
+    background: var(--color-bg-elevated);
+  }
+
+  .problem-list__items {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-10) 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--space-6);
+    counter-reset: problems;
+  }
+
+  .problem-list__item {
+    counter-increment: problems;
+    padding: var(--space-6);
+    background: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    position: relative;
+    padding-top: calc(var(--space-6) + 1rem);
+  }
+
+  .problem-list__item::before {
+    content: counter(problems, decimal-leading-zero);
+    position: absolute;
+    top: var(--space-4);
+    left: var(--space-6);
+    font-size: var(--font-caption);
+    font-weight: 700;
+    color: var(--color-accent);
+    letter-spacing: 0.05em;
+  }
+
+  .problem-list__item h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-2);
+    line-height: 1.35;
+  }
+
+  .problem-list__item p {
+    font-size: var(--font-caption);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  .solution-narrative {
+    background: var(--color-bg-base);
+  }
+
+  .solution-narrative__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  @media (min-width: 1024px) {
+    .solution-narrative__inner {
+      grid-template-columns: 1fr 2fr;
+      align-items: start;
+    }
+  }
+
+  .solution-narrative__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .solution-narrative__body p {
+    font-size: var(--font-body-lg);
+    color: var(--color-text-muted);
+    line-height: 1.75;
+  }
+
+  /* T012-T013 — subsystem-grid + subsystem-card + benefit-grid + benefit-card */
+  .subsystem-grid {
+    background: var(--color-bg-deep);
+  }
+
+  .benefit-grid {
+    background: var(--color-bg-base);
+  }
+
+  .subsystem-grid__list,
+  .benefit-grid__list {
+    display: grid;
+    list-style: none;
+    padding: 0;
+    margin: var(--space-10) 0 0;
+  }
+
+  .subsystem-grid__list {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--space-6);
+  }
+
+  .benefit-grid__list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-5);
+  }
+
+  .subsystem-card,
+  .benefit-card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subsystem-card {
+    padding: var(--space-6);
+    gap: var(--space-3);
+    transition: border-color 200ms ease;
+  }
+
+  .subsystem-card:hover {
+    border-color: rgb(var(--color-accent-ch) / 0.35);
+  }
+
+  .benefit-card {
+    padding: var(--space-5);
+    gap: var(--space-2);
+    text-align: center;
+    align-items: center;
+  }
+
+  .subsystem-card__icon,
+  .benefit-card__icon {
+    color: var(--color-accent);
+    flex-shrink: 0;
+  }
+
+  .subsystem-card__icon { width: 2rem; height: 2rem; }
+  .benefit-card__icon { width: 1.75rem; height: 1.75rem; }
+
+  .subsystem-card__title,
+  .benefit-card__title {
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .subsystem-card__title { font-size: 1rem; }
+  .benefit-card__title { font-size: 0.95rem; }
+
+  .subsystem-card__desc,
+  .benefit-card__desc {
+    font-size: var(--font-caption);
+    color: var(--color-text-muted);
+    line-height: 1.55;
+  }
+
+  /* T014 — topology-diagram ------------------------------------- */
+  .topology-diagram {
+    background: var(--color-bg-elevated);
+  }
+
+  .topology-diagram__figure {
+    margin: var(--space-10) auto 0;
+    max-width: 720px;
+  }
+
+  .topology-diagram__svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .topology-diagram__lead {
+    color: var(--color-text-muted);
+    max-width: 56ch;
+    margin-bottom: var(--space-8);
+    line-height: 1.65;
+  }
+
+  .topology-node text {
+    user-select: none;
+    pointer-events: none;
+  }
+
 }
 
 /* ============================================================

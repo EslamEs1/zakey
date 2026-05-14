@@ -1,19 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0c10"/>
-      <stop offset="100%" stop-color="#05070d"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070d"/>
+      <stop offset="100%" stop-color="#0c0f17"/>
     </linearGradient>
-    <radialGradient id="r" cx="70%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12"/>
+    <radialGradient id="glow" cx="40%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.09"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <rect width="1280" height="720" fill="url(#g)"/>
-  <rect width="1280" height="720" fill="url(#r)"/>
-  <text x="640" y="380" font-family="Manrope,Inter,system-ui,sans-serif" font-size="48" font-weight="700"
-        fill="#22d3ee" fill-opacity="0.15" text-anchor="middle" dominant-baseline="middle"
-        letter-spacing="-1">Smart Apartment</text>
-  <circle cx="640" cy="260" r="60" fill="none" stroke="#22d3ee" stroke-opacity="0.1" stroke-width="1"/>
-  <circle cx="640" cy="260" r="100" fill="none" stroke="#22d3ee" stroke-opacity="0.06" stroke-width="1"/>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#glow)"/>
+  <!-- Apartment tower silhouette -->
+  <rect x="380" y="180" width="440" height="490" fill="#0c1a20" rx="4"/>
+  <!-- Window grid — 6 columns × 5 rows -->
+  <rect x="410" y="210" width="55" height="45" fill="#22d3ee" fill-opacity="0.14" rx="2"/>
+  <rect x="480" y="210" width="55" height="45" fill="#22d3ee" fill-opacity="0.08" rx="2"/>
+  <rect x="550" y="210" width="55" height="45" fill="#22d3ee" fill-opacity="0.12" rx="2"/>
+  <rect x="620" y="210" width="55" height="45" fill="#22d3ee" fill-opacity="0.07" rx="2"/>
+  <rect x="690" y="210" width="55" height="45" fill="#22d3ee" fill-opacity="0.16" rx="2"/>
+  <rect x="760" y="210" width="30" height="45" fill="#22d3ee" fill-opacity="0.09" rx="2"/>
+
+  <rect x="410" y="280" width="55" height="45" fill="#22d3ee" fill-opacity="0.09" rx="2"/>
+  <rect x="480" y="280" width="55" height="45" fill="#22d3ee" fill-opacity="0.14" rx="2"/>
+  <rect x="550" y="280" width="55" height="45" fill="#22d3ee" fill-opacity="0.07" rx="2"/>
+  <rect x="620" y="280" width="55" height="45" fill="#22d3ee" fill-opacity="0.18" rx="2"/>
+  <rect x="690" y="280" width="55" height="45" fill="#22d3ee" fill-opacity="0.10" rx="2"/>
+  <rect x="760" y="280" width="30" height="45" fill="#22d3ee" fill-opacity="0.13" rx="2"/>
+
+  <rect x="410" y="350" width="55" height="45" fill="#22d3ee" fill-opacity="0.13" rx="2"/>
+  <rect x="480" y="350" width="55" height="45" fill="#22d3ee" fill-opacity="0.08" rx="2"/>
+  <rect x="550" y="350" width="55" height="45" fill="#22d3ee" fill-opacity="0.15" rx="2"/>
+  <rect x="620" y="350" width="55" height="45" fill="#22d3ee" fill-opacity="0.09" rx="2"/>
+  <rect x="690" y="350" width="55" height="45" fill="#22d3ee" fill-opacity="0.07" rx="2"/>
+  <rect x="760" y="350" width="30" height="45" fill="#22d3ee" fill-opacity="0.11" rx="2"/>
+
+  <rect x="410" y="420" width="55" height="45" fill="#22d3ee" fill-opacity="0.07" rx="2"/>
+  <rect x="480" y="420" width="55" height="45" fill="#22d3ee" fill-opacity="0.12" rx="2"/>
+  <rect x="550" y="420" width="55" height="45" fill="#22d3ee" fill-opacity="0.09" rx="2"/>
+  <rect x="620" y="420" width="55" height="45" fill="#22d3ee" fill-opacity="0.14" rx="2"/>
+  <rect x="690" y="420" width="55" height="45" fill="#22d3ee" fill-opacity="0.11" rx="2"/>
+  <rect x="760" y="420" width="30" height="45" fill="#22d3ee" fill-opacity="0.08" rx="2"/>
+
+  <!-- Smart panel on facade -->
+  <rect x="572" y="506" width="56" height="80" fill="#22d3ee" fill-opacity="0.08" rx="4"/>
+  <circle cx="600" cy="540" r="12" fill="#22d3ee" fill-opacity="0.22"/>
+  <rect x="578" y="554" width="44" height="2" fill="#22d3ee" fill-opacity="0.30"/>
+  <rect x="578" y="560" width="30" height="2" fill="#22d3ee" fill-opacity="0.18"/>
+
+  <!-- Entrance -->
+  <rect x="530" y="600" width="140" height="70" fill="#091318" rx="2"/>
+  <!-- Ambient strip bottom of tower -->
+  <rect x="380" y="668" width="440" height="2" fill="#22d3ee" fill-opacity="0.20"/>
+  <!-- Ground line -->
+  <rect x="0" y="670" width="1200" height="2" fill="#22d3ee" fill-opacity="0.06"/>
+  <!-- Foreground -->
+  <path d="M0 790 Q350 760 650 775 Q900 790 1200 760 L1200 900 L0 900Z" fill="#05070d" fill-opacity="0.75"/>
+  <!-- Wordmark -->
+  <text x="600" y="840" font-family="Manrope,Inter,system-ui,sans-serif" font-size="22" font-weight="700"
+        fill="#22d3ee" fill-opacity="0.45" text-anchor="middle" letter-spacing="8">ZAKEY</text>
+  <text x="600" y="866" font-family="Manrope,Inter,system-ui,sans-serif" font-size="13" font-weight="400"
+        fill="#9aa3b2" fill-opacity="0.40" text-anchor="middle" letter-spacing="3">SMART APARTMENT</text>
 </svg>
