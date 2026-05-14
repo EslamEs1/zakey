@@ -53,4 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.body.dataset.page === 'product-detail') {
     import('./product-detail.js').then(m => m.initGallery());
   }
+
+  if (document.getElementById('solutions-grid')) {
+    import('./solutions.js').then(m => m.initFilter());
+  }
 });

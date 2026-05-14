@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solutions — Zakey Smart Living</title>
-  <meta name="description" content="Tailored smart-living ecosystems for villas, apartments, hotels, offices, compounds, and gaming rooms — designed to fit the space, not the other way around.">
+  <title>Smart Solutions for Every Space — Zakey</title>
+  <meta name="description" content="Zakey delivers tailored smart-living ecosystems for villas, apartments, hotels, offices, compounds, and gaming rooms. Choose your space, discover your solution.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Solutions — Zakey Smart Living">
-  <meta property="og:description" content="Tailored smart-living ecosystems for villas, apartments, hotels, offices, compounds, and gaming rooms — designed to fit the space, not the other way around.">
+  <meta property="og:title" content="Smart Solutions for Every Space — Zakey">
+  <meta property="og:description" content="Zakey delivers tailored smart-living ecosystems for villas, apartments, hotels, offices, compounds, and gaming rooms.">
   <meta property="og:image" content="../assets/images/og/zakey-og-cover.svg">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preload" as="image" href="../assets/images/solutions/zakey-smart-villa.svg">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
-
+<body data-page="solutions">
+<a class="skip-link" href="#main">Skip to main content</a>
 <!-- header:start -->
 <header class="site-header" data-scrolled="false">
   <div class="site-header__inner">
@@ -154,28 +155,282 @@
 <!-- header:end -->
 
 <main id="main">
-  <section class="u-section u-section--page-top">
-    <div class="u-container">
-      <div class="section-head section-head--flush">
-        <p class="eyebrow">Zakey</p>
-        <h1>Solutions</h1>
-        <p class="u-page-subtitle">Whether you&rsquo;re automating a luxury villa, optimising a smart office, or elevating hotel guest experiences, Zakey delivers the complete ecosystem for every environment.</p>
+
+  <!-- 1. HERO -->
+  <section class="solution-hero" aria-labelledby="solutions-h1">
+    <div class="u-container solution-hero__inner">
+      <div class="solution-hero__content">
+        <p class="eyebrow">Tailored Smart Living</p>
+        <h1 id="solutions-h1">Smart Solutions for Every Space</h1>
+        <p class="solution-hero__sub">
+          Zakey engineers complete smart-living ecosystems for residential, hospitality, commercial, and real-estate environments — each one tuned to the rhythms and pressures of its specific space.
+        </p>
+        <div class="solution-hero__ctas">
+          <a class="btn btn--primary" href="../index.html#get-quote">Plan Your Project</a>
+          <a class="btn btn--ghost" href="#solutions-grid">Browse Solutions &darr;</a>
+        </div>
+      </div>
+      <div class="solution-hero__visual">
+        <img src="../assets/images/solutions/zakey-smart-villa.svg"
+             alt="Zakey smart villa rendering showing a premium residential deployment with ambient scene lighting"
+             width="640" height="480" fetchpriority="high">
       </div>
     </div>
   </section>
 
-  <section class="u-section u-section--tight u-section--bordered-top">
-    <div class="u-container u-container--center">
-      <div class="u-placeholder-card">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg>
-        <div>
-          <p class="u-placeholder-card__title">Coming in Phase 02</p>
-          <p class="u-placeholder-card__desc">The full page is being crafted with the same premium detail you see in the homepage. Check back soon or get in touch to discuss your project.</p>
-        </div>
+  <!-- 2. CATEGORY FILTER TOOLBAR -->
+  <section class="catalog-toolbar" aria-label="Filter solutions by category">
+    <div class="catalog-toolbar__inner u-container">
+      <div class="catalog-toolbar__filters" role="toolbar" aria-label="Solution category filters">
+        <button type="button" class="filter-pill" data-category="all"         aria-pressed="true">All</button>
+        <button type="button" class="filter-pill" data-category="residential" aria-pressed="false">Residential</button>
+        <button type="button" class="filter-pill" data-category="hospitality" aria-pressed="false">Hospitality</button>
+        <button type="button" class="filter-pill" data-category="commercial"  aria-pressed="false">Commercial</button>
+        <button type="button" class="filter-pill" data-category="real-estate" aria-pressed="false">Real Estate</button>
+        <button type="button" class="filter-pill" data-category="lifestyle"   aria-pressed="false">Lifestyle</button>
+      </div>
+      <p class="catalog-status" aria-live="polite">
+        Showing <span data-visible-count>8</span> of <span data-total-count>8</span> solutions.
+      </p>
+    </div>
+  </section>
+
+  <!-- 3. SOLUTIONS GRID -->
+  <section class="solution-grid-section u-section" aria-labelledby="grid-h">
+    <div class="u-container">
+      <h2 id="grid-h" class="sr-only">All solutions</h2>
+      <ul class="solution-grid" id="solutions-grid">
+
+        <!-- Smart Villa -->
+        <li>
+          <article class="solution-card" id="smart-villa"
+                   data-solution
+                   data-category="residential">
+            <div class="solution-card__visual">
+              <img src="../assets/images/solutions/zakey-smart-villa.svg"
+                   alt="Luxury villa living room with Aura Panel control surface and ambient scene lighting"
+                   width="480" height="360"
+                   decoding="async">
+            </div>
+            <div class="solution-card__body">
+              <p class="solution-card__eyebrow eyebrow">Residential</p>
+              <h3 class="solution-card__title">Smart Villa</h3>
+              <p class="solution-card__desc">Luxury whole-home automation engineered for villas and signature residences.</p>
+              <p class="solution-card__for"><strong>For:</strong> villa owners, premium homebuilders, interior designers</p>
+              <ul class="solution-card__benefits" aria-label="Headline benefits">
+                <li class="solution-card__benefit">Whole-home scenes</li>
+                <li class="solution-card__benefit">Central control</li>
+                <li class="solution-card__benefit">Energy intelligence</li>
+                <li class="solution-card__benefit">Premium finishes</li>
+              </ul>
+              <a class="solution-card__cta btn btn--ghost" href="./solution-smart-villa.html">Discover this solution &rarr;</a>
+            </div>
+          </article>
+        </li>
+
+        <!-- Smart Apartment -->
+        <li>
+          <article class="solution-card" id="smart-apartment"
+                   data-solution
+                   data-category="residential">
+            <div class="solution-card__visual">
+              <img src="../assets/images/solutions/zakey-smart-apartment.svg"
+                   alt="Modern apartment interior with Zakey Mini Hub and smart lighting scene"
+                   width="480" height="360"
+                   decoding="async">
+            </div>
+            <div class="solution-card__body">
+              <p class="solution-card__eyebrow eyebrow">Residential</p>
+              <h3 class="solution-card__title">Smart Apartment</h3>
+              <p class="solution-card__desc">Compact, retrofit-ready smart living designed for urban apartments and studios.</p>
+              <p class="solution-card__for"><strong>For:</strong> apartment residents, property managers, renters</p>
+              <ul class="solution-card__benefits" aria-label="Headline benefits">
+                <li class="solution-card__benefit">Easy installation</li>
+                <li class="solution-card__benefit">Energy savings</li>
+                <li class="solution-card__benefit">App control</li>
+                <li class="solution-card__benefit">Renter-friendly</li>
+              </ul>
+              <a class="solution-card__cta btn btn--ghost" href="./solution-smart-apartment.html">Discover this solution &rarr;</a>
+            </div>
+          </article>
+        </li>
+
+        <!-- Smart Hotel -->
+        <li>
+          <article class="solution-card" id="smart-hotel"
+                   data-solution
+                   data-category="hospitality">
+            <div class="solution-card__visual">
+              <img src="../assets/images/solutions/zakey-smart-hotel.svg"
+                   alt="Boutique hotel suite with Zakey Aura Panel and warm ambient bed lighting"
+                   width="480" height="360"
+                   decoding="async">
+            </div>
+            <div class="solution-card__body">
+              <p class="solution-card__eyebrow eyebrow">Hospitality</p>
+              <h3 class="solution-card__title">Smart Hotel</h3>
+              <p class="solution-card__desc">Elevated guest experiences with energy-efficient room automation at every tier.</p>
+              <p class="solution-card__for"><strong>For:</strong> hotel operators, resort developers, property management firms</p>
+              <ul class="solution-card__benefits" aria-label="Headline benefits">
+                <li class="solution-card__benefit">Guest comfort</li>
+                <li class="solution-card__benefit">Energy savings</li>
+                <li class="solution-card__benefit">Room automation</li>
+                <li class="solution-card__benefit">Brand consistency</li>
+              </ul>
+              <a class="solution-card__cta btn btn--ghost" href="./solution-smart-hotel.html">Discover this solution &rarr;</a>
+            </div>
+          </article>
+        </li>
+
+        <!-- Smart Office -->
+        <li>
+          <article class="solution-card" id="smart-office"
+                   data-solution
+                   data-category="commercial">
+            <div class="solution-card__visual">
+              <img src="../assets/images/solutions/zakey-smart-office.svg"
+                   alt="Open-plan smart office with Zakey Climate Hub and scene-control surface"
+                   width="480" height="360"
+                   decoding="async">
+            </div>
+            <div class="solution-card__body">
+              <p class="solution-card__eyebrow eyebrow">Commercial</p>
+              <h3 class="solution-card__title">Smart Office</h3>
+              <p class="solution-card__desc">Climate, lighting, and meeting-room intelligence for modern productive workspaces.</p>
+              <p class="solution-card__for"><strong>For:</strong> facilities managers, commercial tenants, fit-out contractors</p>
+              <ul class="solution-card__benefits" aria-label="Headline benefits">
+                <li class="solution-card__benefit">Air quality</li>
+                <li class="solution-card__benefit">Energy reporting</li>
+                <li class="solution-card__benefit">Meeting modes</li>
+                <li class="solution-card__benefit">Access control</li>
+              </ul>
+              <a class="solution-card__cta btn btn--ghost" href="./solution-smart-office.html">Discover this solution &rarr;</a>
+            </div>
+          </article>
+        </li>
+
+        <!-- Smart Compound -->
+        <li>
+          <article class="solution-card" id="smart-compound"
+                   data-solution
+                   data-category="real-estate">
+            <div class="solution-card__visual">
+              <img src="../assets/images/solutions/zakey-smart-compound.svg"
+                   alt="Gated residential compound with multiple smart villas connected to a central Zakey hub"
+                   width="480" height="360"
+                   loading="lazy" decoding="async">
+            </div>
+            <div class="solution-card__body">
+              <p class="solution-card__eyebrow eyebrow">Real Estate</p>
+              <h3 class="solution-card__title">Smart Compound</h3>
+              <p class="solution-card__desc">Scalable smart infrastructure for developers building premium gated communities.</p>
+              <p class="solution-card__for"><strong>For:</strong> real estate developers, community managers, master planners</p>
+              <ul class="solution-card__benefits" aria-label="Headline benefits">
+                <li class="solution-card__benefit">Scalable rollout</li>
+                <li class="solution-card__benefit">Multi-unit control</li>
+                <li class="solution-card__benefit">Developer toolkit</li>
+                <li class="solution-card__benefit">Brand premium</li>
+              </ul>
+              <a class="solution-card__cta btn btn--ghost" href="./solution-smart-compound.html">Discover this solution &rarr;</a>
+            </div>
+          </article>
+        </li>
+
+        <!-- Gaming Room -->
+        <li>
+          <article class="solution-card" id="gaming-room"
+                   data-solution
+                   data-category="lifestyle">
+            <div class="solution-card__visual">
+              <img src="../assets/images/solutions/zakey-gaming-room.svg"
+                   alt="Immersive gaming room with Zakey ambient RGB lighting strips and one-touch scene control"
+                   width="480" height="360"
+                   loading="lazy" decoding="async">
+            </div>
+            <div class="solution-card__body">
+              <p class="solution-card__eyebrow eyebrow">Lifestyle</p>
+              <h3 class="solution-card__title">Gaming Room</h3>
+              <p class="solution-card__desc">Immersive lighting scenes, climate control, and one-touch ambience for serious players.</p>
+              <p class="solution-card__for"><strong>For:</strong> dedicated gamers, content creators, AV integrators</p>
+              <ul class="solution-card__benefits" aria-label="Headline benefits">
+                <li class="solution-card__benefit">Scene presets</li>
+                <li class="solution-card__benefit">Ambient lighting</li>
+                <li class="solution-card__benefit">Climate comfort</li>
+                <li class="solution-card__benefit">Voice control</li>
+              </ul>
+              <a class="solution-card__cta btn btn--ghost" href="./solution-gaming-room.html">Discover this solution &rarr;</a>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="solution-card" id="elderly-care"
+                   data-solution
+                   data-category="lifestyle residential">
+            <div class="solution-card__visual">
+              <img src="../assets/images/solutions/zakey-elderly-care.svg"
+                   alt="Calm living room with Zakey motion sensor and scene button for dignified elderly care automation"
+                   width="480" height="360"
+                   loading="lazy" decoding="async">
+            </div>
+            <div class="solution-card__body">
+              <p class="solution-card__eyebrow eyebrow">Lifestyle</p>
+              <h3 class="solution-card__title">Elderly Care</h3>
+              <p class="solution-card__desc">Safety monitoring, gentle lighting automation, and one-touch scene control for dignified independent living.</p>
+              <p class="solution-card__for"><strong>For:</strong> elderly residents, families, care providers, retirement communities</p>
+              <ul class="solution-card__benefits" aria-label="Headline benefits">
+                <li class="solution-card__benefit">Passive safety monitoring</li>
+                <li class="solution-card__benefit">Night-path lighting</li>
+                <li class="solution-card__benefit">Smart door lock</li>
+                <li class="solution-card__benefit">Family app alerts</li>
+              </ul>
+              <a class="solution-card__cta btn btn--ghost" href="./solution-elderly-care.html">Discover this solution &rarr;</a>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="solution-card" id="smart-retail"
+                   data-solution
+                   data-category="commercial">
+            <div class="solution-card__visual">
+              <img src="../assets/images/solutions/zakey-smart-retail.svg"
+                   alt="Premium retail showroom with Zakey track lighting scenes and energy monitoring dashboard"
+                   width="480" height="360"
+                   loading="lazy" decoding="async">
+            </div>
+            <div class="solution-card__body">
+              <p class="solution-card__eyebrow eyebrow">Commercial</p>
+              <h3 class="solution-card__title">Smart Retail</h3>
+              <p class="solution-card__desc">Automated ambience lighting, energy monitoring, and one-tap open &amp; close scenes for boutiques and showrooms.</p>
+              <p class="solution-card__for"><strong>For:</strong> boutiques, showrooms, flagship stores, retail chains</p>
+              <ul class="solution-card__benefits" aria-label="Headline benefits">
+                <li class="solution-card__benefit">Lighting scenes</li>
+                <li class="solution-card__benefit">Energy savings</li>
+                <li class="solution-card__benefit">Remote management</li>
+                <li class="solution-card__benefit">After-hours security</li>
+              </ul>
+              <a class="solution-card__cta btn btn--ghost" href="./solution-smart-retail.html">Discover this solution &rarr;</a>
+            </div>
+          </article>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. FINAL CTA BAND -->
+  <section class="product-final-cta u-section" aria-labelledby="solutions-cta-h">
+    <div class="u-container">
+      <h2 id="solutions-cta-h">Ready to Transform Your Space?</h2>
+      <p>Tell us about your project — our specialists size the right ecosystem, quote it, and handle the entire deployment.</p>
+      <div class="u-btn-row">
         <a class="btn btn--primary" href="../index.html#get-quote">Get a Quote</a>
+        <a class="btn btn--secondary" href="./contact.html">Talk to a Specialist</a>
       </div>
     </div>
   </section>
+
 </main>
 
 <!-- footer:start -->

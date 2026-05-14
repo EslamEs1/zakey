@@ -1,19 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0c10"/>
-      <stop offset="100%" stop-color="#05070d"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050510"/>
+      <stop offset="100%" stop-color="#0c0a1a"/>
     </linearGradient>
-    <radialGradient id="r" cx="70%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12"/>
+    <radialGradient id="glow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="screen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.03"/>
+    </linearGradient>
   </defs>
-  <rect width="1280" height="720" fill="url(#g)"/>
-  <rect width="1280" height="720" fill="url(#r)"/>
-  <text x="640" y="380" font-family="Manrope,Inter,system-ui,sans-serif" font-size="48" font-weight="700"
-        fill="#22d3ee" fill-opacity="0.15" text-anchor="middle" dominant-baseline="middle"
-        letter-spacing="-1">Gaming Room</text>
-  <circle cx="640" cy="260" r="60" fill="none" stroke="#22d3ee" stroke-opacity="0.1" stroke-width="1"/>
-  <circle cx="640" cy="260" r="100" fill="none" stroke="#22d3ee" stroke-opacity="0.06" stroke-width="1"/>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#glow)"/>
+  <!-- Room floor perspective lines -->
+  <line x1="100" y1="720" x2="600" y2="460" stroke="#22d3ee" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="1100" y1="720" x2="600" y2="460" stroke="#22d3ee" stroke-opacity="0.04" stroke-width="1"/>
+  <!-- Desk surface -->
+  <rect x="300" y="580" width="600" height="20" fill="#0c1a20" rx="2"/>
+  <!-- Ultra-wide monitor -->
+  <rect x="240" y="350" width="720" height="230" fill="#0d1825" rx="6"/>
+  <rect x="250" y="360" width="700" height="210" fill="url(#screen)" rx="4"/>
+  <!-- Monitor stand -->
+  <rect x="576" y="580" width="48" height="30" fill="#091318" rx="2"/>
+  <rect x="545" y="610" width="110" height="8" fill="#091318" rx="2"/>
+  <!-- Gaming PC tower -->
+  <rect x="850" y="510" width="80" height="130" fill="#0c1820" rx="4"/>
+  <!-- PC RGB strip -->
+  <rect x="854" y="560" width="8" height="60" fill="#22d3ee" fill-opacity="0.40" rx="2"/>
+  <!-- Keyboard -->
+  <rect x="370" y="602" width="320" height="30" fill="#0c1820" rx="3"/>
+  <!-- RGB ambient strip — ceiling -->
+  <rect x="0" y="200" width="1200" height="4" fill="#22d3ee" fill-opacity="0.08" rx="2"/>
+  <rect x="0" y="200" width="400" height="4" fill="#22d3ee" fill-opacity="0.25" rx="2"/>
+  <rect x="800" y="200" width="400" height="4" fill="#22d3ee" fill-opacity="0.20" rx="2"/>
+  <!-- RGB ambient strip — desk edge -->
+  <rect x="300" y="599" width="600" height="2" fill="#22d3ee" fill-opacity="0.30" rx="1"/>
+  <!-- RGB ambient strip — floor -->
+  <rect x="200" y="720" width="800" height="3" fill="#22d3ee" fill-opacity="0.10" rx="1"/>
+  <!-- Scene control panel -->
+  <rect x="150" y="500" width="48" height="80" fill="#22d3ee" fill-opacity="0.12" rx="6"/>
+  <circle cx="174" cy="522" r="10" fill="#22d3ee" fill-opacity="0.35"/>
+  <rect x="158" y="540" width="32" height="3" fill="#22d3ee" fill-opacity="0.40"/>
+  <rect x="158" y="550" width="24" height="3" fill="#22d3ee" fill-opacity="0.25"/>
+  <rect x="158" y="560" width="28" height="3" fill="#22d3ee" fill-opacity="0.30"/>
+  <!-- Speaker left -->
+  <rect x="180" y="440" width="45" height="140" fill="#0c1820" rx="4"/>
+  <circle cx="202" cy="490" r="18" fill="#0a1520" stroke="#22d3ee" stroke-opacity="0.15" stroke-width="1"/>
+  <!-- Speaker right -->
+  <rect x="975" y="440" width="45" height="140" fill="#0c1820" rx="4"/>
+  <circle cx="997" cy="490" r="18" fill="#0a1520" stroke="#22d3ee" stroke-opacity="0.15" stroke-width="1"/>
+  <!-- Wall accent lines -->
+  <line x1="100" y1="200" x2="100" y2="720" stroke="#22d3ee" stroke-opacity="0.06" stroke-width="1"/>
+  <line x1="1100" y1="200" x2="1100" y2="720" stroke="#22d3ee" stroke-opacity="0.06" stroke-width="1"/>
+  <!-- Foreground floor -->
+  <path d="M0 720 Q600 700 1200 720 L1200 900 L0 900Z" fill="#050510" fill-opacity="0.85"/>
+  <!-- Wordmark -->
+  <text x="600" y="840" font-family="Manrope,Inter,system-ui,sans-serif" font-size="22" font-weight="700"
+        fill="#22d3ee" fill-opacity="0.45" text-anchor="middle" letter-spacing="8">ZAKEY</text>
+  <text x="600" y="866" font-family="Manrope,Inter,system-ui,sans-serif" font-size="13" font-weight="400"
+        fill="#9aa3b2" fill-opacity="0.40" text-anchor="middle" letter-spacing="3">GAMING ROOM</text>
 </svg>
