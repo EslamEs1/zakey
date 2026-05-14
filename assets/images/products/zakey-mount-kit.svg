@@ -1,16 +1,201 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <title>Zakey Mount Kit — Complete Wall Mounting Hardware Set</title>
   <defs>
-    <linearGradient id="bg-MOUNT KIT" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
+    <!-- Slightly lighter background for visibility of light-colored items -->
+    <radialGradient id="bgRadial" cx="50%" cy="50%" r="60%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0f1520"/>
+      <stop offset="100%" stop-color="#04060d"/>
+    </radialGradient>
+    <pattern id="dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="0.7" fill="#ffffff" fill-opacity="0.04"/>
+    </pattern>
+    <!-- Surface suggestion -->
+    <linearGradient id="surfaceLine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a2030" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#1a2030" stop-opacity="0"/>
     </linearGradient>
-    <radialGradient id="gl-MOUNT KIT" cx="240" cy="185" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <!-- Mounting plate: light gray aluminum -->
+    <linearGradient id="plateGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d0d4e0"/>
+      <stop offset="50%" stop-color="#c8cad4"/>
+      <stop offset="100%" stop-color="#b8bac8"/>
+    </linearGradient>
+    <!-- Plate edge highlight -->
+    <linearGradient id="plateHL" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.08"/>
+    </linearGradient>
+    <!-- Screw head gradient -->
+    <radialGradient id="screwHead" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#d0d4e0"/>
+      <stop offset="50%" stop-color="#9ca0b0"/>
+      <stop offset="100%" stop-color="#7a7e90"/>
+    </radialGradient>
+    <!-- Anchor gradient (white plastic) -->
+    <linearGradient id="anchorGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e8eaf2"/>
+      <stop offset="50%" stop-color="#d8dae8"/>
+      <stop offset="100%" stop-color="#c8cad8"/>
+    </linearGradient>
+    <!-- Drop shadow -->
+    <radialGradient id="shadowGrad" cx="50%" cy="50%" r="50%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Product glow: subtle warm for hardware -->
+    <radialGradient id="productGlow" cx="50%" cy="50%" r="55%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#c8cad4" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#c8cad4" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Cutout shadow (inner shadow effect for plate cutout) -->
+    <radialGradient id="cutoutGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a0c14" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0a0c14" stop-opacity="0.3"/>
     </radialGradient>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-MOUNT KIT)"/>
-  <ellipse cx="240" cy="185" rx="180" ry="140" fill="url(#gl-MOUNT KIT)"/>
-  <rect x="100" y="140" width="280" height="12" rx="6" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><rect x="100" y="208" width="280" height="12" rx="6" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.5"/><rect x="175" y="140" width="14" height="80" rx="4" fill="#22d3ee" fill-opacity="0.2"/><rect x="291" y="140" width="14" height="80" rx="4" fill="#22d3ee" fill-opacity="0.15"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">MOUNT KIT</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bgRadial)"/>
+  <rect width="480" height="360" fill="url(#dots)"/>
+
+  <!-- Product glow -->
+  <ellipse cx="240" cy="195" rx="160" ry="100" fill="url(#productGlow)"/>
+
+  <!-- Surface plane suggestion -->
+  <rect x="80" y="280" width="320" height="50" fill="url(#surfaceLine)" rx="2"/>
+  <line x1="80" y1="280" x2="400" y2="280" stroke="#1e2438" stroke-width="0.8" stroke-opacity="0.5"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="240" cy="283" rx="180" ry="12" fill="url(#shadowGrad)"/>
+
+  <!-- ──────────────────────────────────────── -->
+  <!-- ITEM 1: Mounting plate (left side)      -->
+  <!-- 80×50px, light gray, 4 screw holes     -->
+  <!-- ──────────────────────────────────────── -->
+
+  <!-- Plate shadow -->
+  <rect x="103" y="197" width="80" height="50" rx="3" fill="#000000" fill-opacity="0.3"/>
+  <!-- Plate body -->
+  <rect x="100" y="194" width="80" height="50" rx="3" fill="url(#plateGrad)"/>
+  <!-- Plate highlight overlay -->
+  <rect x="100" y="194" width="80" height="50" rx="3" fill="url(#plateHL)"/>
+  <!-- Plate outer edge -->
+  <rect x="100" y="194" width="80" height="50" rx="3" fill="none" stroke="#a0a4b4" stroke-width="0.6"/>
+
+  <!-- Center cutout: slot/opening for wire pass-through -->
+  <rect x="128" y="207" width="24" height="24" rx="4" fill="url(#cutoutGrad)"/>
+  <rect x="128" y="207" width="24" height="24" rx="4" fill="none" stroke="#9ca0b0" stroke-width="0.5"/>
+  <!-- Cutout inner shadow lines -->
+  <rect x="129" y="208" width="22" height="22" rx="3.5" fill="#0a0c14" fill-opacity="0.4"/>
+
+  <!-- Screw holes: 4 corners -->
+  <!-- TL -->
+  <circle cx="111" cy="206" r="4" fill="url(#cutoutGrad)"/>
+  <circle cx="111" cy="206" r="3.5" fill="none" stroke="#9ca0b0" stroke-width="0.5"/>
+  <circle cx="111" cy="206" r="1.5" fill="#0a0c14" fill-opacity="0.8"/>
+  <!-- TR -->
+  <circle cx="169" cy="206" r="4" fill="url(#cutoutGrad)"/>
+  <circle cx="169" cy="206" r="3.5" fill="none" stroke="#9ca0b0" stroke-width="0.5"/>
+  <circle cx="169" cy="206" r="1.5" fill="#0a0c14" fill-opacity="0.8"/>
+  <!-- BL -->
+  <circle cx="111" cy="236" r="4" fill="url(#cutoutGrad)"/>
+  <circle cx="111" cy="236" r="3.5" fill="none" stroke="#9ca0b0" stroke-width="0.5"/>
+  <circle cx="111" cy="236" r="1.5" fill="#0a0c14" fill-opacity="0.8"/>
+  <!-- BR -->
+  <circle cx="169" cy="236" r="4" fill="url(#cutoutGrad)"/>
+  <circle cx="169" cy="236" r="3.5" fill="none" stroke="#9ca0b0" stroke-width="0.5"/>
+  <circle cx="169" cy="236" r="1.5" fill="#0a0c14" fill-opacity="0.8"/>
+
+  <!-- Plate label -->
+  <text x="140" y="252" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="5.5" letter-spacing="0.5" fill="#6a6e82" fill-opacity="0.8">MOUNTING PLATE</text>
+
+  <!-- ──────────────────────────────────── -->
+  <!-- ITEM 2: Screws (center)             -->
+  <!-- 3 silver screws arranged nicely     -->
+  <!-- ──────────────────────────────────── -->
+
+  <!-- Screw 1 -->
+  <circle cx="225" cy="200" r="7" fill="url(#screwHead)"/>
+  <!-- Cross slot -->
+  <line x1="221" y1="200" x2="229" y2="200" stroke="#5a5e70" stroke-width="1.2"/>
+  <line x1="225" y1="196" x2="225" y2="204" stroke="#5a5e70" stroke-width="1.2"/>
+  <!-- Shaft -->
+  <rect x="223" y="207" width="4" height="16" rx="2" fill="#9ca0b0"/>
+  <!-- Screw tip -->
+  <polygon points="223,223 225,228 227,223" fill="#8a8e9e"/>
+  <!-- Thread lines on shaft -->
+  <line x1="222.5" y1="211" x2="227.5" y2="211" stroke="#8a8e9e" stroke-width="0.4" stroke-opacity="0.6"/>
+  <line x1="222.5" y1="215" x2="227.5" y2="215" stroke="#8a8e9e" stroke-width="0.4" stroke-opacity="0.6"/>
+  <line x1="222.5" y1="219" x2="227.5" y2="219" stroke="#8a8e9e" stroke-width="0.4" stroke-opacity="0.6"/>
+
+  <!-- Screw 2 -->
+  <circle cx="240" cy="198" r="7" fill="url(#screwHead)"/>
+  <line x1="236" y1="198" x2="244" y2="198" stroke="#5a5e70" stroke-width="1.2"/>
+  <line x1="240" y1="194" x2="240" y2="202" stroke="#5a5e70" stroke-width="1.2"/>
+  <rect x="238" y="205" width="4" height="16" rx="2" fill="#9ca0b0"/>
+  <polygon points="238,221 240,226 242,221" fill="#8a8e9e"/>
+  <line x1="237.5" y1="209" x2="242.5" y2="209" stroke="#8a8e9e" stroke-width="0.4" stroke-opacity="0.6"/>
+  <line x1="237.5" y1="213" x2="242.5" y2="213" stroke="#8a8e9e" stroke-width="0.4" stroke-opacity="0.6"/>
+  <line x1="237.5" y1="217" x2="242.5" y2="217" stroke="#8a8e9e" stroke-width="0.4" stroke-opacity="0.6"/>
+
+  <!-- Screw 3 -->
+  <circle cx="255" cy="202" r="7" fill="url(#screwHead)"/>
+  <line x1="251" y1="202" x2="259" y2="202" stroke="#5a5e70" stroke-width="1.2"/>
+  <line x1="255" y1="198" x2="255" y2="206" stroke="#5a5e70" stroke-width="1.2"/>
+  <rect x="253" y="209" width="4" height="16" rx="2" fill="#9ca0b0"/>
+  <polygon points="253,225 255,230 257,225" fill="#8a8e9e"/>
+  <line x1="252.5" y1="213" x2="257.5" y2="213" stroke="#8a8e9e" stroke-width="0.4" stroke-opacity="0.6"/>
+  <line x1="252.5" y1="217" x2="257.5" y2="217" stroke="#8a8e9e" stroke-width="0.4" stroke-opacity="0.6"/>
+  <line x1="252.5" y1="221" x2="257.5" y2="221" stroke="#8a8e9e" stroke-width="0.4" stroke-opacity="0.6"/>
+
+  <text x="240" y="244" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="5.5" letter-spacing="0.5" fill="#6a6e82" fill-opacity="0.8">SCREWS × 3</text>
+
+  <!-- ───────────────────────────────────── -->
+  <!-- ITEM 3: Drywall anchors (right)      -->
+  <!-- 3 white cylindrical plastic anchors  -->
+  <!-- ───────────────────────────────────── -->
+
+  <!-- Anchor 1 -->
+  <rect x="303" y="205" width="10" height="22" rx="4" fill="url(#anchorGrad)"/>
+  <!-- Anchor top opening -->
+  <ellipse cx="308" cy="205" rx="5" ry="2" fill="#d0d2e0"/>
+  <!-- Anchor flange top -->
+  <rect x="300" y="204" width="16" height="4" rx="2" fill="#e8eaf2"/>
+  <rect x="300" y="204" width="16" height="4" rx="2" fill="none" stroke="#c8cad8" stroke-width="0.4"/>
+  <!-- Expansion slots suggestion -->
+  <line x1="307" y1="208" x2="307" y2="226" stroke="#bbbdc8" stroke-width="0.5" stroke-opacity="0.6"/>
+  <line x1="309" y1="208" x2="309" y2="226" stroke="#bbbdc8" stroke-width="0.5" stroke-opacity="0.6"/>
+  <!-- Bottom of anchor -->
+  <ellipse cx="308" cy="227" rx="5" ry="2" fill="#c0c2d0"/>
+
+  <!-- Anchor 2 -->
+  <rect x="320" y="205" width="10" height="22" rx="4" fill="url(#anchorGrad)"/>
+  <ellipse cx="325" cy="205" rx="5" ry="2" fill="#d0d2e0"/>
+  <rect x="317" y="204" width="16" height="4" rx="2" fill="#e8eaf2"/>
+  <rect x="317" y="204" width="16" height="4" rx="2" fill="none" stroke="#c8cad8" stroke-width="0.4"/>
+  <line x1="324" y1="208" x2="324" y2="226" stroke="#bbbdc8" stroke-width="0.5" stroke-opacity="0.6"/>
+  <line x1="326" y1="208" x2="326" y2="226" stroke="#bbbdc8" stroke-width="0.5" stroke-opacity="0.6"/>
+  <ellipse cx="325" cy="227" rx="5" ry="2" fill="#c0c2d0"/>
+
+  <!-- Anchor 3 -->
+  <rect x="337" y="205" width="10" height="22" rx="4" fill="url(#anchorGrad)"/>
+  <ellipse cx="342" cy="205" rx="5" ry="2" fill="#d0d2e0"/>
+  <rect x="334" y="204" width="16" height="4" rx="2" fill="#e8eaf2"/>
+  <rect x="334" y="204" width="16" height="4" rx="2" fill="none" stroke="#c8cad8" stroke-width="0.4"/>
+  <line x1="341" y1="208" x2="341" y2="226" stroke="#bbbdc8" stroke-width="0.5" stroke-opacity="0.6"/>
+  <line x1="343" y1="208" x2="343" y2="226" stroke="#bbbdc8" stroke-width="0.5" stroke-opacity="0.6"/>
+  <ellipse cx="342" cy="227" rx="5" ry="2" fill="#c0c2d0"/>
+
+  <text x="325" y="244" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="5.5" letter-spacing="0.5" fill="#6a6e82" fill-opacity="0.8">ANCHORS × 3</text>
+
+  <!-- ─── Label ─── -->
+  <text x="240" y="310" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="9" letter-spacing="2"
+        fill="#4a5070" fill-opacity="0.8">ZAKEY MOUNT KIT</text>
+  <text x="240" y="325" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="6.5" letter-spacing="1"
+        fill="#2a3050" fill-opacity="0.6">Plate · Screws · Anchors Included</text>
 </svg>

@@ -1,19 +1,136 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0c0f17"/>
-      <stop offset="100%" stop-color="#05070d"/>
-    </linearGradient>
-    <radialGradient id="r" cx="70%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <radialGradient id="bgG" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
     </radialGradient>
+    <pattern id="hexPat" x="0" y="0" width="30" height="34" patternUnits="userSpaceOnUse">
+      <polygon points="15,1 28,9 28,25 15,33 2,25 2,9" fill="none" stroke="#6080d0" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+    <!-- Module body front -->
+    <linearGradient id="bodyG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#242638"/>
+      <stop offset="100%" stop-color="#171928"/>
+    </linearGradient>
+    <!-- Top face -->
+    <linearGradient id="topG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2c2e44"/>
+      <stop offset="100%" stop-color="#1e2035"/>
+    </linearGradient>
+    <!-- Right side -->
+    <linearGradient id="rightG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#131522"/>
+      <stop offset="100%" stop-color="#0e101c"/>
+    </linearGradient>
+    <!-- Terminal block -->
+    <linearGradient id="termG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2e3e"/>
+      <stop offset="100%" stop-color="#1a1c2a"/>
+    </linearGradient>
+    <!-- Cyan glow -->
+    <radialGradient id="cGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Drop shadow -->
+    <radialGradient id="shadowG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softG" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="1280" height="720" fill="url(#g)"/>
-  <rect width="1280" height="720" fill="url(#r)"/>
-  <text x="640" y="380" font-family="Manrope,Inter,system-ui,sans-serif" font-size="48" font-weight="700"
-        fill="#22d3ee" fill-opacity="0.15" text-anchor="middle" dominant-baseline="middle"
-        letter-spacing="-1">Curtain Driver</text>
-  <circle cx="640" cy="260" r="60" fill="none" stroke="#22d3ee" stroke-opacity="0.1" stroke-width="1"/>
-  <circle cx="640" cy="260" r="100" fill="none" stroke="#22d3ee" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bgG)"/>
+  <rect width="480" height="360" fill="url(#hexPat)"/>
+
+  <!-- Product glow -->
+  <ellipse cx="235" cy="195" rx="130" ry="100" fill="url(#cGlow)"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="228" cy="285" rx="85" ry="11" fill="url(#shadowG)" opacity="0.5"/>
+
+  <!-- === CURTAIN DRIVER MODULE — 3/4 angle === -->
+  <!-- Top face (angled parallelogram) -->
+  <polygon points="155,142 295,142 318,120 178,120" fill="url(#topG)"/>
+  <polygon points="155,142 295,142 297,144 157,144" fill="#3c4060" opacity="0.4"/>
+  <!-- Top face left highlight -->
+  <line x1="155" y1="142" x2="178" y2="120" stroke="#3a3e62" stroke-width="1.5" opacity="0.7"/>
+  <line x1="155" y1="142" x2="295" y2="142" stroke="#3a3e62" stroke-width="1" opacity="0.5"/>
+
+  <!-- Cable grommet/port on top face -->
+  <ellipse cx="220" cy="134" rx="9" ry="5" fill="#0e1020"/>
+  <ellipse cx="220" cy="134" rx="7" ry="3.5" fill="#080a14"/>
+  <ellipse cx="218" cy="133" rx="3" ry="1.5" fill="#1a1c30" opacity="0.5"/>
+
+  <!-- Right side face -->
+  <polygon points="295,142 318,120 318,212 295,234" fill="url(#rightG)"/>
+
+  <!-- Front face (main) -->
+  <rect x="155" y="142" width="140" height="92" rx="5" fill="url(#bodyG)"/>
+  <!-- Left+top edge highlight -->
+  <rect x="155" y="142" width="3" height="92" rx="1.5" fill="#404568" opacity="0.88"/>
+  <rect x="155" y="142" width="140" height="3" rx="1.5" fill="#383c60" opacity="0.78"/>
+
+  <!-- Motor output terminal blocks on right side (2 blocks) -->
+  <!-- Terminal 1 -->
+  <rect x="282" y="155" width="14" height="22" rx="2" fill="url(#termG)" stroke="#2e3250" stroke-width="1"/>
+  <!-- Screw head on terminal -->
+  <circle cx="289" cy="163" r="4" fill="#1e2038" stroke="#303456" stroke-width="0.8"/>
+  <line x1="286" y1="163" x2="292" y2="163" stroke="#404868" stroke-width="1"/>
+  <line x1="289" y1="160" x2="289" y2="166" stroke="#404868" stroke-width="1"/>
+  <!-- Wire slots -->
+  <rect x="283.5" y="173" width="11" height="3" rx="1" fill="#0c0e1c"/>
+
+  <!-- Terminal 2 -->
+  <rect x="282" y="183" width="14" height="22" rx="2" fill="url(#termG)" stroke="#2e3250" stroke-width="1"/>
+  <circle cx="289" cy="191" r="4" fill="#1e2038" stroke="#303456" stroke-width="0.8"/>
+  <line x1="286" y1="191" x2="292" y2="191" stroke="#404868" stroke-width="1"/>
+  <line x1="289" y1="188" x2="289" y2="194" stroke="#404868" stroke-width="1"/>
+  <rect x="283.5" y="201" width="11" height="3" rx="1" fill="#0c0e1c"/>
+
+  <!-- Front face contents -->
+  <!-- Zakey Z logo -->
+  <g transform="translate(168,165)" filter="url(#glow)">
+    <polygon points="0,0 14,0 14,3 4,13 14,13 14,16 0,16 0,13 10,3 0,3" fill="#00e5ff" opacity="0.8" transform="scale(0.75)"/>
+  </g>
+
+  <!-- Power LED (green) -->
+  <circle cx="195" cy="175" r="4" fill="#00cc66" opacity="0.9" filter="url(#softG)"/>
+  <circle cx="195" cy="175" r="2.5" fill="#00ff88"/>
+
+  <!-- Motor direction arrows -->
+  <!-- Arrow UP -->
+  <g transform="translate(220,160)" fill="#7080a0">
+    <polygon points="8,0 16,10 11,10 11,18 5,18 5,10 0,10"/>
+  </g>
+  <!-- Arrow DOWN -->
+  <g transform="translate(220,182)" fill="#505868">
+    <polygon points="8,18 0,8 5,8 5,0 11,0 11,8 16,8"/>
+  </g>
+
+  <!-- "OPEN" indicator line on front face -->
+  <rect x="160" y="210" width="80" height="3" rx="1.5" fill="#1e2238"/>
+  <rect x="160" y="210" width="50" height="3" rx="1.5" fill="#00e5ff" opacity="0.55" filter="url(#softG)"/>
+  <text x="245" y="213" text-anchor="start" font-family="Arial" font-size="6" fill="#6a7090">OPEN</text>
+
+  <!-- DIN rail clip at bottom -->
+  <rect x="162" y="226" width="126" height="9" rx="3" fill="#181a2c" stroke="#252840" stroke-width="0.8"/>
+  <rect x="172" y="228" width="20" height="5" rx="1.5" fill="#0e1020"/>
+  <rect x="248" y="228" width="20" height="5" rx="1.5" fill="#0e1020"/>
+
+  <!-- Floor reflection -->
+  <rect x="155" y="234" width="140" height="30" rx="5" fill="url(#bodyG)" opacity="0.07"
+        transform="scale(1,-1) translate(0,-468)"/>
+
+  <!-- Product label -->
+  <text x="240" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="10"
+        fill="white" opacity="0.5" letter-spacing="2">CURTAIN DRIVER</text>
 </svg>

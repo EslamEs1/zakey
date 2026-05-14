@@ -1,16 +1,115 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
   <defs>
-    <linearGradient id="bg-AC GATEWAY" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
-    </linearGradient>
-    <radialGradient id="gl-AC GATEWAY" cx="240" cy="185" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <radialGradient id="bgG" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
     </radialGradient>
+    <pattern id="gridPat" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20,0 L0,0 0,20" fill="none" stroke="#6080c0" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+    <!-- Puck top face gradient -->
+    <radialGradient id="topG" cx="38%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#282c44"/>
+      <stop offset="100%" stop-color="#1a1e35"/>
+    </radialGradient>
+    <!-- Puck side band -->
+    <linearGradient id="sideG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1e30"/>
+      <stop offset="100%" stop-color="#0e1020"/>
+    </linearGradient>
+    <!-- Cyan glow -->
+    <radialGradient id="cGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Drop shadow -->
+    <radialGradient id="shadowG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <!-- IR window gradient -->
+    <linearGradient id="irG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#080a12"/>
+      <stop offset="50%" stop-color="#101420"/>
+      <stop offset="100%" stop-color="#080a12"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softG" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-AC GATEWAY)"/>
-  <ellipse cx="240" cy="185" rx="180" ry="140" fill="url(#gl-AC GATEWAY)"/>
-  <rect x="150" y="120" width="180" height="120" rx="14" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><circle cx="200" cy="180" r="10" fill="#22d3ee" fill-opacity="0.25"/><circle cx="240" cy="180" r="10" fill="#22d3ee" fill-opacity="0.15"/><circle cx="280" cy="180" r="10" fill="#22d3ee" fill-opacity="0.1"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">AC GATEWAY</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bgG)"/>
+  <rect width="480" height="360" fill="url(#gridPat)"/>
+
+  <!-- Product glow -->
+  <ellipse cx="240" cy="185" rx="120" ry="100" fill="url(#cGlow)"/>
+
+  <!-- Drop shadow on floor -->
+  <ellipse cx="240" cy="278" rx="75" ry="10" fill="url(#shadowG)" opacity="0.55"/>
+
+  <!-- === PUCK SHAPE: top ellipse + side band + bottom ellipse === -->
+
+  <!-- Side cylinder band -->
+  <ellipse cx="240" cy="230" rx="88" ry="22" fill="url(#sideG)"/>
+  <rect x="152" y="198" width="176" height="32" fill="url(#sideG)"/>
+  <ellipse cx="240" cy="198" rx="88" ry="22" fill="#1c2038"/>
+
+  <!-- Side face front highlight arc (lit left side) -->
+  <path d="M152,198 Q152,230 240,230" fill="none" stroke="#2e3258" stroke-width="2" opacity="0.7"/>
+
+  <!-- IR emitter window on front side band -->
+  <rect x="185" y="207" width="110" height="14" rx="7" fill="url(#irG)"/>
+  <rect x="187" y="209" width="106" height="10" rx="5" fill="#060810"/>
+  <!-- IR grid dots suggesting emitter array -->
+  <g fill="#1a0808" opacity="0.7">
+    <circle cx="205" cy="214" r="2"/><circle cx="215" cy="214" r="2"/><circle cx="225" cy="214" r="2"/>
+    <circle cx="235" cy="214" r="2"/><circle cx="245" cy="214" r="2"/><circle cx="255" cy="214" r="2"/>
+    <circle cx="265" cy="214" r="2"/><circle cx="275" cy="214" r="2"/>
+  </g>
+  <!-- IR glow hint (red-ish) -->
+  <rect x="190" y="208" width="100" height="8" rx="4" fill="#ff1000" opacity="0.04"/>
+
+  <!-- Mounting tabs/clips on sides -->
+  <rect x="138" y="202" width="16" height="22" rx="4" fill="#141828" stroke="#202440" stroke-width="1"/>
+  <rect x="326" y="202" width="16" height="22" rx="4" fill="#141828" stroke="#202440" stroke-width="1"/>
+
+  <!-- TOP FACE (ellipse) -->
+  <ellipse cx="240" cy="196" rx="88" ry="22" fill="url(#topG)"/>
+  <!-- Top face edge highlight -->
+  <ellipse cx="240" cy="196" rx="88" ry="22" fill="none" stroke="#383c60" stroke-width="1.5" opacity="0.7"/>
+  <ellipse cx="240" cy="196" rx="85" ry="20" fill="none" stroke="#3a3e62" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Zakey Z logo centered on top face -->
+  <g transform="translate(228,183)" filter="url(#glow)">
+    <polygon points="0,0 18,0 18,4 5,16 18,16 18,20 0,20 0,16 13,4 0,4" fill="#00e5ff" opacity="0.85" transform="scale(0.85)"/>
+  </g>
+
+  <!-- Status LED on top face (front-right area) -->
+  <circle cx="296" cy="200" r="4" fill="#00e5ff" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="296" cy="200" r="2.5" fill="#80f0ff" opacity="1"/>
+
+  <!-- WiFi icon on top face (left of center) -->
+  <g transform="translate(195,192)" stroke="#00e5ff" stroke-width="1.2" fill="none" opacity="0.65">
+    <!-- WiFi arcs -->
+    <path d="M-10,6 A12,12 0 0,1 10,6"/>
+    <path d="M-6,9 A8,8 0 0,1 6,9"/>
+    <path d="M-2,12 A4,4 0 0,1 2,12"/>
+    <circle cx="0" cy="14" r="1.5" fill="#00e5ff" stroke="none"/>
+  </g>
+
+  <!-- Floor reflection (very faint) -->
+  <ellipse cx="240" cy="232" rx="88" ry="22" fill="url(#topG)" opacity="0.1"
+           transform="scale(1,-1) translate(0,-464)"/>
+  <rect x="152" y="232" width="176" height="15" fill="url(#sideG)" opacity="0.06"
+        transform="scale(1,-1) translate(0,-464)"/>
+
+  <!-- Product label -->
+  <text x="240" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="10"
+        fill="white" opacity="0.5" letter-spacing="2">AC GATEWAY</text>
 </svg>

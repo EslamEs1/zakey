@@ -2,24 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script>!function(){var t=localStorage.getItem('zakey-theme')||'dark';document.documentElement.setAttribute('data-theme',t)}()</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Insights — Zakey Smart Living Blog</title>
-  <meta name="description" content="Thought leadership, product news, installation guides, and smart-living trends from the Zakey team.">
+  <title>Zakey Blog — Smart Living Insights</title>
+  <meta name="description" content="Smart living articles, guides, and industry insights from the Zakey team — for homeowners, integrators, and hospitality professionals.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Insights — Zakey Smart Living Blog">
-  <meta property="og:description" content="Thought leadership, product news, installation guides, and smart-living trends from the Zakey team.">
+  <meta property="og:title" content="Zakey Blog — Smart Living Insights">
+  <meta property="og:description" content="Smart living articles, guides, and industry insights from the Zakey team — for homeowners, integrators, and hospitality professionals.">
   <meta property="og:image" content="../assets/images/og/zakey-og-cover.svg">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body data-page="blog">
 
 <!-- header:start -->
 <header class="site-header" data-scrolled="false">
   <div class="site-header__inner">
     <a class="site-header__brand" href="../index.html" aria-label="Zakey — Home">
-      <img class="site-header__wordmark" src="../assets/icons/zakey-wordmark.svg" alt="" width="120" height="28">
+      <img class="site-header__wordmark logo-dark" src="../assets/icons/blue-logo.png" alt="Zakey" width="172" height="52">
+      <img class="site-header__wordmark logo-light" src="../assets/icons/blue-logo.png" alt="Zakey" width="172" height="52">
     </a>
 
     <nav class="site-header__nav" aria-label="Primary">
@@ -83,6 +85,12 @@
       </ul>
     </nav>
 
+    
+    <button type="button" class="theme-toggle" aria-label="Switch to light theme" data-theme-toggle>
+      <svg class="theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+
     <a class="btn btn--primary site-header__cta" href="../index.html#get-quote">Get a Quote</a>
 
     <button type="button" class="site-header__hamburger" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
@@ -96,7 +104,8 @@
   <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Site navigation">
     <div class="mobile-drawer__head">
       <a class="mobile-drawer__brand" href="../index.html">
-        <img src="../assets/icons/zakey-wordmark.svg" alt="Zakey home" width="100" height="24">
+        <img src="../assets/icons/blue-logo.png" alt="Zakey home" class="logo-dark" width="132" height="40">
+        <img src="../assets/icons/blue-logo.png" alt="Zakey home" class="logo-light" width="132" height="40">
       </a>
       <button type="button" class="mobile-drawer__close" data-drawer-dismiss="true" aria-label="Close menu">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -153,36 +162,209 @@
 </aside>
 <!-- header:end -->
 
-<main id="main">
-  <section class="u-section u-section--page-top">
-    <div class="u-container">
-      <div class="section-head section-head--flush">
-        <p class="eyebrow">Zakey</p>
-        <h1>Insights</h1>
-        <p class="u-page-subtitle">Stay ahead of the smart-home curve. From deep dives into automation technology to curated design inspiration and partner spotlights, the Zakey Insights blog publishes one article a week.</p>
-      </div>
-    </div>
-  </section>
+<main id="content">
 
-  <section class="u-section u-section--tight u-section--bordered-top">
-    <div class="u-container u-container--center">
-      <div class="u-placeholder-card">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg>
-        <div>
-          <p class="u-placeholder-card__title">Coming in Phase 02</p>
-          <p class="u-placeholder-card__desc">The full page is being crafted with the same premium detail you see in the homepage. Check back soon or get in touch to discuss your project.</p>
-        </div>
-        <a class="btn btn--primary" href="../index.html#get-quote">Get a Quote</a>
-      </div>
+<section class="blog-hero">
+  <div class="blog-hero__inner">
+    <p class="blog-hero__eyebrow">Zakey Blog</p>
+    <h1 class="blog-hero__title">Smart Living Insights</h1>
+    <p class="blog-hero__subtitle">Guides, ideas, and industry perspectives from the Zakey team — for homeowners, integrators, and hospitality professionals.</p>
+  </div>
+  <figure class="blog-hero__media">
+    <img src="../assets/images/blog/blog-hero.svg" alt="Editorial illustration of smart-living articles and guides on a digital screen" loading="eager" width="560" height="315">
+  </figure>
+</section>
+
+<nav class="blog-filter" aria-label="Filter articles by category">
+  <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">All Articles</button>
+  <button class="filter-chip" type="button" data-filter="smart-home" aria-pressed="false">Smart Home</button>
+  <button class="filter-chip" type="button" data-filter="security" aria-pressed="false">Security</button>
+  <button class="filter-chip" type="button" data-filter="energy-saving" aria-pressed="false">Energy Saving</button>
+  <button class="filter-chip" type="button" data-filter="hotels" aria-pressed="false">Hotels</button>
+  <button class="filter-chip" type="button" data-filter="product-guides" aria-pressed="false">Product Guides</button>
+  <button class="filter-chip" type="button" data-filter="partner-insights" aria-pressed="false">Partner Insights</button>
+</nav>
+
+<div class="blog-grid" data-active-filter="all">
+  <p class="blog-grid__empty" hidden>No articles match the selected category.</p>
+
+  <!-- 3 implemented articles -->
+  <article class="blog-card" data-category="smart-home" data-article-status="implemented">
+    <div class="blog-card__media">
+      <img src="../assets/images/blog/smart-home-guide.svg" alt="Illustration of a smart home setup with connected devices for beginners" loading="lazy" width="600" height="338">
+      <span class="blog-card__category-tag">Smart Home</span>
     </div>
-  </section>
+    <div class="blog-card__body">
+      <div class="blog-card__meta">
+        <span>14 May 2026</span>
+        <span>8 min read</span>
+      </div>
+      <h2 class="blog-card__title">Smart Home Beginner Guide: Your First 7 Days</h2>
+      <p class="blog-card__excerpt">Where do you start? Which room first? What happens if the internet goes down? We answer the questions every first-time smart-home owner asks — calmly and practically.</p>
+      <a class="btn btn--primary blog-card__cta" href="article-smart-home-guide.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-category="smart-home" data-article-status="implemented">
+    <div class="blog-card__media">
+      <img src="../assets/images/blog/villa-automation.svg" alt="Luxury villa floor plan with smart automation zones illustrated" loading="lazy" width="600" height="338">
+      <span class="blog-card__category-tag">Smart Home</span>
+    </div>
+    <div class="blog-card__body">
+      <div class="blog-card__meta">
+        <span>7 May 2026</span>
+        <span>11 min read</span>
+      </div>
+      <h2 class="blog-card__title">12 Villa Automation Ideas That Actually Get Used</h2>
+      <p class="blog-card__excerpt">Most villa automation lists tell you what's possible. This one tells you what clients actually activate six months after moving in — and what they forget they installed.</p>
+      <a class="btn btn--primary blog-card__cta" href="article-villa-automation.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="blog-card" data-category="hotels" data-article-status="implemented">
+    <div class="blog-card__media">
+      <img src="../assets/images/blog/hotel-smart-room.svg" alt="Smart hotel room with in-room control panel and welcome scene" loading="lazy" width="600" height="338">
+      <span class="blog-card__category-tag">Hotels</span>
+    </div>
+    <div class="blog-card__body">
+      <div class="blog-card__meta">
+        <span>1 May 2026</span>
+        <span>9 min read</span>
+      </div>
+      <h2 class="blog-card__title">Inside a Smart Hotel Room: The Guest Experience</h2>
+      <p class="blog-card__excerpt">What does a guest actually experience in a Zakey-powered hotel room? From the Welcome scene at check-in to the Check-Out automation that surprises every first-timer.</p>
+      <a class="btn btn--primary blog-card__cta" href="article-hotel-smart-room.html">Read Article</a>
+    </div>
+  </article>
+
+  <!-- 6 coming-soon articles -->
+  <article class="blog-card" data-category="security" data-article-status="coming-soon">
+    <div class="blog-card__media">
+      <img src="../assets/images/blog/security-camera-setup.svg" alt="Smart security camera setup illustration with monitoring dashboard" loading="lazy" width="600" height="338">
+      <span class="blog-card__category-tag">Security</span>
+      <span class="blog-card__status">Coming Soon</span>
+    </div>
+    <div class="blog-card__body">
+      <div class="blog-card__meta">
+        <span>Coming Soon</span>
+        <span>~7 min read</span>
+      </div>
+      <h2 class="blog-card__title">Setting Up Smart Security: Cameras, Sensors, and Zones</h2>
+      <p class="blog-card__excerpt">A practical guide to planning your smart security layout — from exterior cameras to door sensors and perimeter zones that actually respond the way you expect.</p>
+      <span class="btn btn--primary blog-card__cta btn--disabled" aria-disabled="true">Coming Soon</span>
+    </div>
+  </article>
+
+  <article class="blog-card" data-category="energy-saving" data-article-status="coming-soon">
+    <div class="blog-card__media">
+      <img src="../assets/images/blog/energy-saving-tips.svg" alt="Energy efficiency chart with smart meter and savings visualization" loading="lazy" width="600" height="338">
+      <span class="blog-card__category-tag">Energy Saving</span>
+      <span class="blog-card__status">Coming Soon</span>
+    </div>
+    <div class="blog-card__body">
+      <div class="blog-card__meta">
+        <span>Coming Soon</span>
+        <span>~10 min read</span>
+      </div>
+      <h2 class="blog-card__title">10 Ways Smart Automation Cuts Your Energy Bill</h2>
+      <p class="blog-card__excerpt">From presence-based climate to after-hours shutdown schedules, smart automation doesn't just add comfort — it pays for itself. Here's how to make that happen.</p>
+      <span class="btn btn--primary blog-card__cta btn--disabled" aria-disabled="true">Coming Soon</span>
+    </div>
+  </article>
+
+  <article class="blog-card" data-category="product-guides" data-article-status="coming-soon">
+    <div class="blog-card__media">
+      <img src="../assets/images/blog/lighting-scenes-guide.svg" alt="Room with multiple smart lighting scene modes illustrated" loading="lazy" width="600" height="338">
+      <span class="blog-card__category-tag">Product Guides</span>
+      <span class="blog-card__status">Coming Soon</span>
+    </div>
+    <div class="blog-card__body">
+      <div class="blog-card__meta">
+        <span>Coming Soon</span>
+        <span>~8 min read</span>
+      </div>
+      <h2 class="blog-card__title">Lighting Scenes: A Room-by-Room Guide</h2>
+      <p class="blog-card__excerpt">How to design lighting scenes that feel natural — not theatrical. The specific colour temperatures, intensities, and triggers that make rooms feel right at any time of day.</p>
+      <span class="btn btn--primary blog-card__cta btn--disabled" aria-disabled="true">Coming Soon</span>
+    </div>
+  </article>
+
+  <article class="blog-card" data-category="product-guides" data-article-status="coming-soon">
+    <div class="blog-card__media">
+      <img src="../assets/images/blog/panel-vs-app.svg" alt="Side-by-side comparison of wall control panel and smartphone app" loading="lazy" width="600" height="338">
+      <span class="blog-card__category-tag">Product Guides</span>
+      <span class="blog-card__status">Coming Soon</span>
+    </div>
+    <div class="blog-card__body">
+      <div class="blog-card__meta">
+        <span>Coming Soon</span>
+        <span>~6 min read</span>
+      </div>
+      <h2 class="blog-card__title">Control Panel vs. App: Which Should You Use When?</h2>
+      <p class="blog-card__excerpt">Wall panels and mobile apps each have their strengths. This guide explains the right tool for every moment — and how to set up your system so everyone in the home uses it naturally.</p>
+      <span class="btn btn--primary blog-card__cta btn--disabled" aria-disabled="true">Coming Soon</span>
+    </div>
+  </article>
+
+  <article class="blog-card" data-category="partner-insights" data-article-status="coming-soon">
+    <div class="blog-card__media">
+      <img src="../assets/images/blog/partner-program.svg" alt="Partnership network illustration with handshake and connected nodes" loading="lazy" width="600" height="338">
+      <span class="blog-card__category-tag">Partner Insights</span>
+      <span class="blog-card__status">Coming Soon</span>
+    </div>
+    <div class="blog-card__body">
+      <div class="blog-card__meta">
+        <span>Coming Soon</span>
+        <span>~9 min read</span>
+      </div>
+      <h2 class="blog-card__title">Why System Integrators Choose Zakey for Luxury Projects</h2>
+      <p class="blog-card__excerpt">A candid look at what makes a smart-home brand a reliable partner for installers — and why that relationship makes or breaks the final client experience.</p>
+      <span class="btn btn--primary blog-card__cta btn--disabled" aria-disabled="true">Coming Soon</span>
+    </div>
+  </article>
+
+  <article class="blog-card" data-category="hotels" data-article-status="coming-soon">
+    <div class="blog-card__media">
+      <img src="../assets/images/blog/hotel-back-office.svg" alt="Hotel management dashboard screen showing room status and automation controls" loading="lazy" width="600" height="338">
+      <span class="blog-card__category-tag">Hotels</span>
+      <span class="blog-card__status">Coming Soon</span>
+    </div>
+    <div class="blog-card__body">
+      <div class="blog-card__meta">
+        <span>Coming Soon</span>
+        <span>~12 min read</span>
+      </div>
+      <h2 class="blog-card__title">Smart Hotel Operations: The Back-Office View</h2>
+      <p class="blog-card__excerpt">Guests see the Welcome scene. Operators see the energy dashboard, the housekeeping trigger, and the check-out automation. Here's the full picture from both sides of the door.</p>
+      <span class="btn btn--primary blog-card__cta btn--disabled" aria-disabled="true">Coming Soon</span>
+    </div>
+  </article>
+</div>
+
+<section class="blog-newsletter">
+  <h2>Stay Ahead of the Curve</h2>
+  <p>One monthly update — smart-home insights, new Zakey features, and project case studies. No spam, ever.</p>
+  <form class="newsletter-form" data-state="idle" novalidate style="max-width:480px;margin:0 auto">
+    <label class="field field--inline" data-required="true">
+      <span class="field__label sr-only">Email address</span>
+      <input type="email" name="email" autocomplete="email" placeholder="your@email.com" required>
+      <p class="field__error" role="alert" data-error-for="email">Please enter a valid email.</p>
+    </label>
+    <button type="submit" class="btn btn--primary">Subscribe</button>
+    <p class="newsletter-form__status" data-status="success" hidden>You're on the list — thanks.</p>
+    <p class="newsletter-form__status" data-status="error" hidden>Something went wrong. Try again.</p>
+    <p class="newsletter-form__privacy">One update a month. Unsubscribe any time.</p>
+  </form>
+</section>
+
 </main>
 
 <!-- footer:start -->
 <footer class="site-footer">
   <div class="site-footer__inner">
     <div class="site-footer__brand">
-      <img src="../assets/icons/zakey-wordmark.svg" alt="" width="140" height="34" loading="lazy">
+      <img src="../assets/icons/blue-logo.png" alt="" class="logo-dark" width="185" height="56" loading="lazy">
+              <img src="../assets/icons/blue-logo.png" alt="" class="logo-light" width="185" height="56" loading="lazy">
       <p class="site-footer__summary">
         Zakey crafts the premium smart-living layer for villas, hotels, offices, and signature homes — hardware, app, scenes, and analytics under one elegant ecosystem.
       </p>
@@ -224,6 +406,7 @@
       <ul>
         <li><a href="./about.html">About</a></li>
         <li><a href="./partners.html">Partners</a></li>
+        <li><a href="./become-a-partner.html">Become a Partner</a></li>
         <li><a href="./projects.html">Projects</a></li>
         <li><a href="./blog.html">Blog</a></li>
         <li><a href="./contact.html">Contact</a></li>
@@ -268,5 +451,12 @@
 <!-- footer:end -->
 
 <script type="module" src="../js/main.js" defer></script>
+
+<div class="floating-whatsapp">
+  <a class="floating-whatsapp__btn" href="https://wa.me/966500000000" target="_blank" rel="noopener" aria-label="Chat with Zakey on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <span class="floating-whatsapp__label">Chat on WhatsApp</span>
+</div>
 </body>
 </html>

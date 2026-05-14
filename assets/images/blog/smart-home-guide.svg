@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="guideBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#080c18;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#05070d;stop-opacity:1"/>
+    </linearGradient>
+    <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.35"/>
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="deviceGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="softGlow"><feGaussianBlur stdDeviation="15" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#guideBg)"/>
+  <!-- Dot grid -->
+  <pattern id="dots" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+    <circle cx="25" cy="25" r="0.8" fill="#ffffff" opacity="0.05"/>
+  </pattern>
+  <rect width="1600" height="900" fill="url(#dots)"/>
+
+  <!-- Title -->
+  <text x="800" y="70" font-family="Arial, sans-serif" font-size="28" font-weight="300" letter-spacing="6" fill="#c0c0c0" text-anchor="middle" opacity="0.9">SMART HOME SETUP GUIDE</text>
+  <line x1="580" y1="84" x2="1020" y2="84" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+
+  <!-- Central hub glow -->
+  <ellipse cx="800" cy="450" rx="200" ry="200" fill="url(#hubGlow)" opacity="0.6"/>
+
+  <!-- Connection lines to devices -->
+  <!-- Light bulb - top -->
+  <line x1="800" y1="310" x2="800" y2="170" stroke="#00d4ff" stroke-width="1.5" opacity="0.5" stroke-dasharray="8,4"/>
+  <circle cx="800" cy="165" r="3" fill="#00d4ff" opacity="0.8"/>
+  <!-- Thermostat - top right -->
+  <line x1="850" y1="330" x2="1080" y2="200" stroke="#00d4ff" stroke-width="1.5" opacity="0.5" stroke-dasharray="8,4"/>
+  <circle cx="1083" cy="198" r="3" fill="#00d4ff" opacity="0.8"/>
+  <!-- Camera - right -->
+  <line x1="870" y1="450" x2="1120" y2="450" stroke="#00d4ff" stroke-width="1.5" opacity="0.5" stroke-dasharray="8,4"/>
+  <circle cx="1123" cy="450" r="3" fill="#00d4ff" opacity="0.8"/>
+  <!-- Lock - bottom right -->
+  <line x1="850" y1="570" x2="1080" y2="700" stroke="#00d4ff" stroke-width="1.5" opacity="0.5" stroke-dasharray="8,4"/>
+  <circle cx="1083" cy="702" r="3" fill="#00d4ff" opacity="0.8"/>
+  <!-- Speaker - bottom -->
+  <line x1="800" y1="590" x2="800" y2="740" stroke="#00d4ff" stroke-width="1.5" opacity="0.5" stroke-dasharray="8,4"/>
+  <circle cx="800" cy="743" r="3" fill="#00d4ff" opacity="0.8"/>
+  <!-- Shade/blind - bottom left -->
+  <line x1="750" y1="570" x2="520" y2="700" stroke="#00d4ff" stroke-width="1.5" opacity="0.5" stroke-dasharray="8,4"/>
+  <circle cx="517" cy="702" r="3" fill="#00d4ff" opacity="0.8"/>
+  <!-- AC/Climate - left -->
+  <line x1="730" y1="450" x2="480" y2="450" stroke="#00d4ff" stroke-width="1.5" opacity="0.5" stroke-dasharray="8,4"/>
+  <circle cx="477" cy="450" r="3" fill="#00d4ff" opacity="0.8"/>
+  <!-- Panel - top left -->
+  <line x1="750" y1="330" x2="520" y2="200" stroke="#00d4ff" stroke-width="1.5" opacity="0.5" stroke-dasharray="8,4"/>
+  <circle cx="517" cy="198" r="3" fill="#00d4ff" opacity="0.8"/>
+
+  <!-- Central smart hub -->
+  <circle cx="800" cy="450" r="90" fill="#001a22" stroke="#00d4ff" stroke-width="2.5" opacity="0.9"/>
+  <circle cx="800" cy="450" r="70" fill="#001520" opacity="0.9"/>
+  <circle cx="800" cy="450" r="50" fill="#00d4ff" opacity="0.12"/>
+  <text x="800" y="440" font-family="Arial, sans-serif" font-size="12" fill="#00d4ff" text-anchor="middle" opacity="0.9" letter-spacing="1">SMART</text>
+  <text x="800" y="460" font-family="Arial, sans-serif" font-size="12" fill="#00d4ff" text-anchor="middle" opacity="0.9" letter-spacing="1">HUB</text>
+  <text x="800" y="478" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" text-anchor="middle" opacity="0.6">● Connected</text>
+  <!-- Pulsing rings -->
+  <circle cx="800" cy="450" r="110" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.2"/>
+  <circle cx="800" cy="450" r="140" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.12"/>
+
+  <!-- Device icons (circles with labels) -->
+  <!-- Light bulb - top -->
+  <circle cx="800" cy="145" r="45" fill="#001a22" stroke="#00d4ff" stroke-width="1.5" opacity="0.8"/>
+  <ellipse cx="800" cy="145" rx="30" ry="30" fill="url(#deviceGlow)" opacity="0.5"/>
+  <text x="800" y="141" font-family="Arial, sans-serif" font-size="20" fill="#f59e0b" text-anchor="middle" opacity="0.9">💡</text>
+  <!-- Use simple geometric icon instead -->
+  <ellipse cx="800" cy="138" rx="16" ry="18" fill="#f59e0b" opacity="0.3"/>
+  <rect x="793" y="154" width="14" height="8" fill="#f59e0b" opacity="0.4" rx="1"/>
+  <text x="800" y="208" font-family="Arial, sans-serif" font-size="12" fill="#c0c0c0" text-anchor="middle" opacity="0.8">Smart Light</text>
+
+  <!-- Thermostat - top right -->
+  <circle cx="1120" cy="170" r="45" fill="#001a22" stroke="#00d4ff" stroke-width="1.5" opacity="0.8"/>
+  <circle cx="1120" cy="163" r="22" fill="#001520" stroke="#00d4ff" stroke-width="1" opacity="0.7"/>
+  <circle cx="1120" cy="163" r="15" fill="#00d4ff" opacity="0.15"/>
+  <text x="1120" y="168" font-family="Arial, sans-serif" font-size="11" fill="#00d4ff" text-anchor="middle" opacity="0.9">22°</text>
+  <text x="1120" y="233" font-family="Arial, sans-serif" font-size="12" fill="#c0c0c0" text-anchor="middle" opacity="0.8">Thermostat</text>
+
+  <!-- Camera - right -->
+  <circle cx="1160" cy="450" r="45" fill="#001a22" stroke="#00d4ff" stroke-width="1.5" opacity="0.8"/>
+  <rect x="1138" y="433" width="30" height="22" fill="#001520" stroke="#00d4ff" stroke-width="1" opacity="0.7" rx="3"/>
+  <circle cx="1178" cy="444" r="7" fill="#001520" stroke="#00d4ff" stroke-width="1" opacity="0.7"/>
+  <circle cx="1153" cy="444" r="6" fill="#00d4ff" opacity="0.3"/>
+  <text x="1160" y="513" font-family="Arial, sans-serif" font-size="12" fill="#c0c0c0" text-anchor="middle" opacity="0.8">Security Cam</text>
+
+  <!-- Lock - bottom right -->
+  <circle cx="1120" cy="730" r="45" fill="#001a22" stroke="#00d4ff" stroke-width="1.5" opacity="0.8"/>
+  <rect x="1104" y="723" width="32" height="24" fill="#001520" stroke="#00d4ff" stroke-width="1" opacity="0.7" rx="2"/>
+  <rect x="1112" y="712" width="16" height="14" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.7" rx="8"/>
+  <circle cx="1120" cy="735" r="4" fill="#00d4ff" opacity="0.7"/>
+  <text x="1120" y="793" font-family="Arial, sans-serif" font-size="12" fill="#c0c0c0" text-anchor="middle" opacity="0.8">Smart Lock</text>
+
+  <!-- Speaker - bottom -->
+  <circle cx="800" cy="780" r="45" fill="#001a22" stroke="#00d4ff" stroke-width="1.5" opacity="0.8"/>
+  <circle cx="800" cy="780" r="20" fill="#001520" stroke="#00d4ff" stroke-width="1" opacity="0.7"/>
+  <circle cx="800" cy="780" r="10" fill="#00d4ff" opacity="0.2"/>
+  <circle cx="800" cy="780" r="4" fill="#00d4ff" opacity="0.5"/>
+  <text x="800" y="843" font-family="Arial, sans-serif" font-size="12" fill="#c0c0c0" text-anchor="middle" opacity="0.8">Smart Speaker</text>
+
+  <!-- Blinds - bottom left -->
+  <circle cx="480" cy="730" r="45" fill="#001a22" stroke="#00d4ff" stroke-width="1.5" opacity="0.8"/>
+  <rect x="462" y="715" width="36" height="30" fill="#001520" stroke="#00d4ff" stroke-width="1" opacity="0.7" rx="1"/>
+  <line x1="463" y1="723" x2="497" y2="723" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
+  <line x1="463" y1="731" x2="497" y2="731" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
+  <line x1="463" y1="739" x2="497" y2="739" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+  <text x="480" y="793" font-family="Arial, sans-serif" font-size="12" fill="#c0c0c0" text-anchor="middle" opacity="0.8">Smart Blind</text>
+
+  <!-- Climate - left -->
+  <circle cx="440" cy="450" r="45" fill="#001a22" stroke="#00d4ff" stroke-width="1.5" opacity="0.8"/>
+  <rect x="420" y="432" width="40" height="30" fill="#001520" stroke="#00d4ff" stroke-width="1" opacity="0.7" rx="2"/>
+  <line x1="428" y1="448" x2="452" y2="448" stroke="#00d4ff" stroke-width="1" opacity="0.6"/>
+  <line x1="424" y1="454" x2="456" y2="454" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
+  <text x="440" y="513" font-family="Arial, sans-serif" font-size="12" fill="#c0c0c0" text-anchor="middle" opacity="0.8">HVAC</text>
+
+  <!-- Panel - top left -->
+  <circle cx="480" cy="170" r="45" fill="#001a22" stroke="#00d4ff" stroke-width="1.5" opacity="0.8"/>
+  <rect x="462" y="152" width="36" height="50" fill="#001520" stroke="#00d4ff" stroke-width="1" opacity="0.7" rx="2"/>
+  <rect x="466" y="157" width="28" height="14" fill="#00d4ff" opacity="0.15" rx="1"/>
+  <line x1="466" y1="177" x2="494" y2="177" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
+  <line x1="466" y1="184" x2="490" y2="184" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+  <text x="480" y="233" font-family="Arial, sans-serif" font-size="12" fill="#c0c0c0" text-anchor="middle" opacity="0.8">Wall Panel</text>
+
+  <!-- Person icon (right of scene) -->
+  <circle cx="1400" cy="380" r="30" fill="#0f1e30" stroke="#c0c0c0" stroke-width="1" opacity="0.6"/>
+  <circle cx="1400" cy="368" r="12" fill="#c0c0c0" opacity="0.3"/>
+  <path d="M1375,410 Q1400,395 1425,410" fill="#c0c0c0" opacity="0.25"/>
+  <text x="1400" y="440" font-family="Arial, sans-serif" font-size="12" fill="#c0c0c0" text-anchor="middle" opacity="0.7">Homeowner</text>
+  <!-- Arrow from person to hub -->
+  <line x1="1360" y1="395" x2="900" y2="440" stroke="#c0c0c0" stroke-width="1" opacity="0.2" stroke-dasharray="6,4"/>
+
+  <!-- Step labels -->
+  <text x="800" y="860" font-family="Arial, sans-serif" font-size="22" font-weight="300" letter-spacing="4" fill="#c0c0c0" text-anchor="middle" opacity="0.85">SMART HOME SYSTEM OVERVIEW</text>
+  <text x="800" y="885" font-family="Arial, sans-serif" font-size="12" letter-spacing="2" fill="#00d4ff" text-anchor="middle" opacity="0.6">ZAKEY CENTRAL HUB · ALL DEVICES CONNECTED · ONE APP</text>
+</svg>

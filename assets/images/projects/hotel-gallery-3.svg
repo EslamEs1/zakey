@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="restBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c1020;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#05070d;stop-opacity:1"/>
+    </linearGradient>
+    <radialGradient id="spotTop" cx="50%" cy="0%" r="70%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#restBg)"/>
+  <!-- Walls and ceiling -->
+  <rect x="0" y="0" width="800" height="440" fill="#0d1525"/>
+  <rect x="0" y="440" width="800" height="160" fill="#070c14"/>
+  <rect x="0" y="0" width="800" height="50" fill="#090d18"/>
+  <!-- Dark wood wall paneling -->
+  <rect x="0" y="50" width="800" height="390" fill="#0c1525"/>
+  <line x1="0" y1="280" x2="800" y2="280" stroke="#1a2535" stroke-width="1.5" opacity="0.4"/>
+  <!-- Ceiling recessed lights with adaptive cones -->
+  <circle cx="130" cy="25" r="9" fill="#f59e0b" opacity="0.4" filter="url(#glow)"/>
+  <polygon points="90,50 170,50 210,440 50,440" fill="url(#spotTop)" opacity="0.3"/>
+  <circle cx="320" cy="25" r="9" fill="#f59e0b" opacity="0.35" filter="url(#glow)"/>
+  <polygon points="280,50 360,50 390,440 250,440" fill="url(#spotTop)" opacity="0.25"/>
+  <circle cx="510" cy="25" r="9" fill="#f59e0b" opacity="0.4" filter="url(#glow)"/>
+  <polygon points="470,50 550,50 570,440 450,440" fill="url(#spotTop)" opacity="0.3"/>
+  <circle cx="700" cy="25" r="9" fill="#00d4ff" opacity="0.3" filter="url(#glow)"/>
+  <polygon points="660,50 740,50 760,440 640,440" fill="#00d4ff" opacity="0.04"/>
+  <!-- Track lighting rail -->
+  <rect x="50" y="10" width="700" height="8" fill="#1a2535" rx="2"/>
+  <!-- Tables -->
+  <!-- Table 1 (left) -->
+  <ellipse cx="160" cy="390" rx="80" ry="25" fill="#0d1828" stroke="#1e3050" stroke-width="1"/>
+  <rect x="140" y="390" width="40" height="55" fill="#0a1020" stroke="#1e3050" stroke-width="1"/>
+  <!-- Table cloth -->
+  <ellipse cx="160" cy="390" rx="78" ry="22" fill="#101e30" opacity="0.8"/>
+  <!-- Table 1 items: wine glass, candle -->
+  <polygon points="153,320 170,390 140,390" fill="#0a1020" opacity="0.8"/>
+  <polygon points="152,320 172,320 170,390 140,390" fill="#0d1828" opacity="0.6"/>
+  <circle cx="162" cy="317" r="12" fill="#0a1020" stroke="#1e3050" stroke-width="0.5" opacity="0.6"/>
+  <circle cx="200" cy="373" r="5" fill="#0f1825"/>
+  <circle cx="200" cy="369" r="4" fill="#f59e0b" opacity="0.6" filter="url(#glow)"/>
+  <!-- Table 2 (center) -->
+  <ellipse cx="400" cy="390" rx="90" ry="27" fill="#0d1828" stroke="#1e3050" stroke-width="1"/>
+  <rect x="375" y="390" width="50" height="55" fill="#0a1020" stroke="#1e3050" stroke-width="1"/>
+  <ellipse cx="400" cy="390" rx="88" ry="24" fill="#101e30" opacity="0.8"/>
+  <!-- Candle -->
+  <circle cx="420" cy="368" r="5" fill="#0f1825"/>
+  <circle cx="420" cy="364" r="4" fill="#f59e0b" opacity="0.7" filter="url(#glow)"/>
+  <!-- Wine glasses -->
+  <polygon points="375,310 390,390 360,390" fill="#0a1020" opacity="0.7"/>
+  <circle cx="382" cy="307" r="11" fill="#0a1020" stroke="#1e3050" stroke-width="0.5" opacity="0.5"/>
+  <polygon points="415,310 430,390 400,390" fill="#0a1020" opacity="0.7"/>
+  <circle cx="422" cy="307" r="11" fill="#0a1020" stroke="#1e3050" stroke-width="0.5" opacity="0.5"/>
+  <!-- Table 3 (right) -->
+  <ellipse cx="640" cy="390" rx="80" ry="25" fill="#0d1828" stroke="#1e3050" stroke-width="1"/>
+  <rect x="620" y="390" width="40" height="55" fill="#0a1020" stroke="#1e3050" stroke-width="1"/>
+  <ellipse cx="640" cy="390" rx="78" ry="22" fill="#101e30" opacity="0.8"/>
+  <circle cx="660" cy="373" r="5" fill="#0f1825"/>
+  <circle cx="660" cy="369" r="4" fill="#f59e0b" opacity="0.6" filter="url(#glow)"/>
+  <!-- Chairs (simple arcs/rects) -->
+  <rect x="100" y="420" width="50" height="35" fill="#0a1525" rx="3" stroke="#1a2840" stroke-width="1"/>
+  <rect x="210" y="420" width="50" height="35" fill="#0a1525" rx="3" stroke="#1a2840" stroke-width="1"/>
+  <rect x="340" y="420" width="50" height="35" fill="#0a1525" rx="3" stroke="#1a2840" stroke-width="1"/>
+  <rect x="410" y="420" width="50" height="35" fill="#0a1525" rx="3" stroke="#1a2840" stroke-width="1"/>
+  <rect x="575" y="420" width="50" height="35" fill="#0a1525" rx="3" stroke="#1a2840" stroke-width="1"/>
+  <rect x="675" y="420" width="50" height="35" fill="#0a1525" rx="3" stroke="#1a2840" stroke-width="1"/>
+  <!-- Zone control panel -->
+  <rect x="700" y="100" width="85" height="170" fill="#050d18" rx="4" stroke="#00d4ff" stroke-width="1.5" opacity="0.8"/>
+  <rect x="710" y="112" width="65" height="40" fill="#001a22" rx="2"/>
+  <text x="742" y="128" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.9">RESTAURANT</text>
+  <text x="742" y="143" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.7">Zone Control</text>
+  <rect x="710" y="160" width="65" height="16" fill="#f59e0b" opacity="0.2" rx="2"/>
+  <text x="742" y="172" font-family="Arial, sans-serif" font-size="7" fill="#f59e0b" text-anchor="middle">Dining</text>
+  <rect x="710" y="182" width="65" height="16" fill="#1a2840" rx="2"/>
+  <text x="742" y="194" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Lounge</text>
+  <rect x="710" y="204" width="65" height="16" fill="#1a2840" rx="2"/>
+  <text x="742" y="216" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.5">Bar</text>
+  <rect x="710" y="226" width="65" height="16" fill="#1a2840" rx="2"/>
+  <text x="742" y="238" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.5">Event</text>
+  <!-- Ceiling edge line -->
+  <line x1="0" y1="50" x2="800" y2="50" stroke="#f59e0b" stroke-width="1" opacity="0.12"/>
+  <!-- Label -->
+  <text x="400" y="580" font-family="Arial, sans-serif" font-size="14" font-weight="300" letter-spacing="3" fill="#c0c0c0" text-anchor="middle" opacity="0.8">RESTAURANT ZONE · ADAPTIVE LIGHTING</text>
+</svg>

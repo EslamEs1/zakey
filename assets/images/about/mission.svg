@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <filter id="glowFilter">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="50" cy="50" r="44" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Compass rose tick marks -->
+  <!-- Cardinal ticks (longer) -->
+  <line x1="50" y1="6" x2="50" y2="16" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="50" y1="84" x2="50" y2="94" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="6" y1="50" x2="16" y2="50" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="84" y1="50" x2="94" y2="50" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Inter-cardinal ticks (shorter) -->
+  <line x1="81" y1="19" x2="75" y2="25" stroke="#00d4ff" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+  <line x1="19" y1="19" x2="25" y2="25" stroke="#00d4ff" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+  <line x1="19" y1="81" x2="25" y2="75" stroke="#00d4ff" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+  <line x1="81" y1="81" x2="75" y2="75" stroke="#00d4ff" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Target rings -->
+  <circle cx="50" cy="50" r="30" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.3"/>
+  <circle cx="50" cy="50" r="18" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
+
+  <!-- Compass cross lines -->
+  <line x1="50" y1="20" x2="50" y2="80" stroke="#00d4ff" stroke-width="0.75" opacity="0.25"/>
+  <line x1="20" y1="50" x2="80" y2="50" stroke="#00d4ff" stroke-width="0.75" opacity="0.25"/>
+
+  <!-- Compass rose arrow points (N/S/E/W) -->
+  <!-- North point (pointing up, filled) -->
+  <polygon points="50,22 46,38 50,35 54,38" fill="#00d4ff" opacity="0.8"/>
+  <!-- South point (empty) -->
+  <polygon points="50,78 46,62 50,65 54,62" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
+  <!-- East point -->
+  <polygon points="78,50 62,46 65,50 62,54" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
+  <!-- West point -->
+  <polygon points="22,50 38,46 35,50 38,54" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
+
+  <!-- Center star -->
+  <polygon points="50,40 51.5,47 58,47 52.5,51.5 54.5,58.5 50,54 45.5,58.5 47.5,51.5 42,47 48.5,47"
+    fill="#00d4ff" filter="url(#glowFilter)" opacity="0.95"/>
+
+  <!-- Center dot -->
+  <circle cx="50" cy="50" r="3" fill="#ffffff" opacity="0.9"/>
+  <circle cx="50" cy="50" r="1.5" fill="#00d4ff"/>
+</svg>

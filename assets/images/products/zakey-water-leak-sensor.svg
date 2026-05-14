@@ -1,16 +1,130 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
   <defs>
-    <linearGradient id="bg-WATER LEAK SENSOR" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
+    <radialGradient id="wl-bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
+    </radialGradient>
+    <pattern id="wl-hex" x="0" y="0" width="20" height="17.3" patternUnits="userSpaceOnUse">
+      <polygon points="10,1 19,5.5 19,11.8 10,16.3 1,11.8 1,5.5" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+    <!-- Body — white/light gray -->
+    <linearGradient id="wl-body-top" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8f5f0"/>
+      <stop offset="60%" stop-color="#eceae6"/>
+      <stop offset="100%" stop-color="#d8d6d2"/>
     </linearGradient>
-    <radialGradient id="gl-WATER LEAK SENSOR" cx="240" cy="185" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <!-- Body front face -->
+    <linearGradient id="wl-body-front" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0ece8"/>
+      <stop offset="100%" stop-color="#d8d4d0"/>
+    </linearGradient>
+    <!-- Body right side -->
+    <linearGradient id="wl-body-side" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d0ccc8"/>
+      <stop offset="100%" stop-color="#b8b4b0"/>
+    </linearGradient>
+    <!-- Probe metallic -->
+    <linearGradient id="wl-probe-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d8d8d8"/>
+      <stop offset="50%" stop-color="#a8a8a8"/>
+      <stop offset="100%" stop-color="#888888"/>
+    </linearGradient>
+    <!-- Water droplet -->
+    <radialGradient id="wl-drop-grad" cx="35%" cy="28%" r="65%">
+      <stop offset="0%" stop-color="#80e8ff"/>
+      <stop offset="55%" stop-color="#00aaee"/>
+      <stop offset="100%" stop-color="#006699"/>
+    </radialGradient>
+    <!-- Blue glow -->
+    <radialGradient id="wl-glow" cx="60%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#0088ff" stop-opacity="0.16"/>
+      <stop offset="65%" stop-color="#0044ff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0044ff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Drop glow -->
+    <radialGradient id="wl-drop-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00ccff" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#00ccff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Shadow -->
+    <radialGradient id="wl-shadow" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-WATER LEAK SENSOR)"/>
-  <ellipse cx="240" cy="185" rx="180" ry="140" fill="url(#gl-WATER LEAK SENSOR)"/>
-  <ellipse cx="240" cy="190" rx="75" ry="90" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><circle cx="240" cy="190" r="28" fill="#05070d" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.4"/><circle cx="240" cy="190" r="12" fill="#22d3ee" fill-opacity="0.20"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">WATER LEAK SENSOR</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#wl-bg)"/>
+  <rect width="480" height="360" fill="url(#wl-hex)"/>
+
+  <!-- Blue radial glow -->
+  <ellipse cx="265" cy="188" rx="155" ry="115" fill="url(#wl-glow)"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="210" cy="272" rx="90" ry="11" fill="url(#wl-shadow)"/>
+
+  <!-- === SENSOR BODY — 120x50px face, slight 3D angle === -->
+  <!-- Right side depth -->
+  <polygon points="270,152 282,145 282,202 270,208" fill="url(#wl-body-side)"/>
+  <!-- Top face -->
+  <polygon points="150,152 270,152 282,145 162,145" fill="url(#wl-body-top)"/>
+  <!-- Front face -->
+  <rect x="150" y="152" width="120" height="50" rx="8" fill="url(#wl-body-front)"/>
+  <!-- Front face border -->
+  <rect x="150" y="152" width="120" height="50" rx="8" fill="none" stroke="#c8c4c0" stroke-width="1.2"/>
+  <!-- Top highlight -->
+  <rect x="152" y="153" width="116" height="4" rx="2" fill="#ffffff" opacity="0.55"/>
+  <!-- Left highlight strip -->
+  <rect x="150" y="153" width="4" height="48" rx="2" fill="#ffffff" opacity="0.40"/>
+  <!-- Face sheen -->
+  <ellipse cx="190" cy="162" rx="28" ry="7" fill="#ffffff" opacity="0.18"/>
+
+  <!-- Blue LED indicator (water detected) -->
+  <circle cx="175" cy="177" r="4" fill="#2299ff" opacity="0.95"/>
+  <circle cx="175" cy="177" r="7.5" fill="#2299ff" opacity="0.28"/>
+  <circle cx="175" cy="176" r="1.8" fill="#aae8ff" opacity="0.8"/>
+
+  <!-- WiFi icon -->
+  <path d="M196,168 Q205,161 214,168" stroke="#a8a4a0" stroke-width="1.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+  <path d="M199,172 Q205,166 211,172" stroke="#a8a4a0" stroke-width="1.2" fill="none" opacity="0.55" stroke-linecap="round"/>
+  <circle cx="205" cy="175" r="1.5" fill="#a8a4a0" opacity="0.7"/>
+
+  <!-- ZK-LEAK label -->
+  <text x="232" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#888480" opacity="0.9" letter-spacing="0.5">ZK-LEAK</text>
+
+  <!-- Probe contact pads — left end -->
+  <rect x="154" y="200" width="18" height="5" rx="1.5" fill="url(#wl-probe-grad)"/>
+  <rect x="154" y="200" width="18" height="5" rx="1.5" fill="none" stroke="#aaaaaa" stroke-width="0.8"/>
+  <!-- Probe contact pads — right end -->
+  <rect x="250" y="200" width="18" height="5" rx="1.5" fill="url(#wl-probe-grad)"/>
+  <rect x="250" y="200" width="18" height="5" rx="1.5" fill="none" stroke="#aaaaaa" stroke-width="0.8"/>
+
+  <!-- Sensor probes on bottom face (silver pins) -->
+  <!-- Left probe pair -->
+  <rect x="162" y="202" width="4" height="10" rx="1" fill="url(#wl-probe-grad)"/>
+  <rect x="162" y="202" width="4" height="10" rx="1" fill="none" stroke="#aaaaaa" stroke-width="0.6"/>
+  <rect x="170" y="202" width="4" height="10" rx="1" fill="url(#wl-probe-grad)"/>
+  <rect x="170" y="202" width="4" height="10" rx="1" fill="none" stroke="#aaaaaa" stroke-width="0.6"/>
+  <!-- Right probe pair -->
+  <rect x="252" y="202" width="4" height="10" rx="1" fill="url(#wl-probe-grad)"/>
+  <rect x="252" y="202" width="4" height="10" rx="1" fill="none" stroke="#aaaaaa" stroke-width="0.6"/>
+  <rect x="260" y="202" width="4" height="10" rx="1" fill="url(#wl-probe-grad)"/>
+  <rect x="260" y="202" width="4" height="10" rx="1" fill="none" stroke="#aaaaaa" stroke-width="0.6"/>
+
+  <!-- Water droplet graphic floating near sensor -->
+  <!-- Glow behind droplet -->
+  <ellipse cx="340" cy="158" rx="32" ry="38" fill="url(#wl-drop-glow)"/>
+  <!-- Droplet shape — teardrop path -->
+  <path d="M340,108 C328,125 318,142 318,155 C318,170 328,180 340,180 C352,180 362,170 362,155 C362,142 352,125 340,108 Z" fill="url(#wl-drop-grad)"/>
+  <!-- Droplet inner highlight -->
+  <path d="M340,116 C333,129 327,143 327,153 C327,162 332,170 340,173" stroke="#aae8ff" stroke-width="1" fill="none" opacity="0.4" stroke-linecap="round"/>
+  <!-- Droplet specular -->
+  <ellipse cx="332" cy="133" rx="5" ry="10" fill="#ffffff" opacity="0.35"/>
+  <circle cx="329" cy="127" r="3" fill="#ffffff" opacity="0.4"/>
+
+  <!-- Reflection line -->
+  <ellipse cx="207" cy="275" rx="66" ry="6" fill="#2299ff" opacity="0.04"/>
+
+  <!-- Product label -->
+  <text x="240" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" opacity="0.40" letter-spacing="2.5">WATER LEAK SENSOR</text>
 </svg>

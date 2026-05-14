@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="roomBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1520;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#05070d;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="wallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#111d2a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0d1520;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1320;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#060c14;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="bedGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0ebe0;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#d0cbc0;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="pillowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#e8e4e0;stop-opacity:1"/>
+    </linearGradient>
+    <radialGradient id="warmAmbient" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="cyanPanelGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Room background -->
+  <rect width="1600" height="900" fill="url(#roomBg)"/>
+
+  <!-- Back wall -->
+  <rect x="0" y="0" width="1600" height="620" fill="url(#wallGrad)"/>
+
+  <!-- Floor -->
+  <rect x="0" y="620" width="1600" height="280" fill="url(#floorGrad)"/>
+  <!-- Floor perspective lines -->
+  <line x1="0" y1="620" x2="800" y2="900" stroke="#1a2535" stroke-width="1" opacity="0.3"/>
+  <line x1="1600" y1="620" x2="800" y2="900" stroke="#1a2535" stroke-width="1" opacity="0.3"/>
+  <line x1="0" y1="700" x2="1600" y2="700" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+  <line x1="0" y1="780" x2="1600" y2="780" stroke="#1a2535" stroke-width="1" opacity="0.15"/>
+
+  <!-- Ceiling cove lighting -->
+  <rect x="0" y="0" width="1600" height="60" fill="#0a1020"/>
+  <rect x="0" y="55" width="1600" height="8" fill="#f59e0b" opacity="0.15"/>
+  <!-- Ambient warm overhead -->
+  <ellipse cx="800" cy="60" rx="600" ry="100" fill="url(#warmAmbient)" opacity="0.8"/>
+
+  <!-- Left wall panel / window area -->
+  <!-- Curtains - partially drawn -->
+  <rect x="80" y="80" width="120" height="420" fill="#1a2535" rx="2"/>
+  <rect x="80" y="80" width="80" height="420" fill="#162030" rx="2"/>
+  <!-- Curtain folds -->
+  <line x1="110" y1="80" x2="110" y2="500" stroke="#1e2a3a" stroke-width="2" opacity="0.5"/>
+  <line x1="140" y1="80" x2="140" y2="500" stroke="#1e2a3a" stroke-width="2" opacity="0.4"/>
+  <!-- Window behind curtain - partial glow -->
+  <rect x="200" y="80" width="100" height="420" fill="#f59e0b" opacity="0.08" rx="2"/>
+  <rect x="200" y="80" width="100" height="420" fill="none" stroke="#f59e0b" stroke-width="1" rx="2" opacity="0.3"/>
+
+  <!-- Window right side - curtain partially drawn -->
+  <rect x="1300" y="80" width="220" height="420" fill="#0f1825" rx="2"/>
+  <rect x="1420" y="80" width="100" height="420" fill="#1a2535" rx="2"/>
+  <line x1="1450" y1="80" x2="1450" y2="500" stroke="#1e2a3a" stroke-width="2" opacity="0.5"/>
+  <line x1="1480" y1="80" x2="1480" y2="500" stroke="#1e2a3a" stroke-width="2" opacity="0.4"/>
+  <!-- Curtain rod -->
+  <rect x="70" y="74" width="280" height="8" fill="#1e3050" rx="2"/>
+  <rect x="1280" y="74" width="250" height="8" fill="#1e3050" rx="2"/>
+
+  <!-- Headboard wall decoration -->
+  <rect x="400" y="60" width="800" height="480" fill="#0f1a28" rx="2"/>
+  <!-- Decorative panels behind headboard -->
+  <rect x="420" y="80" width="760" height="20" fill="#1a2840" rx="1"/>
+  <rect x="420" y="105" width="760" height="2" fill="#00d4ff" opacity="0.2"/>
+
+  <!-- TV unit on right wall above bed level -->
+  <rect x="1100" y="150" width="300" height="200" fill="#080e18" rx="3"/>
+  <rect x="1110" y="160" width="280" height="180" fill="#030608" rx="2"/>
+  <!-- TV welcome screen -->
+  <rect x="1110" y="160" width="280" height="180" fill="#001520" rx="2" opacity="0.9"/>
+  <text x="1250" y="230" font-family="Arial, sans-serif" font-size="18" fill="#00d4ff" text-anchor="middle" opacity="0.9">Welcome</text>
+  <text x="1250" y="255" font-family="Arial, sans-serif" font-size="11" fill="#c0c0c0" text-anchor="middle" opacity="0.7">Room 1204 · Premium Suite</text>
+  <line x1="1160" y1="268" x2="1340" y2="268" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+  <text x="1250" y="290" font-family="Arial, sans-serif" font-size="10" fill="#00d4ff" text-anchor="middle" opacity="0.6">● SMART ROOM ACTIVE</text>
+  <!-- TV stand -->
+  <rect x="1200" y="350" width="100" height="8" fill="#0f1825" rx="2"/>
+
+  <!-- Bedside smart control panel on wall -->
+  <rect x="430" y="200" width="130" height="200" fill="#051015" rx="4" stroke="#00d4ff" stroke-width="1.5" opacity="0.8"/>
+  <!-- Panel glow -->
+  <ellipse cx="495" cy="300" rx="100" ry="130" fill="url(#cyanPanelGlow)" opacity="0.6"/>
+  <!-- Panel screen -->
+  <rect x="445" y="215" width="100" height="60" fill="#001a22" rx="2"/>
+  <text x="495" y="238" font-family="Arial, sans-serif" font-size="9" fill="#00d4ff" text-anchor="middle" opacity="0.9">ROOM CONTROL</text>
+  <line x1="450" y1="245" x2="540" y2="245" stroke="#00d4ff" stroke-width="0.5" opacity="0.4"/>
+  <text x="495" y="258" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.7">Scene: Welcome</text>
+  <text x="495" y="270" font-family="Arial, sans-serif" font-size="8" fill="#f59e0b" text-anchor="middle" opacity="0.7">Temp: 22°C</text>
+  <!-- Scene buttons -->
+  <rect x="448" y="288" width="88" height="22" fill="#00d4ff" opacity="0.2" rx="2"/>
+  <text x="492" y="303" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle">WELCOME</text>
+  <rect x="448" y="318" width="88" height="22" fill="#1a2840" rx="2" stroke="#1e3050" stroke-width="1"/>
+  <text x="492" y="333" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.6">SLEEP</text>
+  <rect x="448" y="348" width="88" height="22" fill="#1a2840" rx="2" stroke="#1e3050" stroke-width="1"/>
+  <text x="492" y="363" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.6">DO NOT DISTURB</text>
+
+  <!-- BED -->
+  <!-- Bed frame base -->
+  <rect x="520" y="440" width="680" height="200" fill="#0f1a28" rx="4"/>
+  <!-- Mattress -->
+  <rect x="530" y="420" width="660" height="180" fill="url(#bedGrad)" rx="3"/>
+  <!-- Mattress lighting underneath - cyan perimeter glow -->
+  <rect x="525" y="595" width="670" height="8" fill="#00d4ff" opacity="0.4" filter="url(#glow)"/>
+  <!-- Duvet/blanket -->
+  <rect x="530" y="480" width="660" height="120" fill="#e8e4e0" rx="2"/>
+  <!-- Duvet fold -->
+  <rect x="530" y="480" width="660" height="30" fill="#f0ece8" rx="2"/>
+  <!-- Duvet folds detail -->
+  <line x1="600" y1="480" x2="600" y2="600" stroke="#d8d4d0" stroke-width="1" opacity="0.5"/>
+  <line x1="700" y1="480" x2="700" y2="600" stroke="#d8d4d0" stroke-width="1" opacity="0.4"/>
+  <line x1="800" y1="480" x2="800" y2="600" stroke="#d8d4d0" stroke-width="1" opacity="0.5"/>
+  <line x1="900" y1="480" x2="900" y2="600" stroke="#d8d4d0" stroke-width="1" opacity="0.4"/>
+  <line x1="1000" y1="480" x2="1000" y2="600" stroke="#d8d4d0" stroke-width="1" opacity="0.5"/>
+  <line x1="1100" y1="480" x2="1100" y2="600" stroke="#d8d4d0" stroke-width="1" opacity="0.4"/>
+  <!-- Pillows -->
+  <rect x="560" y="425" width="180" height="60" fill="url(#pillowGrad)" rx="8"/>
+  <rect x="980" y="425" width="180" height="60" fill="url(#pillowGrad)" rx="8"/>
+  <!-- Pillow shadows -->
+  <rect x="560" y="470" width="180" height="15" fill="#c8c4c0" rx="0 0 8 8"/>
+  <rect x="980" y="470" width="180" height="15" fill="#c8c4c0" rx="0 0 8 8"/>
+
+  <!-- Headboard -->
+  <rect x="520" y="350" width="680" height="80" fill="#0d1828" rx="4" stroke="#1e3050" stroke-width="1"/>
+  <!-- Headboard tufted detail -->
+  <circle cx="610" cy="390" r="5" fill="#1a2a40" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="720" cy="390" r="5" fill="#1a2a40" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="830" cy="390" r="5" fill="#1a2a40" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="940" cy="390" r="5" fill="#1a2a40" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="1050" cy="390" r="5" fill="#1a2a40" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Bedside tables -->
+  <rect x="410" y="500" width="115" height="120" fill="#0a1520" rx="2" stroke="#1a2840" stroke-width="1"/>
+  <rect x="1095" y="500" width="115" height="120" fill="#0a1520" rx="2" stroke="#1a2840" stroke-width="1"/>
+  <!-- Bedside lamps -->
+  <rect x="445" y="480" width="40" height="5" fill="#1a2840" rx="1"/>
+  <polygon points="455,400 475,480 435,480" fill="#0f1825" opacity="0.9"/>
+  <ellipse cx="465" cy="403" rx="18" ry="10" fill="#f59e0b" opacity="0.4" filter="url(#softGlow)"/>
+  <rect x="1135" y="480" width="40" height="5" fill="#1a2840" rx="1"/>
+  <polygon points="1145,400 1165,480 1125,480" fill="#0f1825" opacity="0.9"/>
+  <ellipse cx="1155" cy="403" rx="18" ry="10" fill="#f59e0b" opacity="0.4" filter="url(#softGlow)"/>
+
+  <!-- Room label -->
+  <text x="800" y="860" font-family="Arial, sans-serif" font-size="22" font-weight="300" letter-spacing="4" fill="#c0c0c0" text-anchor="middle" opacity="0.85">SMART HOTEL ROOM</text>
+  <text x="800" y="885" font-family="Arial, sans-serif" font-size="12" letter-spacing="2" fill="#00d4ff" text-anchor="middle" opacity="0.6">WELCOME SCENE · SMART CLIMATE · SCENE AUTOMATION</text>
+</svg>

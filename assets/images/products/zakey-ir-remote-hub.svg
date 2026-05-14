@@ -1,16 +1,115 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
   <defs>
-    <linearGradient id="bg-IR REMOTE HUB" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
-    </linearGradient>
-    <radialGradient id="gl-IR REMOTE HUB" cx="240" cy="185" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <radialGradient id="bgG" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
     </radialGradient>
+    <pattern id="hexPat" x="0" y="0" width="30" height="34" patternUnits="userSpaceOnUse">
+      <polygon points="15,1 28,9 28,25 15,33 2,25 2,9" fill="none" stroke="#6080d0" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+    <!-- Box top face -->
+    <linearGradient id="topG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#222540"/>
+      <stop offset="100%" stop-color="#1c1e35"/>
+    </linearGradient>
+    <!-- Box front face -->
+    <linearGradient id="frontG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e2238"/>
+      <stop offset="100%" stop-color="#161828"/>
+    </linearGradient>
+    <!-- Box right side -->
+    <linearGradient id="rightG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#111325"/>
+      <stop offset="100%" stop-color="#0d0f1e"/>
+    </linearGradient>
+    <!-- Cyan glow -->
+    <radialGradient id="cGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.17"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Drop shadow -->
+    <radialGradient id="shadowG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softG" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-IR REMOTE HUB)"/>
-  <ellipse cx="240" cy="185" rx="180" ry="140" fill="url(#gl-IR REMOTE HUB)"/>
-  <rect x="195" y="80" width="90" height="200" rx="20" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><circle cx="240" cy="130" r="20" fill="#22d3ee" fill-opacity="0.15"/><rect x="215" y="165" width="50" height="8" rx="4" fill="#22d3ee" fill-opacity="0.25"/><rect x="215" y="183" width="50" height="8" rx="4" fill="#22d3ee" fill-opacity="0.18"/><rect x="215" y="201" width="50" height="8" rx="4" fill="#22d3ee" fill-opacity="0.12"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">IR REMOTE HUB</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bgG)"/>
+  <rect width="480" height="360" fill="url(#hexPat)"/>
+
+  <!-- Product glow -->
+  <ellipse cx="240" cy="190" rx="115" ry="95" fill="url(#cGlow)"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="232" cy="280" rx="80" ry="11" fill="url(#shadowG)" opacity="0.5"/>
+
+  <!-- === 3/4 PERSPECTIVE BOX === -->
+  <!-- Dimensions: 80x50x30 approx on screen -->
+  <!-- Top face (parallelogram) -->
+  <polygon points="172,148 292,148 310,130 190,130" fill="url(#topG)"/>
+  <!-- Top face lit edge -->
+  <line x1="172" y1="148" x2="292" y2="148" stroke="#3a3e62" stroke-width="1.5" opacity="0.8"/>
+  <line x1="172" y1="148" x2="190" y2="130" stroke="#3a3e62" stroke-width="1.2" opacity="0.6"/>
+  <polygon points="172,148 292,148 294,150 174,150" fill="#3a3e62" opacity="0.4"/>
+
+  <!-- Right side face -->
+  <polygon points="292,148 310,130 310,220 292,238" fill="url(#rightG)"/>
+  <!-- Right side edge accent -->
+  <line x1="310" y1="130" x2="310" y2="220" stroke="#181a2e" stroke-width="1"/>
+
+  <!-- Front face (main) -->
+  <rect x="172" y="148" width="120" height="90" rx="4" fill="url(#frontG)"/>
+  <!-- Front face left+top edge highlight -->
+  <rect x="172" y="148" width="2.5" height="90" rx="1" fill="#3a3e62" opacity="0.85"/>
+  <rect x="172" y="148" width="120" height="2.5" rx="1" fill="#343860" opacity="0.75"/>
+
+  <!-- IR Blaster Lens on top face (front area) -->
+  <!-- Convex lens circle on top face at front-center -->
+  <ellipse cx="236" cy="148" rx="12" ry="7" fill="#100c10"/>
+  <ellipse cx="236" cy="148" rx="10" ry="5.5" fill="#0a0810"/>
+  <ellipse cx="234" cy="147" rx="4" ry="2.5" fill="#1e1828" opacity="0.6"/>
+  <!-- IR lens glow hint -->
+  <ellipse cx="236" cy="148" rx="12" ry="7" fill="#ff2000" opacity="0.05"/>
+
+  <!-- LED dots on top face (top-right quadrant) -->
+  <!-- Red: IR active -->
+  <circle cx="280" cy="135" r="4" fill="#ff2020" opacity="0.85" filter="url(#softG)"/>
+  <circle cx="280" cy="135" r="2.5" fill="#ff5040"/>
+  <!-- Cyan: WiFi -->
+  <circle cx="292" cy="135" r="4" fill="#00e5ff" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="292" cy="135" r="2.5" fill="#80f0ff"/>
+  <!-- Green: power -->
+  <circle cx="304" cy="135" r="4" fill="#00cc66" opacity="0.85" filter="url(#softG)"/>
+  <circle cx="304" cy="135" r="2.5" fill="#00ff88"/>
+
+  <!-- Front face: model label -->
+  <text x="232" y="183" text-anchor="middle" font-family="'Courier New', monospace" font-size="8"
+        fill="#6a7090" letter-spacing="1">ZK-IR01</text>
+  <!-- Front face: subtle Zakey branding area -->
+  <rect x="185" y="166" width="70" height="14" rx="3" fill="#161828" opacity="0.5"/>
+  <text x="220" y="176" text-anchor="middle" font-family="Arial" font-size="7" fill="#4a5070" letter-spacing="1">ZAKEY IR HUB</text>
+
+  <!-- USB-C port on back edge (right side) -->
+  <!-- Suggested on the right side face as a notch -->
+  <rect x="303" y="185" width="8" height="5" rx="1.5" fill="#080a18" stroke="#1e2038" stroke-width="0.8"/>
+
+  <!-- Bottom edge of front face: bottom shadow line -->
+  <line x1="172" y1="238" x2="292" y2="238" stroke="#0e1020" stroke-width="2"/>
+
+  <!-- Floor reflection -->
+  <rect x="172" y="238" width="120" height="30" rx="4" fill="url(#frontG)" opacity="0.07"
+        transform="scale(1,-1) translate(0,-476)"/>
+
+  <!-- Product label -->
+  <text x="240" y="316" text-anchor="middle" font-family="Arial, sans-serif" font-size="10"
+        fill="white" opacity="0.5" letter-spacing="2">IR REMOTE HUB</text>
 </svg>

@@ -1,16 +1,89 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <title>Zakey Secure Kit — Keypad and Fingerprint Sensor Detail</title>
   <defs>
-    <linearGradient id="bg-SECURE KIT — DETAIL" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d0f1c"/>
+      <stop offset="100%" stop-color="#060810"/>
     </linearGradient>
-    <radialGradient id="gl-SECURE KIT — DETAIL" cx="200" cy="165" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
+    <radialGradient id="glow" cx="240" cy="175" r="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.1"/>
+      <stop offset="60%" stop-color="#22d3ee" stop-opacity="0.05"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="ledGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="gf">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-SECURE KIT — DETAIL)"/>
-  <ellipse cx="200" cy="165" rx="180" ry="140" fill="url(#gl-SECURE KIT — DETAIL)"/>
-  <ellipse cx="240" cy="190" rx="75" ry="90" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><circle cx="240" cy="190" r="28" fill="#05070d" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.4"/><circle cx="240" cy="190" r="12" fill="#22d3ee" fill-opacity="0.20"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">SECURE KIT — DETAIL</text>
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bg)"/>
+  <ellipse cx="240" cy="175" rx="210" ry="170" fill="url(#glow)"/>
+
+  <!-- Dark metal texture background panel -->
+  <rect x="120" y="30" width="240" height="300" rx="6" fill="#141728" stroke="#1e2235" stroke-width="0.5"/>
+  <!-- Subtle metal texture lines -->
+  <line x1="120" y1="60" x2="360" y2="60" stroke="#1a1e30" stroke-width="0.5"/>
+  <line x1="120" y1="90" x2="360" y2="90" stroke="#1a1e30" stroke-width="0.5"/>
+  <line x1="120" y1="120" x2="360" y2="120" stroke="#1a1e30" stroke-width="0.5"/>
+  <line x1="120" y1="150" x2="360" y2="150" stroke="#1a1e30" stroke-width="0.5"/>
+  <line x1="120" y1="180" x2="360" y2="180" stroke="#1a1e30" stroke-width="0.5"/>
+  <line x1="120" y1="210" x2="360" y2="210" stroke="#1a1e30" stroke-width="0.5"/>
+  <line x1="120" y1="240" x2="360" y2="240" stroke="#1a1e30" stroke-width="0.5"/>
+  <line x1="120" y1="270" x2="360" y2="270" stroke="#1a1e30" stroke-width="0.5"/>
+  <line x1="120" y1="300" x2="360" y2="300" stroke="#1a1e30" stroke-width="0.5"/>
+
+  <!-- Status LED ring - top center, large -->
+  <circle cx="240" cy="62" r="18" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-opacity="0.85" filter="url(#gf)"/>
+  <circle cx="240" cy="62" r="8" fill="#22d3ee" fill-opacity="0.35"/>
+  <ellipse cx="240" cy="62" rx="30" ry="30" fill="url(#ledGlow)"/>
+
+  <!-- Keypad area: 3×4 number buttons -->
+  <rect x="165" y="92" width="150" height="168" rx="5" fill="#0f1120"/>
+
+  <!-- Button helper: row offsets y=112,136,160,184 ; col offsets x=195,240,285 -->
+  <!-- Row 1: 1 2 3 -->
+  <rect x="181" y="104" width="32" height="26" rx="5" fill="#1a1d2e" stroke="#252840" stroke-width="0.5"/>
+  <text x="197" y="121" font-family="system-ui,sans-serif" font-size="11" fill="#8b92a9" text-anchor="middle">1</text>
+  <rect x="224" y="104" width="32" height="26" rx="5" fill="#1a1d2e" stroke="#252840" stroke-width="0.5"/>
+  <text x="240" y="121" font-family="system-ui,sans-serif" font-size="11" fill="#8b92a9" text-anchor="middle">2</text>
+  <rect x="267" y="104" width="32" height="26" rx="5" fill="#1a1d2e" stroke="#252840" stroke-width="0.5"/>
+  <text x="283" y="121" font-family="system-ui,sans-serif" font-size="11" fill="#8b92a9" text-anchor="middle">3</text>
+  <!-- Row 2: 4 5 6 -->
+  <rect x="181" y="136" width="32" height="26" rx="5" fill="#1a1d2e" stroke="#252840" stroke-width="0.5"/>
+  <text x="197" y="153" font-family="system-ui,sans-serif" font-size="11" fill="#8b92a9" text-anchor="middle">4</text>
+  <rect x="224" y="136" width="32" height="26" rx="5" fill="#1a1d2e" stroke="#252840" stroke-width="0.5"/>
+  <text x="240" y="153" font-family="system-ui,sans-serif" font-size="11" fill="#8b92a9" text-anchor="middle">5</text>
+  <rect x="267" y="136" width="32" height="26" rx="5" fill="#1a1d2e" stroke="#252840" stroke-width="0.5"/>
+  <text x="283" y="153" font-family="system-ui,sans-serif" font-size="11" fill="#8b92a9" text-anchor="middle">6</text>
+  <!-- Row 3: 7 8 9 -->
+  <rect x="181" y="168" width="32" height="26" rx="5" fill="#1a1d2e" stroke="#252840" stroke-width="0.5"/>
+  <text x="197" y="185" font-family="system-ui,sans-serif" font-size="11" fill="#8b92a9" text-anchor="middle">7</text>
+  <rect x="224" y="168" width="32" height="26" rx="5" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="240" y="185" font-family="system-ui,sans-serif" font-size="11" fill="#22d3ee" text-anchor="middle">8</text>
+  <rect x="267" y="168" width="32" height="26" rx="5" fill="#1a1d2e" stroke="#252840" stroke-width="0.5"/>
+  <text x="283" y="185" font-family="system-ui,sans-serif" font-size="11" fill="#8b92a9" text-anchor="middle">9</text>
+  <!-- Row 4: * 0 # -->
+  <rect x="181" y="200" width="32" height="26" rx="5" fill="#1a1d2e" stroke="#252840" stroke-width="0.5"/>
+  <text x="197" y="217" font-family="system-ui,sans-serif" font-size="11" fill="#8b92a9" text-anchor="middle">*</text>
+  <rect x="224" y="200" width="32" height="26" rx="5" fill="#1a1d2e" stroke="#252840" stroke-width="0.5"/>
+  <text x="240" y="217" font-family="system-ui,sans-serif" font-size="11" fill="#8b92a9" text-anchor="middle">0</text>
+  <rect x="267" y="200" width="32" height="26" rx="5" fill="#1a1d2e" stroke="#252840" stroke-width="0.5"/>
+  <text x="283" y="217" font-family="system-ui,sans-serif" font-size="11" fill="#8b92a9" text-anchor="middle">#</text>
+
+  <!-- Fingerprint sensor oval - large, below keypad -->
+  <ellipse cx="240" cy="287" rx="38" ry="27" fill="#0e1020" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.4"/>
+  <!-- Fingerprint arc lines (concentric partial arcs) -->
+  <path d="M225 287 Q240 275 255 287" fill="none" stroke="#22d3ee" stroke-width="0.8" stroke-opacity="0.5"/>
+  <path d="M221 291 Q240 276 259 291" fill="none" stroke="#22d3ee" stroke-width="0.8" stroke-opacity="0.4"/>
+  <path d="M218 295 Q240 278 262 295" fill="none" stroke="#22d3ee" stroke-width="0.8" stroke-opacity="0.3"/>
+  <path d="M222 299 Q240 283 258 299" fill="none" stroke="#22d3ee" stroke-width="0.7" stroke-opacity="0.2"/>
+  <!-- Center dot on fingerprint -->
+  <circle cx="240" cy="287" r="3" fill="#22d3ee" fill-opacity="0.3"/>
+
+  <!-- Label -->
+  <text x="240" y="342" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#22d3ee" fill-opacity="0.6" text-anchor="middle" letter-spacing="0.08em">SECURE KIT — DETAIL</text>
 </svg>

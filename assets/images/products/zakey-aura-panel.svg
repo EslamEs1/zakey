@@ -1,19 +1,181 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <title>Zakey Aura Panel — Flagship Touch Control Panel</title>
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0c0f17"/>
+    <!-- Background radial gradient: deep navy center to near-black edges -->
+    <radialGradient id="ap-bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0d1220"/>
       <stop offset="100%" stop-color="#05070d"/>
+    </radialGradient>
+    <!-- Panel metallic frame gradient -->
+    <linearGradient id="ap-frame" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2e3347"/>
+      <stop offset="40%" stop-color="#404866"/>
+      <stop offset="75%" stop-color="#333a52"/>
+      <stop offset="100%" stop-color="#1e2235"/>
     </linearGradient>
-    <radialGradient id="r" cx="70%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12"/>
+    <!-- Bezel gradient slightly darker -->
+    <linearGradient id="ap-bezel" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#252838"/>
+      <stop offset="40%" stop-color="#353b55"/>
+      <stop offset="100%" stop-color="#181b2a"/>
+    </linearGradient>
+    <!-- Screen background -->
+    <linearGradient id="ap-screen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06080f"/>
+      <stop offset="100%" stop-color="#030408"/>
+    </linearGradient>
+    <!-- Cyan glow behind panel -->
+    <radialGradient id="ap-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.18"/>
+      <stop offset="70%" stop-color="#22d3ee" stop-opacity="0.05"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
+    <!-- Reflection gradient -->
+    <linearGradient id="ap-reflect" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Active zone fill -->
+    <linearGradient id="ap-zone-active" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.04"/>
+    </linearGradient>
+    <!-- Status LED glow -->
+    <radialGradient id="ap-led-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#22d3ee" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Frame side edge highlight gradient -->
+    <linearGradient id="ap-edge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6878a8"/>
+      <stop offset="100%" stop-color="#404866"/>
+    </linearGradient>
+    <!-- Hex grid pattern -->
+    <pattern id="ap-hex" x="0" y="0" width="20" height="23" patternUnits="userSpaceOnUse">
+      <polygon points="10,1 19,6 19,17 10,22 1,17 1,6" fill="none" stroke="#8899cc" stroke-width="0.5" opacity="0.04"/>
+    </pattern>
+    <!-- Floor reflection clip -->
+    <linearGradient id="ap-floor-fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Sun icon filter glow -->
+    <filter id="ap-glow-filter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="ap-led-filter" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
   </defs>
-  <rect width="1280" height="720" fill="url(#g)"/>
-  <rect width="1280" height="720" fill="url(#r)"/>
-  <text x="640" y="380" font-family="Manrope,Inter,system-ui,sans-serif" font-size="48" font-weight="700"
-        fill="#22d3ee" fill-opacity="0.15" text-anchor="middle" dominant-baseline="middle"
-        letter-spacing="-1">Aura Panel</text>
-  <circle cx="640" cy="260" r="60" fill="none" stroke="#22d3ee" stroke-opacity="0.1" stroke-width="1"/>
-  <circle cx="640" cy="260" r="100" fill="none" stroke="#22d3ee" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- Full background -->
+  <rect width="480" height="360" fill="url(#ap-bg)"/>
+  <!-- Hex grid overlay -->
+  <rect width="480" height="360" fill="url(#ap-hex)"/>
+
+  <!-- Cyan radial glow behind panel -->
+  <ellipse cx="240" cy="175" rx="130" ry="130" fill="url(#ap-glow)"/>
+
+  <!-- Panel outer frame: 140×220 centered at 240,175, rx=8 -->
+  <rect x="170" y="65" width="140" height="220" rx="8" ry="8" fill="url(#ap-frame)"/>
+
+  <!-- Left edge highlight (aluminum side) -->
+  <rect x="170" y="65" width="3" height="220" rx="2" ry="2" fill="url(#ap-edge)" opacity="0.7"/>
+
+  <!-- Bezel inner (4px inset from frame) -->
+  <rect x="174" y="69" width="132" height="212" rx="5" ry="5" fill="url(#ap-bezel)"/>
+
+  <!-- Screen area -->
+  <rect x="177" y="72" width="126" height="206" rx="4" ry="4" fill="url(#ap-screen)"/>
+
+  <!-- ── Screen content ── -->
+
+  <!-- Top bar: 30px tall -->
+  <rect x="177" y="72" width="126" height="30" rx="0" ry="0" fill="#0a0d18" opacity="0.9"/>
+  <!-- Time "21:04" -->
+  <text x="188" y="92" font-family="monospace" font-size="14" font-weight="700" fill="#e8edf8" letter-spacing="1">21:04</text>
+  <!-- Temp right-aligned -->
+  <text x="252" y="92" font-family="monospace" font-size="10" fill="#94a3b8" letter-spacing="0.5">24°C</text>
+
+  <!-- Separator line below top bar -->
+  <line x1="177" y1="102" x2="303" y2="102" stroke="#22d3ee" stroke-width="0.5" opacity="0.25"/>
+
+  <!-- Zone 1 (active): y=102 to y=142, height=40 -->
+  <rect x="177" y="102" width="126" height="40" fill="url(#ap-zone-active)"/>
+  <!-- Zone 1 active cyan border left -->
+  <rect x="177" y="102" width="2" height="40" fill="#22d3ee" opacity="0.5"/>
+  <!-- Sun icon: circle + 8 rays, centered at 196,122 -->
+  <circle cx="196" cy="122" r="5" fill="none" stroke="#22d3ee" stroke-width="1.2" opacity="0.9"/>
+  <line x1="196" y1="113" x2="196" y2="111" stroke="#22d3ee" stroke-width="1" opacity="0.9"/>
+  <line x1="196" y1="131" x2="196" y2="133" stroke="#22d3ee" stroke-width="1" opacity="0.9"/>
+  <line x1="187" y1="122" x2="185" y2="122" stroke="#22d3ee" stroke-width="1" opacity="0.9"/>
+  <line x1="205" y1="122" x2="207" y2="122" stroke="#22d3ee" stroke-width="1" opacity="0.9"/>
+  <line x1="189.6" y1="115.6" x2="188.2" y2="114.2" stroke="#22d3ee" stroke-width="1" opacity="0.9"/>
+  <line x1="202.4" y1="128.4" x2="203.8" y2="129.8" stroke="#22d3ee" stroke-width="1" opacity="0.9"/>
+  <line x1="202.4" y1="115.6" x2="203.8" y2="114.2" stroke="#22d3ee" stroke-width="1" opacity="0.9"/>
+  <line x1="189.6" y1="128.4" x2="188.2" y2="129.8" stroke="#22d3ee" stroke-width="1" opacity="0.9"/>
+  <!-- Zone 1 label -->
+  <text x="207" y="118" font-family="sans-serif" font-size="8" fill="#cbd5e1" letter-spacing="0.3">Living Room</text>
+  <text x="207" y="129" font-family="sans-serif" font-size="7" fill="#64748b">Scene: Evening</text>
+
+  <!-- Separator line Zone1-Zone2 -->
+  <line x1="180" y1="142" x2="300" y2="142" stroke="#22d3ee" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Zone 2: y=142 to y=182 -->
+  <!-- Wind swirl icon at 196,162 -->
+  <path d="M191,158 Q196,154 201,158 Q206,162 201,166 Q198,168 196,166" fill="none" stroke="#22d3ee" stroke-width="1.2" opacity="0.7"/>
+  <path d="M193,166 Q196,164 199,166" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.7"/>
+  <!-- Zone 2 label -->
+  <text x="207" y="158" font-family="sans-serif" font-size="8" fill="#cbd5e1" letter-spacing="0.3">Climate</text>
+  <text x="207" y="169" font-family="sans-serif" font-size="7" fill="#64748b">22°C — Auto</text>
+
+  <!-- Separator line Zone2-Zone3 -->
+  <line x1="180" y1="182" x2="300" y2="182" stroke="#22d3ee" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Zone 3: y=182 to y=222 -->
+  <!-- Shield icon at 196,202 -->
+  <path d="M196,194 L203,197 L203,205 Q203,211 196,214 Q189,211 189,205 L189,197 Z" fill="none" stroke="#22d3ee" stroke-width="1.2" opacity="0.7"/>
+  <text x="196" y="207" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#22d3ee" opacity="0.9">✓</text>
+  <!-- Zone 3 label -->
+  <text x="207" y="198" font-family="sans-serif" font-size="8" fill="#cbd5e1" letter-spacing="0.3">Secure</text>
+  <text x="207" y="209" font-family="sans-serif" font-size="7" fill="#64748b">Armed — Home</text>
+
+  <!-- Separator line Zone3-bottom -->
+  <line x1="177" y1="222" x2="303" y2="222" stroke="#22d3ee" stroke-width="0.5" opacity="0.25"/>
+
+  <!-- Bottom bar: scene buttons y=222 to y=250 -->
+  <rect x="177" y="222" width="126" height="26" fill="#080b14" opacity="0.8"/>
+  <!-- 3 scene dots -->
+  <circle cx="200" cy="235" r="6" fill="#22d3ee" opacity="0.85"/>
+  <circle cx="220" cy="235" r="6" fill="#1e2a3a" stroke="#334155" stroke-width="0.8"/>
+  <circle cx="240" cy="235" r="6" fill="#1e2a3a" stroke="#334155" stroke-width="0.8"/>
+  <!-- Active dot indicator -->
+  <circle cx="200" cy="235" r="3" fill="#ffffff" opacity="0.6"/>
+
+  <!-- ── End screen content ── -->
+
+  <!-- Status LED at top-center of panel frame -->
+  <circle cx="240" cy="72" r="6" fill="#22d3ee" opacity="0.15" filter="url(#ap-led-filter)"/>
+  <circle cx="240" cy="72" r="4" fill="#22d3ee" opacity="0.4"/>
+  <circle cx="240" cy="72" r="2" fill="#22d3ee"/>
+
+  <!-- Frame top branding bar -->
+  <rect x="174" y="69" width="132" height="4" rx="2" ry="2" fill="#22344a" opacity="0.5"/>
+
+  <!-- Floor reflection: faint mirror below panel -->
+  <rect x="170" y="285" width="140" height="40" fill="url(#ap-floor-fade)" rx="4"/>
+  <!-- Reflection of frame shape (very faint) -->
+  <rect x="178" y="286" width="124" height="30" rx="3" fill="#22d3ee" opacity="0.02"/>
+
+  <!-- Small "Z" brand mark on frame bottom -->
+  <text x="240" y="283" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#556080" opacity="0.6" letter-spacing="2">ZAKEY</text>
+
+  <!-- Subtle corner screws on frame -->
+  <circle cx="176" cy="71" r="2.5" fill="#1a1e2e" stroke="#3a4060" stroke-width="0.5"/>
+  <circle cx="304" cy="71" r="2.5" fill="#1a1e2e" stroke="#3a4060" stroke-width="0.5"/>
+  <circle cx="176" cy="281" r="2.5" fill="#1a1e2e" stroke="#3a4060" stroke-width="0.5"/>
+  <circle cx="304" cy="281" r="2.5" fill="#1a1e2e" stroke="#3a4060" stroke-width="0.5"/>
 </svg>

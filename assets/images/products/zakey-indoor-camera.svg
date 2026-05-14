@@ -1,16 +1,144 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
   <defs>
-    <linearGradient id="bg-INDOOR CAMERA" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
-    </linearGradient>
-    <radialGradient id="gl-INDOOR CAMERA" cx="260" cy="185" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <radialGradient id="ic-bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
     </radialGradient>
+    <pattern id="ic-hex" x="0" y="0" width="20" height="17.3" patternUnits="userSpaceOnUse">
+      <polygon points="10,1 19,5.5 19,11.8 10,16.3 1,11.8 1,5.5" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+    <radialGradient id="ic-dome-grad" cx="35%" cy="28%" r="65%">
+      <stop offset="0%" stop-color="#3a3f58"/>
+      <stop offset="55%" stop-color="#2a2d3e"/>
+      <stop offset="100%" stop-color="#1a1c28"/>
+    </radialGradient>
+    <radialGradient id="ic-dome-gloss" cx="32%" cy="22%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.20"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ic-base-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2e3248"/>
+      <stop offset="100%" stop-color="#1a1c28"/>
+    </linearGradient>
+    <radialGradient id="ic-lens-bg" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#0d1018"/>
+      <stop offset="100%" stop-color="#060810"/>
+    </radialGradient>
+    <radialGradient id="ic-iris-grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0077aa" stop-opacity="0.85"/>
+    </radialGradient>
+    <radialGradient id="ic-glow" cx="50%" cy="48%" r="50%">
+      <stop offset="0%" stop-color="#00cfff" stop-opacity="0.20"/>
+      <stop offset="70%" stop-color="#00cfff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#00cfff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ic-shadow" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ic-stem-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22253a"/>
+      <stop offset="45%" stop-color="#3a3f58"/>
+      <stop offset="100%" stop-color="#22253a"/>
+    </linearGradient>
+    <filter id="ic-blur-glow">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-INDOOR CAMERA)"/>
-  <ellipse cx="260" cy="185" rx="180" ry="140" fill="url(#gl-INDOOR CAMERA)"/>
-  <rect x="155" y="130" width="170" height="120" rx="12" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><circle cx="240" cy="190" r="34" fill="#05070d" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.5"/><circle cx="240" cy="190" r="18" fill="#22d3ee" fill-opacity="0.12"/><circle cx="240" cy="190" r="8" fill="#22d3ee" fill-opacity="0.25"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">INDOOR CAMERA</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#ic-bg)"/>
+  <rect width="480" height="360" fill="url(#ic-hex)"/>
+
+  <!-- Cyan ambient glow behind device -->
+  <ellipse cx="240" cy="190" rx="130" ry="110" fill="url(#ic-glow)"/>
+
+  <!-- Drop shadow on floor -->
+  <ellipse cx="240" cy="305" rx="68" ry="13" fill="url(#ic-shadow)"/>
+
+  <!-- Floor reflection -->
+  <ellipse cx="240" cy="308" rx="48" ry="6" fill="#00cfff" opacity="0.04"/>
+
+  <!-- Stand base disc — bottom face -->
+  <ellipse cx="240" cy="292" rx="43" ry="9" fill="#0e1018" opacity="0.7"/>
+  <!-- Base main body -->
+  <rect x="197" y="281" width="86" height="14" rx="5" fill="url(#ic-base-grad)"/>
+  <!-- Base top face ellipse -->
+  <ellipse cx="240" cy="281" rx="43" ry="8" fill="#2e3350"/>
+  <!-- Base edge highlight -->
+  <ellipse cx="240" cy="281" rx="43" ry="8" fill="none" stroke="#404468" stroke-width="1"/>
+  <!-- Base top sheen -->
+  <ellipse cx="228" cy="279" rx="20" ry="3.5" fill="#ffffff" opacity="0.06"/>
+  <!-- Status LED red on base front -->
+  <circle cx="222" cy="288" r="3.5" fill="#ff2244" opacity="0.95"/>
+  <circle cx="222" cy="288" r="7" fill="#ff2244" opacity="0.22"/>
+  <circle cx="222.5" cy="287" r="1.5" fill="#ffaabb" opacity="0.8"/>
+
+  <!-- Ball joint stem -->
+  <rect x="234" y="258" width="12" height="26" rx="3" fill="url(#ic-stem-grad)"/>
+  <rect x="235.5" y="260" width="3" height="22" rx="1.5" fill="#ffffff" opacity="0.10"/>
+  <!-- Ball sphere -->
+  <circle cx="240" cy="257" r="10" fill="#282c48"/>
+  <circle cx="240" cy="257" r="10" fill="none" stroke="#3c4060" stroke-width="1.2"/>
+  <circle cx="236" cy="253" r="4" fill="#ffffff" opacity="0.09"/>
+
+  <!-- Dome body — main ellipse (semi-dome look) -->
+  <ellipse cx="240" cy="218" rx="90" ry="65" fill="url(#ic-dome-grad)"/>
+  <!-- Dome bottom flat edge clamp -->
+  <rect x="150" y="218" width="180" height="15" fill="#0e1018"/>
+  <!-- Dome outer edge ring -->
+  <ellipse cx="240" cy="218" rx="90" ry="65" fill="none" stroke="#1e2030" stroke-width="2"/>
+  <!-- Dome highlight rim top-left -->
+  <path d="M182,196 Q208,162 240,157" stroke="#ffffff" stroke-width="1.8" fill="none" stroke-opacity="0.16" stroke-linecap="round"/>
+  <!-- Dome gloss overlay -->
+  <ellipse cx="240" cy="218" rx="90" ry="65" fill="url(#ic-dome-gloss)"/>
+  <!-- Dome seam/base line -->
+  <line x1="150" y1="218" x2="330" y2="218" stroke="#111420" stroke-width="2"/>
+  <!-- Dome bottom rim -->
+  <ellipse cx="240" cy="218" rx="90" ry="6" fill="#141622" opacity="0.85"/>
+  <!-- Dome bottom rim highlight -->
+  <path d="M152,218 Q240,226 328,218" stroke="#2a2e48" stroke-width="1" fill="none" opacity="0.6"/>
+
+  <!-- Lens bezel outer ring -->
+  <circle cx="240" cy="198" r="44" fill="#0e1018"/>
+  <circle cx="240" cy="198" r="44" fill="none" stroke="#1e2235" stroke-width="1.5"/>
+  <!-- Lens glass outer -->
+  <circle cx="240" cy="198" r="37" fill="url(#ic-lens-bg)"/>
+  <!-- Iris cyan ring -->
+  <circle cx="240" cy="198" r="29" fill="none" stroke="url(#ic-iris-grad)" stroke-width="5.5"/>
+  <circle cx="240" cy="198" r="29" fill="none" stroke="#00e5ff" stroke-width="1" opacity="0.4"/>
+  <!-- Inner glass -->
+  <circle cx="240" cy="198" r="22" fill="#060810"/>
+  <!-- Pupil deep -->
+  <circle cx="240" cy="198" r="15" fill="#030508"/>
+  <!-- Depth rings -->
+  <circle cx="240" cy="198" r="10" fill="none" stroke="#0c0f1c" stroke-width="1" opacity="0.6"/>
+  <circle cx="240" cy="198" r="5" fill="none" stroke="#0c0f1c" stroke-width="0.8" opacity="0.4"/>
+  <!-- Specular dot at 1 o'clock -->
+  <circle cx="252" cy="185" r="4.5" fill="#ffffff" opacity="0.70"/>
+  <circle cx="254" cy="183" r="2" fill="#ffffff" opacity="0.55"/>
+
+  <!-- IR LED ring — 6 dots -->
+  <circle cx="240" cy="155" r="3.2" fill="#ff3344" opacity="0.75"/>
+  <circle cx="240" cy="155" r="6" fill="#ff3344" opacity="0.18"/>
+  <circle cx="277" cy="167" r="3.2" fill="#ff3344" opacity="0.75"/>
+  <circle cx="277" cy="167" r="6" fill="#ff3344" opacity="0.18"/>
+  <circle cx="281" cy="208" r="3.2" fill="#ff3344" opacity="0.75"/>
+  <circle cx="281" cy="208" r="6" fill="#ff3344" opacity="0.18"/>
+  <circle cx="240" cy="238" r="3.2" fill="#ff3344" opacity="0.75"/>
+  <circle cx="240" cy="238" r="6" fill="#ff3344" opacity="0.18"/>
+  <circle cx="199" cy="208" r="3.2" fill="#ff3344" opacity="0.75"/>
+  <circle cx="199" cy="208" r="6" fill="#ff3344" opacity="0.18"/>
+  <circle cx="203" cy="167" r="3.2" fill="#ff3344" opacity="0.75"/>
+  <circle cx="203" cy="167" r="6" fill="#ff3344" opacity="0.18"/>
+
+  <!-- Privacy green LED on dome rim -->
+  <circle cx="307" cy="200" r="4.2" fill="#22ff88" opacity="0.92"/>
+  <circle cx="307" cy="200" r="8" fill="#22ff88" opacity="0.25"/>
+  <circle cx="307" cy="199" r="2" fill="#aaffcc" opacity="0.7"/>
+
+  <!-- Product label -->
+  <text x="240" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" opacity="0.40" letter-spacing="2.5">INDOOR DOME CAMERA</text>
 </svg>

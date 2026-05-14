@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="hallBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1525;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#05070d;stop-opacity:1"/>
+    </linearGradient>
+    <radialGradient id="warmCeiling" cx="50%" cy="0%" r="70%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <!-- Room background -->
+  <rect width="800" height="600" fill="url(#hallBg)"/>
+  <!-- Walls -->
+  <rect x="0" y="0" width="800" height="450" fill="#0e1828"/>
+  <!-- Floor -->
+  <rect x="0" y="450" width="800" height="150" fill="#080d18"/>
+  <!-- Floor pattern -->
+  <line x1="0" y1="480" x2="800" y2="480" stroke="#1a2535" stroke-width="1" opacity="0.4"/>
+  <line x1="0" y1="520" x2="800" y2="520" stroke="#1a2535" stroke-width="1" opacity="0.3"/>
+  <line x1="200" y1="450" x2="100" y2="600" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+  <line x1="400" y1="450" x2="400" y2="600" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+  <line x1="600" y1="450" x2="700" y2="600" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+  <!-- Warm ambient ceiling -->
+  <ellipse cx="400" cy="0" rx="400" ry="200" fill="url(#warmCeiling)" opacity="0.8"/>
+  <!-- Ceiling cornice -->
+  <rect x="0" y="0" width="800" height="40" fill="#0a1020"/>
+  <line x1="0" y1="40" x2="800" y2="40" stroke="#f59e0b" stroke-width="1" opacity="0.2"/>
+  <!-- Pendant lights -->
+  <line x1="200" y1="0" x2="200" y2="80" stroke="#1a2535" stroke-width="2"/>
+  <ellipse cx="200" cy="85" rx="25" ry="10" fill="#0f1828" stroke="#1a2535" stroke-width="1"/>
+  <ellipse cx="200" cy="90" rx="18" ry="6" fill="#f59e0b" opacity="0.5" filter="url(#glow)"/>
+  <line x1="600" y1="0" x2="600" y2="80" stroke="#1a2535" stroke-width="2"/>
+  <ellipse cx="600" cy="85" rx="25" ry="10" fill="#0f1828" stroke="#1a2535" stroke-width="1"/>
+  <ellipse cx="600" cy="90" rx="18" ry="6" fill="#f59e0b" opacity="0.5" filter="url(#glow)"/>
+  <!-- Central chandelier -->
+  <line x1="400" y1="0" x2="400" y2="60" stroke="#1e3050" stroke-width="3"/>
+  <circle cx="400" cy="70" r="30" fill="#0f1828" stroke="#00d4ff" stroke-width="1" opacity="0.7"/>
+  <circle cx="400" cy="70" r="20" fill="#001a22" opacity="0.9"/>
+  <ellipse cx="400" cy="95" rx="35" ry="12" fill="#f59e0b" opacity="0.35" filter="url(#glow)"/>
+  <!-- Hallway corridor (perspective) -->
+  <polygon points="250,450 300,180 500,180 550,450" fill="#0a1220" opacity="0.6"/>
+  <!-- Corridor walls -->
+  <rect x="300" y="180" width="200" height="270" fill="#0c1828" stroke="#1e3050" stroke-width="1" opacity="0.8"/>
+  <!-- Corridor end door with glow -->
+  <rect x="350" y="250" width="100" height="200" fill="#05070d" stroke="#1e3050" stroke-width="1.5" rx="2"/>
+  <!-- Cyan door handle/panel -->
+  <rect x="355" y="280" width="40" height="60" fill="#001520" rx="1" stroke="#00d4ff" stroke-width="1" opacity="0.7"/>
+  <circle cx="390" cy="370" r="4" fill="#00d4ff" opacity="0.8" filter="url(#glow)"/>
+  <!-- LEFT WALL SMART PANEL -->
+  <rect x="40" y="150" width="120" height="200" fill="#050d18" rx="4" stroke="#00d4ff" stroke-width="1.5" opacity="0.9"/>
+  <!-- Panel glow -->
+  <rect x="40" y="150" width="120" height="200" fill="#00d4ff" opacity="0.03"/>
+  <rect x="52" y="165" width="96" height="55" fill="#001a22" rx="2"/>
+  <text x="100" y="185" font-family="Arial, sans-serif" font-size="9" fill="#00d4ff" text-anchor="middle">ENTRANCE PANEL</text>
+  <line x1="55" y1="192" x2="145" y2="192" stroke="#00d4ff" stroke-width="0.5" opacity="0.4"/>
+  <text x="100" y="207" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.8">Welcome Home</text>
+  <!-- Scene buttons -->
+  <rect x="52" y="232" width="96" height="20" fill="#00d4ff" opacity="0.2" rx="2"/>
+  <text x="100" y="246" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle">AWAY → HOME</text>
+  <rect x="52" y="258" width="96" height="20" fill="#1a2840" rx="2"/>
+  <text x="100" y="272" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Lighting</text>
+  <rect x="52" y="284" width="96" height="20" fill="#1a2840" rx="2"/>
+  <text x="100" y="298" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Climate</text>
+  <rect x="52" y="310" width="96" height="20" fill="#1a2840" rx="2"/>
+  <text x="100" y="324" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.5">Security</text>
+  <!-- Wall sconces left -->
+  <rect x="140" y="280" width="15" height="40" fill="#0f1828" rx="2"/>
+  <ellipse cx="147" cy="282" rx="12" ry="5" fill="#f59e0b" opacity="0.4" filter="url(#glow)"/>
+  <!-- Right side wall sconce -->
+  <rect x="640" y="280" width="15" height="40" fill="#0f1828" rx="2"/>
+  <ellipse cx="648" cy="282" rx="12" ry="5" fill="#f59e0b" opacity="0.4" filter="url(#glow)"/>
+  <!-- Wainscoting panels -->
+  <rect x="0" y="350" width="800" height="100" fill="#0b1420" stroke="#1a2535" stroke-width="0"/>
+  <line x1="0" y1="350" x2="800" y2="350" stroke="#1a2840" stroke-width="1.5"/>
+  <line x1="0" y1="445" x2="800" y2="445" stroke="#1a2840" stroke-width="1"/>
+  <!-- Label -->
+  <text x="400" y="580" font-family="Arial, sans-serif" font-size="14" font-weight="300" letter-spacing="3" fill="#c0c0c0" text-anchor="middle" opacity="0.8">GRAND ENTRANCE · SMART LIGHTING PANEL</text>
+</svg>

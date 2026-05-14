@@ -1,16 +1,128 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
   <defs>
-    <linearGradient id="bg-DIMMER SWITCH" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
-    </linearGradient>
-    <radialGradient id="gl-DIMMER SWITCH" cx="240" cy="180" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <radialGradient id="bgG" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
     </radialGradient>
+    <pattern id="gridPat" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20,0 L0,0 0,20" fill="none" stroke="#6080c0" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+    <!-- Dark glass face gradient -->
+    <linearGradient id="bodyG" x1="15%" y1="10%" x2="85%" y2="90%">
+      <stop offset="0%" stop-color="#1e2135"/>
+      <stop offset="100%" stop-color="#0f1020"/>
+    </linearGradient>
+    <!-- Side face darker -->
+    <linearGradient id="sideG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14152a"/>
+      <stop offset="100%" stop-color="#0e0f1e"/>
+    </linearGradient>
+    <!-- Slider track -->
+    <linearGradient id="trackG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#080a18"/>
+      <stop offset="100%" stop-color="#0c0e1e"/>
+    </linearGradient>
+    <!-- Cyan glow -->
+    <radialGradient id="cGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Amber glow for status LED -->
+    <radialGradient id="amberGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffaa00" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ffaa00" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Drop shadow -->
+    <radialGradient id="shadowG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softG" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="cyanGlowF" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8"/>
+    </filter>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-DIMMER SWITCH)"/>
-  <ellipse cx="240" cy="180" rx="180" ry="140" fill="url(#gl-DIMMER SWITCH)"/>
-  <rect x="170" y="90" width="140" height="180" rx="10" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><rect x="190" y="115" width="45" height="65" rx="5" fill="#22d3ee" fill-opacity="0.15" stroke="#22d3ee" stroke-width="0.75" stroke-opacity="0.4"/><rect x="245" y="115" width="45" height="65" rx="5" fill="#22d3ee" fill-opacity="0.08" stroke="#22d3ee" stroke-width="0.75" stroke-opacity="0.3"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">DIMMER SWITCH</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bgG)"/>
+  <rect width="480" height="360" fill="url(#gridPat)"/>
+
+  <!-- Product glow (cyan, subtle) -->
+  <ellipse cx="240" cy="190" rx="100" ry="130" fill="url(#cGlow)"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="240" cy="305" rx="60" ry="10" fill="url(#shadowG)" opacity="0.5"/>
+
+  <!-- === GLASS TOUCH PANEL BODY === -->
+  <!-- Right side face (slim, darker) -->
+  <rect x="278" y="90" width="14" height="200" rx="4" fill="url(#sideG)"/>
+  <!-- Top face (parallelogram) -->
+  <polygon points="208,90 278,90 292,78 222,78" fill="#1a1c30"/>
+  <polygon points="208,90 278,90 280,92 210,92" fill="#303462" opacity="0.5"/>
+
+  <!-- Main glass front face -->
+  <rect x="208" y="90" width="70" height="200" rx="9" fill="url(#bodyG)"/>
+  <!-- Lit left+top edge -->
+  <rect x="208" y="90" width="2.5" height="200" rx="2" fill="#3a3e65" opacity="0.85"/>
+  <rect x="208" y="90" width="70" height="2.5" rx="2" fill="#303462" opacity="0.75"/>
+  <!-- Subtle inner border (glass panel frame feel) -->
+  <rect x="212" y="96" width="62" height="188" rx="6" fill="none" stroke="#252848" stroke-width="1" opacity="0.5"/>
+
+  <!-- Status LED: amber, top-center -->
+  <circle cx="243" cy="104" r="5" fill="#ffaa00" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="243" cy="104" r="3" fill="#ffcc40" opacity="1"/>
+
+  <!-- Sun icon above slider (small, center) -->
+  <!-- Sun circle -->
+  <circle cx="243" cy="138" r="6" fill="none" stroke="#00e5ff" stroke-width="1.5" opacity="0.7"/>
+  <!-- Sun rays (4 short lines) -->
+  <g stroke="#00e5ff" stroke-width="1.2" opacity="0.65">
+    <line x1="243" y1="128" x2="243" y2="124"/>
+    <line x1="243" y1="148" x2="243" y2="152"/>
+    <line x1="233" y1="138" x2="229" y2="138"/>
+    <line x1="253" y1="138" x2="257" y2="138"/>
+    <line x1="236" y1="131" x2="233" y2="128"/>
+    <line x1="250" y1="145" x2="253" y2="148"/>
+    <line x1="250" y1="131" x2="253" y2="128"/>
+    <line x1="236" y1="145" x2="233" y2="148"/>
+  </g>
+
+  <!-- Dimmer slider track (vertical, 2px wide, center of face) -->
+  <rect x="242" y="158" width="2" height="100" rx="1" fill="url(#trackG)"/>
+  <!-- Track border glow suggestion -->
+  <rect x="241" y="158" width="4" height="100" rx="2" fill="#00e5ff" opacity="0.05"/>
+
+  <!-- Slider knob at 70% from top of track (70% of 100px = 70px from top = y=228) -->
+  <!-- Glow behind knob -->
+  <circle cx="243" cy="228" r="14" fill="#00e5ff" filter="url(#cyanGlowF)" opacity="0.6"/>
+  <!-- Knob ring -->
+  <circle cx="243" cy="228" r="9" fill="#1a1c30" stroke="#00e5ff" stroke-width="1.5"/>
+  <!-- Knob center dot -->
+  <circle cx="243" cy="228" r="4" fill="#00e5ff" opacity="0.9" filter="url(#softG)"/>
+
+  <!-- 70% text beside the knob -->
+  <text x="259" y="232" text-anchor="start" font-family="Arial" font-size="8" fill="white" opacity="0.75">70%</text>
+
+  <!-- Track fill below knob to bottom (showing brightness level — filled portion from bottom) -->
+  <!-- Bottom track filled (brighter region) -->
+  <rect x="242" y="228" width="2" height="30" rx="1" fill="#00e5ff" opacity="0.55"/>
+
+  <!-- Bottom of slider indicator -->
+  <circle cx="243" cy="258" r="3" fill="#00e5ff" opacity="0.3"/>
+  <circle cx="243" cy="158" r="3" fill="#2e3260" opacity="0.5"/>
+
+  <!-- Floor reflection (very faint dark glass) -->
+  <rect x="208" y="290" width="70" height="40" rx="9" fill="url(#bodyG)" opacity="0.08"
+        transform="scale(1,-1) translate(0,-580)"/>
+
+  <!-- Product label -->
+  <text x="240" y="332" text-anchor="middle" font-family="Arial, sans-serif" font-size="10"
+        fill="white" opacity="0.5" letter-spacing="2">DIMMER SWITCH</text>
 </svg>

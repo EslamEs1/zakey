@@ -1,19 +1,206 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225">
+  <title>Zakey Mesh Bridge — Multi-Protocol Mesh Network</title>
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0c0f17"/>
-      <stop offset="100%" stop-color="#05070d"/>
-    </linearGradient>
-    <radialGradient id="r" cx="70%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12"/>
+    <!-- Background: deep navy to near black -->
+    <radialGradient id="mb-bg" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#0d1025"/>
+      <stop offset="100%" stop-color="#060912"/>
+    </radialGradient>
+    <!-- Central hub glow -->
+    <radialGradient id="mb-hub-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#22d3ee" stop-opacity="0.12"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
+    <!-- Hub node fill -->
+    <radialGradient id="mb-hub-fill" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#40e8ff"/>
+      <stop offset="100%" stop-color="#16b8cc"/>
+    </radialGradient>
+    <!-- Secondary node fill -->
+    <radialGradient id="mb-sec-fill" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#0e9aaa"/>
+    </radialGradient>
+    <!-- Tertiary node fill -->
+    <radialGradient id="mb-ter-fill" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#16a8b8"/>
+      <stop offset="100%" stop-color="#0a7080"/>
+    </radialGradient>
+    <!-- Secondary node glow -->
+    <radialGradient id="mb-sec-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Connection line gradient -->
+    <linearGradient id="mb-line-hub-sec" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.2"/>
+    </linearGradient>
+    <!-- Data pulse: white bright dot on line -->
+    <radialGradient id="mb-pulse" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#88eeff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Hex grid background pattern -->
+    <pattern id="mb-hex-bg" x="0" y="0" width="22" height="25.4" patternUnits="userSpaceOnUse">
+      <polygon points="11,1 21,6.5 21,18.9 11,24.4 1,18.9 1,6.5" fill="none" stroke="#4488aa" stroke-width="0.4" opacity="0.05"/>
+    </pattern>
+    <!-- Hub inner ring -->
+    <radialGradient id="mb-hub-ring" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#60f0ff" stop-opacity="0"/>
+      <stop offset="80%" stop-color="#60f0ff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#60f0ff" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <rect width="1280" height="720" fill="url(#g)"/>
-  <rect width="1280" height="720" fill="url(#r)"/>
-  <text x="640" y="380" font-family="Manrope,Inter,system-ui,sans-serif" font-size="48" font-weight="700"
-        fill="#22d3ee" fill-opacity="0.15" text-anchor="middle" dominant-baseline="middle"
-        letter-spacing="-1">Mesh Bridge</text>
-  <circle cx="640" cy="260" r="60" fill="none" stroke="#22d3ee" stroke-opacity="0.1" stroke-width="1"/>
-  <circle cx="640" cy="260" r="100" fill="none" stroke="#22d3ee" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- Background -->
+  <rect width="400" height="225" fill="url(#mb-bg)"/>
+  <!-- Hex grid overlay -->
+  <rect width="400" height="225" fill="url(#mb-hex-bg)"/>
+
+  <!-- Background scattered particles -->
+  <circle cx="30" cy="20" r="1.5" fill="#22d3ee" opacity="0.15"/>
+  <circle cx="370" cy="35" r="1.5" fill="#22d3ee" opacity="0.18"/>
+  <circle cx="15" cy="160" r="1.5" fill="#22d3ee" opacity="0.12"/>
+  <circle cx="385" cy="180" r="1.5" fill="#22d3ee" opacity="0.15"/>
+  <circle cx="80" cy="205" r="2" fill="#22d3ee" opacity="0.12"/>
+  <circle cx="340" cy="200" r="2" fill="#22d3ee" opacity="0.14"/>
+  <circle cx="55" cy="80" r="1" fill="#22d3ee" opacity="0.2"/>
+  <circle cx="350" cy="60" r="1" fill="#22d3ee" opacity="0.2"/>
+  <circle cx="200" cy="15" r="1.5" fill="#22d3ee" opacity="0.15"/>
+  <circle cx="195" cy="210" r="1.5" fill="#22d3ee" opacity="0.12"/>
+
+  <!-- ══ CENTER HUB NODE (30px radius at 200,112) ══ -->
+  <!-- Large glow halo -->
+  <circle cx="200" cy="112" r="80" fill="url(#mb-hub-glow)"/>
+  <!-- Hub ring -->
+  <circle cx="200" cy="112" r="38" fill="url(#mb-hub-ring)"/>
+  <!-- Hub outer ring -->
+  <circle cx="200" cy="112" r="33" fill="none" stroke="#22d3ee" stroke-width="0.8" opacity="0.3"/>
+  <!-- Hub body -->
+  <circle cx="200" cy="112" r="30" fill="url(#mb-hub-fill)"/>
+  <!-- Hub inner detail: cross lines -->
+  <line x1="200" y1="88" x2="200" y2="136" stroke="#0a2030" stroke-width="1" opacity="0.3"/>
+  <line x1="176" y1="112" x2="224" y2="112" stroke="#0a2030" stroke-width="1" opacity="0.3"/>
+  <!-- Hub inner circle highlight -->
+  <circle cx="193" cy="105" r="8" fill="#60f8ff" opacity="0.2"/>
+  <!-- Hub icon: circuit node dot -->
+  <circle cx="200" cy="112" r="6" fill="#0a2030" opacity="0.5"/>
+  <circle cx="200" cy="112" r="3" fill="#ffffff" opacity="0.9"/>
+
+  <!-- ══ 8 SECONDARY NODES (radius 80 from center 200,112) ══ -->
+  <!-- Angles: 0, 45, 90, 135, 180, 225, 270, 315 degrees -->
+  <!-- Node at 0°: (280, 112) -->
+  <!-- Connection lines (drawn first, behind nodes) -->
+  <line x1="200" y1="112" x2="280" y2="112" stroke="#22d3ee" stroke-width="0.8" opacity="0.35"/>
+  <line x1="200" y1="112" x2="257" y2="55" stroke="#22d3ee" stroke-width="0.8" opacity="0.35"/>
+  <line x1="200" y1="112" x2="200" y2="32" stroke="#22d3ee" stroke-width="0.8" opacity="0.35"/>
+  <line x1="200" y1="112" x2="143" y2="55" stroke="#22d3ee" stroke-width="0.8" opacity="0.35"/>
+  <line x1="200" y1="112" x2="120" y2="112" stroke="#22d3ee" stroke-width="0.8" opacity="0.35"/>
+  <line x1="200" y1="112" x2="143" y2="169" stroke="#22d3ee" stroke-width="0.8" opacity="0.35"/>
+  <line x1="200" y1="112" x2="200" y2="192" stroke="#22d3ee" stroke-width="0.8" opacity="0.35"/>
+  <line x1="200" y1="112" x2="257" y2="169" stroke="#22d3ee" stroke-width="0.8" opacity="0.35"/>
+
+  <!-- Secondary node glows -->
+  <circle cx="280" cy="112" r="28" fill="url(#mb-sec-glow)"/>
+  <circle cx="257" cy="55" r="28" fill="url(#mb-sec-glow)"/>
+  <circle cx="200" cy="32" r="28" fill="url(#mb-sec-glow)"/>
+  <circle cx="143" cy="55" r="28" fill="url(#mb-sec-glow)"/>
+  <circle cx="120" cy="112" r="28" fill="url(#mb-sec-glow)"/>
+  <circle cx="143" cy="169" r="28" fill="url(#mb-sec-glow)"/>
+  <circle cx="200" cy="192" r="28" fill="url(#mb-sec-glow)"/>
+  <circle cx="257" cy="169" r="28" fill="url(#mb-sec-glow)"/>
+
+  <!-- Secondary nodes (14px radius) -->
+  <circle cx="280" cy="112" r="14" fill="url(#mb-sec-fill)"/>
+  <circle cx="280" cy="112" r="6" fill="#0a2030" opacity="0.4"/>
+  <circle cx="280" cy="112" r="2.5" fill="#ffffff" opacity="0.8"/>
+
+  <circle cx="257" cy="55" r="14" fill="url(#mb-sec-fill)"/>
+  <circle cx="257" cy="55" r="6" fill="#0a2030" opacity="0.4"/>
+  <circle cx="257" cy="55" r="2.5" fill="#ffffff" opacity="0.8"/>
+
+  <circle cx="200" cy="32" r="14" fill="url(#mb-sec-fill)"/>
+  <circle cx="200" cy="32" r="6" fill="#0a2030" opacity="0.4"/>
+  <circle cx="200" cy="32" r="2.5" fill="#ffffff" opacity="0.8"/>
+
+  <circle cx="143" cy="55" r="14" fill="url(#mb-sec-fill)"/>
+  <circle cx="143" cy="55" r="6" fill="#0a2030" opacity="0.4"/>
+  <circle cx="143" cy="55" r="2.5" fill="#ffffff" opacity="0.8"/>
+
+  <circle cx="120" cy="112" r="14" fill="url(#mb-sec-fill)"/>
+  <circle cx="120" cy="112" r="6" fill="#0a2030" opacity="0.4"/>
+  <circle cx="120" cy="112" r="2.5" fill="#ffffff" opacity="0.8"/>
+
+  <circle cx="143" cy="169" r="14" fill="url(#mb-sec-fill)"/>
+  <circle cx="143" cy="169" r="6" fill="#0a2030" opacity="0.4"/>
+  <circle cx="143" cy="169" r="2.5" fill="#ffffff" opacity="0.8"/>
+
+  <circle cx="200" cy="192" r="14" fill="url(#mb-sec-fill)"/>
+  <circle cx="200" cy="192" r="6" fill="#0a2030" opacity="0.4"/>
+  <circle cx="200" cy="192" r="2.5" fill="#ffffff" opacity="0.8"/>
+
+  <circle cx="257" cy="169" r="14" fill="url(#mb-sec-fill)"/>
+  <circle cx="257" cy="169" r="6" fill="#0a2030" opacity="0.4"/>
+  <circle cx="257" cy="169" r="2.5" fill="#ffffff" opacity="0.8"/>
+
+  <!-- ══ 16 TERTIARY NODES (radius 150 from center 200,112) ══ -->
+  <!-- Secondary-to-tertiary connection lines (thinner, more faded) -->
+  <!-- From node 0° (280,112) right: tertiary at (350,112) and (330,62) -->
+  <line x1="280" y1="112" x2="350" y2="112" stroke="#22d3ee" stroke-width="0.6" opacity="0.2"/>
+  <line x1="280" y1="112" x2="335" y2="67" stroke="#22d3ee" stroke-width="0.6" opacity="0.2"/>
+  <!-- From node 45° (257,55): tertiary at (316,8) and (365,55) -->
+  <line x1="257" y1="55" x2="316" y2="15" stroke="#22d3ee" stroke-width="0.6" opacity="0.2"/>
+  <line x1="257" y1="55" x2="360" y2="40" stroke="#22d3ee" stroke-width="0.6" opacity="0.2"/>
+  <!-- From node 90° (200,32): tertiary at (145,12) and (255,12) -->
+  <line x1="200" y1="32" x2="150" y2="8" stroke="#22d3ee" stroke-width="0.6" opacity="0.2"/>
+  <line x1="200" y1="32" x2="250" y2="8" stroke="#22d3ee" stroke-width="0.6" opacity="0.2"/>
+  <!-- From node 135° (143,55): tertiary at (65,40) and (90,8) -->
+  <line x1="143" y1="55" x2="60" y2="40" stroke="#22d3ee" stroke-width="0.6" opacity="0.2"/>
+  <line x1="143" y1="55" x2="88" y2="15" stroke="#22d3ee" stroke-width="0.6" opacity="0.2"/>
+  <!-- From node 180° (120,112): tertiary at (50,112) and (65,160) -->
+  <line x1="120" y1="112" x2="50" y2="112" stroke="#22d3ee" stroke-width="0.6" opacity="0.2"/>
+  <line x1="120" y1="112" x2="68" y2="168" stroke="#22d3ee" stroke-width="0.6" opacity="0.2"/>
+  <!-- From node 225° (143,169): tertiary at (68,168) and (85,208) -->
+  <line x1="143" y1="169" x2="70" y2="200" stroke="#22d3ee" stroke-width="0.6" opacity="0.2"/>
+  <line x1="143" y1="169" x2="100" y2="215" stroke="#22d3ee" stroke-width="0.6" opacity="0.2"/>
+  <!-- From node 270° (200,192): tertiary at (152,215) and (248,215) -->
+  <line x1="200" y1="192" x2="155" y2="218" stroke="#22d3ee" stroke-width="0.6" opacity="0.2"/>
+  <line x1="200" y1="192" x2="248" y2="218" stroke="#22d3ee" stroke-width="0.6" opacity="0.2"/>
+  <!-- From node 315° (257,169): tertiary at (310,205) and (345,165) -->
+  <line x1="257" y1="169" x2="315" y2="205" stroke="#22d3ee" stroke-width="0.6" opacity="0.2"/>
+  <line x1="257" y1="169" x2="348" y2="168" stroke="#22d3ee" stroke-width="0.6" opacity="0.2"/>
+
+  <!-- Tertiary nodes (8px radius) -->
+  <circle cx="350" cy="112" r="8" fill="url(#mb-ter-fill)"/>
+  <circle cx="335" cy="67" r="8" fill="url(#mb-ter-fill)"/>
+  <circle cx="316" cy="15" r="8" fill="url(#mb-ter-fill)"/>
+  <circle cx="360" cy="40" r="8" fill="url(#mb-ter-fill)"/>
+  <circle cx="150" cy="8" r="8" fill="url(#mb-ter-fill)"/>
+  <circle cx="250" cy="8" r="8" fill="url(#mb-ter-fill)"/>
+  <circle cx="60" cy="40" r="8" fill="url(#mb-ter-fill)"/>
+  <circle cx="88" cy="15" r="8" fill="url(#mb-ter-fill)"/>
+  <circle cx="50" cy="112" r="8" fill="url(#mb-ter-fill)"/>
+  <circle cx="68" cy="168" r="8" fill="url(#mb-ter-fill)"/>
+  <circle cx="70" cy="200" r="8" fill="url(#mb-ter-fill)"/>
+  <circle cx="100" cy="215" r="8" fill="url(#mb-ter-fill)"/>
+  <circle cx="155" cy="218" r="8" fill="url(#mb-ter-fill)"/>
+  <circle cx="248" cy="218" r="8" fill="url(#mb-ter-fill)"/>
+  <circle cx="315" cy="205" r="8" fill="url(#mb-ter-fill)"/>
+  <circle cx="348" cy="168" r="8" fill="url(#mb-ter-fill)"/>
+
+  <!-- ══ DATA PULSE DOTS on connection lines ══ -->
+  <!-- Pulse on hub-to-right (at 2/3 of the way from hub to 280,112): ~253,112 -->
+  <circle cx="253" cy="112" r="6" fill="url(#mb-pulse)"/>
+  <!-- Pulse on hub-to-top-left (at midpoint ~171,83): -->
+  <circle cx="171" cy="83" r="5" fill="url(#mb-pulse)"/>
+  <!-- Pulse on hub-to-bottom (midpoint ~200,152): -->
+  <circle cx="200" cy="155" r="5" fill="url(#mb-pulse)"/>
+  <!-- Pulse on hub-to-bottom-right (midpoint ~228,140): -->
+  <circle cx="228" cy="140" r="4" fill="url(#mb-pulse)"/>
+
+  <!-- ══ BOTTOM LABEL ══ -->
+  <text x="200" y="218" text-anchor="middle" font-family="sans-serif" font-size="8" font-variant="small-caps" fill="#ffffff" opacity="0.35" letter-spacing="3">ZAKEY MESH PROTOCOL</text>
 </svg>

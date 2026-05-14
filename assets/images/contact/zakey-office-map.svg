@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070d"/>
+      <stop offset="60%" stop-color="#07090f"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <!-- Topographic gradient for terrain suggestion -->
+    <radialGradient id="terrainGlow1" cx="50%" cy="55%" r="45%">
+      <stop offset="0%" stop-color="#0a1525" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#05070d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="terrainGlow2" cx="35%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#080f1e" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#05070d" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Pin pulse glow -->
+    <radialGradient id="pinPulse" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#00d4ff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="pinGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="contourGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Reference grid (tech feel) -->
+  <g opacity="0.07" stroke="#00d4ff" stroke-width="0.5">
+    <!-- Horizontal -->
+    <line x1="0" y1="100" x2="1600" y2="100"/>
+    <line x1="0" y1="200" x2="1600" y2="200"/>
+    <line x1="0" y1="300" x2="1600" y2="300"/>
+    <line x1="0" y1="400" x2="1600" y2="400"/>
+    <line x1="0" y1="500" x2="1600" y2="500"/>
+    <line x1="0" y1="600" x2="1600" y2="600"/>
+    <line x1="0" y1="700" x2="1600" y2="700"/>
+    <line x1="0" y1="800" x2="1600" y2="800"/>
+    <!-- Vertical -->
+    <line x1="100" y1="0" x2="100" y2="900"/>
+    <line x1="200" y1="0" x2="200" y2="900"/>
+    <line x1="300" y1="0" x2="300" y2="900"/>
+    <line x1="400" y1="0" x2="400" y2="900"/>
+    <line x1="500" y1="0" x2="500" y2="900"/>
+    <line x1="600" y1="0" x2="600" y2="900"/>
+    <line x1="700" y1="0" x2="700" y2="900"/>
+    <line x1="800" y1="0" x2="800" y2="900"/>
+    <line x1="900" y1="0" x2="900" y2="900"/>
+    <line x1="1000" y1="0" x2="1000" y2="900"/>
+    <line x1="1100" y1="0" x2="1100" y2="900"/>
+    <line x1="1200" y1="0" x2="1200" y2="900"/>
+    <line x1="1300" y1="0" x2="1300" y2="900"/>
+    <line x1="1400" y1="0" x2="1400" y2="900"/>
+    <line x1="1500" y1="0" x2="1500" y2="900"/>
+  </g>
+
+  <!-- Grid reference labels (left edge) -->
+  <g font-family="monospace" font-size="9" fill="#00d4ff" opacity="0.2">
+    <text x="15" y="104">A</text>
+    <text x="15" y="204">B</text>
+    <text x="15" y="304">C</text>
+    <text x="15" y="404">D</text>
+    <text x="15" y="504">E</text>
+    <text x="15" y="604">F</text>
+    <text x="15" y="704">G</text>
+    <text x="15" y="804">H</text>
+  </g>
+  <!-- Grid reference labels (top edge) -->
+  <g font-family="monospace" font-size="9" fill="#00d4ff" opacity="0.2">
+    <text x="96" y="20">01</text>
+    <text x="196" y="20">02</text>
+    <text x="296" y="20">03</text>
+    <text x="396" y="20">04</text>
+    <text x="496" y="20">05</text>
+    <text x="596" y="20">06</text>
+    <text x="696" y="20">07</text>
+    <text x="796" y="20">08</text>
+    <text x="896" y="20">09</text>
+    <text x="996" y="20">10</text>
+    <text x="1096" y="20">11</text>
+    <text x="1196" y="20">12</text>
+    <text x="1296" y="20">13</text>
+    <text x="1396" y="20">14</text>
+    <text x="1496" y="20">15</text>
+  </g>
+
+  <!-- Terrain glow areas -->
+  <ellipse cx="800" cy="490" rx="700" ry="320" fill="url(#terrainGlow1)"/>
+  <ellipse cx="480" cy="380" rx="400" ry="260" fill="url(#terrainGlow2)"/>
+
+  <!-- Topographic contour lines (abstract, like a UAE/Arabian peninsula impression) -->
+  <!-- Outermost contour -->
+  <path d="M 200 600 C 280 560 380 520 480 510 C 600 498 720 505 840 495
+             C 980 484 1100 470 1200 455 C 1340 436 1440 420 1520 410
+             C 1560 405 1580 400 1600 395 L 1600 600 C 1500 610 1380 625 1250 635
+             C 1100 648 950 650 800 645 C 650 640 480 635 350 630
+             C 260 626 200 620 200 600 Z"
+    fill="#0a1220" opacity="0.5"/>
+
+  <!-- Second contour (smaller, inward) -->
+  <path d="M 380 570 C 460 540 570 520 680 514 C 800 507 920 512 1040 502
+             C 1160 492 1280 478 1380 468 C 1430 462 1480 456 1520 450
+             L 1520 560 C 1420 570 1300 582 1160 590 C 1020 598 880 598 740 595
+             C 600 592 480 585 380 580 Z"
+    fill="#0c1628" opacity="0.45"/>
+
+  <!-- Third contour -->
+  <path d="M 540 548 C 630 525 740 515 860 510 C 980 505 1100 508 1200 498
+             C 1300 488 1390 475 1440 468 L 1440 540 C 1360 548 1260 558 1140 565
+             C 1020 572 890 572 760 568 C 640 564 560 555 540 548 Z"
+    fill="#0e1c34" opacity="0.35"/>
+
+  <!-- Coastline-like edge curves (abstract) -->
+  <path d="M 100 700 C 200 680 350 660 500 650 C 700 637 900 638 1100 628
+             C 1300 618 1450 605 1580 595"
+    fill="none" stroke="#00d4ff" stroke-width="0.75" opacity="0.15"/>
+  <path d="M 150 620 C 280 605 450 590 620 582 C 800 573 1000 572 1180 562
+             C 1340 553 1480 540 1580 532"
+    fill="none" stroke="#00d4ff" stroke-width="0.75" opacity="0.18"/>
+  <path d="M 300 545 C 450 530 620 520 800 514 C 980 508 1140 510 1300 500
+             C 1420 492 1520 482 1580 475"
+    fill="none" stroke="#00d4ff" stroke-width="0.75" opacity="0.2"/>
+  <path d="M 480 505 C 600 494 730 488 880 484 C 1020 480 1160 482 1280 474
+             C 1380 467 1460 458 1540 452"
+    fill="none" stroke="#00d4ff" stroke-width="0.75" opacity="0.18"/>
+
+  <!-- Water body suggestion (blue toned area, left) -->
+  <path d="M 0 300 C 60 310 130 330 180 360 C 230 390 240 430 220 470
+             C 200 510 170 540 140 560 C 100 585 50 600 0 610 Z"
+    fill="#060e1e" opacity="0.6"/>
+  <path d="M 0 300 C 60 310 130 330 180 360 C 230 390 240 430 220 470
+             C 200 510 170 540 140 560 C 100 585 50 600 0 610 Z"
+    fill="none" stroke="#00d4ff" stroke-width="0.75" opacity="0.15"/>
+
+  <!-- ==========================================
+       MAIN LOCATION PIN (center-ish, slightly right)
+       ========================================== -->
+  <!-- Pin location: represents UAE/Dubai ~800,440 -->
+  <g>
+    <!-- Outer pulse rings -->
+    <circle cx="800" cy="440" r="90" fill="#00d4ff" opacity="0.03"/>
+    <circle cx="800" cy="440" r="70" fill="#00d4ff" opacity="0.05"/>
+    <circle cx="800" cy="440" r="50" fill="#00d4ff" opacity="0.08"/>
+    <circle cx="800" cy="440" r="30" fill="#00d4ff" opacity="0.12"/>
+
+    <!-- Pulse ring strokes -->
+    <circle cx="800" cy="440" r="90" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.15"/>
+    <circle cx="800" cy="440" r="65" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.2"/>
+    <circle cx="800" cy="440" r="40" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.3"/>
+
+    <!-- Pin drop shape -->
+    <path d="M 800 490 L 784 462 A 18 18 0 1 1 816 462 Z"
+      fill="#00d4ff" filter="url(#pinGlow)"/>
+    <!-- Pin inner circle -->
+    <circle cx="800" cy="444" r="10" fill="#0a1020"/>
+    <circle cx="800" cy="444" r="5" fill="#00d4ff"/>
+    <!-- Pin highlight -->
+    <circle cx="797" cy="441" r="2" fill="#ffffff" opacity="0.7"/>
+
+    <!-- Location label -->
+    <rect x="660" y="500" width="280" height="60" rx="6" fill="#05090f" stroke="#00d4ff" stroke-width="1"/>
+    <!-- Label inner glow -->
+    <rect x="661" y="501" width="278" height="58" rx="5" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.3"/>
+    <text x="800" y="527" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold" letter-spacing="1">Zakey Regional Office</text>
+    <text x="800" y="548" font-family="Arial, sans-serif" font-size="10" fill="#00d4ff" text-anchor="middle" opacity="0.8" letter-spacing="2">DUBAI · UAE</text>
+
+    <!-- Leader line from label to pin -->
+    <line x1="800" y1="500" x2="800" y2="490" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- ==========================================
+       Scale bar / legend
+       ========================================== -->
+  <g transform="translate(80, 820)">
+    <rect x="0" y="0" width="160" height="1" fill="#00d4ff" opacity="0.3"/>
+    <rect x="0" y="-4" width="1" height="8" fill="#00d4ff" opacity="0.3"/>
+    <rect x="80" y="-3" width="1" height="6" fill="#00d4ff" opacity="0.3"/>
+    <rect x="160" y="-4" width="1" height="8" fill="#00d4ff" opacity="0.3"/>
+    <text x="0" y="16" font-family="monospace" font-size="8" fill="#00d4ff" opacity="0.4">0 km</text>
+    <text x="65" y="16" font-family="monospace" font-size="8" fill="#00d4ff" opacity="0.4">500 km</text>
+    <text x="140" y="16" font-family="monospace" font-size="8" fill="#00d4ff" opacity="0.4">1000 km</text>
+  </g>
+
+  <!-- Compass rose (bottom right) -->
+  <g transform="translate(1480, 780)">
+    <!-- N/S/E/W arms -->
+    <line x1="0" y1="-35" x2="0" y2="35" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+    <line x1="-35" y1="0" x2="35" y2="0" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+    <!-- N pointer (filled) -->
+    <polygon points="0,-35 -5,-20 0,-18 5,-20" fill="#00d4ff" opacity="0.7"/>
+    <!-- S pointer -->
+    <polygon points="0,35 -5,20 0,18 5,20" fill="#00d4ff" opacity="0.3"/>
+    <!-- E pointer -->
+    <polygon points="35,0 20,-5 18,0 20,5" fill="#00d4ff" opacity="0.3"/>
+    <!-- W pointer -->
+    <polygon points="-35,0 -20,-5 -18,0 -20,5" fill="#00d4ff" opacity="0.3"/>
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="3" fill="#00d4ff" opacity="0.5"/>
+    <!-- N label -->
+    <text x="0" y="-40" font-family="Arial, sans-serif" font-size="10" fill="#00d4ff" text-anchor="middle" opacity="0.6" font-weight="bold">N</text>
+  </g>
+
+  <!-- Corner decoration -->
+  <polyline points="30,55 30,30 55,30" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.2"/>
+  <polyline points="1545,30 1570,30 1570,55" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.2"/>
+  <polyline points="30,845 30,870 55,870" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.2"/>
+  <polyline points="1545,870 1570,870 1570,845" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.2"/>
+
+  <!-- Title -->
+  <text x="800" y="55" font-family="Arial, sans-serif" font-size="11" fill="#00d4ff" text-anchor="middle" letter-spacing="6" opacity="0.3">ZAKEY · OFFICE LOCATION</text>
+</svg>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070d"/>
+      <stop offset="60%" stop-color="#080d16"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <!-- Zone glows -->
+    <radialGradient id="meGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="euGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="asGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pinPulse1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#00d4ff" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="pinGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="zoneGlow">
+      <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Tech grid lines (horizontal) -->
+  <g opacity="0.06" stroke="#00d4ff" stroke-width="0.5">
+    <line x1="0" y1="100" x2="1600" y2="100"/>
+    <line x1="0" y1="200" x2="1600" y2="200"/>
+    <line x1="0" y1="300" x2="1600" y2="300"/>
+    <line x1="0" y1="400" x2="1600" y2="400"/>
+    <line x1="0" y1="500" x2="1600" y2="500"/>
+    <line x1="0" y1="600" x2="1600" y2="600"/>
+    <line x1="0" y1="700" x2="1600" y2="700"/>
+    <line x1="0" y1="800" x2="1600" y2="800"/>
+  </g>
+  <!-- Tech grid lines (vertical) -->
+  <g opacity="0.06" stroke="#00d4ff" stroke-width="0.5">
+    <line x1="100" y1="0" x2="100" y2="900"/>
+    <line x1="200" y1="0" x2="200" y2="900"/>
+    <line x1="300" y1="0" x2="300" y2="900"/>
+    <line x1="400" y1="0" x2="400" y2="900"/>
+    <line x1="500" y1="0" x2="500" y2="900"/>
+    <line x1="600" y1="0" x2="600" y2="900"/>
+    <line x1="700" y1="0" x2="700" y2="900"/>
+    <line x1="800" y1="0" x2="800" y2="900"/>
+    <line x1="900" y1="0" x2="900" y2="900"/>
+    <line x1="1000" y1="0" x2="1000" y2="900"/>
+    <line x1="1100" y1="0" x2="1100" y2="900"/>
+    <line x1="1200" y1="0" x2="1200" y2="900"/>
+    <line x1="1300" y1="0" x2="1300" y2="900"/>
+    <line x1="1400" y1="0" x2="1400" y2="900"/>
+    <line x1="1500" y1="0" x2="1500" y2="900"/>
+  </g>
+
+  <!-- ==========================================
+       Abstract Region Shapes (not real maps)
+       ========================================== -->
+
+  <!-- EUROPE zone — top left flowing blob -->
+  <ellipse cx="380" cy="340" rx="260" ry="200" fill="url(#euGlow)"/>
+  <!-- Europe landmass silhouette suggestion (abstract flowing curves) -->
+  <path d="M 180 200 C 220 160 280 155 340 170 C 400 185 450 175 500 195
+             C 540 210 560 250 550 300 C 540 350 520 380 490 400
+             C 460 420 430 430 400 420 C 370 410 340 400 310 410
+             C 280 420 250 415 220 395 C 190 375 170 340 165 300
+             C 160 260 165 225 180 200 Z"
+    fill="#0a1525" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
+  <!-- Europe inner highlight -->
+  <path d="M 200 220 C 240 195 310 190 360 205 C 410 220 460 215 500 235
+             C 520 245 525 275 510 310 C 500 340 480 365 455 375
+             C 430 385 400 380 380 370 C 350 360 320 358 300 370
+             C 275 380 250 370 230 350 C 210 330 195 295 195 265 Z"
+    fill="#0d1f38" opacity="0.3"/>
+  <!-- Europe label -->
+  <text x="355" y="310" font-family="Arial, sans-serif" font-size="16" fill="#00d4ff" text-anchor="middle" letter-spacing="3" opacity="0.5">EUROPE</text>
+
+  <!-- MIDDLE EAST zone — center right area -->
+  <ellipse cx="900" cy="520" rx="280" ry="210" fill="url(#meGlow)"/>
+  <!-- ME landmass suggestion -->
+  <path d="M 680 380 C 720 350 790 345 850 360 C 910 375 970 365 1020 385
+             C 1070 405 1100 445 1095 490 C 1090 540 1070 580 1040 605
+             C 1010 630 975 640 940 635 C 905 630 870 620 835 630
+             C 800 640 765 635 735 615 C 705 595 685 560 675 520
+             C 665 480 665 420 680 380 Z"
+    fill="#0a1525" stroke="#00d4ff" stroke-width="1" opacity="0.6"/>
+  <!-- ME peninsula (Arabian Peninsula suggestion) -->
+  <path d="M 840 540 C 855 560 865 590 860 620 C 855 650 840 670 825 660
+             C 810 650 810 625 815 600 C 820 575 830 555 840 540 Z"
+    fill="#0d1f38" stroke="#00d4ff" stroke-width="0.5" opacity="0.4"/>
+  <!-- ME label -->
+  <text x="890" y="500" font-family="Arial, sans-serif" font-size="16" fill="#00d4ff" text-anchor="middle" letter-spacing="2" opacity="0.6">MIDDLE EAST</text>
+
+  <!-- ASIA zone — right area -->
+  <ellipse cx="1330" cy="380" rx="230" ry="280" fill="url(#asGlow)"/>
+  <!-- Asia landmass suggestion (large, irregular) -->
+  <path d="M 1150 180 C 1190 150 1250 145 1310 160 C 1380 178 1440 165 1490 190
+             C 1540 215 1560 260 1545 310 C 1530 360 1500 395 1465 420
+             C 1435 445 1395 460 1355 455 C 1315 450 1275 445 1240 460
+             C 1205 475 1175 470 1150 450 C 1125 430 1108 395 1105 355
+             C 1102 315 1115 265 1130 230 C 1140 205 1150 190 1150 180 Z"
+    fill="#0a1525" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
+  <!-- Asia peninsulas / islands suggestion -->
+  <ellipse cx="1380" cy="500" rx="40" ry="25" fill="#0a1525" stroke="#00d4ff" stroke-width="0.5" opacity="0.3"/>
+  <ellipse cx="1470" cy="460" rx="25" ry="15" fill="#0a1525" stroke="#00d4ff" stroke-width="0.5" opacity="0.3"/>
+  <!-- Asia label -->
+  <text x="1310" y="330" font-family="Arial, sans-serif" font-size="16" fill="#00d4ff" text-anchor="middle" letter-spacing="3" opacity="0.5">ASIA</text>
+
+  <!-- Connection arcs between zones -->
+  <path d="M 490 310 C 620 250 750 350 870 420" fill="none" stroke="#00d4ff" stroke-width="1" stroke-dasharray="6 8" opacity="0.2"/>
+  <path d="M 1050 430 C 1130 390 1180 370 1230 310" fill="none" stroke="#00d4ff" stroke-width="1" stroke-dasharray="6 8" opacity="0.2"/>
+
+  <!-- ==========================================
+       PIN INDICATORS
+       ========================================== -->
+
+  <!-- PIN 1 — Europe (London/Paris area) -->
+  <g transform="translate(340, 270)">
+    <circle cx="0" cy="0" r="30" fill="#00d4ff" opacity="0.05"/>
+    <circle cx="0" cy="0" r="20" fill="#00d4ff" opacity="0.08"/>
+    <circle cx="0" cy="0" r="10" fill="#00d4ff" opacity="0.15"/>
+    <circle cx="0" cy="0" r="5" fill="#00d4ff" opacity="0.8" filter="url(#pinGlow)"/>
+    <circle cx="0" cy="0" r="2.5" fill="#ffffff"/>
+    <!-- Pin drop shape -->
+    <path d="M 0 5 L -6 -8 A 6 6 0 1 1 6 -8 Z" fill="#00d4ff" opacity="0.8" transform="translate(0 -5)"/>
+    <circle cx="0" cy="-13" r="3" fill="#ffffff" opacity="0.9"/>
+  </g>
+
+  <!-- PIN 2 — Europe (Germany/Netherlands area) -->
+  <g transform="translate(430, 235)">
+    <circle cx="0" cy="0" r="22" fill="#00d4ff" opacity="0.06"/>
+    <circle cx="0" cy="0" r="12" fill="#00d4ff" opacity="0.1"/>
+    <circle cx="0" cy="0" r="5" fill="#00d4ff" opacity="0.6" filter="url(#pinGlow)"/>
+    <circle cx="0" cy="0" r="2.5" fill="#ffffff"/>
+    <path d="M 0 5 L -5 -7 A 5 5 0 1 1 5 -7 Z" fill="#00d4ff" opacity="0.7" transform="translate(0 -5)"/>
+    <circle cx="0" cy="-12" r="2.5" fill="#ffffff" opacity="0.9"/>
+  </g>
+
+  <!-- PIN 3 — Middle East (UAE/Dubai area) — PRIMARY -->
+  <g transform="translate(940, 530)">
+    <circle cx="0" cy="0" r="50" fill="#00d4ff" opacity="0.04"/>
+    <circle cx="0" cy="0" r="35" fill="#00d4ff" opacity="0.07"/>
+    <circle cx="0" cy="0" r="20" fill="#00d4ff" opacity="0.12"/>
+    <circle cx="0" cy="0" r="8" fill="#00d4ff" opacity="0.7" filter="url(#pinGlow)"/>
+    <circle cx="0" cy="0" r="4" fill="#ffffff"/>
+    <!-- Primary drop pin -->
+    <path d="M 0 6 L -8 -10 A 8 8 0 1 1 8 -10 Z" fill="#00d4ff" transform="translate(0 -6)"/>
+    <circle cx="0" cy="-16" r="4" fill="#ffffff"/>
+    <!-- Label -->
+    <rect x="-50" y="18" width="100" height="22" rx="4" fill="#050a14" stroke="#00d4ff" stroke-width="0.75" opacity="0.8"/>
+    <text x="0" y="33" font-family="Arial, sans-serif" font-size="10" fill="#00d4ff" text-anchor="middle" letter-spacing="1">HEADQUARTERS</text>
+  </g>
+
+  <!-- PIN 4 — Middle East (Saudi/Riyadh area) -->
+  <g transform="translate(850, 590)">
+    <circle cx="0" cy="0" r="22" fill="#00d4ff" opacity="0.06"/>
+    <circle cx="0" cy="0" r="12" fill="#00d4ff" opacity="0.1"/>
+    <circle cx="0" cy="0" r="5" fill="#00d4ff" opacity="0.6" filter="url(#pinGlow)"/>
+    <circle cx="0" cy="0" r="2.5" fill="#ffffff"/>
+    <path d="M 0 5 L -5 -7 A 5 5 0 1 1 5 -7 Z" fill="#00d4ff" opacity="0.7" transform="translate(0 -5)"/>
+    <circle cx="0" cy="-12" r="2.5" fill="#ffffff" opacity="0.9"/>
+  </g>
+
+  <!-- PIN 5 — Asia (Singapore/Southeast Asia) -->
+  <g transform="translate(1350, 440)">
+    <circle cx="0" cy="0" r="28" fill="#00d4ff" opacity="0.06"/>
+    <circle cx="0" cy="0" r="16" fill="#00d4ff" opacity="0.1"/>
+    <circle cx="0" cy="0" r="6" fill="#00d4ff" opacity="0.65" filter="url(#pinGlow)"/>
+    <circle cx="0" cy="0" r="3" fill="#ffffff"/>
+    <path d="M 0 5 L -5 -7 A 5 5 0 1 1 5 -7 Z" fill="#00d4ff" opacity="0.7" transform="translate(0 -5)"/>
+    <circle cx="0" cy="-12" r="2.5" fill="#ffffff" opacity="0.9"/>
+  </g>
+
+  <!-- PIN 6 — Asia (Japan/East Asia) -->
+  <g transform="translate(1450, 270)">
+    <circle cx="0" cy="0" r="22" fill="#00d4ff" opacity="0.05"/>
+    <circle cx="0" cy="0" r="12" fill="#00d4ff" opacity="0.09"/>
+    <circle cx="0" cy="0" r="5" fill="#00d4ff" opacity="0.55" filter="url(#pinGlow)"/>
+    <circle cx="0" cy="0" r="2.5" fill="#ffffff"/>
+    <path d="M 0 5 L -5 -7 A 5 5 0 1 1 5 -7 Z" fill="#00d4ff" opacity="0.65" transform="translate(0 -5)"/>
+    <circle cx="0" cy="-12" r="2.5" fill="#ffffff" opacity="0.9"/>
+  </g>
+
+  <!-- Title / branding -->
+  <text x="800" y="820" font-family="Arial, sans-serif" font-size="13" fill="#00d4ff" text-anchor="middle" letter-spacing="6" opacity="0.35">ZAKEY GLOBAL COVERAGE</text>
+  <line x1="600" y1="835" x2="1000" y2="835" stroke="#00d4ff" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Corner frame decoration -->
+  <polyline points="30,55 30,30 55,30" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.2"/>
+  <polyline points="1545,30 1570,30 1570,55" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.2"/>
+  <polyline points="30,845 30,870 55,870" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.2"/>
+  <polyline points="1545,870 1570,870 1570,845" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.2"/>
+</svg>

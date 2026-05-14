@@ -1,16 +1,87 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <title>Zakey Aura Panel — Angled View</title>
   <defs>
-    <linearGradient id="bg-AURA PANEL — ANGLE" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0f1c"/>
+      <stop offset="100%" stop-color="#060810"/>
     </linearGradient>
-    <radialGradient id="gl-AURA PANEL — ANGLE" cx="300" cy="200" r="180" gradientUnits="userSpaceOnUse">
+    <radialGradient id="bgGlow" cx="260" cy="180" r="160" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
+      <stop offset="40%" stop-color="#22d3ee" stop-opacity="0.07"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="faceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#252840"/>
+      <stop offset="100%" stop-color="#1a1d2e"/>
+    </linearGradient>
+    <linearGradient id="sideGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a1e30"/>
+      <stop offset="100%" stop-color="#12152a"/>
+    </linearGradient>
+    <linearGradient id="statusBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.2"/>
+    </linearGradient>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-AURA PANEL — ANGLE)"/>
-  <ellipse cx="300" cy="200" rx="180" ry="140" fill="url(#gl-AURA PANEL — ANGLE)"/>
-  <rect x="160" y="80" width="160" height="200" rx="10" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><rect x="175" y="100" width="130" height="140" rx="6" fill="#05070d" stroke="#22d3ee" stroke-width="0.75" stroke-opacity="0.3"/><circle cx="240" cy="256" r="6" fill="none" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.5"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">AURA PANEL — ANGLE</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bg)"/>
+
+  <!-- Subtle wall surface -->
+  <rect width="480" height="360" fill="#0c0f1c" fill-opacity="0.3"/>
+
+  <!-- Ambient glow -->
+  <ellipse cx="260" cy="180" rx="165" ry="135" fill="url(#bgGlow)"/>
+
+  <!-- Panel shadow on wall -->
+  <rect x="183" y="87" width="118" height="208" rx="5" fill="#000000" fill-opacity="0.35"/>
+
+  <!-- Right edge face (side panel) — parallelogram -->
+  <polygon points="278,82 296,88 296,284 278,278" fill="url(#sideGrad)"/>
+  <!-- Right edge top/bottom trim -->
+  <line x1="278" y1="82" x2="296" y2="88" stroke="#2a2e45" stroke-width="1"/>
+  <line x1="278" y1="278" x2="296" y2="284" stroke="#1a1e30" stroke-width="1"/>
+  <!-- Right edge highlight line -->
+  <line x1="296" y1="88" x2="296" y2="284" stroke="#22d3ee" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- Main front face frame -->
+  <rect x="180" y="82" width="98" height="196" rx="5" fill="url(#faceGrad)" stroke="#2c3050" stroke-width="1"/>
+
+  <!-- Glass face -->
+  <rect x="186" y="88" width="86" height="184" rx="3" fill="#080b18"/>
+
+  <!-- Zone 1 active background -->
+  <rect x="186" y="92" width="86" height="38" fill="#22d3ee" fill-opacity="0.12"/>
+
+  <!-- Zone separators -->
+  <line x1="186" y1="130" x2="272" y2="130" stroke="#22d3ee" stroke-opacity="0.2" stroke-width="1"/>
+  <line x1="186" y1="168" x2="272" y2="168" stroke="#22d3ee" stroke-opacity="0.2" stroke-width="1"/>
+  <line x1="186" y1="206" x2="272" y2="206" stroke="#22d3ee" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- Zakey brand text -->
+  <text x="229" y="100" font-family="system-ui,sans-serif" font-size="9" fill="#22d3ee" fill-opacity="0.6" text-anchor="middle" letter-spacing="1.5">ZAKEY</text>
+
+  <!-- Zone 1: Lights — active -->
+  <circle cx="206" cy="112" r="6" fill="none" stroke="#22d3ee" stroke-width="1.2"/>
+  <circle cx="206" cy="112" r="2.5" fill="#22d3ee" fill-opacity="0.8"/>
+  <text x="221" y="116" font-family="system-ui,sans-serif" font-size="9" fill="#22d3ee" fill-opacity="0.9" dominant-baseline="middle">Lights</text>
+
+  <!-- Zone 2: Scenes — wave -->
+  <path d="M198 148 Q202 144 206 148 Q210 152 214 148" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-opacity="0.6" stroke-linecap="round"/>
+  <text x="221" y="152" font-family="system-ui,sans-serif" font-size="9" fill="#8b92a9" dominant-baseline="middle">Scenes</text>
+
+  <!-- Zone 3: Climate — zigzag -->
+  <path d="M198 182 L202 178 L206 186 L210 178 L214 182" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="221" y="186" font-family="system-ui,sans-serif" font-size="9" fill="#8b92a9" dominant-baseline="middle">Climate</text>
+
+  <!-- Zone 4: Security — lock -->
+  <rect x="202" y="218" width="8" height="6" rx="1" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-opacity="0.6"/>
+  <path d="M203 218 Q204 214 206 214 Q208 214 209 218" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-opacity="0.6"/>
+  <text x="221" y="222" font-family="system-ui,sans-serif" font-size="9" fill="#8b92a9" dominant-baseline="middle">Security</text>
+
+  <!-- Status bar -->
+  <rect x="186" y="257" width="86" height="6" fill="url(#statusBar)" rx="1"/>
+
+  <!-- Frame edge highlight -->
+  <rect x="180" y="82" width="98" height="196" rx="5" fill="none" stroke="#3a3f5c" stroke-width="0.5"/>
 </svg>

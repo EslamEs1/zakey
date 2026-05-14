@@ -1,16 +1,125 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
   <defs>
-    <linearGradient id="bg-POWER MODULE" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
+    <radialGradient id="pm-bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
+    </radialGradient>
+    <pattern id="pm-hex" x="0" y="0" width="20" height="17.3" patternUnits="userSpaceOnUse">
+      <polygon points="10,1 19,5.5 19,11.8 10,16.3 1,11.8 1,5.5" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+    <!-- Body gradient -->
+    <linearGradient id="pm-body-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2c3050"/>
+      <stop offset="45%" stop-color="#1e2030"/>
+      <stop offset="100%" stop-color="#12141e"/>
     </linearGradient>
-    <radialGradient id="gl-POWER MODULE" cx="240" cy="185" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <!-- Right side -->
+    <linearGradient id="pm-side-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#161824"/>
+      <stop offset="100%" stop-color="#0c0e16"/>
+    </linearGradient>
+    <!-- Top face -->
+    <linearGradient id="pm-top-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#383c58"/>
+      <stop offset="100%" stop-color="#242638"/>
+    </linearGradient>
+    <!-- Terminal block -->
+    <linearGradient id="pm-terminal-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#282c44"/>
+      <stop offset="100%" stop-color="#181a28"/>
+    </linearGradient>
+    <!-- Screw metallic -->
+    <radialGradient id="pm-screw-grad" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#707070"/>
+      <stop offset="100%" stop-color="#383838"/>
+    </radialGradient>
+    <!-- Cyan glow indicator -->
+    <radialGradient id="pm-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00cfff" stop-opacity="0.18"/>
+      <stop offset="65%" stop-color="#00cfff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#00cfff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Shadow -->
+    <radialGradient id="pm-shadow" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-POWER MODULE)"/>
-  <ellipse cx="240" cy="185" rx="180" ry="140" fill="url(#gl-POWER MODULE)"/>
-  <rect x="150" y="120" width="180" height="120" rx="14" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><circle cx="200" cy="180" r="10" fill="#22d3ee" fill-opacity="0.25"/><circle cx="240" cy="180" r="10" fill="#22d3ee" fill-opacity="0.15"/><circle cx="280" cy="180" r="10" fill="#22d3ee" fill-opacity="0.1"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">POWER MODULE</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#pm-bg)"/>
+  <rect width="480" height="360" fill="url(#pm-hex)"/>
+
+  <!-- Cyan glow -->
+  <ellipse cx="240" cy="192" rx="115" ry="110" fill="url(#pm-glow)"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="248" cy="308" rx="70" ry="12" fill="url(#pm-shadow)"/>
+
+  <!-- === IN-WALL POWER MODULE — 90x90px square, 3D === -->
+  <!-- Right side depth -->
+  <polygon points="285,135 301,128 301,228 285,235" fill="url(#pm-side-grad)"/>
+  <!-- Top face -->
+  <polygon points="195,135 285,135 301,128 211,128" fill="url(#pm-top-grad)"/>
+  <!-- Main front face -->
+  <rect x="195" y="135" width="90" height="100" rx="6" fill="url(#pm-body-grad)"/>
+  <!-- Front left highlight strip -->
+  <rect x="195" y="135" width="5" height="100" rx="2.5" fill="#ffffff" opacity="0.08"/>
+  <!-- Front top edge highlight -->
+  <rect x="197" y="136" width="86" height="3" rx="1.5" fill="#ffffff" opacity="0.07"/>
+  <!-- Front face border -->
+  <rect x="195" y="135" width="90" height="100" rx="6" fill="none" stroke="#2a2e48" stroke-width="1.2"/>
+
+  <!-- Zakey logo center -->
+  <text x="240" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#00cfff" opacity="0.50" letter-spacing="2">Z</text>
+  <text x="240" y="173" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#404468" opacity="0.7" letter-spacing="1">ZAKEY</text>
+
+  <!-- Terminal blocks -->
+  <!-- LOAD terminal -->
+  <rect x="204" y="182" width="24" height="28" rx="3" fill="url(#pm-terminal-grad)"/>
+  <rect x="204" y="182" width="24" height="28" rx="3" fill="none" stroke="#383c58" stroke-width="1"/>
+  <!-- Load screw -->
+  <circle cx="216" cy="193" r="5" fill="url(#pm-screw-grad)"/>
+  <circle cx="216" cy="193" r="5" fill="none" stroke="#505050" stroke-width="0.8"/>
+  <line x1="213" y1="193" x2="219" y2="193" stroke="#282828" stroke-width="1.2"/>
+  <line x1="216" y1="190" x2="216" y2="196" stroke="#282828" stroke-width="1.2"/>
+  <text x="216" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#404468" opacity="0.8">LOAD</text>
+
+  <!-- LINE terminal -->
+  <rect x="238" y="182" width="24" height="28" rx="3" fill="url(#pm-terminal-grad)"/>
+  <rect x="238" y="182" width="24" height="28" rx="3" fill="none" stroke="#383c58" stroke-width="1"/>
+  <!-- Line screw -->
+  <circle cx="250" cy="193" r="5" fill="url(#pm-screw-grad)"/>
+  <circle cx="250" cy="193" r="5" fill="none" stroke="#505050" stroke-width="0.8"/>
+  <line x1="247" y1="193" x2="253" y2="193" stroke="#282828" stroke-width="1.2"/>
+  <line x1="250" y1="190" x2="250" y2="196" stroke="#282828" stroke-width="1.2"/>
+  <text x="250" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#404468" opacity="0.8">LINE</text>
+
+  <!-- N terminal -->
+  <rect x="258" y="182" width="20" height="28" rx="3" fill="url(#pm-terminal-grad)"/>
+  <rect x="258" y="182" width="20" height="28" rx="3" fill="none" stroke="#383c58" stroke-width="1"/>
+  <!-- N screw -->
+  <circle cx="268" cy="193" r="4.5" fill="url(#pm-screw-grad)"/>
+  <circle cx="268" cy="193" r="4.5" fill="none" stroke="#505050" stroke-width="0.8"/>
+  <line x1="265.5" y1="193" x2="270.5" y2="193" stroke="#282828" stroke-width="1.2"/>
+  <text x="268" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#404468" opacity="0.8">N</text>
+
+  <!-- Wire entry slots at top edge -->
+  <circle cx="216" cy="137" r="3.5" fill="#0a0c16"/>
+  <circle cx="216" cy="137" r="3.5" fill="none" stroke="#2a2e48" stroke-width="0.8"/>
+  <circle cx="240" cy="137" r="3.5" fill="#0a0c16"/>
+  <circle cx="240" cy="137" r="3.5" fill="none" stroke="#2a2e48" stroke-width="0.8"/>
+  <circle cx="264" cy="137" r="3.5" fill="#0a0c16"/>
+  <circle cx="264" cy="137" r="3.5" fill="none" stroke="#2a2e48" stroke-width="0.8"/>
+
+  <!-- Status LED green -->
+  <circle cx="240" cy="222" r="4" fill="#22ff88" opacity="0.92"/>
+  <circle cx="240" cy="222" r="7.5" fill="#22ff88" opacity="0.25"/>
+  <circle cx="240" cy="221" r="1.8" fill="#aaffcc" opacity="0.7"/>
+
+  <!-- Cyan indicator line below logo -->
+  <line x1="225" y1="178" x2="255" y2="178" stroke="#00cfff" stroke-width="0.8" opacity="0.35"/>
+
+  <!-- Product label -->
+  <text x="240" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" opacity="0.40" letter-spacing="2.5">IN-WALL POWER MODULE</text>
 </svg>

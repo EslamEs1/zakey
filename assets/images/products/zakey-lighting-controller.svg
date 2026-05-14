@@ -1,19 +1,127 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0c0f17"/>
-      <stop offset="100%" stop-color="#05070d"/>
-    </linearGradient>
-    <radialGradient id="r" cx="70%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <radialGradient id="bgG" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
     </radialGradient>
+    <pattern id="gridPat" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20,0 L0,0 0,20" fill="none" stroke="#6080c0" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+    <!-- DIN body gradient -->
+    <linearGradient id="bodyG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#252838"/>
+      <stop offset="100%" stop-color="#181a28"/>
+    </linearGradient>
+    <!-- Side face -->
+    <linearGradient id="sideG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#141620"/>
+      <stop offset="100%" stop-color="#0e1018"/>
+    </linearGradient>
+    <!-- Cyan glow -->
+    <radialGradient id="cGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Drop shadow -->
+    <radialGradient id="shadowG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softG" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="1280" height="720" fill="url(#g)"/>
-  <rect width="1280" height="720" fill="url(#r)"/>
-  <text x="640" y="380" font-family="Manrope,Inter,system-ui,sans-serif" font-size="48" font-weight="700"
-        fill="#22d3ee" fill-opacity="0.15" text-anchor="middle" dominant-baseline="middle"
-        letter-spacing="-1">Lighting Controller</text>
-  <circle cx="640" cy="260" r="60" fill="none" stroke="#22d3ee" stroke-opacity="0.1" stroke-width="1"/>
-  <circle cx="640" cy="260" r="100" fill="none" stroke="#22d3ee" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bgG)"/>
+  <rect width="480" height="360" fill="url(#gridPat)"/>
+
+  <!-- Product glow (cyan) -->
+  <ellipse cx="240" cy="185" rx="90" ry="130" fill="url(#cGlow)"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="240" cy="298" rx="55" ry="9" fill="url(#shadowG)" opacity="0.5"/>
+
+  <!-- === DIN RAIL MODULE (elongated vertical) === -->
+  <!-- Right side face -->
+  <rect x="272" y="80" width="16" height="210" rx="3" fill="url(#sideG)"/>
+  <!-- Top face perspective -->
+  <polygon points="224,80 272,80 288,68 240,68" fill="#2e3248"/>
+  <polygon points="224,80 272,80 274,82 226,82" fill="#3a3e60" opacity="0.5"/>
+
+  <!-- Main front body -->
+  <rect x="224" y="80" width="48" height="210" rx="4" fill="url(#bodyG)"/>
+  <!-- Lit left+top edges -->
+  <rect x="224" y="80" width="2.5" height="210" rx="1" fill="#404568" opacity="0.85"/>
+  <rect x="224" y="80" width="48" height="2.5" rx="1" fill="#383c60" opacity="0.75"/>
+
+  <!-- Top mounting bracket -->
+  <rect x="216" y="74" width="64" height="12" rx="3" fill="#1e2038" stroke="#303458" stroke-width="1"/>
+  <rect x="230" y="76" width="36" height="8" rx="2" fill="#141628"/>
+  <!-- Bracket slots -->
+  <rect x="235" y="77" width="10" height="6" rx="1.5" fill="#0c0e1e"/>
+  <rect x="251" y="77" width="10" height="6" rx="1.5" fill="#0c0e1e"/>
+
+  <!-- Bottom mounting bracket -->
+  <rect x="216" y="286" width="64" height="12" rx="3" fill="#1e2038" stroke="#303458" stroke-width="1"/>
+  <rect x="230" y="288" width="36" height="8" rx="2" fill="#141628"/>
+  <rect x="235" y="289" width="10" height="6" rx="1.5" fill="#0c0e1e"/>
+  <rect x="251" y="289" width="10" height="6" rx="1.5" fill="#0c0e1e"/>
+
+  <!-- DIN clip lip at bottom back -->
+  <rect x="228" y="283" width="40" height="6" rx="2" fill="#0d0f1e"/>
+
+  <!-- Channel output ports (4x) - circles with labels -->
+  <!-- CH1 (top, active) -->
+  <circle cx="248" cy="118" r="10" fill="#101220" stroke="#2e3258" stroke-width="1.5"/>
+  <circle cx="248" cy="118" r="7" fill="#0e1020" stroke="#252840" stroke-width="0.8"/>
+  <circle cx="248" cy="118" r="4" fill="#161828"/>
+  <text x="248" y="135" text-anchor="middle" font-family="Arial" font-size="5.5" fill="#7080a0" letter-spacing="0.5">CH1</text>
+
+  <!-- CH2 -->
+  <circle cx="248" cy="162" r="10" fill="#101220" stroke="#2e3258" stroke-width="1.5"/>
+  <circle cx="248" cy="162" r="7" fill="#0e1020" stroke="#252840" stroke-width="0.8"/>
+  <circle cx="248" cy="162" r="4" fill="#161828"/>
+  <text x="248" y="179" text-anchor="middle" font-family="Arial" font-size="5.5" fill="#7080a0" letter-spacing="0.5">CH2</text>
+
+  <!-- CH3 -->
+  <circle cx="248" cy="206" r="10" fill="#101220" stroke="#2e3258" stroke-width="1.5"/>
+  <circle cx="248" cy="206" r="7" fill="#0e1020" stroke="#252840" stroke-width="0.8"/>
+  <circle cx="248" cy="206" r="4" fill="#161828"/>
+  <text x="248" y="223" text-anchor="middle" font-family="Arial" font-size="5.5" fill="#7080a0" letter-spacing="0.5">CH3</text>
+
+  <!-- CH4 -->
+  <circle cx="248" cy="250" r="10" fill="#101220" stroke="#2e3258" stroke-width="1.5"/>
+  <circle cx="248" cy="250" r="7" fill="#0e1020" stroke="#252840" stroke-width="0.8"/>
+  <circle cx="248" cy="250" r="4" fill="#161828"/>
+  <text x="248" y="267" text-anchor="middle" font-family="Arial" font-size="5.5" fill="#7080a0" letter-spacing="0.5">CH4</text>
+
+  <!-- Status LED column (right side of body) -->
+  <!-- CH1: green (active) -->
+  <circle cx="264" cy="118" r="3.5" fill="#00cc66" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="264" cy="118" r="2" fill="#00ff88"/>
+  <!-- CH2: dim -->
+  <circle cx="264" cy="162" r="3.5" fill="#00e5ff" opacity="0.2"/>
+  <!-- CH3: dim -->
+  <circle cx="264" cy="206" r="3.5" fill="#00e5ff" opacity="0.15"/>
+  <!-- CH4: dim -->
+  <circle cx="264" cy="250" r="3.5" fill="#00e5ff" opacity="0.1"/>
+
+  <!-- Brand label area -->
+  <rect x="228" y="92" width="36" height="14" rx="2" fill="#10121e"/>
+  <text x="246" y="102" text-anchor="middle" font-family="'Courier New', monospace" font-size="7"
+        fill="#4a5070" letter-spacing="0.5">ZK-L4</text>
+
+  <!-- Floor reflection -->
+  <rect x="224" y="290" width="48" height="30" rx="4" fill="url(#bodyG)" opacity="0.08"
+        transform="scale(1,-1) translate(0,-580)"/>
+
+  <!-- Product label -->
+  <text x="240" y="332" text-anchor="middle" font-family="Arial, sans-serif" font-size="10"
+        fill="white" opacity="0.5" letter-spacing="2">LIGHTING CONTROLLER</text>
 </svg>

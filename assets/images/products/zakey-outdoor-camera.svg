@@ -1,16 +1,140 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
   <defs>
-    <linearGradient id="bg-OUTDOOR CAMERA" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
-    </linearGradient>
-    <radialGradient id="gl-OUTDOOR CAMERA" cx="220" cy="180" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <radialGradient id="oc-bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
     </radialGradient>
+    <pattern id="oc-hex" x="0" y="0" width="20" height="17.3" patternUnits="userSpaceOnUse">
+      <polygon points="10,1 19,5.5 19,11.8 10,16.3 1,11.8 1,5.5" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+    <linearGradient id="oc-body-top" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3a3e58"/>
+      <stop offset="40%" stop-color="#2c2f46"/>
+      <stop offset="100%" stop-color="#1a1c2e"/>
+    </linearGradient>
+    <linearGradient id="oc-body-side" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#40445e"/>
+      <stop offset="50%" stop-color="#2c2f46"/>
+      <stop offset="100%" stop-color="#181a28"/>
+    </linearGradient>
+    <linearGradient id="oc-bracket" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#333650"/>
+      <stop offset="60%" stop-color="#272a3e"/>
+      <stop offset="100%" stop-color="#1a1c28"/>
+    </linearGradient>
+    <radialGradient id="oc-lens-bg" cx="35%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#0d1018"/>
+      <stop offset="100%" stop-color="#060810"/>
+    </radialGradient>
+    <radialGradient id="oc-iris" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#006688"/>
+    </radialGradient>
+    <radialGradient id="oc-glow" cx="35%" cy="58%" r="48%">
+      <stop offset="0%" stop-color="#00cfff" stop-opacity="0.18"/>
+      <stop offset="70%" stop-color="#00cfff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#00cfff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="oc-shadow" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.52"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="oc-lens-cap" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e2135"/>
+      <stop offset="100%" stop-color="#0e1020"/>
+    </linearGradient>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-OUTDOOR CAMERA)"/>
-  <ellipse cx="220" cy="180" rx="180" ry="140" fill="url(#gl-OUTDOOR CAMERA)"/>
-  <rect x="155" y="130" width="170" height="120" rx="12" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><circle cx="240" cy="190" r="34" fill="#05070d" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.5"/><circle cx="240" cy="190" r="18" fill="#22d3ee" fill-opacity="0.12"/><circle cx="240" cy="190" r="8" fill="#22d3ee" fill-opacity="0.25"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">OUTDOOR CAMERA</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#oc-bg)"/>
+  <rect width="480" height="360" fill="url(#oc-hex)"/>
+
+  <!-- Cyan glow emanating from lens direction -->
+  <ellipse cx="185" cy="250" rx="130" ry="95" fill="url(#oc-glow)"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="265" cy="318" rx="85" ry="13" fill="url(#oc-shadow)"/>
+
+  <!-- Wall mount bracket — vertical arm -->
+  <rect x="283" y="55" width="24" height="145" rx="6" fill="url(#oc-bracket)"/>
+  <!-- Bracket left highlight -->
+  <rect x="284" y="56" width="5" height="143" rx="2.5" fill="#ffffff" opacity="0.08"/>
+  <!-- Bracket horizontal arm -->
+  <rect x="230" y="55" width="77" height="22" rx="6" fill="url(#oc-bracket)"/>
+  <rect x="231" y="56" width="75" height="5" rx="2.5" fill="#ffffff" opacity="0.07"/>
+  <!-- Mount screw top -->
+  <circle cx="295" cy="76" r="6" fill="#141624"/>
+  <circle cx="295" cy="76" r="6" fill="none" stroke="#404468" stroke-width="1.2"/>
+  <line x1="292" y1="76" x2="298" y2="76" stroke="#505678" stroke-width="1.2"/>
+  <line x1="295" y1="73" x2="295" y2="79" stroke="#505678" stroke-width="1.2"/>
+  <!-- Mount screw bottom -->
+  <circle cx="295" cy="175" r="6" fill="#141624"/>
+  <circle cx="295" cy="175" r="6" fill="none" stroke="#404468" stroke-width="1.2"/>
+  <line x1="292" y1="175" x2="298" y2="175" stroke="#505678" stroke-width="1.2"/>
+  <line x1="295" y1="172" x2="295" y2="178" stroke="#505678" stroke-width="1.2"/>
+  <!-- Pivot/knuckle joint -->
+  <circle cx="283" cy="190" r="16" fill="#282c44"/>
+  <circle cx="283" cy="190" r="16" fill="none" stroke="#404468" stroke-width="1.5"/>
+  <circle cx="279" cy="186" r="5.5" fill="#ffffff" opacity="0.07"/>
+
+  <!-- Camera bullet body — tilted 30° downward — using transform -->
+  <g transform="translate(240,192) rotate(-28)">
+    <!-- Main cylinder body face (top face) -->
+    <rect x="-52" y="-21" width="122" height="42" rx="20" fill="url(#oc-body-top)"/>
+    <!-- Body left side shade -->
+    <rect x="-52" y="-21" width="18" height="42" rx="10" fill="#14162a" opacity="0.5"/>
+    <!-- Body right highlight edge -->
+    <rect x="60" y="-19" width="8" height="38" rx="4" fill="#ffffff" opacity="0.05"/>
+    <!-- Body top edge highlight line -->
+    <line x1="-30" y1="-20" x2="58" y2="-20" stroke="#5a5e78" stroke-width="0.8" opacity="0.4"/>
+    <!-- Diamond grip texture — faint lines -->
+    <line x1="20" y1="-19" x2="20" y2="19" stroke="#ffffff" stroke-width="0.5" opacity="0.05"/>
+    <line x1="30" y1="-19" x2="30" y2="19" stroke="#ffffff" stroke-width="0.5" opacity="0.05"/>
+    <line x1="40" y1="-19" x2="40" y2="19" stroke="#ffffff" stroke-width="0.5" opacity="0.05"/>
+    <line x1="50" y1="-19" x2="50" y2="19" stroke="#ffffff" stroke-width="0.5" opacity="0.05"/>
+    <line x1="15" y1="-10" x2="60" y2="-10" stroke="#ffffff" stroke-width="0.5" opacity="0.04"/>
+    <line x1="15" y1="-3" x2="60" y2="-3" stroke="#ffffff" stroke-width="0.5" opacity="0.04"/>
+    <line x1="15" y1="4" x2="60" y2="4" stroke="#ffffff" stroke-width="0.5" opacity="0.04"/>
+    <line x1="15" y1="11" x2="60" y2="11" stroke="#ffffff" stroke-width="0.5" opacity="0.04"/>
+    <!-- IP66 label -->
+    <text x="37" y="5" font-family="Arial, sans-serif" font-size="7.5" fill="#50546e" opacity="0.85" text-anchor="middle">IP66</text>
+    <!-- Status green LED on body side -->
+    <circle cx="48" cy="-13" r="3.2" fill="#22ff88" opacity="0.92"/>
+    <circle cx="48" cy="-13" r="6" fill="#22ff88" opacity="0.22"/>
+    <circle cx="48.5" cy="-13.5" r="1.4" fill="#aaffcc" opacity="0.7"/>
+    <!-- Weather seal groove near lens end -->
+    <line x1="-28" y1="-20" x2="-28" y2="20" stroke="#0e1020" stroke-width="3"/>
+    <line x1="-28" y1="-20" x2="-28" y2="20" stroke="#404468" stroke-width="0.8" opacity="0.35"/>
+    <!-- Rear end cap -->
+    <ellipse cx="70" cy="0" rx="14" ry="20" fill="#343852"/>
+    <ellipse cx="70" cy="0" rx="14" ry="20" fill="none" stroke="#404468" stroke-width="1"/>
+    <ellipse cx="67" cy="-3" rx="5" ry="8" fill="#ffffff" opacity="0.05"/>
+    <!-- Lens housing recessed end -->
+    <ellipse cx="-52" cy="0" rx="16" ry="21" fill="url(#oc-lens-cap)"/>
+    <ellipse cx="-52" cy="0" rx="16" ry="21" fill="none" stroke="#2a2d42" stroke-width="1.5"/>
+    <!-- Recessed ring -->
+    <ellipse cx="-52" cy="0" rx="13" ry="17" fill="#0a0c18"/>
+    <!-- Glass element -->
+    <ellipse cx="-52" cy="0" rx="10" ry="13" fill="url(#oc-lens-bg)"/>
+    <!-- Cyan iris ring -->
+    <ellipse cx="-52" cy="0" rx="8" ry="10" fill="none" stroke="url(#oc-iris)" stroke-width="4.5"/>
+    <ellipse cx="-52" cy="0" rx="8" ry="10" fill="none" stroke="#00e5ff" stroke-width="1" opacity="0.4"/>
+    <!-- Pupil -->
+    <ellipse cx="-52" cy="0" rx="4.5" ry="6" fill="#030508"/>
+    <!-- Specular dot -->
+    <circle cx="-47" cy="-5" r="2.8" fill="#ffffff" opacity="0.68"/>
+    <circle cx="-46" cy="-6" r="1.2" fill="#ffffff" opacity="0.5"/>
+    <!-- IR LEDs — 8 dots in ring -->
+    <circle cx="-52" cy="-19" r="2.5" fill="#ff3344" opacity="0.72"/>
+    <circle cx="-40" cy="-16" r="2.5" fill="#ff3344" opacity="0.72"/>
+    <circle cx="-37" cy="-5" r="2.5" fill="#ff3344" opacity="0.72"/>
+    <circle cx="-40" cy="16" r="2.5" fill="#ff3344" opacity="0.72"/>
+    <circle cx="-52" cy="19" r="2.5" fill="#ff3344" opacity="0.72"/>
+    <circle cx="-64" cy="16" r="2.5" fill="#ff3344" opacity="0.72"/>
+    <circle cx="-67" cy="-5" r="2.5" fill="#ff3344" opacity="0.72"/>
+    <circle cx="-64" cy="-16" r="2.5" fill="#ff3344" opacity="0.72"/>
+  </g>
+
+  <!-- Product label -->
+  <text x="240" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" opacity="0.40" letter-spacing="2.5">OUTDOOR BULLET CAMERA</text>
 </svg>

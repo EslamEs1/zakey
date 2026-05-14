@@ -1,16 +1,158 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
   <defs>
-    <linearGradient id="bg-SMART THERMOSTAT" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
+    <radialGradient id="st-bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
+    </radialGradient>
+    <pattern id="st-hex" x="0" y="0" width="20" height="17.3" patternUnits="userSpaceOnUse">
+      <polygon points="10,1 19,5.5 19,11.8 10,16.3 1,11.8 1,5.5" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+    <!-- Body — pearl white -->
+    <radialGradient id="st-body-grad" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#f5f2ed"/>
+      <stop offset="100%" stop-color="#dedad4"/>
+    </radialGradient>
+    <!-- Right side -->
+    <linearGradient id="st-side-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d8d4ce"/>
+      <stop offset="100%" stop-color="#b8b4ae"/>
     </linearGradient>
-    <radialGradient id="gl-SMART THERMOSTAT" cx="240" cy="185" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <!-- Top face -->
+    <linearGradient id="st-top-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#eae6e0"/>
+    </linearGradient>
+    <!-- Display screen -->
+    <radialGradient id="st-screen-grad" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#0a1420"/>
+      <stop offset="100%" stop-color="#050c14"/>
+    </radialGradient>
+    <!-- Arc progress gradient (cyan-warm) -->
+    <linearGradient id="st-arc-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffaa22"/>
+      <stop offset="50%" stop-color="#00ddff"/>
+      <stop offset="100%" stop-color="#00aaff"/>
+    </linearGradient>
+    <!-- Touch ring emboss -->
+    <radialGradient id="st-touch-ring" cx="50%" cy="50%" r="50%">
+      <stop offset="85%" stop-color="#f5f2ed" stop-opacity="0"/>
+      <stop offset="92%" stop-color="#e8e4de" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#d8d4ce" stop-opacity="0.3"/>
+    </radialGradient>
+    <!-- Warm white glow -->
+    <radialGradient id="st-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="55%" stop-color="#fff8ee" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Shadow -->
+    <radialGradient id="st-shadow" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-SMART THERMOSTAT)"/>
-  <ellipse cx="240" cy="185" rx="180" ry="140" fill="url(#gl-SMART THERMOSTAT)"/>
-  <circle cx="240" cy="185" r="80" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><circle cx="240" cy="185" r="55" fill="#05070d" stroke="#22d3ee" stroke-width="0.75" stroke-opacity="0.3"/><circle cx="240" cy="185" r="28" fill="#22d3ee" fill-opacity="0.12"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">SMART THERMOSTAT</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#st-bg)"/>
+  <rect width="480" height="360" fill="url(#st-hex)"/>
+
+  <!-- Warm white glow behind thermostat -->
+  <ellipse cx="240" cy="190" rx="150" ry="140" fill="url(#st-glow)"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="250" cy="312" rx="85" ry="13" fill="url(#st-shadow)"/>
+
+  <!-- === THERMOSTAT BODY — rounded square 120x120, 3D === -->
+  <!-- Right side depth -->
+  <polygon points="300,118 316,111 316,252 300,259" fill="url(#st-side-grad)"/>
+  <!-- Bottom face -->
+  <polygon points="180,259 300,259 316,252 196,252" fill="#ccc8c2"/>
+  <!-- Top face -->
+  <polygon points="180,118 300,118 316,111 196,111" fill="url(#st-top-grad)"/>
+  <!-- Main front face -->
+  <rect x="180" y="118" width="120" height="141" rx="16" fill="url(#st-body-grad)"/>
+  <!-- Front left edge highlight -->
+  <rect x="180" y="118" width="6" height="141" rx="3" fill="#ffffff" opacity="0.50"/>
+  <!-- Front top edge highlight -->
+  <rect x="182" y="119" width="116" height="5" rx="2.5" fill="#ffffff" opacity="0.55"/>
+  <!-- Front face border -->
+  <rect x="180" y="118" width="120" height="141" rx="16" fill="none" stroke="#d0ccc6" stroke-width="1.2"/>
+  <!-- Face sheen top-left -->
+  <ellipse cx="210" cy="135" rx="32" ry="12" fill="#ffffff" opacity="0.22"/>
+
+  <!-- Connectivity icons at top of face -->
+  <!-- WiFi arcs -->
+  <path d="M197,136 Q205,128 213,136" stroke="#c0bcb6" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <path d="M200,140 Q205,133 210,140" stroke="#c0bcb6" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.65"/>
+  <circle cx="205" cy="144" r="1.5" fill="#c0bcb6" opacity="0.8"/>
+  <!-- Zigbee hexagon -->
+  <polygon points="222,130 226,128 230,130 230,134 226,136 222,134" fill="none" stroke="#c0bcb6" stroke-width="1" opacity="0.65"/>
+
+  <!-- Status dot amber top-right -->
+  <circle cx="286" cy="132" r="4" fill="#ffaa22" opacity="0.92"/>
+  <circle cx="286" cy="132" r="7" fill="#ffaa22" opacity="0.22"/>
+  <circle cx="286" cy="131" r="1.8" fill="#ffdd88" opacity="0.7"/>
+
+  <!-- Touch ring emboss around display -->
+  <circle cx="240" cy="192" r="52" fill="url(#st-touch-ring)"/>
+  <circle cx="240" cy="192" r="52" fill="none" stroke="#dedad4" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Display screen circle -->
+  <circle cx="240" cy="192" r="44" fill="url(#st-screen-grad)"/>
+  <circle cx="240" cy="192" r="44" fill="none" stroke="#1a2840" stroke-width="1"/>
+  <!-- Screen glass sheen -->
+  <ellipse cx="228" cy="175" rx="18" ry="10" fill="#ffffff" opacity="0.06"/>
+
+  <!-- Arc progress indicator — 270° arc, 65% filled -->
+  <!-- Background arc track (full 270°) -->
+  <!-- Arc from 135° to 45° (270° arc, going clockwise through bottom) -->
+  <!-- Using path for the progress arc -->
+  <!-- Track (full 270°) -->
+  <path d="M 207,218 A 44,44 0 1 1 273,218" stroke="#1e3048" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- Progress arc (65% of 270° = ~175°) — from 135° to ~310° -->
+  <path d="M 207,218 A 44,44 0 0 1 272.5,167" stroke="url(#st-arc-grad)" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- Progress arc glow -->
+  <path d="M 207,218 A 44,44 0 0 1 272.5,167" stroke="#00ddff" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.25"/>
+
+  <!-- Large temperature display: "22.5" -->
+  <!-- Simulated digit display using text (cleaner approach for SVG readability) -->
+  <text x="240" y="186" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="300" fill="#ffffff" opacity="0.95" letter-spacing="-1">22.5</text>
+  <text x="264" y="175" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" opacity="0.75">°C</text>
+
+  <!-- Set temperature smaller -->
+  <text x="240" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#80c8d8" opacity="0.80">Set: 23°</text>
+
+  <!-- Mode icons inside display -->
+  <!-- Snowflake (cool mode — off, dimmed) -->
+  <g transform="translate(214,213)" opacity="0.35">
+    <line x1="0" y1="-8" x2="0" y2="8" stroke="#a0d8f0" stroke-width="1.5"/>
+    <line x1="-8" y1="0" x2="8" y2="0" stroke="#a0d8f0" stroke-width="1.5"/>
+    <line x1="-5" y1="-5" x2="5" y2="5" stroke="#a0d8f0" stroke-width="1.5"/>
+    <line x1="5" y1="-5" x2="-5" y2="5" stroke="#a0d8f0" stroke-width="1.5"/>
+  </g>
+  <!-- Sun (heat mode — active, bright) -->
+  <g transform="translate(266,213)" opacity="0.85">
+    <circle cx="0" cy="0" r="4" fill="#ffaa22" opacity="0.9"/>
+    <line x1="0" y1="-8" x2="0" y2="-5" stroke="#ffaa22" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="0" y1="5" x2="0" y2="8" stroke="#ffaa22" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="-8" y1="0" x2="-5" y2="0" stroke="#ffaa22" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="5" y1="0" x2="8" y2="0" stroke="#ffaa22" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="-5.5" y1="-5.5" x2="-3.5" y2="-3.5" stroke="#ffaa22" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="3.5" y1="3.5" x2="5.5" y2="5.5" stroke="#ffaa22" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="5.5" y1="-5.5" x2="3.5" y2="-3.5" stroke="#ffaa22" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="-3.5" y1="3.5" x2="-5.5" y2="5.5" stroke="#ffaa22" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Capacitive touch zones below display: + and - -->
+  <!-- Plus zone -->
+  <rect x="196" y="238" width="36" height="16" rx="8" fill="none" stroke="#d0ccc6" stroke-width="0.8" opacity="0.5"/>
+  <line x1="208" y1="246" x2="220" y2="246" stroke="#c0bcb6" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+  <line x1="214" y1="240" x2="214" y2="252" stroke="#c0bcb6" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+  <!-- Minus zone -->
+  <rect x="248" y="238" width="36" height="16" rx="8" fill="none" stroke="#d0ccc6" stroke-width="0.8" opacity="0.5"/>
+  <line x1="260" y1="246" x2="272" y2="246" stroke="#c0bcb6" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+
+  <!-- Product label -->
+  <text x="240" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" opacity="0.40" letter-spacing="2.5">SMART THERMOSTAT</text>
 </svg>

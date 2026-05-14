@@ -2,24 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script>!function(){var t=localStorage.getItem('zakey-theme')||'dark';document.documentElement.setAttribute('data-theme',t)}()</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Use — Zakey Smart Living</title>
-  <meta name="description" content="The terms governing your use of the Zakey Smart Living website and any services offered through it.">
+  <title>Terms of Service — Zakey Smart Living</title>
+  <meta name="description" content="Zakey's Terms of Service — acceptable use, intellectual property, limitations of liability, and governing law.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Terms of Use — Zakey Smart Living">
-  <meta property="og:description" content="The terms governing your use of the Zakey Smart Living website and any services offered through it.">
+  <meta property="og:title" content="Terms of Service — Zakey Smart Living">
+  <meta property="og:description" content="Zakey's Terms of Service — acceptable use, intellectual property, limitations of liability, and governing law.">
   <meta property="og:image" content="../assets/images/og/zakey-og-cover.svg">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body data-page="terms">
 
 <!-- header:start -->
 <header class="site-header" data-scrolled="false">
   <div class="site-header__inner">
     <a class="site-header__brand" href="../index.html" aria-label="Zakey — Home">
-      <img class="site-header__wordmark" src="../assets/icons/zakey-wordmark.svg" alt="" width="120" height="28">
+      <img class="site-header__wordmark logo-dark" src="../assets/icons/blue-logo.png" alt="Zakey" width="172" height="52">
+      <img class="site-header__wordmark logo-light" src="../assets/icons/blue-logo.png" alt="Zakey" width="172" height="52">
     </a>
 
     <nav class="site-header__nav" aria-label="Primary">
@@ -83,6 +85,12 @@
       </ul>
     </nav>
 
+    
+    <button type="button" class="theme-toggle" aria-label="Switch to light theme" data-theme-toggle>
+      <svg class="theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+
     <a class="btn btn--primary site-header__cta" href="../index.html#get-quote">Get a Quote</a>
 
     <button type="button" class="site-header__hamburger" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
@@ -96,7 +104,8 @@
   <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Site navigation">
     <div class="mobile-drawer__head">
       <a class="mobile-drawer__brand" href="../index.html">
-        <img src="../assets/icons/zakey-wordmark.svg" alt="Zakey home" width="100" height="24">
+        <img src="../assets/icons/blue-logo.png" alt="Zakey home" class="logo-dark" width="132" height="40">
+        <img src="../assets/icons/blue-logo.png" alt="Zakey home" class="logo-light" width="132" height="40">
       </a>
       <button type="button" class="mobile-drawer__close" data-drawer-dismiss="true" aria-label="Close menu">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -153,63 +162,112 @@
 </aside>
 <!-- header:end -->
 
-<main id="main">
-  <section class="u-section u-section--page-top">
-    <div class="u-container u-prose">
+<main id="content">
+
+  <!-- Hero -->
+  <section class="legal-page__hero">
+    <div class="legal-page__hero-inner">
       <p class="eyebrow">Legal</p>
-      <h1>Terms of Use</h1>
-      <p class="u-prose__subtitle">Last updated: 13 May 2026</p>
-
-      <div class="u-prose__body">
-        <section>
-          <h2 class="u-prose__h2">Acceptance</h2>
-          <p>By accessing or using the Zakey Smart Living website (zakey.example), you agree to be bound by these Terms of Use. If you do not agree, please do not use this site.</p>
-        </section>
-
-        <section>
-          <h2 class="u-prose__h2">Permitted use</h2>
-          <p>You may use this site for lawful purposes only. You must not use it to transmit spam, attempt unauthorised access, or post content that is unlawful, harmful, or deceptive.</p>
-        </section>
-
-        <section>
-          <h2 class="u-prose__h2">Intellectual property</h2>
-          <p>All content on this site — including the Zakey brand name, wordmark, design system, product names (Aura Panel, Secure Kit, Zakey Mesh Bridge, etc.), copy, photography, and code — is the property of Zakey Smart Living or its licensors. You may not reproduce or distribute it without written permission.</p>
-        </section>
-
-        <section>
-          <h2 class="u-prose__h2">Quote submissions</h2>
-          <p>Submitting a quote request is not a contract. It is an expression of interest. Zakey reserves the right to decline any enquiry. No binding agreement exists until a written proposal is signed by both parties.</p>
-        </section>
-
-        <section>
-          <h2 class="u-prose__h2">Limitation of liability</h2>
-          <p>This site is provided &ldquo;as is.&rdquo; Zakey makes no warranties as to the accuracy or completeness of the information presented. To the maximum extent permitted by law, Zakey is not liable for any indirect or consequential damages arising from your use of this site.</p>
-        </section>
-
-        <section>
-          <h2 class="u-prose__h2">Governing law</h2>
-          <p>These terms are governed by the laws of the jurisdiction in which Zakey Smart Living is incorporated. Any dispute shall be subject to the exclusive jurisdiction of the courts of that jurisdiction.</p>
-        </section>
-
-        <section>
-          <h2 class="u-prose__h2">Changes</h2>
-          <p>We may update these terms from time to time. Continued use of the site after changes constitutes acceptance. The &ldquo;Last updated&rdquo; date above reflects the most recent revision.</p>
-        </section>
-
-        <section>
-          <h2 class="u-prose__h2">Contact</h2>
-          <p>Questions? Email <a href="mailto:legal@zakey.example" class="u-link-accent">legal@zakey.example</a>.</p>
-        </section>
-      </div>
+      <h1>Terms of Service</h1>
+      <p class="legal-page__meta">Last updated: <time datetime="2026-05-14">14 May 2026</time></p>
+      <p class="legal-page__lead">Please read these Terms of Service carefully before using the Zakey Smart Living website or engaging our services. By accessing our site or submitting an enquiry, you agree to be bound by these terms.</p>
     </div>
   </section>
+
+  <!-- TOC -->
+  <aside class="legal-page__toc" aria-label="Table of contents">
+    <div class="legal-page__toc-inner">
+      <p class="legal-page__toc-title">On this page</p>
+      <ol class="legal-page__toc-list">
+        <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+        <li><a href="#services">2. Our Services</a></li>
+        <li><a href="#accounts">3. Accounts &amp; Enquiries</a></li>
+        <li><a href="#intellectual-property">4. Intellectual Property</a></li>
+        <li><a href="#limitations">5. Limitations of Liability</a></li>
+        <li><a href="#governing-law">6. Governing Law</a></li>
+        <li><a href="#changes">7. Changes to These Terms</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <!-- Body -->
+  <article class="legal-page__body">
+
+    <section id="acceptance">
+      <h2>1. Acceptance of Terms</h2>
+      <p>These Terms of Service ("Terms") govern your access to and use of the Zakey Smart Living LLC website located at zakey.com (the "Site") and any related services, content, or enquiry forms provided by Zakey Smart Living LLC ("Zakey", "we", "us", or "our").</p>
+      <p>By accessing or using the Site, you confirm that you are at least 18 years of age, that you have the legal authority to agree to these Terms on behalf of yourself or your organisation, and that you agree to comply with all applicable local, national, and international laws and regulations.</p>
+      <p>If you do not agree to these Terms, you must not use the Site or our services. Continued use of the Site after any update to these Terms constitutes your acceptance of the revised Terms.</p>
+    </section>
+
+    <section id="services">
+      <h2>2. Our Services</h2>
+      <p>Zakey Smart Living provides smart home, smart hotel, smart office, and broader smart building automation solutions including hardware products, professional installation services, system integration, and after-sales support. The Site is an informational and lead-generation platform; it does not constitute a binding commercial agreement unless confirmed separately in writing.</p>
+      <p>All product specifications, availability, and pricing shown on the Site are indicative and subject to change without notice. A formal quotation, signed by an authorised Zakey representative, constitutes the binding commercial offer.</p>
+      <p>We reserve the right to modify, suspend, or discontinue any part of the Site or our services at any time without notice, and we shall not be liable to you or any third party for any such modification, suspension, or discontinuation.</p>
+    </section>
+
+    <section id="accounts">
+      <h2>3. Accounts &amp; Enquiries</h2>
+      <p>When you submit a quote request or partner application through our Site, you agree to provide accurate, current, and complete information. You are responsible for maintaining the confidentiality of any credentials or reference codes provided to you by Zakey.</p>
+      <p>Zakey reserves the right to refuse service, terminate enquiries, or cancel partnerships at our sole discretion, including — but not limited to — when we believe that use of the Site or our services violates these Terms or applicable law, or where providing services would be commercially impractical.</p>
+      <p>You agree not to use automated means (bots, scrapers, crawlers) to submit forms, harvest data, or otherwise access the Site in a manner that imposes an unreasonable or disproportionate load on our infrastructure.</p>
+    </section>
+
+    <section id="intellectual-property">
+      <h2>4. Intellectual Property</h2>
+      <p>All content on the Site — including text, photography, graphics, product names, the Zakey brand identity, logos, icons, software, and design — is the exclusive property of Zakey Smart Living LLC or its licensors and is protected by applicable copyright, trademark, and other intellectual property laws.</p>
+      <p>You may view and download content from the Site for your personal, non-commercial use only, provided you retain all copyright and proprietary notices. You may not reproduce, distribute, modify, create derivative works from, publicly display, or exploit any content from the Site for commercial purposes without our prior written consent.</p>
+      <p>The Zakey name, logo, and all related product and solution names are trademarks of Zakey Smart Living LLC. Use of these marks without our express written permission is strictly prohibited.</p>
+    </section>
+
+    <section id="limitations">
+      <h2>5. Limitations of Liability</h2>
+      <p>The Site and all content are provided on an "as is" and "as available" basis without any warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+      <p>To the fullest extent permitted by applicable law, Zakey Smart Living LLC shall not be liable for any direct, indirect, incidental, consequential, special, or punitive damages — including but not limited to loss of profits, data, goodwill, or business opportunities — arising from:</p>
+      <ul>
+        <li>Your use of or inability to use the Site;</li>
+        <li>Any errors, omissions, or inaccuracies in Site content;</li>
+        <li>Unauthorised access to or alteration of your data;</li>
+        <li>Any third-party conduct or content linked from the Site.</li>
+      </ul>
+      <p>Some jurisdictions do not allow the exclusion of certain warranties or limitation of liability, so some of the above limitations may not apply to you. In such cases, Zakey's liability shall be limited to the maximum extent permitted by law.</p>
+    </section>
+
+    <section id="governing-law">
+      <h2>6. Governing Law</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of the Emirate of Dubai and the federal laws of the United Arab Emirates, without regard to conflict of law provisions.</p>
+      <p>Any dispute arising out of or in connection with these Terms that cannot be resolved amicably within 30 days of written notice shall be referred to and finally resolved by binding arbitration administered by the Dubai International Arbitration Centre (DIAC) in accordance with its current arbitration rules. The arbitration shall be conducted in English and seated in Dubai, UAE.</p>
+      <p>Notwithstanding the above, Zakey reserves the right to seek injunctive or other equitable relief in any court of competent jurisdiction to prevent or halt any actual or threatened infringement of our intellectual property or confidential information.</p>
+    </section>
+
+    <section id="changes">
+      <h2>7. Changes to These Terms</h2>
+      <p>We reserve the right to revise these Terms at any time. When we make material changes, we will update the "Last updated" date at the top of this page and, where appropriate, notify registered users by email. Your continued use of the Site after the effective date of any revision constitutes your acceptance of the updated Terms.</p>
+      <p>If you disagree with any changes to these Terms, your sole remedy is to discontinue use of the Site and our services. We encourage you to review these Terms periodically to stay informed of any updates.</p>
+      <p>For any questions about these Terms, please contact our Legal team at <a href="mailto:legal@zakey.com">legal@zakey.com</a>.</p>
+    </section>
+
+  </article>
+
+  <!-- CTA -->
+  <section class="legal-page__cta">
+    <div class="legal-page__cta-inner">
+      <h2>Still have questions?</h2>
+      <p>Our team is happy to clarify any point in these Terms before you engage with our services.</p>
+      <a class="btn btn--primary" href="contact.html">Contact Us</a>
+    </div>
+    <p class="legal-page__footnote">This document does not constitute legal advice. For advice specific to your circumstances, please consult a qualified legal professional. Zakey reserves the right to update these Terms at any time in accordance with Section 7 above.</p>
+  </section>
+
 </main>
 
 <!-- footer:start -->
 <footer class="site-footer">
   <div class="site-footer__inner">
     <div class="site-footer__brand">
-      <img src="../assets/icons/zakey-wordmark.svg" alt="" width="140" height="34" loading="lazy">
+      <img src="../assets/icons/blue-logo.png" alt="" class="logo-dark" width="185" height="56" loading="lazy">
+              <img src="../assets/icons/blue-logo.png" alt="" class="logo-light" width="185" height="56" loading="lazy">
       <p class="site-footer__summary">
         Zakey crafts the premium smart-living layer for villas, hotels, offices, and signature homes — hardware, app, scenes, and analytics under one elegant ecosystem.
       </p>
@@ -251,6 +309,7 @@
       <ul>
         <li><a href="./about.html">About</a></li>
         <li><a href="./partners.html">Partners</a></li>
+        <li><a href="./become-a-partner.html">Become a Partner</a></li>
         <li><a href="./projects.html">Projects</a></li>
         <li><a href="./blog.html">Blog</a></li>
         <li><a href="./contact.html">Contact</a></li>

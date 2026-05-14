@@ -1,16 +1,107 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
   <defs>
-    <linearGradient id="bg-SMOKE DETECTOR" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
+    <radialGradient id="sd-bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
+    </radialGradient>
+    <pattern id="sd-hex" x="0" y="0" width="20" height="17.3" patternUnits="userSpaceOnUse">
+      <polygon points="10,1 19,5.5 19,11.8 10,16.3 1,11.8 1,5.5" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+    <!-- Body gradient (white device) -->
+    <radialGradient id="sd-body-grad" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#f0f0ec"/>
+      <stop offset="100%" stop-color="#d8d8d4"/>
+    </radialGradient>
+    <!-- Body side rim -->
+    <linearGradient id="sd-rim-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e0e0dc"/>
+      <stop offset="60%" stop-color="#c8c8c4"/>
+      <stop offset="100%" stop-color="#aaaaaa"/>
     </linearGradient>
-    <radialGradient id="gl-SMOKE DETECTOR" cx="240" cy="185" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <!-- Mounting base -->
+    <radialGradient id="sd-base-grad" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#e0e0dc"/>
+      <stop offset="100%" stop-color="#c4c4c0"/>
+    </radialGradient>
+    <!-- White glow -->
+    <radialGradient id="sd-glow" cx="50%" cy="48%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="65%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Shadow -->
+    <radialGradient id="sd-shadow" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.52"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <!-- LED ring gradient (amber blink) -->
+    <radialGradient id="sd-led-ring" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffaa22" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ff8800" stop-opacity="0.4"/>
     </radialGradient>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-SMOKE DETECTOR)"/>
-  <ellipse cx="240" cy="185" rx="180" ry="140" fill="url(#gl-SMOKE DETECTOR)"/>
-  <ellipse cx="240" cy="190" rx="75" ry="90" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><circle cx="240" cy="190" r="28" fill="#05070d" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.4"/><circle cx="240" cy="190" r="12" fill="#22d3ee" fill-opacity="0.20"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">SMOKE DETECTOR</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#sd-bg)"/>
+  <rect width="480" height="360" fill="url(#sd-hex)"/>
+
+  <!-- White glow behind detector -->
+  <ellipse cx="240" cy="190" rx="145" ry="120" fill="url(#sd-glow)"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="240" cy="308" rx="80" ry="12" fill="url(#sd-shadow)"/>
+
+  <!-- Mounting base (ceiling side, slightly larger disc at back) -->
+  <ellipse cx="240" cy="148" rx="75" ry="20" fill="url(#sd-base-grad)"/>
+  <ellipse cx="240" cy="148" rx="75" ry="20" fill="none" stroke="#c4c4c0" stroke-width="1"/>
+
+  <!-- Main disc body — shown from slightly below (face + rim visible) -->
+  <!-- Rim side (bottom visible) -->
+  <ellipse cx="240" cy="215" rx="72" ry="20" fill="url(#sd-rim-grad)"/>
+  <ellipse cx="240" cy="215" rx="72" ry="20" fill="none" stroke="#c0c0bc" stroke-width="1"/>
+
+  <!-- Main face ellipse (top of disc, angled view) -->
+  <ellipse cx="240" cy="175" rx="72" ry="46" fill="url(#sd-body-grad)"/>
+  <ellipse cx="240" cy="175" rx="72" ry="46" fill="none" stroke="#d8d8d4" stroke-width="1.5"/>
+
+  <!-- Face top highlight -->
+  <ellipse cx="222" cy="163" rx="30" ry="14" fill="#ffffff" opacity="0.30"/>
+
+  <!-- Perforated grille mesh pattern (concentric rings with gaps suggesting holes) -->
+  <!-- Outer rings — dashed stroke simulates perforated metal -->
+  <circle cx="240" cy="175" r="62" fill="none" stroke="#c8c8c4" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6" transform="rotate(15,240,175)"/>
+  <circle cx="240" cy="175" r="53" fill="none" stroke="#c4c4c0" stroke-width="1.5" stroke-dasharray="3.5,3" opacity="0.55" transform="rotate(10,240,175)"/>
+  <circle cx="240" cy="175" r="44" fill="none" stroke="#c0c0bc" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.5" transform="rotate(5,240,175)"/>
+  <circle cx="240" cy="175" r="35" fill="none" stroke="#bcbcb8" stroke-width="1.2" stroke-dasharray="3,2.5" opacity="0.45" transform="rotate(0,240,175)"/>
+  <circle cx="240" cy="175" r="27" fill="none" stroke="#b8b8b4" stroke-width="1.2" stroke-dasharray="2.5,2.5" opacity="0.4" transform="rotate(-5,240,175)"/>
+  <circle cx="240" cy="175" r="19" fill="none" stroke="#b4b4b0" stroke-width="1" stroke-dasharray="2,2" opacity="0.35" transform="rotate(-10,240,175)"/>
+  <circle cx="240" cy="175" r="12" fill="none" stroke="#b0b0ac" stroke-width="1" stroke-dasharray="2,2" opacity="0.3" transform="rotate(-15,240,175)"/>
+
+  <!-- LED ring at r=60 from center (amber blinking) -->
+  <!-- Use two arcs to simulate dashed ring with amber sections -->
+  <circle cx="240" cy="175" r="60" fill="none" stroke="#ffaa22" stroke-width="2.5" stroke-dasharray="18,30" opacity="0.75" stroke-linecap="round"/>
+  <circle cx="240" cy="175" r="60" fill="none" stroke="#ffdd66" stroke-width="1.5" stroke-dasharray="18,30" opacity="0.50" stroke-linecap="round"/>
+  <!-- LED glow spots at amber blink positions -->
+  <circle cx="300" cy="158" r="5" fill="#ffaa22" opacity="0.4"/>
+  <circle cx="240" cy="114" r="5" fill="#ffaa22" opacity="0.4"/>
+  <circle cx="180" cy="158" r="5" fill="#ffaa22" opacity="0.4"/>
+
+  <!-- Center Zakey logo -->
+  <circle cx="240" cy="175" r="9" fill="#e8e8e4"/>
+  <text x="240" y="179" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#888884">Z</text>
+
+  <!-- Test button on side rim -->
+  <ellipse cx="290" cy="215" rx="6" ry="5" fill="#d8d8d4"/>
+  <ellipse cx="290" cy="215" rx="6" ry="5" fill="none" stroke="#b8b8b4" stroke-width="1"/>
+  <ellipse cx="290" cy="214.5" rx="3" ry="2.5" fill="#c8c8c4"/>
+
+  <!-- "SMOKE DETECTOR" arc text along bottom of face -->
+  <path id="sd-arc-text" d="M 185,215 A 60,42 0 0 0 295,215" fill="none"/>
+  <text font-family="Arial, sans-serif" font-size="7" fill="#aaaaaa" opacity="0.8" letter-spacing="1">
+    <textPath href="#sd-arc-text" startOffset="10%">SMOKE DETECTOR</textPath>
+  </text>
+
+  <!-- Product label -->
+  <text x="240" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" opacity="0.40" letter-spacing="2.5">SMOKE DETECTOR</text>
 </svg>

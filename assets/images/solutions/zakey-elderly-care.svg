@@ -1,65 +1,340 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <title>Zakey Elderly Care — Safe Smart Home</title>
   <defs>
-    <linearGradient id="a" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#060810"/>
-      <stop offset="100%" stop-color="#0d0b18"/>
+    <linearGradient id="ec-wall" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5edd8"/>
+      <stop offset="100%" stop-color="#f0e8d0"/>
     </linearGradient>
-    <radialGradient id="b" cx="40%" cy="55%" r="50%">
-      <stop offset="0%" stop-color="#f59e0b" stop-opacity=".12"/>
-      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="c" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fde68a" stop-opacity=".5"/>
-      <stop offset="100%" stop-color="#fde68a" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="d" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#22d3ee"/>
-      <stop offset="100%" stop-color="#f59e0b"/>
+    <linearGradient id="ec-sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#87c1e8"/>
+      <stop offset="100%" stop-color="#b8d8f0"/>
     </linearGradient>
+    <linearGradient id="ec-floor" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d4aa74"/>
+      <stop offset="100%" stop-color="#c09060"/>
+    </linearGradient>
+    <linearGradient id="ec-chair" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8dcc0"/>
+      <stop offset="100%" stop-color="#d4c8a8"/>
+    </linearGradient>
+    <linearGradient id="ec-blanket" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d04040"/>
+      <stop offset="40%" stop-color="#e06030"/>
+      <stop offset="70%" stop-color="#c03030"/>
+      <stop offset="100%" stop-color="#d84040"/>
+    </linearGradient>
+    <linearGradient id="ec-garden" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5a9a5a"/>
+      <stop offset="100%" stop-color="#3a7a3a"/>
+    </linearGradient>
+    <radialGradient id="ec-sunshine" cx="70%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#fff8e0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ec-cyanglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ec-warmglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe0a0" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#ffe0a0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="ec-blur">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <filter id="ec-soft">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+    <filter id="ec-glow">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="1200" height="900" fill="url(#a)"/>
-  <rect width="1200" height="900" fill="url(#b)"/>
-  <!-- Floor -->
-  <rect x="0" y="680" width="1200" height="220" fill="#0d0b18" opacity=".6"/>
-  <line x1="0" y1="680" x2="1200" y2="680" stroke="#22d3ee" stroke-opacity=".07" stroke-width="1"/>
-  <!-- Window -->
-  <rect x="90" y="160" width="190" height="290" rx="4" fill="#0f1a2e" stroke="#22d3ee" stroke-opacity=".12" stroke-width="1"/>
-  <line x1="185" y1="160" x2="185" y2="450" stroke="#22d3ee" stroke-opacity=".08" stroke-width="1"/>
-  <line x1="90" y1="305" x2="280" y2="305" stroke="#22d3ee" stroke-opacity=".08" stroke-width="1"/>
-  <!-- Sofa -->
-  <rect x="310" y="555" width="470" height="120" rx="12" fill="#1e1a2e" stroke="#2d2a45" stroke-width="1"/>
-  <rect x="310" y="518" width="470" height="50" rx="8" fill="#252040" stroke="#2d2a45" stroke-width="1"/>
-  <rect x="305" y="508" width="28" height="165" rx="7" fill="#252040"/>
-  <rect x="752" y="508" width="28" height="165" rx="7" fill="#252040"/>
-  <rect x="335" y="528" width="125" height="35" rx="5" fill="#2a2545" opacity=".8"/>
-  <rect x="480" y="528" width="125" height="35" rx="5" fill="#2a2545" opacity=".8"/>
-  <rect x="625" y="528" width="125" height="35" rx="5" fill="#2a2545" opacity=".8"/>
-  <!-- Floor lamp -->
-  <rect x="868" y="300" width="6" height="380" rx="3" fill="#2a2240"/>
-  <ellipse cx="871" cy="296" rx="38" ry="16" fill="#1e1a2e" stroke="#f59e0b" stroke-opacity=".4" stroke-width="1"/>
-  <circle cx="871" cy="296" r="32" fill="url(#c)"/>
-  <!-- Coffee table -->
-  <rect x="425" y="652" width="240" height="28" rx="6" fill="#141020" stroke="#22d3ee" stroke-opacity=".1" stroke-width="1"/>
-  <!-- Emergency button on table -->
-  <circle cx="545" cy="640" r="12" fill="#22d3ee" opacity=".18"/>
-  <circle cx="545" cy="640" r="6" fill="#22d3ee" opacity=".7"/>
-  <circle cx="545" cy="640" r="14" fill="none" stroke="#22d3ee" stroke-width="1" stroke-opacity=".3"/>
-  <circle cx="545" cy="640" r="20" fill="none" stroke="#22d3ee" stroke-width=".5" stroke-opacity=".15"/>
-  <!-- Smart panel -->
-  <rect x="218" y="370" width="52" height="86" rx="6" fill="#161224" stroke="#22d3ee" stroke-opacity=".3" stroke-width="1"/>
-  <rect x="226" y="380" width="36" height="20" rx="3" fill="#0d1a2e"/>
-  <rect x="226" y="418" width="14" height="5" rx="2" fill="#22d3ee" opacity=".5"/>
-  <rect x="248" y="418" width="14" height="5" rx="2" fill="#f59e0b" opacity=".5"/>
-  <rect x="226" y="432" width="36" height="5" rx="2" fill="#2a2240" opacity=".5"/>
-  <!-- Sensors -->
-  <circle cx="340" cy="78" r="8" fill="#1e1a2e" stroke="#22d3ee" stroke-opacity=".5" stroke-width="1"/>
-  <circle cx="340" cy="78" r="3" fill="#22d3ee" opacity=".8"/>
-  <line x1="340" y1="86" x2="545" y2="626" stroke="#22d3ee" stroke-opacity=".05" stroke-width="1" stroke-dasharray="4 6"/>
-  <circle cx="710" cy="68" r="8" fill="#1e1a2e" stroke="#f59e0b" stroke-opacity=".5" stroke-width="1"/>
-  <circle cx="710" cy="68" r="3" fill="#f59e0b" opacity=".8"/>
-  <circle cx="980" cy="72" r="8" fill="#1e1a2e" stroke="#22d3ee" stroke-opacity=".5" stroke-width="1"/>
-  <circle cx="980" cy="72" r="3" fill="#22d3ee" opacity=".8"/>
-  <!-- Accent bar -->
-  <rect x="0" y="858" width="1200" height="3" fill="url(#d)" opacity=".5"/>
-  <text x="600" y="840" font-family="system-ui,sans-serif" font-size="13" fill="#fff" fill-opacity=".15" text-anchor="middle" letter-spacing="5">ZAKEY</text>
+
+  <!-- BACK WALL: warm cream -->
+  <rect x="0" y="0" width="800" height="500" fill="url(#ec-wall)"/>
+  <!-- Subtle warm golden sunlight overlay from window -->
+  <rect x="0" y="0" width="800" height="500" fill="url(#ec-sunshine)"/>
+
+  <!-- CEILING: warm white -->
+  <rect x="0" y="0" width="800" height="70" fill="#fafaf5"/>
+  <!-- Ceiling shadow junction -->
+  <rect x="0" y="68" width="800" height="6" fill="#e0dad0" opacity="0.6"/>
+  <!-- Warm ceiling ambient glow -->
+  <ellipse cx="400" cy="0" rx="500" ry="120" fill="#ffe8a0" opacity="0.12"/>
+
+  <!-- WINDOW: large, back wall, showing peaceful garden -->
+  <!-- Window surround reveal -->
+  <rect x="340" y="75" width="400" height="320" fill="#e0d8c8"/>
+  <!-- Window glass: garden view -->
+  <rect x="350" y="83" width="380" height="305" fill="url(#ec-sky)"/>
+  <!-- Garden view: sky and trees -->
+  <!-- Sky -->
+  <rect x="350" y="83" width="380" height="160" fill="#a0cce8"/>
+  <!-- Garden ground/lawn -->
+  <rect x="350" y="240" width="380" height="148" fill="url(#ec-garden)"/>
+  <!-- Fluffy garden trees (left) -->
+  <ellipse cx="390" cy="235" rx="45" ry="40" fill="#3a7a3a" opacity="0.9"/>
+  <ellipse cx="385" cy="228" rx="38" ry="35" fill="#4a8a4a" opacity="0.85"/>
+  <!-- Tree 2 -->
+  <ellipse cx="480" cy="220" rx="50" ry="45" fill="#358035" opacity="0.88"/>
+  <ellipse cx="475" cy="213" rx="42" ry="38" fill="#459045" opacity="0.82"/>
+  <!-- Tree 3 -->
+  <ellipse cx="560" cy="232" rx="40" ry="36" fill="#3a7a3a" opacity="0.87"/>
+  <ellipse cx="556" cy="225" rx="34" ry="30" fill="#4a8a4a" opacity="0.82"/>
+  <!-- Tree 4 (right background) -->
+  <ellipse cx="680" cy="215" rx="55" ry="50" fill="#308030" opacity="0.85"/>
+  <ellipse cx="674" cy="206" rx="46" ry="42" fill="#408040" opacity="0.80"/>
+  <!-- Tree trunks -->
+  <rect x="385" y="270" width="10" height="75" fill="#5a3818" opacity="0.75"/>
+  <rect x="472" y="260" width="12" height="85" fill="#5a3818" opacity="0.75"/>
+  <rect x="554" y="265" width="10" height="78" fill="#5a3818" opacity="0.72"/>
+  <rect x="676" y="260" width="14" height="85" fill="#5a3818" opacity="0.7"/>
+  <!-- Garden flowers/low bushes -->
+  <ellipse cx="360" cy="345" rx="25" ry="12" fill="#4a8a4a" opacity="0.7"/>
+  <ellipse cx="420" cy="352" rx="20" ry="10" fill="#3a7a3a" opacity="0.65"/>
+  <ellipse cx="640" cy="348" rx="22" ry="11" fill="#459045" opacity="0.68"/>
+  <ellipse cx="720" cy="355" rx="18" ry="9" fill="#4a8a4a" opacity="0.65"/>
+  <!-- Garden path hint -->
+  <ellipse cx="540" cy="375" rx="60" ry="15" fill="#c8b898" opacity="0.4"/>
+  <!-- Blue sky clouds -->
+  <ellipse cx="440" cy="108" rx="55" ry="25" fill="#ffffff" opacity="0.6"/>
+  <ellipse cx="415" cy="115" rx="40" ry="20" fill="#ffffff" opacity="0.55"/>
+  <ellipse cx="470" cy="112" rx="38" ry="18" fill="#ffffff" opacity="0.5"/>
+  <ellipse cx="650" cy="120" rx="50" ry="22" fill="#ffffff" opacity="0.55"/>
+  <ellipse cx="628" cy="127" rx="38" ry="18" fill="#ffffff" opacity="0.5"/>
+  <!-- Sunshine sparkle -->
+  <ellipse cx="700" cy="100" rx="35" ry="30" fill="#fffde0" opacity="0.35" filter="url(#ec-soft)"/>
+
+  <!-- Window frames -->
+  <rect x="340" y="75" width="8" height="320" fill="#c8a870" opacity="0.7"/>
+  <rect x="732" y="75" width="8" height="320" fill="#c8a870" opacity="0.7"/>
+  <rect x="340" y="75" width="400" height="8" fill="#c8a870" opacity="0.7"/>
+  <rect x="340" y="387" width="400" height="8" fill="#c8a870" opacity="0.6"/>
+  <!-- Vertical center mullion -->
+  <rect x="536" y="82" width="6" height="305" fill="#c8a870" opacity="0.6"/>
+  <!-- Horizontal mullion mid -->
+  <rect x="348" y="228" width="384" height="5" fill="#c8a870" opacity="0.55"/>
+
+  <!-- Window sunlight spill onto floor/room -->
+  <polygon points="350,395 732,395 760,438 320,438" fill="#fff8e0" opacity="0.2"/>
+  <rect x="340" y="395" width="400" height="48" fill="#fff8e0" opacity="0.15" filter="url(#ec-soft)"/>
+
+  <!-- LEFT WALL section -->
+  <rect x="0" y="75" width="340" height="320" fill="#f5edd8"/>
+
+  <!-- TV on left wall area -->
+  <rect x="42" y="92" width="160" height="100" rx="4" fill="#1a1a1a"/>
+  <rect x="46" y="96" width="152" height="92" rx="3" fill="#0d1522"/>
+  <!-- TV screen: weather/news content -->
+  <!-- Weather display background -->
+  <rect x="48" y="98" width="148" height="88" rx="2" fill="#152038"/>
+  <!-- Weather info text blocks -->
+  <!-- Sun icon simulated -->
+  <circle cx="80" cy="125" r="16" fill="#ffcc40" opacity="0.85"/>
+  <!-- Sun rays -->
+  <line x1="80" y1="105" x2="80" y2="99" stroke="#ffcc40" stroke-width="1.5" opacity="0.7"/>
+  <line x1="95" y1="110" x2="100" y2="105" stroke="#ffcc40" stroke-width="1.5" opacity="0.7"/>
+  <line x1="100" y1="125" x2="107" y2="125" stroke="#ffcc40" stroke-width="1.5" opacity="0.7"/>
+  <line x1="95" y1="140" x2="100" y2="145" stroke="#ffcc40" stroke-width="1.5" opacity="0.7"/>
+  <line x1="65" y1="110" x2="60" y2="105" stroke="#ffcc40" stroke-width="1.5" opacity="0.7"/>
+  <!-- Temperature text simulated -->
+  <text x="125" y="118" font-family="sans-serif" font-size="20" fill="#ffffff" opacity="0.9" font-weight="bold">24°</text>
+  <text x="115" y="132" font-family="sans-serif" font-size="8" fill="#a0c0e0" opacity="0.8">Sunny</text>
+  <!-- News ticker bar at bottom of TV -->
+  <rect x="48" y="178" width="148" height="8" rx="1" fill="#203050"/>
+  <text x="122" y="184" font-family="sans-serif" font-size="5" fill="#c0d8f0" text-anchor="middle" opacity="0.75">Wednesday — Warm &amp; Peaceful</text>
+  <!-- TV mount arm -->
+  <rect x="120" y="192" width="5" height="18" fill="#2a2a2a"/>
+  <rect x="100" y="208" width="45" height="5" rx="2" fill="#333"/>
+  <!-- TV glow on wall -->
+  <ellipse cx="122" cy="200" rx="85" ry="25" fill="#204060" opacity="0.08" filter="url(#ec-blur)"/>
+
+  <!-- HALLWAY ENTRANCE hint (right side of left wall) -->
+  <rect x="295" y="175" width="50" height="220" rx="2" fill="#e0d8c8" opacity="0.8"/>
+  <!-- Door opening/archway (simulated as lighter area) -->
+  <rect x="300" y="180" width="40" height="210" rx="2" fill="#d5ccba" opacity="0.7"/>
+  <!-- Door frame -->
+  <rect x="295" y="175" width="5" height="220" fill="#c8a870" opacity="0.5"/>
+  <rect x="340" y="175" width="5" height="220" fill="#c8a870" opacity="0.5"/>
+  <rect x="295" y="175" width="50" height="6" fill="#c8a870" opacity="0.5"/>
+
+  <!-- GRAB RAIL on wall near hallway entrance -->
+  <rect x="270" y="290" width="60" height="8" rx="4" fill="#c8b898"/>
+  <rect x="272" y="292" width="56" height="4" rx="2" fill="#d8c8a8"/>
+  <!-- Grab rail wall brackets -->
+  <rect x="274" y="286" width="8" height="16" rx="4" fill="#b8a888"/>
+  <rect x="318" y="286" width="8" height="16" rx="4" fill="#b8a888"/>
+
+  <!-- ARMCHAIR: oversized, high-back, center-left -->
+  <!-- Chair shadow -->
+  <ellipse cx="185" cy="442" rx="120" ry="15" fill="#8a7a60" opacity="0.2" filter="url(#ec-soft)"/>
+  <!-- Chair back (high) -->
+  <rect x="80" y="235" width="210" height="200" rx="8" fill="url(#ec-chair)"/>
+  <!-- Chair back cushion detail -->
+  <rect x="87" y="242" width="196" height="155" rx="6" fill="#e0d4b4"/>
+  <!-- Back cushion seam -->
+  <line x1="185" y1="245" x2="185" y2="392" stroke="#cfc3a3" stroke-width="2" opacity="0.6"/>
+  <!-- Back seat cushion horizontal seams -->
+  <line x1="87" y1="300" x2="283" y2="300" stroke="#cfc3a3" stroke-width="1.5" opacity="0.45"/>
+  <line x1="87" y1="340" x2="283" y2="340" stroke="#cfc3a3" stroke-width="1.2" opacity="0.38"/>
+  <!-- Chair arms (wide, with good armrests) -->
+  <rect x="68" y="305" width="28" height="130" rx="6" fill="#d4c8a8"/>
+  <rect x="274" y="305" width="28" height="130" rx="6" fill="#d4c8a8"/>
+  <!-- Armrest tops: wider, for support -->
+  <rect x="62" y="298" width="40" height="18" rx="5" fill="#ddd1b4"/>
+  <rect x="268" y="298" width="40" height="18" rx="5" fill="#ddd1b4"/>
+  <!-- Chair seat -->
+  <rect x="80" y="390" width="210" height="50" rx="6" fill="#d8ccac"/>
+  <!-- Seat cushion detail -->
+  <rect x="86" y="396" width="198" height="40" rx="5" fill="#ddd1b0"/>
+  <!-- Chair legs (sturdy) -->
+  <rect x="90" y="434" width="16" height="18" rx="3" fill="#8a6838"/>
+  <rect x="262" y="434" width="16" height="18" rx="3" fill="#8a6838"/>
+
+  <!-- COLORFUL BLANKET draped over chair arm -->
+  <rect x="68" y="285" width="40" height="90" rx="6" fill="url(#ec-blanket)" transform="rotate(-8 88 330)"/>
+  <!-- Blanket fold lines -->
+  <line x1="72" y1="300" x2="104" y2="296" stroke="#b02828" stroke-width="1.2" opacity="0.5" transform="rotate(-8 88 330)"/>
+  <line x1="72" y1="316" x2="104" y2="312" stroke="#b02828" stroke-width="1" opacity="0.4" transform="rotate(-8 88 330)"/>
+  <line x1="72" y1="332" x2="104" y2="328" stroke="#b02828" stroke-width="1" opacity="0.35" transform="rotate(-8 88 330)"/>
+
+  <!-- SIDE TABLE: beside chair -->
+  <!-- Table top -->
+  <ellipse cx="45" cy="380" rx="35" ry="12" fill="#c8a870" opacity="0.4"/>
+  <ellipse cx="45" cy="374" rx="32" ry="10" fill="#d4b880"/>
+  <ellipse cx="45" cy="372" rx="30" ry="9" fill="#dcc890" stroke="#c8a870" stroke-width="1"/>
+  <!-- Table leg (single pedestal) -->
+  <rect x="40" y="381" width="10" height="42" rx="3" fill="#c0a060"/>
+  <ellipse cx="45" cy="425" rx="20" ry="6" fill="#b89050" opacity="0.5"/>
+
+  <!-- Items on side table -->
+  <!-- Tea cup with saucer -->
+  <ellipse cx="30" cy="370" rx="12" ry="5" fill="#d8d0c0" opacity="0.8"/>
+  <rect x="20" y="355" width="20" height="16" rx="3" fill="#e8e0d0"/>
+  <ellipse cx="30" cy="356" rx="10" ry="4" fill="#eae4d5"/>
+  <!-- Tea steam lines -->
+  <line x1="28" y1="350" x2="26" y2="342" stroke="#c8c0b0" stroke-width="1" opacity="0.5"/>
+  <line x1="32" y1="348" x2="30" y2="340" stroke="#c8c0b0" stroke-width="1" opacity="0.45"/>
+
+  <!-- Pill organizer box -->
+  <rect x="42" y="358" width="30" height="18" rx="2" fill="#5a8aaa"/>
+  <!-- Day compartments -->
+  <rect x="44" y="360" width="6" height="6" rx="1" fill="#4a7a9a" stroke="#3a6a8a" stroke-width="0.5"/>
+  <rect x="52" y="360" width="6" height="6" rx="1" fill="#4a7a9a" stroke="#3a6a8a" stroke-width="0.5"/>
+  <rect x="60" y="360" width="6" height="6" rx="1" fill="#5a9aaa" stroke="#3a6a8a" stroke-width="0.5"/>
+  <rect x="44" y="368" width="6" height="6" rx="1" fill="#5a9aaa" stroke="#3a6a8a" stroke-width="0.5"/>
+  <rect x="52" y="368" width="6" height="6" rx="1" fill="#4a7a9a" stroke="#3a6a8a" stroke-width="0.5"/>
+  <rect x="60" y="368" width="6" height="6" rx="1" fill="#4a7a9a" stroke="#3a6a8a" stroke-width="0.5"/>
+
+  <!-- Zakey scene button remote (LARGE BUTTONS, elderly-accessible) -->
+  <rect x="12" y="340" width="28" height="18" rx="3" fill="#2a2a3a" stroke="#4a4a5a" stroke-width="0.8"/>
+  <!-- Large round scene buttons -->
+  <circle cx="18" cy="347" r="5" fill="#ff8040" opacity="0.85"/>
+  <circle cx="28" cy="347" r="5" fill="#4080ff" opacity="0.85"/>
+  <circle cx="38" cy="347" r="5" fill="#40cc40" opacity="0.85"/>
+
+  <!-- ZAKEY SMART PANEL on wall: large text, simple icons -->
+  <rect x="245" y="235" width="55" height="140" rx="5" fill="#f5f5f5"/>
+  <rect x="248" y="238" width="49" height="134" rx="4" fill="#f0f0f0" stroke="#d0d0d0" stroke-width="0.8"/>
+  <!-- Panel screen -->
+  <rect x="251" y="244" width="43" height="80" rx="3" fill="#0a1020"/>
+  <!-- Screen title -->
+  <text x="272" y="256" font-family="sans-serif" font-size="4" fill="#00e5ff" text-anchor="middle" font-weight="bold" opacity="0.95">HELP</text>
+  <!-- Divider -->
+  <line x1="253" y1="260" x2="292" y2="260" stroke="#00e5ff" stroke-width="0.8" opacity="0.65"/>
+  <!-- Large icon buttons (accessibility) -->
+  <!-- Button 1: Call for Help -->
+  <rect x="253" y="264" width="39" height="16" rx="3" fill="#cc2020" opacity="0.85"/>
+  <text x="272" y="275" font-family="sans-serif" font-size="4.5" fill="#ffffff" text-anchor="middle" font-weight="bold">Call Help</text>
+  <!-- Button 2: Lock Door -->
+  <rect x="253" y="283" width="39" height="16" rx="3" fill="#204080" opacity="0.8"/>
+  <text x="272" y="294" font-family="sans-serif" font-size="4.5" fill="#ffffff" text-anchor="middle" font-weight="bold">Lock Door</text>
+  <!-- Button 3: Call Family -->
+  <rect x="253" y="302" width="39" height="16" rx="3" fill="#20603a" opacity="0.8"/>
+  <text x="272" y="313" font-family="sans-serif" font-size="4.5" fill="#ffffff" text-anchor="middle" font-weight="bold">Call Family</text>
+  <!-- Cyan LED ring bottom -->
+  <circle cx="272" cy="350" r="10" fill="#0a1020" stroke="#00e5ff" stroke-width="2"/>
+  <circle cx="272" cy="350" r="6" fill="#00e5ff" opacity="0.55"/>
+  <!-- Panel glow -->
+  <ellipse cx="272" cy="315" rx="40" ry="72" fill="#00e5ff" opacity="0.04" filter="url(#ec-blur)"/>
+
+  <!-- EMERGENCY CALL BUTTON on wall: RED OCTAGON, very visible -->
+  <!-- Octagon shape -->
+  <polygon points="195,295 215,275 235,275 255,295 255,315 235,335 215,335 195,315" fill="#dd1515"/>
+  <polygon points="198,297 216,278 234,278 252,297 252,313 234,332 216,332 198,313" fill="#ee2020"/>
+  <!-- White hand icon (simplified) -->
+  <rect x="216" y="294" width="6" height="18" rx="3" fill="#ffffff" opacity="0.9"/>
+  <rect x="210" y="297" width="5" height="13" rx="2.5" fill="#ffffff" opacity="0.85"/>
+  <rect x="207" y="301" width="4" height="10" rx="2" fill="#ffffff" opacity="0.8"/>
+  <rect x="222" y="297" width="5" height="13" rx="2.5" fill="#ffffff" opacity="0.85"/>
+  <rect x="227" y="300" width="4" height="11" rx="2" fill="#ffffff" opacity="0.8"/>
+  <!-- Glow on emergency button -->
+  <ellipse cx="225" cy="305" rx="35" ry="30" fill="#dd1515" opacity="0.12" filter="url(#ec-blur)"/>
+
+  <!-- Medical alert pendant on wall hook -->
+  <rect x="198" y="342" width="5" height="6" rx="1" fill="#8a8a8a"/>
+  <ellipse cx="200" cy="345" rx="3" ry="2" fill="#c8c8c8"/>
+  <!-- Pendant device -->
+  <rect x="190" y="348" width="20" height="28" rx="5" fill="#3060aa"/>
+  <rect x="193" y="352" width="14" height="20" rx="3" fill="#2050a0"/>
+  <!-- Pendant button -->
+  <circle cx="200" cy="358" r="5" fill="#204090"/>
+  <circle cx="200" cy="358" r="3" fill="#ff2a2a" opacity="0.8"/>
+  <!-- SOS label on pendant -->
+  <text x="200" y="372" font-family="sans-serif" font-size="5" fill="#ffffff" text-anchor="middle" font-weight="bold" opacity="0.85">SOS</text>
+
+  <!-- SMART DOOR SENSOR on right wall hallway door area -->
+  <rect x="290" y="265" width="14" height="24" rx="3" fill="#e8e8e8"/>
+  <rect x="293" y="268" width="8" height="18" rx="2" fill="#d0d0d0"/>
+  <!-- Magnetic sensor dot -->
+  <circle cx="297" cy="272" r="3" fill="#00ff88" opacity="0.9"/>
+  <!-- Sensor indicator LED -->
+  <circle cx="297" cy="280" r="2.5" fill="#00e5ff" opacity="0.8"/>
+
+  <!-- MOTION SENSOR on ceiling: white disc -->
+  <!-- Center ceiling -->
+  <ellipse cx="400" cy="10" rx="0" ry="0"/>
+  <!-- Front ceiling motion sensor -->
+  <ellipse cx="185" cy="72" rx="16" ry="7" fill="#f5f5f0"/>
+  <ellipse cx="185" cy="72" rx="13" ry="5" fill="#e8e8e4"/>
+  <ellipse cx="185" cy="71" rx="8" ry="3" fill="#dcdcd8"/>
+  <!-- Sensor LED -->
+  <circle cx="195" cy="70" r="2.5" fill="#00e5ff" opacity="0.9"/>
+  <!-- Sensor glow -->
+  <ellipse cx="185" cy="78" rx="20" ry="12" fill="#00e5ff" opacity="0.06" filter="url(#ec-soft)"/>
+
+  <!-- FLOOR: warm wood, non-slip texture -->
+  <rect x="0" y="438" width="800" height="62" fill="url(#ec-floor)"/>
+  <!-- Non-slip texture lines (matte finish, subtle parallel lines) -->
+  <line x1="0" y1="445" x2="800" y2="445" stroke="#c09050" stroke-width="0.6" opacity="0.35"/>
+  <line x1="0" y1="452" x2="800" y2="452" stroke="#c09050" stroke-width="0.6" opacity="0.35"/>
+  <line x1="0" y1="459" x2="800" y2="459" stroke="#c09050" stroke-width="0.6" opacity="0.32"/>
+  <line x1="0" y1="466" x2="800" y2="466" stroke="#c09050" stroke-width="0.6" opacity="0.3"/>
+  <line x1="0" y1="473" x2="800" y2="473" stroke="#c09050" stroke-width="0.6" opacity="0.3"/>
+  <line x1="0" y1="480" x2="800" y2="480" stroke="#c09050" stroke-width="0.6" opacity="0.28"/>
+  <line x1="0" y1="487" x2="800" y2="487" stroke="#c09050" stroke-width="0.6" opacity="0.28"/>
+  <line x1="0" y1="494" x2="800" y2="494" stroke="#c09050" stroke-width="0.6" opacity="0.25"/>
+  <!-- Plank vertical dividers (subtle, non-slip) -->
+  <line x1="150" y1="438" x2="145" y2="500" stroke="#c09050" stroke-width="0.7" opacity="0.2"/>
+  <line x1="300" y1="438" x2="298" y2="500" stroke="#c09050" stroke-width="0.7" opacity="0.2"/>
+  <line x1="450" y1="438" x2="449" y2="500" stroke="#c09050" stroke-width="0.7" opacity="0.2"/>
+  <line x1="600" y1="438" x2="600" y2="500" stroke="#c09050" stroke-width="0.7" opacity="0.2"/>
+  <line x1="750" y1="438" x2="751" y2="500" stroke="#c09050" stroke-width="0.7" opacity="0.18"/>
+  <!-- Open clear floor space highlight (no obstacles) -->
+  <rect x="320" y="395" width="350" height="48" fill="#fff8e0" opacity="0.08" filter="url(#ec-soft)"/>
+
+  <!-- Sunlight warm wash on floor near window -->
+  <polygon points="350,395 732,395 750,438 330,438" fill="#fff8e0" opacity="0.18"/>
+
+  <!-- Baseboard trim -->
+  <rect x="0" y="432" width="800" height="9" fill="#d4c8a0" opacity="0.7"/>
+
+  <!-- WARM AMBIENT GLOW from sunlight in room (overall fill) -->
+  <rect x="340" y="75" width="400" height="370" fill="#fff8e0" opacity="0.06" filter="url(#ec-blur)"/>
+
+  <!-- Cozy warm light indicators (small warm LED in corner) -->
+  <circle cx="785" cy="78" r="5" fill="#ffd080" opacity="0.7"/>
+  <ellipse cx="785" cy="85" rx="12" ry="10" fill="#ffd080" opacity="0.2" filter="url(#ec-soft)"/>
+
 </svg>

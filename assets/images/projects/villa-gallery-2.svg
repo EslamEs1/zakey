@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="lrBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1828;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#05070d;stop-opacity:1"/>
+    </linearGradient>
+    <radialGradient id="warmAmbient" cx="30%" cy="20%" r="60%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#lrBg)"/>
+  <!-- Wall -->
+  <rect x="0" y="0" width="800" height="430" fill="#0e1a2e"/>
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="800" height="50" fill="#090d18"/>
+  <!-- Floor -->
+  <rect x="0" y="430" width="800" height="170" fill="#070c16"/>
+  <!-- Floor reflections/lines -->
+  <line x1="0" y1="460" x2="800" y2="460" stroke="#1a2535" stroke-width="1" opacity="0.3"/>
+  <line x1="0" y1="510" x2="800" y2="510" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+  <!-- Ambient warm light -->
+  <ellipse cx="240" cy="80" rx="250" ry="180" fill="url(#warmAmbient)" opacity="0.8"/>
+  <!-- Ceiling cove lighting (warm) -->
+  <rect x="0" y="45" width="800" height="10" fill="#f59e0b" opacity="0.08"/>
+  <!-- Ceiling recessed lights -->
+  <circle cx="120" cy="25" r="10" fill="#f59e0b" opacity="0.35" filter="url(#glow)"/>
+  <circle cx="280" cy="25" r="10" fill="#f59e0b" opacity="0.3" filter="url(#glow)"/>
+  <circle cx="440" cy="25" r="8" fill="#00d4ff" opacity="0.3" filter="url(#glow)"/>
+  <circle cx="600" cy="25" r="8" fill="#00d4ff" opacity="0.25" filter="url(#glow)"/>
+  <circle cx="720" cy="25" r="10" fill="#f59e0b" opacity="0.3" filter="url(#glow)"/>
+  <!-- Large window on left -->
+  <rect x="30" y="80" width="200" height="310" fill="#0d1e30" stroke="#1e3050" stroke-width="2" rx="2"/>
+  <rect x="38" y="88" width="184" height="294" fill="#060e1a" rx="1"/>
+  <!-- Night view through window -->
+  <rect x="38" y="88" width="184" height="294" fill="#030710" rx="1"/>
+  <!-- Stars visible -->
+  <circle cx="90" cy="120" r="1" fill="#fff" opacity="0.6"/>
+  <circle cx="160" cy="100" r="1.5" fill="#fff" opacity="0.7"/>
+  <circle cx="200" cy="140" r="1" fill="#fff" opacity="0.5"/>
+  <circle cx="120" cy="180" r="1" fill="#00d4ff" opacity="0.5"/>
+  <!-- Garden lights visible outside -->
+  <circle cx="80" cy="340" r="4" fill="#f59e0b" opacity="0.5"/>
+  <circle cx="140" cy="360" r="3" fill="#f59e0b" opacity="0.4"/>
+  <circle cx="200" cy="345" r="4" fill="#00d4ff" opacity="0.4"/>
+  <!-- Window frame cross -->
+  <line x1="130" y1="88" x2="130" y2="382" stroke="#1e3050" stroke-width="2" opacity="0.5"/>
+  <line x1="38" y1="235" x2="222" y2="235" stroke="#1e3050" stroke-width="2" opacity="0.5"/>
+  <!-- Curtain partial -->
+  <rect x="22" y="75" width="35" height="320" fill="#1a2840" rx="1"/>
+  <line x1="35" y1="75" x2="35" y2="395" stroke="#1e3050" stroke-width="1" opacity="0.4"/>
+  <!-- Sofa -->
+  <rect x="240" y="370" width="400" height="60" fill="#0f1825" rx="4" stroke="#1a2840" stroke-width="1"/>
+  <rect x="240" y="330" width="400" height="50" fill="#121e30" rx="4 4 0 0" stroke="#1a2840" stroke-width="1"/>
+  <!-- Sofa cushions -->
+  <rect x="260" y="340" width="110" height="40" fill="#15223a" rx="3"/>
+  <rect x="385" y="340" width="110" height="40" fill="#15223a" rx="3"/>
+  <rect x="510" y="340" width="110" height="40" fill="#15223a" rx="3"/>
+  <!-- Sofa pillows -->
+  <ellipse cx="290" cy="345" rx="25" ry="15" fill="#1a2a40" opacity="0.8"/>
+  <ellipse cx="610" cy="345" rx="25" ry="15" fill="#1a2a40" opacity="0.8"/>
+  <!-- Coffee table -->
+  <rect x="310" y="430" width="180" height="10" fill="#0d1828" rx="1" stroke="#1e3050" stroke-width="1"/>
+  <rect x="330" y="440" width="10" height="30" fill="#0d1828"/>
+  <rect x="460" y="440" width="10" height="30" fill="#0d1828"/>
+  <!-- Smart control panel on wall (right side) -->
+  <rect x="660" y="120" width="110" height="190" fill="#050d18" rx="4" stroke="#00d4ff" stroke-width="1.5" opacity="0.9"/>
+  <rect x="672" y="133" width="86" height="50" fill="#001a22" rx="2"/>
+  <text x="715" y="152" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.9">LIVING ROOM</text>
+  <text x="715" y="167" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.7">Scene: Evening</text>
+  <!-- Scene buttons -->
+  <rect x="672" y="193" width="86" height="18" fill="#f59e0b" opacity="0.25" rx="2"/>
+  <text x="715" y="206" font-family="Arial, sans-serif" font-size="7" fill="#f59e0b" text-anchor="middle">Evening</text>
+  <rect x="672" y="216" width="86" height="18" fill="#1a2840" rx="2"/>
+  <text x="715" y="229" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Cinema</text>
+  <rect x="672" y="240" width="86" height="18" fill="#1a2840" rx="2"/>
+  <text x="715" y="253" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Bright</text>
+  <rect x="672" y="264" width="86" height="18" fill="#1a2840" rx="2"/>
+  <text x="715" y="277" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.5">Romantic</text>
+  <!-- Wall art -->
+  <rect x="370" y="100" width="240" height="200" fill="#0a1020" stroke="#1e3050" stroke-width="1" rx="2"/>
+  <rect x="380" y="110" width="220" height="180" fill="#060d18" rx="1"/>
+  <!-- Abstract art pattern -->
+  <polygon points="430,180 490,130 550,170 530,220 460,230" fill="#00d4ff" opacity="0.08"/>
+  <polygon points="430,180 490,130 550,170 530,220 460,230" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.3"/>
+  <circle cx="490" cy="195" r="30" fill="#f59e0b" opacity="0.05" stroke="#f59e0b" stroke-width="1" opacity="0.2"/>
+  <!-- Label -->
+  <text x="400" y="580" font-family="Arial, sans-serif" font-size="14" font-weight="300" letter-spacing="3" fill="#c0c0c0" text-anchor="middle" opacity="0.8">LIVING ROOM · MULTI-SCENE LIGHTING</text>
+</svg>

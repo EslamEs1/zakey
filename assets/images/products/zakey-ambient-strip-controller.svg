@@ -1,16 +1,190 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <title>Zakey Ambient Strip Controller — RGBW LED Strip Controller</title>
   <defs>
-    <linearGradient id="bg-STRIP CONTROLLER" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
-    </linearGradient>
-    <radialGradient id="gl-STRIP CONTROLLER" cx="240" cy="185" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
+    <radialGradient id="bgRadial" cx="50%" cy="50%" r="60%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
+    </radialGradient>
+    <pattern id="dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="0.7" fill="#ffffff" fill-opacity="0.04"/>
+    </pattern>
+    <!-- Product glow: rainbow-ish to suggest RGB -->
+    <radialGradient id="productGlow" cx="50%" cy="45%" r="45%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.12"/>
+      <stop offset="40%" stop-color="#22d3ee" stop-opacity="0.08"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
+    <!-- Body top face -->
+    <linearGradient id="bodyTopGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#252840"/>
+      <stop offset="100%" stop-color="#181a28"/>
+    </linearGradient>
+    <!-- Body front face -->
+    <linearGradient id="bodyFrontGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e2135"/>
+      <stop offset="100%" stop-color="#131522"/>
+    </linearGradient>
+    <!-- Body right side face -->
+    <linearGradient id="bodyRightGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#141624"/>
+      <stop offset="100%" stop-color="#0d0e1a"/>
+    </linearGradient>
+    <!-- RGB gradient strip: suggestion of output light -->
+    <linearGradient id="rgbStripGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="16%" stop-color="#f97316"/>
+      <stop offset="33%" stop-color="#eab308"/>
+      <stop offset="50%" stop-color="#22c55e"/>
+      <stop offset="66%" stop-color="#22d3ee"/>
+      <stop offset="83%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+    <!-- Power LED: green -->
+    <radialGradient id="pwrLed" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#22c55e" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Activity LED: cyan -->
+    <radialGradient id="actLed" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#22d3ee" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Drop shadow -->
+    <radialGradient id="shadowGrad" cx="50%" cy="50%" r="50%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Floor reflection -->
+    <linearGradient id="reflGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </linearGradient>
+    <!-- RGBW channel colors -->
+    <radialGradient id="redGlow" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0.4"/>
+    </radialGradient>
+    <radialGradient id="greenGlow" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0.4"/>
+    </radialGradient>
+    <radialGradient id="blueGlow" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.4"/>
+    </radialGradient>
+    <radialGradient id="whiteGlow" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#f8fafc" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#f8fafc" stop-opacity="0.4"/>
+    </radialGradient>
+    <!-- Input cable circle -->
+    <radialGradient id="cablePort" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a0b14"/>
+      <stop offset="100%" stop-color="#04060d"/>
+    </radialGradient>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-STRIP CONTROLLER)"/>
-  <ellipse cx="240" cy="185" rx="180" ry="140" fill="url(#gl-STRIP CONTROLLER)"/>
-  <rect x="60" y="165" width="360" height="24" rx="12" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><rect x="60" y="165" width="120" height="24" rx="12" fill="#22d3ee" fill-opacity="0.25"/><rect x="180" y="165" width="90" height="24" rx="12" fill="#22d3ee" fill-opacity="0.12"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">STRIP CONTROLLER</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bgRadial)"/>
+  <rect width="480" height="360" fill="url(#dots)"/>
+
+  <!-- Product glow -->
+  <ellipse cx="240" cy="190" rx="140" ry="90" fill="url(#productGlow)"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="255" cy="305" rx="80" ry="10" fill="url(#shadowGrad)"/>
+
+  <!-- ─── RGB gradient strip visualization below product ─── -->
+  <!-- This suggests the light output of the controller -->
+  <rect x="145" y="285" width="210" height="12" rx="6" fill="url(#rgbStripGrad)" fill-opacity="0.35"/>
+  <!-- Glow under strip -->
+  <rect x="145" y="291" width="210" height="10" rx="5" fill="url(#rgbStripGrad)" fill-opacity="0.12"/>
+  <!-- Floor reflection above -->
+  <rect x="145" y="278" width="210" height="8" rx="4" fill="url(#reflGrad)"/>
+
+  <!-- ─── 3/4 perspective box: 90×55px top face, 20px depth ─── -->
+  <!-- Product centered around x=240, top at y=175, front face y=195, bottom at y=250 -->
+
+  <!-- Bottom-right face (right side, slightly darker) -->
+  <polygon points="325,195 355,175 355,220 325,240" fill="url(#bodyRightGrad)"/>
+  <!-- Edge highlight on right face top -->
+  <line x1="325" y1="195" x2="355" y2="175" stroke="#2a2e44" stroke-width="0.5"/>
+
+  <!-- Top face (perspective top) -->
+  <polygon points="145,195 175,175 355,175 325,195" fill="url(#bodyTopGrad)"/>
+  <!-- Top face inner edge highlight -->
+  <line x1="146" y1="195" x2="175.5" y2="175.5" stroke="#3a3e58" stroke-width="0.5" stroke-opacity="0.5"/>
+  <line x1="175.5" y1="175.5" x2="354" y2="175.5" stroke="#3a3e58" stroke-width="0.5" stroke-opacity="0.5"/>
+
+  <!-- "RGBW" label on top face -->
+  <text transform="translate(230,192) rotate(-8)"
+        font-family="'SF Mono', monospace" font-size="7" letter-spacing="2"
+        fill="#4a4e68" fill-opacity="0.8">RGBW</text>
+
+  <!-- 4-pin JST connector on top-right -->
+  <!-- Connector block -->
+  <rect transform="translate(300,178) rotate(-8)" x="-14" y="-4" width="28" height="8" rx="2"
+        fill="#0a0c18" stroke="#2a2e44" stroke-width="0.5"/>
+  <!-- 4 pins -->
+  <circle cx="291" cy="177" r="1.5" fill="#a0a8c0"/>
+  <circle cx="297" cy="176" r="1.5" fill="#a0a8c0"/>
+  <circle cx="303" cy="175" r="1.5" fill="#a0a8c0"/>
+  <circle cx="309" cy="174" r="1.5" fill="#a0a8c0"/>
+
+  <!-- Front face (main visible face) -->
+  <rect x="145" y="195" width="180" height="45" rx="3" fill="url(#bodyFrontGrad)"/>
+  <!-- Front face edge highlights -->
+  <rect x="145" y="195" width="180" height="1" fill="#2e3250" fill-opacity="0.7"/>
+  <rect x="145" y="195" width="1.2" height="45" fill="#2e3250" fill-opacity="0.7"/>
+  <rect x="145" y="195" width="180" height="45" rx="3" fill="none" stroke="#1e2138" stroke-width="0.7"/>
+
+  <!-- ─── Front face content: 4 RGBW colored squares ─── -->
+  <!-- R channel -->
+  <rect x="162" y="206" width="14" height="14" rx="2" fill="#0d0f1c"/>
+  <rect x="162" y="206" width="14" height="14" rx="2" fill="#ef4444" fill-opacity="0.15"/>
+  <rect x="162" y="206" width="14" height="14" rx="2" fill="none" stroke="#ef4444" stroke-width="0.7" stroke-opacity="0.6"/>
+  <circle cx="169" cy="213" r="4" fill="url(#redGlow)" fill-opacity="0.6"/>
+  <text x="169" y="225" text-anchor="middle" font-family="'SF Mono', monospace" font-size="5" fill="#ef4444" fill-opacity="0.7">R</text>
+  <!-- G channel -->
+  <rect x="182" y="206" width="14" height="14" rx="2" fill="#0d0f1c"/>
+  <rect x="182" y="206" width="14" height="14" rx="2" fill="#22c55e" fill-opacity="0.15"/>
+  <rect x="182" y="206" width="14" height="14" rx="2" fill="none" stroke="#22c55e" stroke-width="0.7" stroke-opacity="0.6"/>
+  <circle cx="189" cy="213" r="4" fill="url(#greenGlow)" fill-opacity="0.6"/>
+  <text x="189" y="225" text-anchor="middle" font-family="'SF Mono', monospace" font-size="5" fill="#22c55e" fill-opacity="0.7">G</text>
+  <!-- B channel -->
+  <rect x="202" y="206" width="14" height="14" rx="2" fill="#0d0f1c"/>
+  <rect x="202" y="206" width="14" height="14" rx="2" fill="#3b82f6" fill-opacity="0.15"/>
+  <rect x="202" y="206" width="14" height="14" rx="2" fill="none" stroke="#3b82f6" stroke-width="0.7" stroke-opacity="0.6"/>
+  <circle cx="209" cy="213" r="4" fill="url(#blueGlow)" fill-opacity="0.6"/>
+  <text x="209" y="225" text-anchor="middle" font-family="'SF Mono', monospace" font-size="5" fill="#3b82f6" fill-opacity="0.7">B</text>
+  <!-- W channel -->
+  <rect x="222" y="206" width="14" height="14" rx="2" fill="#0d0f1c"/>
+  <rect x="222" y="206" width="14" height="14" rx="2" fill="#f8fafc" fill-opacity="0.08"/>
+  <rect x="222" y="206" width="14" height="14" rx="2" fill="none" stroke="#d1d5e8" stroke-width="0.7" stroke-opacity="0.4"/>
+  <circle cx="229" cy="213" r="4" fill="url(#whiteGlow)" fill-opacity="0.5"/>
+  <text x="229" y="225" text-anchor="middle" font-family="'SF Mono', monospace" font-size="5" fill="#94a3b8" fill-opacity="0.7">W</text>
+
+  <!-- ─── Status LEDs ─── -->
+  <!-- Power LED (green) -->
+  <circle cx="280" cy="207" r="6" fill="url(#pwrLed)" fill-opacity="0.35"/>
+  <circle cx="280" cy="207" r="2.5" fill="#22c55e"/>
+  <text x="280" y="218" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="4.5" fill="#22c55e" fill-opacity="0.6">PWR</text>
+  <!-- Activity LED (cyan, blinking-look: slightly dimmer) -->
+  <circle cx="295" cy="207" r="5" fill="url(#actLed)" fill-opacity="0.3"/>
+  <circle cx="295" cy="207" r="2" fill="#22d3ee" fill-opacity="0.7"/>
+  <text x="295" y="218" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="4.5" fill="#22d3ee" fill-opacity="0.55">ACT</text>
+
+  <!-- ─── Input cable port: small circle on left side ─── -->
+  <circle cx="148" cy="218" r="5" fill="url(#cablePort)" stroke="#2a2e44" stroke-width="0.7"/>
+  <circle cx="148" cy="218" r="2.5" fill="#0d0e1c" stroke="#1e2030" stroke-width="0.5"/>
+  <!-- Cable wire suggestion -->
+  <path d="M143 218 Q135 218 130 220" fill="none" stroke="#1a1c2a" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Branding label -->
+  <text x="240" y="340" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="7.5" letter-spacing="2"
+        fill="#1e2235" fill-opacity="0.85">ZAKEY STRIP CONTROLLER</text>
 </svg>

@@ -1,16 +1,77 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <title>Zakey Smart Switch Series — Angled view</title>
   <defs>
-    <linearGradient id="bg-SWITCH SERIES — ANGLE" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0d0f1c"/>
+      <stop offset="100%" stop-color="#060810"/>
     </linearGradient>
-    <radialGradient id="gl-SWITCH SERIES — ANGLE" cx="270" cy="185" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
+    <radialGradient id="glow" cx="250" cy="180" r="160" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.10"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="plateFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#eceef5"/>
+      <stop offset="100%" stop-color="#d4d8e5"/>
+    </linearGradient>
+    <linearGradient id="sideEdge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c8cad8"/>
+      <stop offset="100%" stop-color="#a8aab8"/>
+    </linearGradient>
+    <linearGradient id="bottomEdge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b8bac8"/>
+      <stop offset="100%" stop-color="#9a9caa"/>
+    </linearGradient>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-SWITCH SERIES — ANGLE)"/>
-  <ellipse cx="270" cy="185" rx="180" ry="140" fill="url(#gl-SWITCH SERIES — ANGLE)"/>
-  <rect x="170" y="90" width="140" height="180" rx="10" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><rect x="190" y="115" width="45" height="65" rx="5" fill="#22d3ee" fill-opacity="0.15" stroke="#22d3ee" stroke-width="0.75" stroke-opacity="0.4"/><rect x="245" y="115" width="45" height="65" rx="5" fill="#22d3ee" fill-opacity="0.08" stroke="#22d3ee" stroke-width="0.75" stroke-opacity="0.3"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">SWITCH SERIES — ANGLE</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bg)"/>
+  <ellipse cx="250" cy="180" rx="120" ry="140" fill="url(#glow)"/>
+
+  <!-- Device shadow -->
+  <polygon points="198,115 288,108 298,258 208,258" fill="#000000" fill-opacity="0.28"/>
+
+  <!-- Right side depth strip (perspective edge) -->
+  <polygon points="288,108 298,112 298,254 288,258" fill="url(#sideEdge)"/>
+
+  <!-- Bottom edge strip -->
+  <polygon points="198,258 288,258 298,254 208,262" fill="url(#bottomEdge)"/>
+
+  <!-- Front face (skewed: top-right corner pulled in slightly) -->
+  <polygon points="198,110 288,108 288,258 198,258" fill="url(#plateFace)" stroke="#b0b4c0" stroke-width="0.5"/>
+
+  <!-- Button dividers on face -->
+  <line x1="200" y1="160" x2="286" y2="159" stroke="#c5c8d4" stroke-width="0.5"/>
+  <line x1="200" y1="210" x2="286" y2="208" stroke="#c5c8d4" stroke-width="0.5"/>
+
+  <!-- Button 1 face highlight -->
+  <rect x="200" y="112" width="86" height="46" fill="#ffffff" fill-opacity="0.22"/>
+  <!-- B1 icon -->
+  <circle cx="217" cy="135" r="4.5" fill="none" stroke="#a0a4b0" stroke-width="0.8"/>
+  <circle cx="217" cy="135" r="2" fill="#b0b4c0"/>
+  <!-- B1 backlit strip (cyan) -->
+  <rect x="274" y="120" width="3" height="25" rx="1.5" fill="#22d3ee" fill-opacity="0.40"/>
+  <!-- B1 LED -->
+  <circle cx="283" cy="135" r="2.5" fill="#22d3ee"/>
+  <circle cx="283" cy="135" r="4" fill="#22d3ee" fill-opacity="0.18"/>
+
+  <!-- Button 2 -->
+  <rect x="200" y="161" width="86" height="46" fill="#ffffff" fill-opacity="0.18"/>
+  <circle cx="217" cy="184" r="4.5" fill="none" stroke="#a0a4b0" stroke-width="0.8"/>
+  <circle cx="217" cy="184" r="2" fill="#b0b4c0"/>
+  <rect x="274" y="169" width="3" height="25" rx="1.5" fill="#f59e0b" fill-opacity="0.40"/>
+  <circle cx="283" cy="184" r="2.5" fill="#f59e0b"/>
+  <circle cx="283" cy="184" r="4" fill="#f59e0b" fill-opacity="0.22"/>
+
+  <!-- Button 3 -->
+  <rect x="200" y="210" width="86" height="46" fill="#ffffff" fill-opacity="0.14"/>
+  <circle cx="217" cy="233" r="4.5" fill="none" stroke="#a0a4b0" stroke-width="0.8"/>
+  <circle cx="217" cy="233" r="2" fill="#b0b4c0"/>
+  <rect x="274" y="218" width="3" height="25" rx="1.5" fill="#c5c8d4" fill-opacity="0.18"/>
+  <circle cx="283" cy="233" r="2.5" fill="#3a3d4a"/>
+
+  <!-- Edge-lit cyan on right depth strip -->
+  <line x1="298" y1="140" x2="298" y2="155" stroke="#22d3ee" stroke-width="0.8" stroke-opacity="0.35"/>
+  <line x1="298" y1="188" x2="298" y2="200" stroke="#f59e0b" stroke-width="0.8" stroke-opacity="0.30"/>
+
+  <text x="243" y="292" font-family="system-ui,sans-serif" font-size="10" fill="#8b92a9" text-anchor="middle" letter-spacing="0.04em">Smart Switch Series</text>
 </svg>

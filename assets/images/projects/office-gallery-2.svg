@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="openBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#080c18;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#05070d;stop-opacity:1"/>
+    </linearGradient>
+    <radialGradient id="sensorCone" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#openBg)"/>
+  <!-- Wall -->
+  <rect x="0" y="0" width="800" height="420" fill="#0c1525"/>
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="800" height="50" fill="#08101e"/>
+  <!-- Floor -->
+  <rect x="0" y="420" width="800" height="180" fill="#070a12"/>
+  <!-- Floor tiles -->
+  <line x1="0" y1="460" x2="800" y2="460" stroke="#1a2535" stroke-width="1" opacity="0.3"/>
+  <line x1="0" y1="510" x2="800" y2="510" stroke="#1a2535" stroke-width="1" opacity="0.25"/>
+  <line x1="0" y1="560" x2="800" y2="560" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+  <!-- Ceiling smart lighting panels with sensor indicators -->
+  <rect x="60" y="10" width="140" height="30" fill="#00d4ff" opacity="0.15" rx="2"/>
+  <line x1="60" y1="40" x2="200" y2="40" stroke="#00d4ff" stroke-width="1.5" opacity="0.5" filter="url(#glow)"/>
+  <!-- Occupancy sensor on panel 1 -->
+  <circle cx="130" cy="8" r="5" fill="#00ff88" opacity="0.9" filter="url(#glow)"/>
+  <polygon points="60,40 200,40 240,420 20,420" fill="url(#sensorCone)" opacity="0.4"/>
+  <rect x="260" y="10" width="140" height="30" fill="#00d4ff" opacity="0.12" rx="2"/>
+  <line x1="260" y1="40" x2="400" y2="40" stroke="#00d4ff" stroke-width="1.5" opacity="0.45"/>
+  <circle cx="330" cy="8" r="5" fill="#00ff88" opacity="0.8" filter="url(#glow)"/>
+  <polygon points="260,40 400,40 430,420 230,420" fill="url(#sensorCone)" opacity="0.35"/>
+  <rect x="460" y="10" width="140" height="30" fill="#00d4ff" opacity="0.14" rx="2"/>
+  <line x1="460" y1="40" x2="600" y2="40" stroke="#00d4ff" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="530" cy="8" r="5" fill="#00ff88" opacity="0.9" filter="url(#glow)"/>
+  <polygon points="460,40 600,40 620,420 440,420" fill="url(#sensorCone)" opacity="0.4"/>
+  <!-- Panel 4 - unoccupied zone (dimmed) -->
+  <rect x="650" y="10" width="120" height="30" fill="#1a2840" opacity="0.6" rx="2"/>
+  <line x1="650" y1="40" x2="770" y2="40" stroke="#1a2840" stroke-width="1" opacity="0.4"/>
+  <circle cx="710" cy="8" r="5" fill="#1a2840" opacity="0.6"/>
+  <!-- Sensor detail text -->
+  <text x="130" y="58" font-family="Arial, sans-serif" font-size="7" fill="#00ff88" text-anchor="middle" opacity="0.8">OCCUPIED</text>
+  <text x="330" y="58" font-family="Arial, sans-serif" font-size="7" fill="#00ff88" text-anchor="middle" opacity="0.8">OCCUPIED</text>
+  <text x="530" y="58" font-family="Arial, sans-serif" font-size="7" fill="#00ff88" text-anchor="middle" opacity="0.8">OCCUPIED</text>
+  <text x="710" y="58" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.4">VACANT</text>
+  <!-- Workstations Row 1 -->
+  <rect x="50" y="320" width="700" height="50" fill="#0a1525" stroke="#1a2840" stroke-width="1" rx="1"/>
+  <!-- Monitors row 1 -->
+  <rect x="70" y="265" width="75" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="74" y="269" width="67" height="47" fill="#001520" rx="1"/>
+  <rect x="165" y="265" width="75" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="169" y="269" width="67" height="47" fill="#001520" rx="1"/>
+  <rect x="280" y="265" width="75" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="284" y="269" width="67" height="47" fill="#001520" rx="1"/>
+  <rect x="375" y="265" width="75" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="379" y="269" width="67" height="47" fill="#001520" rx="1"/>
+  <rect x="490" y="265" width="75" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="494" y="269" width="67" height="47" fill="#001520" rx="1"/>
+  <rect x="585" y="265" width="75" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="589" y="269" width="67" height="47" fill="#001520" rx="1"/>
+  <rect x="680" y="265" width="70" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="684" y="269" width="62" height="47" fill="#001520" rx="1"/>
+  <!-- Row 2 desks -->
+  <rect x="50" y="420" width="700" height="40" fill="#0a1525" stroke="#1a2840" stroke-width="1" rx="1"/>
+  <!-- Small sensors on ceiling visible as dots -->
+  <circle cx="190" cy="55" r="3" fill="#00ff88" opacity="0.6"/>
+  <circle cx="410" cy="55" r="3" fill="#00ff88" opacity="0.6"/>
+  <circle cx="620" cy="55" r="3" fill="#00ff88" opacity="0.6"/>
+  <circle cx="730" cy="55" r="3" fill="#1a2840" opacity="0.5"/>
+  <!-- Label at bottom -->
+  <text x="400" y="575" font-family="Arial, sans-serif" font-size="14" font-weight="300" letter-spacing="3" fill="#c0c0c0" text-anchor="middle" opacity="0.8">OPEN FLOOR · SENSOR-DRIVEN LIGHTING</text>
+</svg>

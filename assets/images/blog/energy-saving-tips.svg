@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="enBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#060c18"/>
+      <stop offset="100%" stop-color="#05070d"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#enBg)"/>
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="18" font-weight="300" letter-spacing="4" fill="#c0c0c0" text-anchor="middle" opacity="0.9">ENERGY SAVING TIPS</text>
+  <line x1="250" y1="62" x2="550" y2="62" stroke="#00ff88" stroke-width="1" opacity="0.4"/>
+  <!-- Energy meter gauge (circular) -->
+  <circle cx="220" cy="200" r="100" fill="#001015" stroke="#1a2535" stroke-width="2"/>
+  <circle cx="220" cy="200" r="80" fill="none" stroke="#1a2840" stroke-width="14"/>
+  <!-- Efficiency arc (green - 82%) -->
+  <circle cx="220" cy="200" r="80" fill="none" stroke="#00ff88" stroke-width="14" stroke-dasharray="410 90" stroke-dashoffset="125" opacity="0.8"/>
+  <text x="220" y="193" font-family="Arial, sans-serif" font-size="22" fill="#00ff88" text-anchor="middle" font-weight="bold">82%</text>
+  <text x="220" y="213" font-family="Arial, sans-serif" font-size="10" fill="#c0c0c0" text-anchor="middle" opacity="0.7">Efficient</text>
+  <text x="220" y="230" font-family="Arial, sans-serif" font-size="9" fill="#00ff88" text-anchor="middle" opacity="0.6">Energy Score</text>
+  <!-- Gauge label -->
+  <text x="220" y="320" font-family="Arial, sans-serif" font-size="11" fill="#c0c0c0" text-anchor="middle" opacity="0.7">Monthly Usage</text>
+  <text x="220" y="340" font-family="Arial, sans-serif" font-size="14" fill="#00d4ff" text-anchor="middle">284 kWh</text>
+  <text x="220" y="358" font-family="Arial, sans-serif" font-size="9" fill="#00ff88" text-anchor="middle" opacity="0.7">-18% vs last month</text>
+  <!-- Bar chart (right side) -->
+  <rect x="370" y="80" width="390" height="290" fill="#001015" rx="4" stroke="#1a2535" stroke-width="0.5"/>
+  <text x="565" y="102" font-family="Arial, sans-serif" font-size="10" fill="#00d4ff" text-anchor="middle" opacity="0.8">Weekly Consumption (kWh)</text>
+  <!-- Bars - Mon to Sun -->
+  <rect x="390" y="220" width="36" height="120" fill="#00ff88" opacity="0.5" rx="2"/>
+  <text x="408" y="353" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Mon</text>
+  <rect x="440" y="190" width="36" height="150" fill="#00ff88" opacity="0.7" rx="2"/>
+  <text x="458" y="353" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Tue</text>
+  <rect x="490" y="175" width="36" height="165" fill="#00ff88" opacity="0.85" rx="2"/>
+  <text x="508" y="353" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Wed</text>
+  <rect x="540" y="205" width="36" height="135" fill="#00ff88" opacity="0.65" rx="2"/>
+  <text x="558" y="353" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Thu</text>
+  <rect x="590" y="230" width="36" height="110" fill="#f59e0b" opacity="0.6" rx="2"/>
+  <text x="608" y="353" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Fri</text>
+  <rect x="640" y="260" width="36" height="80" fill="#f59e0b" opacity="0.5" rx="2"/>
+  <text x="658" y="353" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Sat</text>
+  <rect x="690" y="240" width="36" height="100" fill="#f59e0b" opacity="0.55" rx="2"/>
+  <text x="708" y="353" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Sun</text>
+  <!-- Target line -->
+  <line x1="385" y1="210" x2="745" y2="210" stroke="#00d4ff" stroke-width="1" stroke-dasharray="6,3" opacity="0.5"/>
+  <text x="750" y="213" font-family="Arial, sans-serif" font-size="7" fill="#00d4ff" opacity="0.6">Target</text>
+  <!-- Chart baseline -->
+  <line x1="385" y1="340" x2="745" y2="340" stroke="#1a2535" stroke-width="1" opacity="0.6"/>
+  <!-- Tip cards bottom -->
+  <rect x="40" y="390" width="170" height="160" fill="#001015" rx="5" stroke="#00ff88" stroke-width="1" opacity="0.6"/>
+  <circle cx="125" cy="425" r="18" fill="#00ff88" opacity="0.15" stroke="#00ff88" stroke-width="1" opacity="0.5"/>
+  <text x="125" y="430" font-family="Arial, sans-serif" font-size="12" fill="#00ff88" text-anchor="middle" opacity="0.8">1</text>
+  <text x="125" y="460" font-family="Arial, sans-serif" font-size="10" fill="#c0c0c0" text-anchor="middle" opacity="0.8">Use scene presets</text>
+  <text x="125" y="476" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Auto-dim at sunset</text>
+  <text x="125" y="490" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" text-anchor="middle" opacity="0.5">saves 15% lighting</text>
+  <rect x="222" y="390" width="170" height="160" fill="#001015" rx="5" stroke="#00d4ff" stroke-width="1" opacity="0.6"/>
+  <circle cx="307" cy="425" r="18" fill="#00d4ff" opacity="0.12" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
+  <text x="307" y="430" font-family="Arial, sans-serif" font-size="12" fill="#00d4ff" text-anchor="middle" opacity="0.8">2</text>
+  <text x="307" y="460" font-family="Arial, sans-serif" font-size="10" fill="#c0c0c0" text-anchor="middle" opacity="0.8">Occupancy sensors</text>
+  <text x="307" y="476" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Auto-off empty rooms</text>
+  <text x="307" y="490" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" text-anchor="middle" opacity="0.5">saves 20% energy</text>
+  <rect x="404" y="390" width="170" height="160" fill="#001015" rx="5" stroke="#f59e0b" stroke-width="1" opacity="0.5"/>
+  <circle cx="489" cy="425" r="18" fill="#f59e0b" opacity="0.12" stroke="#f59e0b" stroke-width="1" opacity="0.4"/>
+  <text x="489" y="430" font-family="Arial, sans-serif" font-size="12" fill="#f59e0b" text-anchor="middle" opacity="0.8">3</text>
+  <text x="489" y="460" font-family="Arial, sans-serif" font-size="10" fill="#c0c0c0" text-anchor="middle" opacity="0.8">Smart thermostat</text>
+  <text x="489" y="476" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Schedule AC by hour</text>
+  <text x="489" y="490" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" text-anchor="middle" opacity="0.5">saves 25% HVAC</text>
+  <rect x="586" y="390" width="174" height="160" fill="#001015" rx="5" stroke="#00ff88" stroke-width="1" opacity="0.4"/>
+  <circle cx="673" cy="425" r="18" fill="#00ff88" opacity="0.1" stroke="#00ff88" stroke-width="1" opacity="0.3"/>
+  <text x="673" y="430" font-family="Arial, sans-serif" font-size="12" fill="#00ff88" text-anchor="middle" opacity="0.7">4</text>
+  <text x="673" y="460" font-family="Arial, sans-serif" font-size="10" fill="#c0c0c0" text-anchor="middle" opacity="0.8">Peak hour alerts</text>
+  <text x="673" y="476" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Shift usage to off-peak</text>
+  <text x="673" y="490" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" text-anchor="middle" opacity="0.5">saves 12% on bills</text>
+</svg>

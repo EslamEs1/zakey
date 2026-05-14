@@ -1,19 +1,284 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0c0f17"/>
-      <stop offset="100%" stop-color="#05070d"/>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1b3e"/>
+      <stop offset="55%" stop-color="#1e2a5e"/>
+      <stop offset="80%" stop-color="#3a1d60"/>
+      <stop offset="100%" stop-color="#c05820"/>
     </linearGradient>
-    <radialGradient id="r" cx="70%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <linearGradient id="wallGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d4c8b0"/>
+      <stop offset="45%" stop-color="#f0ece4"/>
+      <stop offset="100%" stop-color="#e4dccc"/>
+    </linearGradient>
+    <linearGradient id="ceilGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f2ed"/>
+      <stop offset="100%" stop-color="#e0d8c8"/>
+    </linearGradient>
+    <linearGradient id="leftWallGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b0a088"/>
+      <stop offset="100%" stop-color="#d0c4ac"/>
+    </linearGradient>
+    <linearGradient id="ledCoveGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffaa33" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#ffaa33" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="dl1" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#fff5cc" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#ffdd77" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffaa33" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="dl2" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#fff5cc" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#ffdd77" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffaa33" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="dl3" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#fff5cc" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#ffdd77" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffaa33" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lampGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff5cc" stop-opacity="0.95"/>
+      <stop offset="35%" stop-color="#ffdd77" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffaa33" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="panelGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tvGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0055ee" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#0033aa" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tvLedGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#00e5ff" stop-opacity="0.7"/>
+      <stop offset="75%" stop-color="#00e5ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="cityGlowGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e07030" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#e06020" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#c04810" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aa7e50"/>
+      <stop offset="100%" stop-color="#7a5230"/>
+    </linearGradient>
+    <linearGradient id="sofaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#383838"/>
+      <stop offset="100%" stop-color="#181818"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b8d4e8" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#90b4cc" stop-opacity="0.15"/>
+    </linearGradient>
+    <radialGradient id="cyanDotGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#00e5ff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rugGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#212121"/>
+      <stop offset="100%" stop-color="#2d2d2d"/>
+    </linearGradient>
+    <filter id="blur3">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="blur6">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
   </defs>
-  <rect width="1280" height="720" fill="url(#g)"/>
-  <rect width="1280" height="720" fill="url(#r)"/>
-  <text x="640" y="380" font-family="Manrope,Inter,system-ui,sans-serif" font-size="48" font-weight="700"
-        fill="#22d3ee" fill-opacity="0.15" text-anchor="middle" dominant-baseline="middle"
-        letter-spacing="-1">Smart Home Hero</text>
-  <circle cx="640" cy="260" r="60" fill="none" stroke="#22d3ee" stroke-opacity="0.1" stroke-width="1"/>
-  <circle cx="640" cy="260" r="100" fill="none" stroke="#22d3ee" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- ===== CEILING ===== -->
+  <polygon points="0,0 1280,0 1060,130 220,130" fill="url(#ceilGrad)"/>
+  <!-- Cove recess inner rectangle -->
+  <polygon points="295,60 990,60 990,128 295,128" fill="#ede8e0"/>
+  <!-- Cove border lines (moulding) -->
+  <polygon points="295,60 990,60 990,128 295,128" fill="none" stroke="#d5ccba" stroke-width="2"/>
+  <!-- LED warm amber strip in cove -->
+  <rect x="295" y="60" width="695" height="45" fill="url(#ledCoveGrad)" opacity="0.75"/>
+  <!-- Downlight halos x3 -->
+  <ellipse cx="410" cy="68" rx="55" ry="48" fill="url(#dl1)" opacity="0.85"/>
+  <circle cx="410" cy="68" r="7" fill="#fff8e0"/>
+  <ellipse cx="640" cy="68" rx="55" ry="48" fill="url(#dl2)" opacity="0.85"/>
+  <circle cx="640" cy="68" r="7" fill="#fff8e0"/>
+  <ellipse cx="870" cy="68" rx="55" ry="48" fill="url(#dl3)" opacity="0.85"/>
+  <circle cx="870" cy="68" r="7" fill="#fff8e0"/>
+
+  <!-- ===== LEFT SIDE WALL ===== -->
+  <polygon points="0,0 220,130 220,720 0,720" fill="url(#leftWallGrad)"/>
+  <!-- Panel moulding on left wall -->
+  <rect x="28" y="220" width="158" height="260" rx="3" fill="none" stroke="#c0b098" stroke-width="1.2" opacity="0.45"/>
+  <rect x="35" y="228" width="144" height="244" rx="2" fill="none" stroke="#c8b8a0" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Zakey Aura Panel on left wall -->
+  <rect x="55" y="295" width="42" height="118" rx="7" fill="#181828"/>
+  <rect x="59" y="316" width="34" height="2.5" rx="1" fill="#00e5ff" opacity="0.9"/>
+  <rect x="59" y="326" width="28" height="2" rx="1" fill="#00e5ff" opacity="0.65"/>
+  <rect x="59" y="334" width="34" height="2" rx="1" fill="#00e5ff" opacity="0.5"/>
+  <rect x="59" y="345" width="34" height="22" rx="4" fill="#00e5ff" opacity="0.12"/>
+  <rect x="63" y="349" width="26" height="1.5" rx="1" fill="#00e5ff" opacity="0.55"/>
+  <rect x="63" y="354" width="20" height="1.5" rx="1" fill="#00e5ff" opacity="0.45"/>
+  <rect x="63" y="359" width="24" height="1.5" rx="1" fill="#00e5ff" opacity="0.4"/>
+  <circle cx="76" cy="396" r="4.5" fill="#00e5ff" opacity="0.95"/>
+  <circle cx="76" cy="396" r="9" fill="#00e5ff" opacity="0.2"/>
+  <!-- Panel glow halo -->
+  <ellipse cx="76" cy="354" rx="32" ry="75" fill="url(#panelGlow)" opacity="0.55"/>
+
+  <!-- ===== BACK WALL ===== -->
+  <polygon points="220,130 1060,130 1060,720 220,720" fill="url(#wallGrad)"/>
+  <!-- Panel moulding lines -->
+  <line x1="270" y1="210" x2="1010" y2="210" stroke="#d8d0be" stroke-width="1.2" opacity="0.55"/>
+  <line x1="270" y1="218" x2="1010" y2="218" stroke="#d8d0be" stroke-width="0.8" opacity="0.3"/>
+  <!-- Baseboard -->
+  <rect x="220" y="695" width="840" height="22" fill="#ddd5c2" opacity="0.65"/>
+
+  <!-- TV Alcove recess (shadow) -->
+  <rect x="455" y="195" width="330" height="210" rx="5" fill="#10121c"/>
+  <!-- TV screen dark with content hint -->
+  <rect x="465" y="205" width="310" height="195" rx="3" fill="#0c0e1a"/>
+  <rect x="478" y="230" width="180" height="4" rx="2" fill="#152545" opacity="0.7"/>
+  <rect x="478" y="242" width="130" height="3" rx="2" fill="#152545" opacity="0.5"/>
+  <rect x="478" y="258" width="260" height="55" rx="3" fill="#0a1528" opacity="0.55"/>
+  <rect x="486" y="266" width="80" height="8" rx="2" fill="#1a3560" opacity="0.5"/>
+  <rect x="486" y="280" width="60" height="5" rx="2" fill="#1a3560" opacity="0.35"/>
+  <!-- TV screen blue glow -->
+  <ellipse cx="620" cy="302" rx="145" ry="102" fill="url(#tvGlow)" opacity="0.55"/>
+  <!-- TV unit / credenza shelf -->
+  <rect x="415" y="405" width="410" height="18" rx="3" fill="#282010"/>
+  <rect x="415" y="423" width="410" height="62" rx="3" fill="#1e1808"/>
+  <!-- Under-TV cyan LED strip -->
+  <rect x="425" y="422" width="390" height="3.5" rx="1" fill="url(#tvLedGrad)"/>
+  <!-- Ambient cyan glow under shelf -->
+  <ellipse cx="620" cy="425" rx="200" ry="18" fill="#00e5ff" opacity="0.06" filter="url(#blur6)"/>
+
+  <!-- ===== WINDOW / GLASS WALL RIGHT ===== -->
+  <polygon points="1060,130 1280,0 1280,720 1060,720" fill="url(#skyGrad)"/>
+  <!-- Mullion vertical bars -->
+  <line x1="1105" y1="130" x2="1105" y2="720" stroke="#708090" stroke-width="2.5" opacity="0.35"/>
+  <line x1="1165" y1="100" x2="1165" y2="720" stroke="#708090" stroke-width="2" opacity="0.28"/>
+  <line x1="1222" y1="70" x2="1222" y2="720" stroke="#708090" stroke-width="2" opacity="0.28"/>
+  <!-- Mullion horizontal -->
+  <line x1="1065" y1="370" x2="1280" y2="360" stroke="#708090" stroke-width="1.8" opacity="0.28"/>
+  <!-- City warm glow at horizon -->
+  <polygon points="1060,545 1280,510 1280,720 1060,720" fill="url(#cityGlowGrad)" opacity="0.75"/>
+  <!-- City building silhouettes -->
+  <rect x="1065" y="596" width="24" height="130" fill="#08091a" opacity="0.9"/>
+  <rect x="1075" y="575" width="10" height="22" fill="#08091a" opacity="0.9"/>
+  <rect x="1093" y="606" width="20" height="120" fill="#0a0b1c" opacity="0.8"/>
+  <rect x="1118" y="588" width="28" height="138" fill="#08091a" opacity="0.9"/>
+  <rect x="1130" y="564" width="10" height="25" fill="#08091a" opacity="0.9"/>
+  <rect x="1152" y="598" width="24" height="128" fill="#0a0b1c" opacity="0.8"/>
+  <rect x="1181" y="582" width="36" height="144" fill="#08091a" opacity="0.9"/>
+  <rect x="1192" y="558" width="9" height="25" fill="#08091a" opacity="0.9"/>
+  <rect x="1222" y="592" width="30" height="134" fill="#0a0b1c" opacity="0.8"/>
+  <rect x="1254" y="604" width="28" height="122" fill="#08091a" opacity="0.8"/>
+  <!-- Building warm lights -->
+  <circle cx="1070" cy="598" r="2.5" fill="#ffcc44" opacity="0.75"/>
+  <circle cx="1082" cy="612" r="2" fill="#ffcc44" opacity="0.6"/>
+  <circle cx="1122" cy="594" r="2.5" fill="#ffcc44" opacity="0.75"/>
+  <circle cx="1138" cy="574" r="2" fill="#ffcc44" opacity="0.65"/>
+  <circle cx="1158" cy="602" r="2" fill="#ffcc44" opacity="0.6"/>
+  <circle cx="1186" cy="590" r="2.5" fill="#ffcc44" opacity="0.75"/>
+  <circle cx="1196" cy="566" r="2" fill="#ffcc44" opacity="0.65"/>
+  <circle cx="1228" cy="598" r="2" fill="#ffcc44" opacity="0.65"/>
+  <circle cx="1258" cy="612" r="2.5" fill="#ffcc44" opacity="0.6"/>
+  <!-- Stars -->
+  <circle cx="1085" cy="145" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="1138" cy="105" r="1" fill="white" opacity="0.6"/>
+  <circle cx="1196" cy="82" r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="1245" cy="130" r="1" fill="white" opacity="0.55"/>
+  <circle cx="1168" cy="62" r="1" fill="white" opacity="0.7"/>
+  <circle cx="1112" cy="195" r="1" fill="white" opacity="0.4"/>
+  <circle cx="1258" cy="175" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="1080" cy="240" r="1" fill="white" opacity="0.4"/>
+  <circle cx="1215" cy="55" r="1.5" fill="white" opacity="0.55"/>
+
+  <!-- ===== FLOOR ===== -->
+  <polygon points="0,720 1280,720 1060,490 220,490" fill="url(#floorGrad)"/>
+  <!-- Wood plank horizontal lines (foreshortened) -->
+  <line x1="220" y1="500" x2="0" y2="722" stroke="#c0905a" stroke-width="9" opacity="0.4"/>
+  <line x1="300" y1="493" x2="80" y2="718" stroke="#c0905a" stroke-width="9" opacity="0.4"/>
+  <line x1="385" y1="490" x2="165" y2="716" stroke="#987048" stroke-width="7" opacity="0.35"/>
+  <line x1="470" y1="489" x2="250" y2="715" stroke="#c0905a" stroke-width="9" opacity="0.4"/>
+  <line x1="555" y1="489" x2="335" y2="715" stroke="#c0905a" stroke-width="9" opacity="0.4"/>
+  <line x1="640" y1="490" x2="420" y2="716" stroke="#987048" stroke-width="7" opacity="0.35"/>
+  <line x1="725" y1="490" x2="505" y2="716" stroke="#c0905a" stroke-width="9" opacity="0.4"/>
+  <line x1="810" y1="491" x2="590" y2="717" stroke="#c0905a" stroke-width="9" opacity="0.4"/>
+  <line x1="895" y1="492" x2="675" y2="718" stroke="#987048" stroke-width="7" opacity="0.35"/>
+  <line x1="980" y1="493" x2="760" y2="719" stroke="#c0905a" stroke-width="9" opacity="0.4"/>
+  <line x1="1060" y1="494" x2="840" y2="720" stroke="#c0905a" stroke-width="9" opacity="0.4"/>
+  <!-- Floor warm glow near window -->
+  <polygon points="1060,490 1280,450 1280,720 1060,720" fill="#c07838" opacity="0.22"/>
+
+  <!-- ===== CHARCOAL RUG ===== -->
+  <polygon points="340,588 840,555 945,700 245,730" fill="url(#rugGrad)" opacity="0.92"/>
+  <!-- Rug thin border -->
+  <polygon points="358,583 822,551 924,694 264,722" fill="none" stroke="#3a3a3a" stroke-width="2.5" opacity="0.55"/>
+  <polygon points="374,579 806,547 905,688 282,714" fill="none" stroke="#2a2a2a" stroke-width="1" opacity="0.35"/>
+
+  <!-- ===== SOFA ===== -->
+  <!-- Back rest -->
+  <polygon points="265,495 808,468 808,540 265,570" fill="url(#sofaGrad)"/>
+  <!-- Seat -->
+  <polygon points="265,570 808,540 875,605 198,635" fill="#202020"/>
+  <!-- Left arm -->
+  <polygon points="198,520 272,498 265,570 198,635" fill="#2e2e2e"/>
+  <!-- Right arm -->
+  <polygon points="808,468 882,458 875,605 808,540" fill="#2e2e2e"/>
+  <!-- Cushion dividers seat -->
+  <line x1="418" y1="542" x2="402" y2="615" stroke="#161616" stroke-width="3.5" opacity="0.75"/>
+  <line x1="590" y1="535" x2="574" y2="608" stroke="#161616" stroke-width="3.5" opacity="0.75"/>
+  <!-- Cushion dividers back -->
+  <line x1="418" y1="469" x2="418" y2="540" stroke="#161616" stroke-width="2.5" opacity="0.65"/>
+  <line x1="590" y1="465" x2="590" y2="536" stroke="#161616" stroke-width="2.5" opacity="0.65"/>
+  <!-- Stitching highlights on back cushions -->
+  <line x1="310" y1="475" x2="398" y2="473" stroke="#383838" stroke-width="1" opacity="0.55"/>
+  <line x1="438" y1="471" x2="568" y2="469" stroke="#383838" stroke-width="1" opacity="0.55"/>
+  <line x1="608" y1="468" x2="778" y2="466" stroke="#383838" stroke-width="1" opacity="0.55"/>
+  <!-- Sofa leg feet -->
+  <rect x="218" y="632" width="12" height="8" rx="2" fill="#111111"/>
+  <rect x="852" y="600" width="12" height="8" rx="2" fill="#111111"/>
+
+  <!-- ===== GLASS COFFEE TABLE ===== -->
+  <polygon points="360,610 705,588 726,625 382,648" fill="url(#glassGrad)" stroke="#88aac8" stroke-width="1.8" opacity="0.82"/>
+  <!-- Glass reflection streak -->
+  <polygon points="380,612 640,597 648,606 386,620" fill="white" opacity="0.09"/>
+  <!-- Table legs (thin chrome) -->
+  <line x1="382" y1="612" x2="387" y2="660" stroke="#aaaaaa" stroke-width="2.5"/>
+  <line x1="696" y1="592" x2="701" y2="640" stroke="#aaaaaa" stroke-width="2.5"/>
+  <line x1="718" y1="622" x2="723" y2="665" stroke="#aaaaaa" stroke-width="2.5"/>
+  <line x1="368" y1="640" x2="373" y2="672" stroke="#aaaaaa" stroke-width="2.5"/>
+
+  <!-- ===== FLOOR LAMP ===== -->
+  <!-- Pole -->
+  <line x1="872" y1="638" x2="880" y2="445" stroke="#909090" stroke-width="5.5"/>
+  <!-- Shade (white sphere) -->
+  <circle cx="880" cy="440" r="30" fill="#f5f0e8"/>
+  <ellipse cx="880" cy="452" rx="30" ry="12" fill="#e8e0d0" opacity="0.6"/>
+  <!-- Lamp glow halo -->
+  <ellipse cx="880" cy="440" rx="90" ry="90" fill="url(#lampGlow)" opacity="0.65"/>
+  <!-- Base disk -->
+  <ellipse cx="873" cy="639" rx="14" ry="5.5" fill="#686868"/>
+
+  <!-- ===== SMART HUD: connection mesh ===== -->
+  <!-- Very faint dashed lines -->
+  <line x1="76" y1="354" x2="620" y2="414" stroke="#00e5ff" stroke-width="1.2" stroke-dasharray="7,10" opacity="0.13"/>
+  <line x1="620" y1="414" x2="880" y2="440" stroke="#00e5ff" stroke-width="1.2" stroke-dasharray="7,10" opacity="0.13"/>
+  <line x1="620" y1="414" x2="1065" y2="390" stroke="#00e5ff" stroke-width="1.2" stroke-dasharray="7,10" opacity="0.13"/>
+  <line x1="620" y1="414" x2="640" y2="68" stroke="#00e5ff" stroke-width="1.2" stroke-dasharray="7,10" opacity="0.1"/>
+  <line x1="76" y1="354" x2="640" y2="68" stroke="#00e5ff" stroke-width="1" stroke-dasharray="5,12" opacity="0.08"/>
+  <!-- Glowing cyan anchor dots -->
+  <circle cx="76" cy="354" r="14" fill="url(#cyanDotGrad)" opacity="0.8"/>
+  <circle cx="76" cy="354" r="5" fill="#00e5ff"/>
+  <circle cx="620" cy="414" r="14" fill="url(#cyanDotGrad)" opacity="0.8"/>
+  <circle cx="620" cy="414" r="5" fill="#00e5ff"/>
+  <circle cx="880" cy="440" r="14" fill="url(#cyanDotGrad)" opacity="0.8"/>
+  <circle cx="880" cy="440" r="5" fill="#00e5ff"/>
+  <circle cx="1065" cy="390" r="14" fill="url(#cyanDotGrad)" opacity="0.8"/>
+  <circle cx="1065" cy="390" r="5" fill="#00e5ff"/>
+  <circle cx="640" cy="68" r="14" fill="url(#cyanDotGrad)" opacity="0.8"/>
+  <circle cx="640" cy="68" r="5" fill="#00e5ff"/>
 </svg>

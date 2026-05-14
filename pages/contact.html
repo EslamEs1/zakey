@@ -2,24 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script>!function(){var t=localStorage.getItem('zakey-theme')||'dark';document.documentElement.setAttribute('data-theme',t)}()</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Zakey Smart Living</title>
-  <meta name="description" content="Get in touch with the Zakey team — whether you have a project to discuss, want to become a partner, or need technical support.">
+  <title>Contact Zakey — Request a Quote</title>
+  <meta name="description" content="Get in touch with Zakey to discuss your smart-living project. Reach our sales, support, partner, or project teams directly.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Contact — Zakey Smart Living">
-  <meta property="og:description" content="Get in touch with the Zakey team — whether you have a project to discuss, want to become a partner, or need technical support.">
+  <meta property="og:title" content="Contact Zakey — Request a Quote">
+  <meta property="og:description" content="Get in touch with Zakey to discuss your smart-living project. Reach our sales, support, partner, or project teams directly.">
   <meta property="og:image" content="../assets/images/og/zakey-og-cover.svg">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body data-page="contact">
 
 <!-- header:start -->
 <header class="site-header" data-scrolled="false">
   <div class="site-header__inner">
     <a class="site-header__brand" href="../index.html" aria-label="Zakey — Home">
-      <img class="site-header__wordmark" src="../assets/icons/zakey-wordmark.svg" alt="" width="120" height="28">
+      <img class="site-header__wordmark logo-dark" src="../assets/icons/blue-logo.png" alt="Zakey" width="172" height="52">
+      <img class="site-header__wordmark logo-light" src="../assets/icons/blue-logo.png" alt="Zakey" width="172" height="52">
     </a>
 
     <nav class="site-header__nav" aria-label="Primary">
@@ -83,6 +85,12 @@
       </ul>
     </nav>
 
+    
+    <button type="button" class="theme-toggle" aria-label="Switch to light theme" data-theme-toggle>
+      <svg class="theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+
     <a class="btn btn--primary site-header__cta" href="../index.html#get-quote">Get a Quote</a>
 
     <button type="button" class="site-header__hamburger" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
@@ -96,7 +104,8 @@
   <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Site navigation">
     <div class="mobile-drawer__head">
       <a class="mobile-drawer__brand" href="../index.html">
-        <img src="../assets/icons/zakey-wordmark.svg" alt="Zakey home" width="100" height="24">
+        <img src="../assets/icons/blue-logo.png" alt="Zakey home" class="logo-dark" width="132" height="40">
+        <img src="../assets/icons/blue-logo.png" alt="Zakey home" class="logo-light" width="132" height="40">
       </a>
       <button type="button" class="mobile-drawer__close" data-drawer-dismiss="true" aria-label="Close menu">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -153,36 +162,284 @@
 </aside>
 <!-- header:end -->
 
-<main id="main">
-  <section class="u-section u-section--page-top">
-    <div class="u-container">
-      <div class="section-head section-head--flush">
-        <p class="eyebrow">Zakey</p>
-        <h1>Contact</h1>
-        <p class="u-page-subtitle">Our team is available around the clock for partners and enterprise clients. Reach us by email, phone, or submit a quote request and a partnership manager will follow up within one business day.</p>
-      </div>
-    </div>
-  </section>
+<main id="content">
 
-  <section class="u-section u-section--tight u-section--bordered-top">
-    <div class="u-container u-container--center">
-      <div class="u-placeholder-card">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg>
-        <div>
-          <p class="u-placeholder-card__title">Coming in Phase 02</p>
-          <p class="u-placeholder-card__desc">The full page is being crafted with the same premium detail you see in the homepage. Check back soon or get in touch to discuss your project.</p>
+<section class="contact-hero">
+  <div class="contact-hero__inner">
+    <p class="contact-hero__eyebrow">Get in Touch</p>
+    <h1 class="contact-hero__title">Talk to Zakey</h1>
+    <p class="contact-hero__subtitle">Whether you're planning a luxury villa, scaling a hotel chain, or specifying for a development — our team is ready to design the right system for your project.</p>
+  </div>
+  <figure class="contact-hero__media">
+    <img src="../assets/images/contact/zakey-contact-hero.svg" alt="Stylized illustration of Zakey communication channels: phone, email, and chat" loading="eager" width="560" height="315">
+  </figure>
+</section>
+
+<section class="contact-channels" aria-labelledby="channels-heading">
+  <h2 id="channels-heading">How to Reach Us</h2>
+  <div class="contact-channels__grid">
+    <article class="contact-channel-card">
+      <svg class="contact-channel-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 3H8a2 2 0 00-2 2v2h12V5a2 2 0 00-2-2z"/><path d="M12 14v3m-3 0h6"/></svg>
+      <h3 class="contact-channel-card__title">Sales</h3>
+      <p class="contact-channel-card__desc">New projects, pricing, and proposals. Talk to our sales team about your requirements and get a tailored quote.</p>
+      <a class="btn btn--primary" href="mailto:sales@zakey.tech">Email Sales</a>
+    </article>
+    <article class="contact-channel-card">
+      <svg class="contact-channel-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      <h3 class="contact-channel-card__title">Partners</h3>
+      <p class="contact-channel-card__desc">System integrators, distributors, and architects. Join our partner network and grow your business with Zakey.</p>
+      <a class="btn btn--primary" href="become-a-partner.html">Become a Partner</a>
+    </article>
+    <article class="contact-channel-card">
+      <svg class="contact-channel-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      <h3 class="contact-channel-card__title">Support</h3>
+      <p class="contact-channel-card__desc">Technical support, firmware updates, and after-sales assistance. We respond within 4 business hours.</p>
+      <a class="btn btn--primary" href="mailto:support@zakey.tech">Email Support</a>
+    </article>
+    <article class="contact-channel-card">
+      <svg class="contact-channel-card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      <h3 class="contact-channel-card__title">Projects</h3>
+      <p class="contact-channel-card__desc">Large-scale or complex installations. Our projects team will scope, plan, and manage your rollout end to end.</p>
+      <a class="btn btn--primary" href="#quote-form">Request a Quote</a>
+    </article>
+  </div>
+</section>
+
+<section class="contact-map-section">
+  <figure class="contact-map">
+    <img src="../assets/images/contact/zakey-office-map.svg" alt="Stylized regional map showing Zakey office location and served markets" loading="lazy" width="1100" height="619">
+    <figcaption>Zakey Regional Office · Available for on-site consultations by appointment &middot; Mon–Fri 09:00–18:00 GST</figcaption>
+  </figure>
+</section>
+
+<section id="quote-form" class="quote-form-section">
+  <h2>Request a Project Quote</h2>
+  <p class="quote-form-section__lead">Tell us about your project. We'll respond within one business day with a tailored proposal.</p>
+
+  <form id="contact-form" class="quote-form" data-form-state="idle" novalidate>
+    <div class="form-error-summary" role="alert" aria-live="assertive" tabindex="-1" hidden></div>
+
+    <fieldset class="quote-form__group">
+      <legend>About You</legend>
+      <div class="quote-form__grid">
+        <div class="form-field">
+          <label class="form-field__label" for="role">I am a <abbr class="form-field__req" title="required">*</abbr></label>
+          <select id="role" name="role" required aria-describedby="role-error" aria-invalid="false">
+            <option value="">Select your role…</option>
+            <option value="distributor">Distributor</option>
+            <option value="integrator">System Integrator</option>
+            <option value="developer">Real Estate Developer</option>
+            <option value="installer">Installer</option>
+            <option value="designer">Interior Designer</option>
+            <option value="hotel">Hotel Operator</option>
+            <option value="end-user">End User / Homeowner</option>
+            <option value="other">Other</option>
+          </select>
+          <p class="form-field__error" id="role-error" role="alert" hidden data-error-for="role"></p>
         </div>
-        <a class="btn btn--primary" href="../index.html#get-quote">Get a Quote</a>
+        <div class="form-field">
+          <label class="form-field__label" for="fullName">Full Name <abbr class="form-field__req" title="required">*</abbr></label>
+          <input type="text" id="fullName" name="fullName" autocomplete="name" placeholder="Your full name" required aria-describedby="fullName-error" aria-invalid="false">
+          <p class="form-field__error" id="fullName-error" role="alert" hidden data-error-for="fullName"></p>
+        </div>
+        <div class="form-field">
+          <label class="form-field__label" for="company">Company / Project Name <abbr class="form-field__req" title="required">*</abbr></label>
+          <input type="text" id="company" name="company" autocomplete="organization" placeholder="Your company or project name" required aria-describedby="company-error" aria-invalid="false">
+          <p class="form-field__error" id="company-error" role="alert" hidden data-error-for="company"></p>
+        </div>
+        <div class="form-field">
+          <label class="form-field__label" for="email">Email Address <abbr class="form-field__req" title="required">*</abbr></label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="you@company.com" required aria-describedby="email-error" aria-invalid="false">
+          <p class="form-field__error" id="email-error" role="alert" hidden data-error-for="email"></p>
+        </div>
+        <div class="form-field">
+          <label class="form-field__label" for="phone">Phone / WhatsApp <abbr class="form-field__req" title="required">*</abbr></label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+966 5X XXX XXXX" required aria-describedby="phone-error" aria-invalid="false">
+          <p class="form-field__error" id="phone-error" role="alert" hidden data-error-for="phone"></p>
+        </div>
       </div>
+    </fieldset>
+
+    <fieldset class="quote-form__group">
+      <legend>Location</legend>
+      <div class="quote-form__grid">
+        <div class="form-field">
+          <label class="form-field__label" for="country">Country <abbr class="form-field__req" title="required">*</abbr></label>
+          <select id="country" name="country" required aria-describedby="country-error" aria-invalid="false">
+            <option value="">Select your country…</option>
+            <option>Saudi Arabia</option><option>UAE</option><option>Egypt</option><option>Qatar</option>
+            <option>Kuwait</option><option>Bahrain</option><option>Oman</option><option>Jordan</option>
+            <option>Lebanon</option><option>Iraq</option><option>Morocco</option><option>Tunisia</option>
+            <option>Algeria</option><option>Turkey</option><option>UK</option><option>Germany</option>
+            <option>France</option><option>Italy</option><option>Spain</option><option>USA</option>
+            <option>Canada</option><option>India</option><option>Indonesia</option><option>Singapore</option>
+            <option>Malaysia</option><option>Vietnam</option><option>Thailand</option><option>China</option>
+            <option>Brazil</option><option>Mexico</option><option>Other</option>
+          </select>
+          <p class="form-field__error" id="country-error" role="alert" hidden data-error-for="country"></p>
+        </div>
+        <div class="form-field">
+          <label class="form-field__label" for="city">City <abbr class="form-field__req" title="required">*</abbr></label>
+          <input type="text" id="city" name="city" autocomplete="address-level2" placeholder="Your city" required aria-describedby="city-error" aria-invalid="false">
+          <p class="form-field__error" id="city-error" role="alert" hidden data-error-for="city"></p>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="quote-form__group">
+      <legend>Your Project</legend>
+      <div class="quote-form__grid">
+        <div class="form-field">
+          <label class="form-field__label" for="projectType">Project Type <abbr class="form-field__req" title="required">*</abbr></label>
+          <select id="projectType" name="projectType" required aria-describedby="projectType-error" aria-invalid="false">
+            <option value="">Select project type…</option>
+            <option>Smart Villa</option><option>Smart Apartment</option><option>Smart Hotel</option>
+            <option>Smart Office</option><option>Smart Compound</option><option>Gaming Room</option>
+            <option>Elderly Care</option><option>Smart Retail</option><option>Other</option>
+          </select>
+          <p class="form-field__error" id="projectType-error" role="alert" hidden data-error-for="projectType"></p>
+        </div>
+        <div class="form-field">
+          <label class="form-field__label" for="projectSize">Project Size <abbr class="form-field__req" title="required">*</abbr></label>
+          <select id="projectSize" name="projectSize" required aria-describedby="projectSize-error" aria-invalid="false">
+            <option value="">Select project size…</option>
+            <option>1 unit</option><option>2–5 units</option><option>6–25 units</option>
+            <option>26–100 units</option><option>100+ units</option><option>Recurring rollout</option>
+          </select>
+          <p class="form-field__error" id="projectSize-error" role="alert" hidden data-error-for="projectSize"></p>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <p class="form-field__label">Interested Solutions <abbr class="form-field__req" title="required">*</abbr></p>
+        <div class="quote-form__solutions-grid" role="group" aria-labelledby="solutions-label" aria-describedby="interestedSolutions-error">
+          <label><input type="checkbox" name="interestedSolutions" value="lighting" aria-invalid="false"> Lighting Control</label>
+          <label><input type="checkbox" name="interestedSolutions" value="climate"> Climate &amp; HVAC</label>
+          <label><input type="checkbox" name="interestedSolutions" value="security"> Security &amp; Access</label>
+          <label><input type="checkbox" name="interestedSolutions" value="curtains"> Curtains &amp; Shading</label>
+          <label><input type="checkbox" name="interestedSolutions" value="energy"> Energy Monitoring</label>
+          <label><input type="checkbox" name="interestedSolutions" value="scenes"> Scene Automation</label>
+          <label><input type="checkbox" name="interestedSolutions" value="hospitality"> Hospitality Solutions</label>
+          <label><input type="checkbox" name="interestedSolutions" value="full-system"> Full Zakey System</label>
+        </div>
+        <p class="form-field__error" id="interestedSolutions-error" role="alert" hidden data-error-for="interestedSolutions"></p>
+      </div>
+
+      <div class="quote-form__grid">
+        <div class="form-field">
+          <label class="form-field__label" for="budgetRange">Budget Range <span class="form-field__optional">(optional)</span></label>
+          <select id="budgetRange" name="budgetRange" aria-describedby="budgetRange-hint">
+            <option value="">Prefer not to say</option>
+            <option>$5,000 – $25,000</option><option>$25,000 – $100,000</option>
+            <option>$100,000 – $500,000</option><option>$500,000+</option>
+          </select>
+          <p class="form-field__hint" id="budgetRange-hint">Helps us scope the right solution. Completely optional.</p>
+        </div>
+        <div class="form-field">
+          <label class="form-field__label" for="timeline">Timeline <abbr class="form-field__req" title="required">*</abbr></label>
+          <select id="timeline" name="timeline" required aria-describedby="timeline-error" aria-invalid="false">
+            <option value="">Select timeline…</option>
+            <option>Immediate (&lt;1 month)</option><option>Short (1–3 months)</option>
+            <option>Mid (3–6 months)</option><option>Long (6–12 months)</option><option>Not sure yet</option>
+          </select>
+          <p class="form-field__error" id="timeline-error" role="alert" hidden data-error-for="timeline"></p>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label class="form-field__label" for="message">Project Description <abbr class="form-field__req" title="required">*</abbr></label>
+        <textarea id="message" name="message" rows="5" maxlength="2000" placeholder="Tell us about your project — the space, the goals, any specific requirements, or questions you have." required aria-describedby="message-error message-counter" aria-invalid="false"></textarea>
+        <p class="form-field__counter" id="message-counter">0 / 2000</p>
+        <p class="form-field__error" id="message-error" role="alert" hidden data-error-for="message"></p>
+      </div>
+    </fieldset>
+
+    <div class="quote-form__consent form-field">
+      <input type="checkbox" id="consent" name="consent" required aria-describedby="consent-error" aria-invalid="false">
+      <label for="consent">I agree to Zakey's <a href="privacy.html">Privacy Policy</a> and consent to being contacted about my enquiry. <abbr class="form-field__req" title="required">*</abbr></label>
+      <p class="form-field__error" id="consent-error" role="alert" hidden data-error-for="consent"></p>
     </div>
-  </section>
+
+    <button type="submit" class="btn btn--primary quote-form__submit">
+      <span data-when="idle">Request a Quote</span>
+      <span data-when="submitting" hidden>Sending…</span>
+    </button>
+  </form>
+</section>
+
+<section class="quote-success" data-form-success hidden aria-live="polite">
+  <div class="quote-success__card">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <h2 tabindex="-1">Quote Request Received</h2>
+    <p>Thank you — your request has been sent to our team. We'll review your project details and respond within one business day with a tailored proposal.</p>
+    <p>In the meantime, explore our work or connect with us on WhatsApp for urgent queries.</p>
+    <div class="quote-success__cta">
+      <a class="btn btn--primary" href="../index.html">Back to Home</a>
+      <a class="btn btn--ghost" href="projects.html">Browse Projects</a>
+      <button class="btn btn--ghost" type="button" data-edit-application>Edit &amp; Resubmit</button>
+    </div>
+  </div>
+</section>
+
+<section class="contact-faq" aria-labelledby="contact-faq-heading">
+  <h2 id="contact-faq-heading">Quick Answers</h2>
+  <div class="faq" data-faq data-faq-mode="single">
+    <details class="faq-item">
+      <summary class="faq-item__trigger" aria-expanded="false">
+        How quickly will you respond to my quote request?
+        <svg class="faq-item__chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="faq-item__body">
+        <p>We respond to all quote requests within one business day. Complex or multi-site projects may take slightly longer as we prepare a thorough proposal — but we'll acknowledge receipt immediately and keep you informed.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-item__trigger" aria-expanded="false">
+        What languages does Zakey support?
+        <svg class="faq-item__chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="faq-item__body">
+        <p>Our team works in Arabic and English. The Zakey app and control panels support multiple language settings and can be configured to match your guests' or residents' preferences.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-item__trigger" aria-expanded="false">
+        What is the minimum project size Zakey works with?
+        <svg class="faq-item__chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="faq-item__body">
+        <p>We work with projects of all sizes — from single-apartment smart-home packages to multi-hundred-unit developer rollouts. For very small installations, we can often connect you with a trained local partner to ensure premium service delivery at every scale.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-item__trigger" aria-expanded="false">
+        Do you offer on-site surveys before quoting?
+        <svg class="faq-item__chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="faq-item__body">
+        <p>Yes. For projects above a certain scope, we recommend an on-site survey to assess existing infrastructure, ceiling and wall access, and network topology. We can arrange this directly or through a certified Zakey partner in your region.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-item__trigger" aria-expanded="false">
+        What after-sales support does Zakey provide?
+        <svg class="faq-item__chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="faq-item__body">
+        <p>All Zakey systems ship with a 24-month hardware warranty and lifetime firmware updates. Our support team is reachable by email, WhatsApp, and scheduled video call for technical queries. We also offer optional annual service contracts for hospitality and commercial clients.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
 </main>
 
 <!-- footer:start -->
 <footer class="site-footer">
   <div class="site-footer__inner">
     <div class="site-footer__brand">
-      <img src="../assets/icons/zakey-wordmark.svg" alt="" width="140" height="34" loading="lazy">
+      <img src="../assets/icons/blue-logo.png" alt="" class="logo-dark" width="185" height="56" loading="lazy">
+              <img src="../assets/icons/blue-logo.png" alt="" class="logo-light" width="185" height="56" loading="lazy">
       <p class="site-footer__summary">
         Zakey crafts the premium smart-living layer for villas, hotels, offices, and signature homes — hardware, app, scenes, and analytics under one elegant ecosystem.
       </p>
@@ -224,6 +481,7 @@
       <ul>
         <li><a href="./about.html">About</a></li>
         <li><a href="./partners.html">Partners</a></li>
+        <li><a href="./become-a-partner.html">Become a Partner</a></li>
         <li><a href="./projects.html">Projects</a></li>
         <li><a href="./blog.html">Blog</a></li>
         <li><a href="./contact.html">Contact</a></li>
@@ -267,6 +525,12 @@
 </footer>
 <!-- footer:end -->
 
+<div class="floating-whatsapp">
+  <a class="floating-whatsapp__btn" href="https://wa.me/966500000000" target="_blank" rel="noopener" aria-label="Chat with Zakey on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <span class="floating-whatsapp__label">Chat on WhatsApp</span>
+</div>
 <script type="module" src="../js/main.js" defer></script>
 </body>
 </html>

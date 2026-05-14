@@ -1,16 +1,214 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <title>Zakey Bracket Set — Adjustable Anodized Aluminum Mounting Brackets</title>
   <defs>
-    <linearGradient id="bg-BRACKET SET" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
-    </linearGradient>
-    <radialGradient id="gl-BRACKET SET" cx="240" cy="185" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <!-- Slightly lighter bg for dark metal visibility -->
+    <radialGradient id="bgRadial" cx="50%" cy="50%" r="60%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0f1825"/>
+      <stop offset="100%" stop-color="#04060d"/>
     </radialGradient>
+    <pattern id="dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="0.7" fill="#ffffff" fill-opacity="0.04"/>
+    </pattern>
+    <!-- Product glow -->
+    <radialGradient id="productGlow" cx="50%" cy="50%" r="55%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#4a5080" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#4a5080" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Anodized aluminum bracket body: dark with linear highlight (CNC look) -->
+    <linearGradient id="bracketFaceGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2e3248"/>
+      <stop offset="25%" stop-color="#3a3e58"/>
+      <stop offset="60%" stop-color="#2e3248"/>
+      <stop offset="100%" stop-color="#1e2038"/>
+    </linearGradient>
+    <!-- Top face of bracket (lighter aluminum) -->
+    <linearGradient id="bracketTopGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#404460"/>
+      <stop offset="50%" stop-color="#4a4e6a"/>
+      <stop offset="100%" stop-color="#363a54"/>
+    </linearGradient>
+    <!-- Side face (depth) -->
+    <linearGradient id="bracketSideGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a1c2e"/>
+      <stop offset="100%" stop-color="#0e0f1c"/>
+    </linearGradient>
+    <!-- CNC surface: linear micro-highlight bands -->
+    <pattern id="cncLines" x="0" y="0" width="1" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="200" y2="0" stroke="#ffffff" stroke-width="0.3" stroke-opacity="0.04"/>
+      <line x1="0" y1="2" x2="200" y2="2" stroke="#000000" stroke-width="0.3" stroke-opacity="0.04"/>
+    </pattern>
+    <!-- Allen screw head (hex) -->
+    <radialGradient id="allenHead" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#6a6e88"/>
+      <stop offset="60%" stop-color="#4a4e66"/>
+      <stop offset="100%" stop-color="#2e3248"/>
+    </radialGradient>
+    <!-- Drop shadow -->
+    <radialGradient id="shadowGrad" cx="50%" cy="50%" r="50%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Measurement callout line color -->
+    <marker id="arrowL" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M6,0 L0,3 L6,6" fill="none" stroke="#3a4060" stroke-width="0.8"/>
+    </marker>
+    <marker id="arrowR" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L6,3 L0,6" fill="none" stroke="#3a4060" stroke-width="0.8"/>
+    </marker>
+    <!-- Surface -->
+    <linearGradient id="surfaceLine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a2030" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#1a2030" stop-opacity="0"/>
+    </linearGradient>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-BRACKET SET)"/>
-  <ellipse cx="240" cy="185" rx="180" ry="140" fill="url(#gl-BRACKET SET)"/>
-  <rect x="100" y="140" width="280" height="12" rx="6" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><rect x="100" y="208" width="280" height="12" rx="6" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.5"/><rect x="175" y="140" width="14" height="80" rx="4" fill="#22d3ee" fill-opacity="0.2"/><rect x="291" y="140" width="14" height="80" rx="4" fill="#22d3ee" fill-opacity="0.15"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">BRACKET SET</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bgRadial)"/>
+  <rect width="480" height="360" fill="url(#dots)"/>
+
+  <!-- Product glow -->
+  <ellipse cx="240" cy="200" rx="170" ry="100" fill="url(#productGlow)"/>
+
+  <!-- Surface -->
+  <rect x="80" y="285" width="320" height="45" fill="url(#surfaceLine)"/>
+  <line x1="80" y1="285" x2="400" y2="285" stroke="#1e2438" stroke-width="0.6" stroke-opacity="0.4"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="240" cy="288" rx="175" ry="11" fill="url(#shadowGrad)"/>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- BRACKET 1 (LEFT): L-bracket at 3/4 view   -->
+  <!-- Vertical leg: 60px tall × 12px wide        -->
+  <!-- Horizontal leg: 40px wide × 12px tall      -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Bracket 1: vertical leg — front face -->
+  <rect x="125" y="150" width="18" height="70" rx="2" fill="url(#bracketFaceGrad)"/>
+  <rect x="125" y="150" width="18" height="70" rx="2" fill="url(#cncLines)"/>
+  <!-- Vertical leg: top face (depth) -->
+  <polygon points="125,150 143,150 151,142 133,142" fill="url(#bracketTopGrad)"/>
+  <!-- Vertical leg: right side face (depth) -->
+  <polygon points="143,150 151,142 151,212 143,220" fill="url(#bracketSideGrad)"/>
+  <!-- CNC linear highlight on vertical leg -->
+  <line x1="133" y1="153" x2="133" y2="218" stroke="#4a4e68" stroke-width="0.6" stroke-opacity="0.5"/>
+  <line x1="138" y1="152" x2="138" y2="219" stroke="#3a3e56" stroke-width="0.4" stroke-opacity="0.3"/>
+
+  <!-- Bracket 1: horizontal leg (bottom) — front face -->
+  <rect x="125" y="202" width="50" height="18" rx="2" fill="url(#bracketFaceGrad)"/>
+  <rect x="125" y="202" width="50" height="18" rx="2" fill="url(#cncLines)"/>
+  <!-- Horizontal leg: top face -->
+  <polygon points="125,202 175,202 183,194 133,194" fill="url(#bracketTopGrad)"/>
+  <!-- Horizontal leg: right side face -->
+  <polygon points="175,202 183,194 183,212 175,220" fill="url(#bracketSideGrad)"/>
+  <!-- CNC linear highlight on horizontal leg -->
+  <line x1="128" y1="207" x2="172" y2="207" stroke="#4a4e68" stroke-width="0.6" stroke-opacity="0.5"/>
+  <line x1="128" y1="213" x2="172" y2="213" stroke="#3a3e56" stroke-width="0.4" stroke-opacity="0.3"/>
+
+  <!-- Inner corner of L: filled solid corner block -->
+  <rect x="125" y="202" width="18" height="18" rx="0" fill="url(#bracketFaceGrad)"/>
+
+  <!-- Slotted holes on vertical leg (for adjustment) -->
+  <!-- Slot 1 -->
+  <rect x="130" y="165" width="8" height="18" rx="4" fill="#0a0c16"/>
+  <rect x="130" y="165" width="8" height="18" rx="4" fill="none" stroke="#3a3e58" stroke-width="0.5"/>
+  <!-- Slot 2 -->
+  <rect x="130" y="188" width="8" height="6" rx="3" fill="#0a0c16"/>
+  <rect x="130" y="188" width="8" height="6" rx="3" fill="none" stroke="#3a3e58" stroke-width="0.5"/>
+
+  <!-- Slotted hole on horizontal leg -->
+  <rect x="148" y="207" width="18" height="8" rx="4" fill="#0a0c16"/>
+  <rect x="148" y="207" width="18" height="8" rx="4" fill="none" stroke="#3a3e58" stroke-width="0.5"/>
+
+  <!-- Bracket 1: label -->
+  <text x="150" y="237" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="5.5" fill="#3a3e58" fill-opacity="0.7">BRACKET A</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- BRACKET 2 (RIGHT): mirror L-bracket        -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Bracket 2: vertical leg — front face -->
+  <rect x="300" y="150" width="18" height="70" rx="2" fill="url(#bracketFaceGrad)"/>
+  <rect x="300" y="150" width="18" height="70" rx="2" fill="url(#cncLines)"/>
+  <!-- Top face -->
+  <polygon points="300,150 318,150 326,142 308,142" fill="url(#bracketTopGrad)"/>
+  <!-- Right side face -->
+  <polygon points="318,150 326,142 326,212 318,220" fill="url(#bracketSideGrad)"/>
+  <!-- CNC highlights -->
+  <line x1="308" y1="153" x2="308" y2="218" stroke="#4a4e68" stroke-width="0.6" stroke-opacity="0.5"/>
+  <line x1="313" y1="152" x2="313" y2="219" stroke="#3a3e56" stroke-width="0.4" stroke-opacity="0.3"/>
+
+  <!-- Bracket 2: horizontal leg (bottom) -->
+  <rect x="255" y="202" width="63" height="18" rx="2" fill="url(#bracketFaceGrad)"/>
+  <rect x="255" y="202" width="63" height="18" rx="2" fill="url(#cncLines)"/>
+  <polygon points="255,202 318,202 326,194 263,194" fill="url(#bracketTopGrad)"/>
+  <polygon points="318,202 326,194 326,212 318,220" fill="url(#bracketSideGrad)"/>
+  <line x1="258" y1="207" x2="315" y2="207" stroke="#4a4e68" stroke-width="0.6" stroke-opacity="0.5"/>
+  <line x1="258" y1="213" x2="315" y2="213" stroke="#3a3e56" stroke-width="0.4" stroke-opacity="0.3"/>
+
+  <!-- Inner corner fill -->
+  <rect x="300" y="202" width="18" height="18" rx="0" fill="url(#bracketFaceGrad)"/>
+
+  <!-- Slotted holes — vertical leg -->
+  <rect x="305" y="165" width="8" height="18" rx="4" fill="#0a0c16"/>
+  <rect x="305" y="165" width="8" height="18" rx="4" fill="none" stroke="#3a3e58" stroke-width="0.5"/>
+  <rect x="305" y="188" width="8" height="6" rx="3" fill="#0a0c16"/>
+  <rect x="305" y="188" width="8" height="6" rx="3" fill="none" stroke="#3a3e58" stroke-width="0.5"/>
+
+  <!-- Slotted hole — horizontal leg -->
+  <rect x="268" y="207" width="18" height="8" rx="4" fill="#0a0c16"/>
+  <rect x="268" y="207" width="18" height="8" rx="4" fill="none" stroke="#3a3e58" stroke-width="0.5"/>
+
+  <text x="290" y="237" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="5.5" fill="#3a3e58" fill-opacity="0.7">BRACKET B</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- Allen screws (4 small) between brackets    -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Allen screw 1 (hex head + shaft) -->
+  <polygon points="215,155 221,158 221,164 215,167 209,164 209,158" fill="url(#allenHead)"/>
+  <!-- Hex socket (inner hex hole) -->
+  <polygon points="215,158 218,159.7 218,162.3 215,164 212,162.3 212,159.7" fill="#1a1c2c"/>
+  <rect x="213" y="167" width="4" height="12" rx="2" fill="#4a4e66"/>
+  <line x1="212" y1="170" x2="218" y2="170" stroke="#3a3e56" stroke-width="0.4" stroke-opacity="0.5"/>
+  <line x1="212" y1="174" x2="218" y2="174" stroke="#3a3e56" stroke-width="0.4" stroke-opacity="0.5"/>
+
+  <!-- Allen screw 2 -->
+  <polygon points="230,152 236,155 236,161 230,164 224,161 224,155" fill="url(#allenHead)"/>
+  <polygon points="230,155 233,156.7 233,159.3 230,161 227,159.3 227,156.7" fill="#1a1c2c"/>
+  <rect x="228" y="164" width="4" height="12" rx="2" fill="#4a4e66"/>
+  <line x1="227" y1="167" x2="233" y2="167" stroke="#3a3e56" stroke-width="0.4" stroke-opacity="0.5"/>
+  <line x1="227" y1="171" x2="233" y2="171" stroke="#3a3e56" stroke-width="0.4" stroke-opacity="0.5"/>
+
+  <!-- Allen screw 3 -->
+  <polygon points="245,156 251,159 251,165 245,168 239,165 239,159" fill="url(#allenHead)"/>
+  <polygon points="245,159 248,160.7 248,163.3 245,165 242,163.3 242,160.7" fill="#1a1c2c"/>
+  <rect x="243" y="168" width="4" height="12" rx="2" fill="#4a4e66"/>
+  <line x1="242" y1="171" x2="248" y2="171" stroke="#3a3e56" stroke-width="0.4" stroke-opacity="0.5"/>
+  <line x1="242" y1="175" x2="248" y2="175" stroke="#3a3e56" stroke-width="0.4" stroke-opacity="0.5"/>
+
+  <!-- Allen screw 4 -->
+  <polygon points="260,153 266,156 266,162 260,165 254,162 254,156" fill="url(#allenHead)"/>
+  <polygon points="260,156 263,157.7 263,160.3 260,162 257,160.3 257,157.7" fill="#1a1c2c"/>
+  <rect x="258" y="165" width="4" height="12" rx="2" fill="#4a4e66"/>
+  <line x1="257" y1="168" x2="263" y2="168" stroke="#3a3e56" stroke-width="0.4" stroke-opacity="0.5"/>
+  <line x1="257" y1="172" x2="263" y2="172" stroke="#3a3e56" stroke-width="0.4" stroke-opacity="0.5"/>
+
+  <!-- ─── Measurement callout: "Adjustable 35-60mm" ─── -->
+  <!-- Callout line from horizontal leg left end to right end -->
+  <line x1="255" y1="258" x2="318" y2="258" stroke="#2a3050" stroke-width="0.8" stroke-opacity="0.5"
+        marker-start="url(#arrowL)" marker-end="url(#arrowR)"/>
+  <line x1="255" y1="220" x2="255" y2="262" stroke="#2a3050" stroke-width="0.4" stroke-opacity="0.4" stroke-dasharray="2,3"/>
+  <line x1="318" y1="220" x2="318" y2="262" stroke="#2a3050" stroke-width="0.4" stroke-opacity="0.4" stroke-dasharray="2,3"/>
+  <text x="287" y="268" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="6" fill="#2a3050" fill-opacity="0.5">Adjustable 35–60mm</text>
+
+  <!-- ─── Branding label ─── -->
+  <text x="240" y="310" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="9" letter-spacing="2"
+        fill="#3a4060" fill-opacity="0.8">ZAKEY BRACKET SET</text>
+  <text x="240" y="325" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="6" letter-spacing="1"
+        fill="#2a3050" fill-opacity="0.55">Anodized Aluminum · 2× Brackets · 4× Screws</text>
 </svg>

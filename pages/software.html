@@ -2,24 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script>!function(){var t=localStorage.getItem('zakey-theme')||'dark';document.documentElement.setAttribute('data-theme',t)}()</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zakey Software — Smart Living App & Dashboard</title>
-  <meta name="description" content="The Zakey app and cloud dashboard put every room, scene, schedule, and sensor at your fingertips — on iOS, Android, and the web.">
+  <title>Zakey Software Platform — Zakey Smart Living</title>
+  <meta name="description" content="Control every space from one intelligent experience — the Zakey mobile app, control panels, smart scenes, voice integration, business dashboard, and guest experience platform.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Zakey Software — Smart Living App & Dashboard">
-  <meta property="og:description" content="The Zakey app and cloud dashboard put every room, scene, schedule, and sensor at your fingertips — on iOS, Android, and the web.">
+  <meta property="og:title" content="Zakey Software Platform — Zakey Smart Living">
+  <meta property="og:description" content="Seven software pillars unify your smart-home experience — from the resident app to the operator dashboard.">
   <meta property="og:image" content="../assets/images/og/zakey-og-cover.svg">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body data-page="software">
+<a class="skip-link" href="#content">Skip to main content</a>
 
 <!-- header:start -->
 <header class="site-header" data-scrolled="false">
   <div class="site-header__inner">
     <a class="site-header__brand" href="../index.html" aria-label="Zakey — Home">
-      <img class="site-header__wordmark" src="../assets/icons/zakey-wordmark.svg" alt="" width="120" height="28">
+      <img class="site-header__wordmark logo-dark" src="../assets/icons/blue-logo.png" alt="Zakey" width="172" height="52">
+      <img class="site-header__wordmark logo-light" src="../assets/icons/blue-logo.png" alt="Zakey" width="172" height="52">
     </a>
 
     <nav class="site-header__nav" aria-label="Primary">
@@ -83,6 +86,12 @@
       </ul>
     </nav>
 
+    
+    <button type="button" class="theme-toggle" aria-label="Switch to light theme" data-theme-toggle>
+      <svg class="theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+
     <a class="btn btn--primary site-header__cta" href="../index.html#get-quote">Get a Quote</a>
 
     <button type="button" class="site-header__hamburger" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
@@ -96,7 +105,8 @@
   <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Site navigation">
     <div class="mobile-drawer__head">
       <a class="mobile-drawer__brand" href="../index.html">
-        <img src="../assets/icons/zakey-wordmark.svg" alt="Zakey home" width="100" height="24">
+        <img src="../assets/icons/blue-logo.png" alt="Zakey home" class="logo-dark" width="132" height="40">
+        <img src="../assets/icons/blue-logo.png" alt="Zakey home" class="logo-light" width="132" height="40">
       </a>
       <button type="button" class="mobile-drawer__close" data-drawer-dismiss="true" aria-label="Close menu">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -153,36 +163,207 @@
 </aside>
 <!-- header:end -->
 
-<main id="main">
-  <section class="u-section u-section--page-top">
-    <div class="u-container">
-      <div class="section-head section-head--flush">
-        <p class="eyebrow">Zakey</p>
-        <h1>Zakey Software</h1>
-        <p class="u-page-subtitle">Manage your entire smart-home ecosystem from one beautifully simple interface. Create scenes, track energy, monitor security, and share access with family or staff — all in real time.</p>
+<main id="content">
+
+  <!-- Hero -->
+  <section class="sw-hero">
+    <div class="sw-hero__inner">
+      <div class="sw-hero__copy">
+        <p class="sw-hero__eyebrow">Software Platform</p>
+        <h1 class="sw-hero__h1">Control Every Space from One Intelligent Experience</h1>
+        <p class="sw-hero__subtitle">Seven software pillars unify the resident app, control panels, automation scenes, voice integration, business dashboard, energy insights, and guest experience.</p>
+        <div class="sw-hero__cta">
+          <a class="btn btn--primary" href="contact.html">Request a Demo</a>
+          <a class="btn btn--secondary" href="become-a-partner.html">Become a Partner</a>
+        </div>
+      </div>
+      <div class="sw-hero__visual">
+        <img src="../assets/images/software/zakey-platform-hero.svg" alt="Zakey software platform — phone, wall panel, and operator dashboard in unified visual language" loading="lazy" width="800" height="600">
       </div>
     </div>
   </section>
 
-  <section class="u-section u-section--tight u-section--bordered-top">
-    <div class="u-container u-container--center">
-      <div class="u-placeholder-card">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg>
-        <div>
-          <p class="u-placeholder-card__title">Coming in Phase 02</p>
-          <p class="u-placeholder-card__desc">The full page is being crafted with the same premium detail you see in the homepage. Check back soon or get in touch to discuss your project.</p>
-        </div>
-        <a class="btn btn--primary" href="../index.html#get-quote">Get a Quote</a>
+  <!-- Pillar 1 — Mobile App -->
+  <section class="pillar" id="mobile-app" data-pillar="mobile-app" data-audience="resident">
+    <div class="pillar-grid">
+      <div class="pillar-card__body">
+        <p class="pillar-card__eyebrow">Pillar 01</p>
+        <h2 class="pillar-card__title">Zakey Mobile App</h2>
+        <p class="pillar-card__positioning">Your home in your pocket — full control, anywhere you are.</p>
+        <p class="pillar-card__copy">The Zakey iOS and Android app gives residents a single, beautifully organised interface for their entire home. Browse every room, adjust individual devices, or fire a scene with a single tap. Build schedules that match your daily rhythm — wake up to warm light, arrive home to the perfect temperature — and receive instant push notifications when doors open, sensors trigger, or automations run. For those managing multiple properties, the app handles all of them from one account without switching apps or profiles.</p>
+        <ul class="pillar-card__bullets">
+          <li>Live device status across every room</li>
+          <li>One-tap scene activation</li>
+          <li>Visual schedule builder with repeat rules</li>
+          <li>Push notifications for devices and automations</li>
+          <li>Multi-property support under a single account</li>
+        </ul>
+        <div class="pillar-card__cta"><a class="btn btn--ghost" href="contact.html">Request a Demo &rarr;</a></div>
+      </div>
+      <div class="pillar-card__visual">
+        <img src="../assets/images/software/zakey-app-mockup.svg" alt="Zakey mobile app home screen showing room controls, active scenes, and energy usage" loading="lazy" width="800" height="600">
       </div>
     </div>
   </section>
+
+  <!-- Pillar 2 — Control Panels (flipped) -->
+  <section class="pillar" id="control-panels" data-pillar="control-panels" data-flip="true" data-audience="resident">
+    <div class="pillar-grid">
+      <div class="pillar-card__body">
+        <p class="pillar-card__eyebrow">Pillar 02</p>
+        <h2 class="pillar-card__title">Zakey Control Panels</h2>
+        <p class="pillar-card__positioning">Every room deserves a command centre — not a phone hunt.</p>
+        <p class="pillar-card__copy">Zakey wall panels bring the entire room's intelligence to your fingertips the moment you enter. Customise each panel with the scene tiles that matter most in that space — Morning, Focus, Cinema, Relax — and switch between them with a single press. Ambient display mode shows the time, temperature, and active scene when the panel is at rest, turning a functional device into an elegant fixture. Panels install in a standard wall box and connect to the Zakey hub without running new cable, and they operate locally so scenes fire even when your internet is temporarily unavailable.</p>
+        <ul class="pillar-card__bullets">
+          <li>Customisable scene tiles per room</li>
+          <li>Ambient display mode when idle</li>
+          <li>Master controls for all devices in the space</li>
+          <li>Plug-and-play installation in standard wall boxes</li>
+          <li>Local processing — works offline</li>
+        </ul>
+        <div class="pillar-card__cta"><a class="btn btn--ghost" href="products.html">View Products &rarr;</a></div>
+      </div>
+      <div class="pillar-card__visual">
+        <img src="../assets/images/software/zakey-control-panels.svg" alt="Zakey wall-mounted control panel with customizable scene tiles and ambient display" loading="lazy" width="800" height="600">
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillar 3 — Smart Scenes & Automation -->
+  <section class="pillar" id="scenes" data-pillar="scenes" data-audience="resident">
+    <div class="pillar-grid">
+      <div class="pillar-card__body">
+        <p class="pillar-card__eyebrow">Pillar 03</p>
+        <h2 class="pillar-card__title">Smart Scenes &amp; Automation</h2>
+        <p class="pillar-card__positioning">Set the conditions once — your home handles the rest.</p>
+        <p class="pillar-card__copy">The Zakey scene builder uses a visual, drag-and-drop canvas to connect triggers with device actions across your entire home. Choose from time-based triggers, sensor readings, sunrise and sunset offsets, geofencing events, or presence detection — then chain any combination of lights, climate, curtains, and audio into a single, coordinated response. Pre-built templates get you started in seconds; advanced users can nest scenes inside scenes to build layered routines as sophisticated as the space demands. Every automation runs locally for instant response, with cloud sync for remote access.</p>
+        <ul class="pillar-card__bullets">
+          <li>Drag-and-drop visual scene builder</li>
+          <li>Sensor-triggered automations (motion, door, temperature)</li>
+          <li>Time, sunrise/sunset, and geofencing triggers</li>
+          <li>Nested scenes for layered routines</li>
+          <li>Pre-built templates for common living patterns</li>
+        </ul>
+        <div class="pillar-card__cta"><a class="btn btn--ghost" href="solution-smart-villa.html">Explore Smart Villa &rarr;</a></div>
+      </div>
+      <div class="pillar-card__visual">
+        <img src="../assets/images/software/zakey-scenes.svg" alt="Visual scene builder showing condition triggers connected to device actions in a chain" loading="lazy" width="800" height="600">
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillar 4 — Voice Integration (flipped) -->
+  <section class="pillar" id="voice" data-pillar="voice" data-flip="true" data-audience="resident">
+    <div class="pillar-grid">
+      <div class="pillar-card__body">
+        <p class="pillar-card__eyebrow">Pillar 04</p>
+        <h2 class="pillar-card__title">Voice Assistant Integration</h2>
+        <p class="pillar-card__positioning">Speak naturally — your home listens across every major platform.</p>
+        <p class="pillar-card__copy">Zakey works with Alexa and is compatible with Google Assistant, giving residents hands-free control over every device and scene without lifting a finger. Siri Shortcuts support brings the same convenience to the Apple ecosystem, letting you launch scenes from the Shortcuts app or with a custom phrase. Ask to dim the living room, activate the Good Night scene, or check whether the front door is locked — and the right thing happens immediately. Voice commands reach the same device graph as the app, so everything stays in sync across all control surfaces.</p>
+        <ul class="pillar-card__bullets">
+          <li>Voice-activated scene activation</li>
+          <li>Natural language device control by room or name</li>
+          <li>Works with Alexa for hands-free automation</li>
+          <li>Compatible with Google Assistant</li>
+          <li>Siri Shortcuts support for Apple users</li>
+        </ul>
+        <div class="pillar-card__cta"><a class="btn btn--ghost" href="partners.html">Become a Partner &rarr;</a></div>
+      </div>
+      <div class="pillar-card__visual">
+        <img src="../assets/images/software/zakey-voice.svg" alt="Voice control visualization with text labels showing Alexa, Google Assistant, and Siri Shortcuts support" loading="lazy" width="800" height="600">
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillar 5 — Business Dashboard -->
+  <section class="pillar" id="dashboard" data-pillar="dashboard" data-audience="operator">
+    <div class="pillar-grid">
+      <div class="pillar-card__body">
+        <p class="pillar-card__eyebrow">Pillar 05</p>
+        <h2 class="pillar-card__title">Business / Project Dashboard</h2>
+        <p class="pillar-card__positioning">One web portal for every property in your portfolio.</p>
+        <p class="pillar-card__copy">The Zakey operator dashboard is a web-based management layer built for system integrators, hotel operations teams, and real-estate developers overseeing multiple installations simultaneously. See every property on a single screen — KPI tiles, building schematics, and live device status at a glance. Role-based access control ensures that hotel managers see only their building, while a head-office team sees the full portfolio. Run remote diagnostics without sending a technician on-site, pull usage analytics into your own reporting tools via CSV export, and configure alert routing so the right team member is notified the moment something needs attention.</p>
+        <ul class="pillar-card__bullets">
+          <li>Multi-property overview on a single dashboard</li>
+          <li>Role-based user management and access control</li>
+          <li>Remote device diagnostics without site visits</li>
+          <li>Usage analytics with CSV export</li>
+          <li>Configurable alert and notification centre</li>
+        </ul>
+        <div class="pillar-card__cta"><a class="btn btn--ghost" href="become-a-partner.html">Become a Partner &rarr;</a></div>
+      </div>
+      <div class="pillar-card__visual">
+        <img src="../assets/images/software/zakey-dashboard.svg" alt="Business dashboard with multi-property overview, KPI tiles, and building schematic" loading="lazy" width="800" height="600">
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillar 6 — Energy & Device Insights (flipped) -->
+  <section class="pillar" id="insights" data-pillar="insights" data-flip="true" data-audience="operator">
+    <div class="pillar-grid">
+      <div class="pillar-card__body">
+        <p class="pillar-card__eyebrow">Pillar 06</p>
+        <h2 class="pillar-card__title">Energy &amp; Device Insights</h2>
+        <p class="pillar-card__positioning">Know what your building is consuming — and where you can save.</p>
+        <p class="pillar-card__copy">Zakey tracks energy consumption at the device, room, and building level in real time, giving operators the granular visibility they need to reduce waste and plan maintenance before failures occur. Live consumption graphs surface unexpected spikes the moment they happen, while daily and monthly trend charts reveal the patterns behind your utility bills. Device uptime monitoring flags equipment behaving outside normal parameters, and the anomaly alert engine sends a notification before a failing device disrupts the resident experience. Scheduled efficiency reports land in your inbox every week with prioritised cost-saving recommendations.</p>
+        <ul class="pillar-card__bullets">
+          <li>Real-time consumption graphs by device, room, and building</li>
+          <li>Device uptime monitoring with health indicators</li>
+          <li>Anomaly alerts for unexpected energy spikes or failures</li>
+          <li>Scheduled efficiency reports delivered by email</li>
+          <li>Actionable cost-saving recommendations</li>
+        </ul>
+        <div class="pillar-card__cta"><a class="btn btn--ghost" href="contact.html">Request a Demo &rarr;</a></div>
+      </div>
+      <div class="pillar-card__visual">
+        <img src="../assets/images/software/zakey-insights.svg" alt="Energy and device insights charts showing consumption trends, anomalies, and device uptime" loading="lazy" width="800" height="600">
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillar 7 — Guest Experience -->
+  <section class="pillar" id="guest-experience" data-pillar="guest-experience" data-audience="guest">
+    <div class="pillar-grid">
+      <div class="pillar-card__body">
+        <p class="pillar-card__eyebrow">Pillar 07</p>
+        <h2 class="pillar-card__title">Guest / Hotel Room Experience</h2>
+        <p class="pillar-card__positioning">A stay that feels personal — without burdening the guest with technology.</p>
+        <p class="pillar-card__copy">The Zakey guest experience layer elevates every hotel room stay into a personalised moment. A branded welcome screen greets each guest by name when they enter, and a curated set of scene tiles — Relax, Sleep, Work, Bright — lets them shape the room's atmosphere with a single press. Do-not-disturb mode activates from the in-room panel without touching the phone, and the check-out flow automatically resets every device to the hotel's default state when the guest departs. Guests who prefer to use their own phone can scan a QR code to access room controls instantly — no app download required.</p>
+        <ul class="pillar-card__bullets">
+          <li>Personalised welcome screen with guest name</li>
+          <li>In-room scene tiles: Relax, Sleep, Work, Bright</li>
+          <li>Do-not-disturb activation from the room panel</li>
+          <li>Check-out flow resets the room to hotel defaults automatically</li>
+          <li>No app download required — QR code access from any phone</li>
+        </ul>
+        <div class="pillar-card__cta"><a class="btn btn--ghost" href="solution-smart-hotel.html">Explore Smart Hotel &rarr;</a></div>
+      </div>
+      <div class="pillar-card__visual">
+        <img src="../assets/images/software/zakey-guest-experience.svg" alt="Hotel room control panel showing welcome screen with guest name, scene tiles, and check-out button" loading="lazy" width="800" height="600">
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="sw-final-cta">
+    <div class="sw-final-cta__inner">
+      <h2>See Zakey Software in Action</h2>
+      <p>Book a live demo and see how the Zakey platform unifies every touchpoint — from the resident app to the operator dashboard — in under 30 minutes.</p>
+      <div class="u-btn-row" style="justify-content:center">
+        <a class="btn btn--primary" href="contact.html">Request a Demo</a>
+        <a class="btn btn--secondary" href="become-a-partner.html">Become a Partner</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <!-- footer:start -->
 <footer class="site-footer">
   <div class="site-footer__inner">
     <div class="site-footer__brand">
-      <img src="../assets/icons/zakey-wordmark.svg" alt="" width="140" height="34" loading="lazy">
+      <img src="../assets/icons/blue-logo.png" alt="" class="logo-dark" width="185" height="56" loading="lazy">
+              <img src="../assets/icons/blue-logo.png" alt="" class="logo-light" width="185" height="56" loading="lazy">
       <p class="site-footer__summary">
         Zakey crafts the premium smart-living layer for villas, hotels, offices, and signature homes — hardware, app, scenes, and analytics under one elegant ecosystem.
       </p>
@@ -224,6 +405,7 @@
       <ul>
         <li><a href="./about.html">About</a></li>
         <li><a href="./partners.html">Partners</a></li>
+        <li><a href="./become-a-partner.html">Become a Partner</a></li>
         <li><a href="./projects.html">Projects</a></li>
         <li><a href="./blog.html">Blog</a></li>
         <li><a href="./contact.html">Contact</a></li>

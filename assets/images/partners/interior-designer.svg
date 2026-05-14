@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Interior Designer Partner Icon">
+  <rect width="100" height="100" rx="12" fill="#0c1628"/>
+  <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(34,211,238,0.15)" stroke-width="1"/>
+  <!-- Palette icon -->
+  <!-- Palette body -->
+  <path d="M25,52 Q22,34 36,26 Q50,18 64,26 Q76,34 74,48 Q72,58 62,60 Q55,61 52,56 Q48,50 42,52 Q36,54 34,62 Q30,68 25,62 Q20,56 25,52z" fill="none" stroke="white" stroke-width="1.8" opacity="0.8"/>
+  <!-- Color swatches on palette -->
+  <circle cx="40" cy="32" r="4" fill="#22d3ee" opacity="0.8"/>
+  <circle cx="54" cy="28" r="4" fill="rgba(255,255,255,0.5)"/>
+  <circle cx="66" cy="36" r="4" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="70" cy="50" r="4" fill="rgba(34,211,238,0.4)"/>
+  <!-- Thumb hole -->
+  <circle cx="34" cy="58" r="5" fill="none" stroke="#22d3ee" stroke-width="1.2" opacity="0.7"/>
+  <!-- Brush handle extending right -->
+  <line x1="68" y1="38" x2="80" y2="26" stroke="white" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+  <line x1="80" y1="26" x2="76" y2="22" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+</svg>

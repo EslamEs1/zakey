@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Zakey Partner Network">
+  <defs>
+    <radialGradient id="pn-bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#0a1828"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </radialGradient>
+    <radialGradient id="pn-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#pn-bg)"/>
+  <rect x="1" y="1" width="798" height="598" fill="none" stroke="rgba(34,211,238,0.08)" stroke-width="1"/>
+
+  <!-- Top label -->
+  <text x="400" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.5)" letter-spacing="4">PARTNER NETWORK</text>
+
+  <!-- Building / smart home silhouette behind figures -->
+  <!-- House/building outline -->
+  <g fill="none" stroke="rgba(34,211,238,0.12)" stroke-width="1.2">
+    <polyline points="400,130 500,170 500,310 300,310 300,170z"/>
+    <line x1="300" y1="170" x2="400" y2="130"/>
+    <!-- Windows with cyan indicator dots -->
+  </g>
+  <!-- Smart indicators on building -->
+  <circle cx="340" cy="210" r="4" fill="#22d3ee" opacity="0.4"/>
+  <circle cx="360" cy="210" r="4" fill="#22d3ee" opacity="0.5"/>
+  <circle cx="440" cy="210" r="4" fill="#22d3ee" opacity="0.6"/>
+  <circle cx="460" cy="210" r="4" fill="#22d3ee" opacity="0.35"/>
+  <!-- Signal arcs from building -->
+  <path d="M400,165 Q400,145 400,130" fill="none" stroke="#22d3ee" stroke-width="0.8" stroke-opacity="0.3" stroke-dasharray="3,2"/>
+  <path d="M390,155 Q380,140 370,148" fill="none" stroke="#22d3ee" stroke-width="0.8" stroke-opacity="0.2" stroke-dasharray="3,2"/>
+  <path d="M410,155 Q420,140 430,148" fill="none" stroke="#22d3ee" stroke-width="0.8" stroke-opacity="0.2" stroke-dasharray="3,2"/>
+
+  <!-- Left figure (abstract silhouette) -->
+  <g fill="#1a2a3a" opacity="0.85">
+    <!-- head -->
+    <ellipse cx="240" cy="270" rx="28" ry="30"/>
+    <!-- shoulders/torso -->
+    <path d="M190,310 Q190,360 200,380 L280,380 Q290,360 290,310 Q265,295 240,295 Q215,295 190,310z"/>
+    <!-- Right arm extended for handshake -->
+    <path d="M280,320 Q320,330 360,345 Q370,348 370,355 Q360,358 350,352 Q310,338 270,330z"/>
+  </g>
+
+  <!-- Right figure -->
+  <g fill="#1a2a3a" opacity="0.85">
+    <!-- head -->
+    <ellipse cx="560" cy="270" rx="28" ry="30"/>
+    <!-- shoulders/torso -->
+    <path d="M510,310 Q510,360 520,380 L600,380 Q610,360 610,310 Q585,295 560,295 Q535,295 510,310z"/>
+    <!-- Left arm extended for handshake -->
+    <path d="M520,320 Q480,330 440,345 Q430,348 430,355 Q440,358 450,352 Q490,338 530,330z"/>
+  </g>
+
+  <!-- Handshake clasp in center -->
+  <ellipse cx="400" cy="350" rx="25" ry="18" fill="url(#pn-glow)"/>
+  <!-- Hands meeting -->
+  <path d="M360,345 Q380,340 400,345 Q420,350 440,345" fill="none" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.5"/>
+  <ellipse cx="400" cy="347" rx="20" ry="12" fill="#0c1e38" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="400" y="351" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#22d3ee" letter-spacing="1">PARTNER</text>
+
+  <!-- Partner type labels below -->
+  <text x="400" y="418" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="rgba(255,255,255,0.65)">Build · Distribute · Integrate · Install</text>
+
+  <!-- Partner type chips row -->
+  <g font-family="system-ui, sans-serif" font-size="8.5" fill="rgba(255,255,255,0.5)" text-anchor="middle">
+    <rect x="66" y="444" width="90" height="24" rx="5" fill="#0c1e38" stroke="rgba(34,211,238,0.2)" stroke-width="0.8"/>
+    <text x="111" y="460">Distributor</text>
+    <rect x="172" y="444" width="100" height="24" rx="5" fill="#0c1e38" stroke="rgba(34,211,238,0.2)" stroke-width="0.8"/>
+    <text x="222" y="460">SI Partner</text>
+    <rect x="288" y="444" width="100" height="24" rx="5" fill="#0c1e38" stroke="rgba(34,211,238,0.2)" stroke-width="0.8"/>
+    <text x="338" y="460">Developer</text>
+    <rect x="404" y="444" width="100" height="24" rx="5" fill="#0c1e38" stroke="rgba(34,211,238,0.2)" stroke-width="0.8"/>
+    <text x="454" y="460">Installer</text>
+    <rect x="520" y="444" width="110" height="24" rx="5" fill="#0c1e38" stroke="rgba(34,211,238,0.2)" stroke-width="0.8"/>
+    <text x="575" y="460">Interior Design</text>
+    <rect x="646" y="444" width="90" height="24" rx="5" fill="#0c1e38" stroke="rgba(34,211,238,0.2)" stroke-width="0.8"/>
+    <text x="691" y="460">Hotel Ops</text>
+  </g>
+
+  <!-- Benefit row -->
+  <line x1="80" y1="490" x2="720" y2="490" stroke="rgba(34,211,238,0.08)" stroke-width="1"/>
+  <text x="400" y="518" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.35)">Co-sell · Co-market · Technical Support · Certification</text>
+  <text x="400" y="560" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.3)" letter-spacing="2">ZAKEY PARTNER PROGRAM</text>
+</svg>

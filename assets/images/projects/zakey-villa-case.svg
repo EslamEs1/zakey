@@ -1,19 +1,188 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 338" width="600" height="338">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0c0f17"/>
-      <stop offset="100%" stop-color="#05070d"/>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1040"/>
+      <stop offset="60%" stop-color="#2a1858"/>
+      <stop offset="80%" stop-color="#3d2a6e"/>
+      <stop offset="93%" stop-color="#a04818"/>
+      <stop offset="100%" stop-color="#c06020"/>
     </linearGradient>
-    <radialGradient id="r" cx="70%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <linearGradient id="villaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f0e8"/>
+      <stop offset="100%" stop-color="#e8e2d8"/>
+    </linearGradient>
+    <linearGradient id="windowGlowGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffc060"/>
+      <stop offset="100%" stop-color="#ff8820"/>
+    </linearGradient>
+    <radialGradient id="windowRadial" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffcc66" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#ff9922" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ff6600" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="groundSpot" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#ffcc66" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#ffaa33" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="driveGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ccc8c0"/>
+      <stop offset="100%" stop-color="#b8b4ac"/>
+    </linearGradient>
+    <linearGradient id="poolGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a4a6a"/>
+      <stop offset="100%" stop-color="#0d2a40"/>
+    </linearGradient>
+    <linearGradient id="ledRoofGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffcc55" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#ffcc55" stop-opacity="0.65"/>
+      <stop offset="80%" stop-color="#ffcc55" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#ffcc55" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur3">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="blur5">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
   </defs>
-  <rect width="1280" height="720" fill="url(#g)"/>
-  <rect width="1280" height="720" fill="url(#r)"/>
-  <text x="640" y="380" font-family="Manrope,Inter,system-ui,sans-serif" font-size="48" font-weight="700"
-        fill="#22d3ee" fill-opacity="0.15" text-anchor="middle" dominant-baseline="middle"
-        letter-spacing="-1">Villa Case Study</text>
-  <circle cx="640" cy="260" r="60" fill="none" stroke="#22d3ee" stroke-opacity="0.1" stroke-width="1"/>
-  <circle cx="640" cy="260" r="100" fill="none" stroke="#22d3ee" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- ===== SKY ===== -->
+  <rect x="0" y="0" width="600" height="338" fill="url(#skyGrad)"/>
+  <!-- Stars -->
+  <circle cx="45" cy="25" r="1.2" fill="white" opacity="0.7"/>
+  <circle cx="90" cy="15" r="1" fill="white" opacity="0.6"/>
+  <circle cx="155" cy="30" r="1.5" fill="white" opacity="0.75"/>
+  <circle cx="205" cy="12" r="1" fill="white" opacity="0.5"/>
+  <circle cx="265" cy="22" r="1.2" fill="white" opacity="0.65"/>
+  <circle cx="320" cy="8" r="1" fill="white" opacity="0.55"/>
+  <circle cx="380" cy="35" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="75" cy="50" r="1" fill="white" opacity="0.45"/>
+  <circle cx="420" cy="18" r="1" fill="white" opacity="0.6"/>
+  <circle cx="480" cy="42" r="1.2" fill="white" opacity="0.65"/>
+
+  <!-- ===== LANDSCAPING GROUND ===== -->
+  <!-- Grass/ground dark base -->
+  <rect x="0" y="248" width="600" height="90" fill="#1a2810"/>
+  <!-- Lawn highlights -->
+  <rect x="0" y="248" width="600" height="15" fill="#223018" opacity="0.8"/>
+
+  <!-- ===== DRIVEWAY (herringbone) ===== -->
+  <polygon points="120,260 430,260 480,338 70,338" fill="url(#driveGrad)"/>
+  <!-- Herringbone pattern lines -->
+  <line x1="145" y1="260" x2="100" y2="338" stroke="#b0ac98" stroke-width="0.8" opacity="0.55"/>
+  <line x1="175" y1="260" x2="130" y2="338" stroke="#b0ac98" stroke-width="0.8" opacity="0.55"/>
+  <line x1="205" y1="260" x2="163" y2="338" stroke="#b0ac98" stroke-width="0.8" opacity="0.55"/>
+  <line x1="240" y1="260" x2="198" y2="338" stroke="#b0ac98" stroke-width="0.8" opacity="0.55"/>
+  <line x1="278" y1="260" x2="236" y2="338" stroke="#b0ac98" stroke-width="0.8" opacity="0.55"/>
+  <line x1="318" y1="260" x2="276" y2="338" stroke="#b0ac98" stroke-width="0.8" opacity="0.55"/>
+  <line x1="358" y1="260" x2="318" y2="338" stroke="#b0ac98" stroke-width="0.8" opacity="0.55"/>
+  <line x1="398" y1="260" x2="360" y2="338" stroke="#b0ac98" stroke-width="0.8" opacity="0.55"/>
+  <line x1="432" y1="263" x2="400" y2="338" stroke="#b0ac98" stroke-width="0.8" opacity="0.55"/>
+  <!-- Cross lines for herringbone -->
+  <line x1="120" y1="280" x2="440" y2="270" stroke="#b0ac98" stroke-width="0.8" opacity="0.35"/>
+  <line x1="100" y1="305" x2="460" y2="292" stroke="#b0ac98" stroke-width="0.8" opacity="0.35"/>
+  <line x1="80" y1="325" x2="475" y2="312" stroke="#b0ac98" stroke-width="0.8" opacity="0.35"/>
+
+  <!-- ===== FOREGROUND POOL ===== -->
+  <rect x="80" y="305" width="200" height="33" rx="4" fill="url(#poolGrad)" opacity="0.85"/>
+  <!-- Pool water shimmer lines -->
+  <line x1="90" y1="312" x2="250" y2="312" stroke="#4a9ab8" stroke-width="1" opacity="0.4"/>
+  <line x1="95" y1="318" x2="245" y2="318" stroke="#4a9ab8" stroke-width="0.8" opacity="0.35"/>
+  <line x1="90" y1="324" x2="248" y2="324" stroke="#4a9ab8" stroke-width="0.8" opacity="0.3"/>
+  <!-- Pool villa reflection glow -->
+  <rect x="130" y="308" width="100" height="30" rx="3" fill="#ffcc55" opacity="0.06"/>
+
+  <!-- ===== VILLA BUILDING ===== -->
+  <!-- Ground floor body -->
+  <rect x="85" y="148" width="400" height="112" fill="url(#villaGrad)"/>
+  <!-- Upper floor body -->
+  <rect x="140" y="80" width="300" height="72" fill="url(#villaGrad)"/>
+  <!-- Roof (flat) -->
+  <rect x="135" y="76" width="310" height="8" rx="1" fill="#d8d0c4"/>
+  <rect x="80" y="245" width="410" height="8" rx="1" fill="#d8d0c4"/>
+  <!-- Ground floor column pilasters -->
+  <rect x="85" y="148" width="12" height="112" fill="#e8e2d8" opacity="0.7"/>
+  <rect x="473" y="148" width="12" height="112" fill="#e8e2d8" opacity="0.7"/>
+  <!-- Shadow under roof overhangs -->
+  <rect x="80" y="240" width="412" height="14" fill="#c0b8a8" opacity="0.4"/>
+  <rect x="130" y="78" width="310" height="10" fill="#c0b8a8" opacity="0.3"/>
+
+  <!-- Ground floor windows (large, glowing amber) -->
+  <!-- Window 1 -->
+  <rect x="108" y="162" width="85" height="82" rx="2" fill="url(#windowGlowGrad)" opacity="0.88"/>
+  <ellipse cx="150" cy="203" rx="60" ry="55" fill="url(#windowRadial)" opacity="0.6" filter="url(#blur5)"/>
+  <!-- Window frame -->
+  <rect x="108" y="162" width="85" height="82" rx="2" fill="none" stroke="#c8aa80" stroke-width="2"/>
+  <line x1="150" y1="162" x2="150" y2="244" stroke="#c8aa80" stroke-width="1.5"/>
+  <line x1="108" y1="203" x2="193" y2="203" stroke="#c8aa80" stroke-width="1.5"/>
+  <!-- Window 2 (center) -->
+  <rect x="240" y="162" width="100" height="82" rx="2" fill="url(#windowGlowGrad)" opacity="0.9"/>
+  <ellipse cx="290" cy="203" rx="70" ry="55" fill="url(#windowRadial)" opacity="0.65" filter="url(#blur5)"/>
+  <rect x="240" y="162" width="100" height="82" rx="2" fill="none" stroke="#c8aa80" stroke-width="2"/>
+  <line x1="290" y1="162" x2="290" y2="244" stroke="#c8aa80" stroke-width="1.5"/>
+  <line x1="240" y1="203" x2="340" y2="203" stroke="#c8aa80" stroke-width="1.5"/>
+  <!-- Window 3 -->
+  <rect x="385" y="162" width="85" height="82" rx="2" fill="url(#windowGlowGrad)" opacity="0.85"/>
+  <ellipse cx="428" cy="203" rx="60" ry="55" fill="url(#windowRadial)" opacity="0.6" filter="url(#blur5)"/>
+  <rect x="385" y="162" width="85" height="82" rx="2" fill="none" stroke="#c8aa80" stroke-width="2"/>
+  <line x1="428" y1="162" x2="428" y2="244" stroke="#c8aa80" stroke-width="1.5"/>
+  <line x1="385" y1="203" x2="470" y2="203" stroke="#c8aa80" stroke-width="1.5"/>
+
+  <!-- Upper floor windows (smaller) -->
+  <!-- Upper Window 1 -->
+  <rect x="168" y="96" width="72" height="50" rx="2" fill="url(#windowGlowGrad)" opacity="0.8"/>
+  <rect x="168" y="96" width="72" height="50" rx="2" fill="none" stroke="#c8aa80" stroke-width="1.5"/>
+  <line x1="204" y1="96" x2="204" y2="146" stroke="#c8aa80" stroke-width="1.2"/>
+  <!-- Upper Window 2 -->
+  <rect x="330" y="96" width="72" height="50" rx="2" fill="url(#windowGlowGrad)" opacity="0.78"/>
+  <rect x="330" y="96" width="72" height="50" rx="2" fill="none" stroke="#c8aa80" stroke-width="1.5"/>
+  <line x1="366" y1="96" x2="366" y2="146" stroke="#c8aa80" stroke-width="1.2"/>
+
+  <!-- Front door -->
+  <rect x="257" y="200" width="66" height="58" rx="3" fill="#3a2a1e"/>
+  <rect x="260" y="203" width="60" height="52" rx="2" fill="#2a1c14"/>
+  <!-- Door handle + cyan smart lock -->
+  <circle cx="307" cy="230" r="3.5" fill="#00e5ff" opacity="0.9"/>
+  <circle cx="307" cy="230" r="7" fill="#00e5ff" opacity="0.18"/>
+  <rect x="304" y="236" width="6" height="10" rx="2" fill="#00e5ff" opacity="0.7"/>
+  <!-- Door frame light -->
+  <rect x="256" y="200" width="68" height="58" rx="3" fill="none" stroke="#c8aa80" stroke-width="1.5"/>
+
+  <!-- Corner pillar mounted camera -->
+  <rect x="476" y="158" width="10" height="7" rx="2" fill="#1a1a28"/>
+  <circle cx="481" cy="162" r="2.5" fill="#00e5ff" opacity="0.7"/>
+  <circle cx="481" cy="162" r="5" fill="#00e5ff" opacity="0.15"/>
+
+  <!-- LED strip under roof overhang -->
+  <rect x="85" y="247" width="408" height="2.5" rx="1" fill="url(#ledRoofGrad)"/>
+  <rect x="140" y="79" width="302" height="2" rx="1" fill="url(#ledRoofGrad)" opacity="0.65"/>
+
+  <!-- Ground recessed spotlights -->
+  <!-- Spot 1 -->
+  <circle cx="130" cy="260" r="5" fill="#ffdd88" opacity="0.9"/>
+  <ellipse cx="130" cy="255" rx="18" ry="30" fill="url(#groundSpot)" opacity="0.5"/>
+  <!-- Spot 2 -->
+  <circle cx="290" cy="258" r="5" fill="#ffdd88" opacity="0.9"/>
+  <ellipse cx="290" cy="253" rx="18" ry="30" fill="url(#groundSpot)" opacity="0.5"/>
+  <!-- Spot 3 -->
+  <circle cx="450" cy="260" r="5" fill="#ffdd88" opacity="0.9"/>
+  <ellipse cx="450" cy="255" rx="18" ry="30" fill="url(#groundSpot)" opacity="0.5"/>
+
+  <!-- ===== HEDGE AND LANDSCAPING ===== -->
+  <!-- Left hedges -->
+  <rect x="0" y="215" width="88" height="46" rx="8" fill="#1a3820"/>
+  <rect x="0" y="210" width="88" height="20" rx="8" fill="#204828"/>
+  <!-- Right hedge -->
+  <rect x="484" y="215" width="116" height="46" rx="8" fill="#1a3820"/>
+  <rect x="484" y="210" width="116" height="20" rx="8" fill="#204828"/>
+
+  <!-- ===== PALM TREE (right side) ===== -->
+  <!-- Trunk -->
+  <rect x="542" y="148" width="10" height="112" rx="4" fill="#5a3a18"/>
+  <!-- Fronds (layered ellipses) -->
+  <ellipse cx="547" cy="140" rx="48" ry="18" fill="#154020" transform="rotate(-35 547 140)" opacity="0.85"/>
+  <ellipse cx="547" cy="140" rx="48" ry="18" fill="#1a4a28" transform="rotate(-10 547 140)" opacity="0.85"/>
+  <ellipse cx="547" cy="140" rx="48" ry="18" fill="#154020" transform="rotate(20 547 140)" opacity="0.8"/>
+  <ellipse cx="547" cy="140" rx="48" ry="18" fill="#1a4a28" transform="rotate(48 547 140)" opacity="0.75"/>
+  <ellipse cx="547" cy="140" rx="48" ry="18" fill="#154020" transform="rotate(-60 547 140)" opacity="0.75"/>
 </svg>
