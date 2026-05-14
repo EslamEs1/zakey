@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>!function(){var t=localStorage.getItem('zakey-theme')||'dark';document.documentElement.setAttribute('data-theme',t)}()</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inside a Smart Hotel Room — Zakey Blog</title>
+  <meta name="description" content="What guests experience in a Zakey-powered hotel room — from check-in welcome scenes to DND automation and smooth check-out.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Inside a Smart Hotel Room — Zakey Blog">
+  <meta property="og:description" content="What guests experience in a Zakey-powered hotel room — from check-in welcome scenes to DND automation and smooth check-out.">
+  <meta property="og:image" content="../assets/images/og/zakey-og-cover.svg">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-page="article">
+
+<!-- header:start -->
+<header class="site-header" data-scrolled="false">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="../index.html" aria-label="Zakey — Home">
+      <img class="site-header__wordmark logo-dark" src="../assets/icons/zakey-logo-white.png" alt="Zakey" width="120" height="36">
+      <img class="site-header__wordmark logo-light" src="../assets/icons/zakey-logo-blue.png" alt="Zakey" width="120" height="36">
+    </a>
+
+    <nav class="site-header__nav" aria-label="Primary">
+      <ul class="site-header__list">
+        <li><a href="../index.html">Home</a></li>
+        <li class="has-mega">
+          <button type="button" class="site-header__megabtn" aria-expanded="false" aria-controls="mega-products" data-mega-trigger="products">
+            Products
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div id="mega-products" class="mega-panel" role="region" aria-label="Products overview" data-mega-panel="products" hidden>
+            <div class="mega-panel__inner">
+              <div class="mega-panel__intro">
+                <h3>Hardware that disappears into your home</h3>
+                <p>Eight categories engineered to feel like a single ecosystem.</p>
+                <a class="btn btn--ghost" href="./products.html">All products &rarr;</a>
+              </div>
+              <ul class="mega-panel__grid">
+                <li><a href="./products.html#control-panels"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg><span class="mega-panel__title">Control Panels</span><span class="mega-panel__sub">Wall-mounted command for every room</span></a></li>
+                <li><a href="./products.html#smart-switches"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg><span class="mega-panel__title">Smart Switches</span><span class="mega-panel__sub">Tactile control with digital precision</span></a></li>
+                <li><a href="./products.html#sensors"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg><span class="mega-panel__title">Sensors</span><span class="mega-panel__sub">Motion, door, environment &amp; presence</span></a></li>
+                <li><a href="./products.html#security"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span class="mega-panel__title">Security</span><span class="mega-panel__sub">Cameras, locks &amp; perimeter defence</span></a></li>
+                <li><a href="./products.html#lighting-control"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg><span class="mega-panel__title">Lighting Control</span><span class="mega-panel__sub">Scenes, dimming &amp; colour temperature</span></a></li>
+                <li><a href="./products.html#climate"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 9V3M12 21v-3M4.22 10.22l1.42 1.42M17.36 12.64l1.42-1.42M3 17h18"/><path d="M12 12c-2.21 0-4 1.79-4 4h8c0-2.21-1.79-4-4-4z"/></svg><span class="mega-panel__title">Climate</span><span class="mega-panel__sub">HVAC, thermostats &amp; air quality</span></a></li>
+                <li><a href="./products.html#curtains-shading"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="3" rx="1"/><path d="M6 6v12M18 6v12M2 21h20"/></svg><span class="mega-panel__title">Curtains &amp; Shading</span><span class="mega-panel__sub">Automated blinds &amp; motorised curtains</span></a></li>
+                <li><a href="./products.html#energy"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg><span class="mega-panel__title">Energy</span><span class="mega-panel__sub">Monitoring, metering &amp; optimisation</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="has-mega">
+          <button type="button" class="site-header__megabtn" aria-expanded="false" aria-controls="mega-solutions" data-mega-trigger="solutions">
+            Solutions
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div id="mega-solutions" class="mega-panel" role="region" aria-label="Solutions overview" data-mega-panel="solutions" hidden>
+            <div class="mega-panel__inner">
+              <div class="mega-panel__intro">
+                <h3>Every space, a living intelligence</h3>
+                <p>Tailored smart-living ecosystems for six distinct environments.</p>
+                <a class="btn btn--ghost" href="./solutions.html">All solutions &rarr;</a>
+              </div>
+              <ul class="mega-panel__grid">
+                <li><a href="./solutions.html#smart-villa"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span class="mega-panel__title">Smart Villa</span><span class="mega-panel__sub">Whole-home luxury automation</span></a></li>
+                <li><a href="./solutions.html#smart-apartment"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 21V9M16 21V9M2 12h20"/></svg><span class="mega-panel__title">Smart Apartment</span><span class="mega-panel__sub">Compact living, complete control</span></a></li>
+                <li><a href="./solutions.html#smart-hotel"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 20V8l10-5 10 5v12"/><path d="M6 20v-6h4v6M14 20v-6h4v6"/></svg><span class="mega-panel__title">Smart Hotel</span><span class="mega-panel__sub">Elevated guest experiences at scale</span></a></li>
+                <li><a href="./solutions.html#smart-office"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg><span class="mega-panel__title">Smart Office</span><span class="mega-panel__sub">Productive, energy-efficient workspaces</span></a></li>
+                <li><a href="./solutions.html#smart-compound"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><circle cx="12" cy="13" r="2"/></svg><span class="mega-panel__title">Smart Compound</span><span class="mega-panel__sub">Multi-unit community automation</span></a></li>
+                <li><a href="./solutions.html#gaming-room"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4M15 12h.01M18 12h.01"/></svg><span class="mega-panel__title">Gaming Room</span><span class="mega-panel__sub">Immersive scene control &amp; ambience</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li><a href="./technology.html">Technology</a></li>
+        <li><a href="./software.html">Software</a></li>
+        <li><a href="./partners.html">Partners</a></li>
+        <li><a href="./projects.html">Projects</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    
+    <button type="button" class="theme-toggle" aria-label="Switch to light theme" data-theme-toggle>
+      <svg class="theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+
+    <a class="btn btn--primary site-header__cta" href="../index.html#get-quote">Get a Quote</a>
+
+    <button type="button" class="site-header__hamburger" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<aside id="mobile-drawer" class="mobile-drawer" data-state="closed" aria-hidden="true" aria-label="Site navigation">
+  <div class="mobile-drawer__scrim" data-drawer-dismiss="true"></div>
+  <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Site navigation">
+    <div class="mobile-drawer__head">
+      <a class="mobile-drawer__brand" href="../index.html">
+        <img src="../assets/icons/zakey-logo-white.png" alt="Zakey home" class="logo-dark" width="100" height="32">
+        <img src="../assets/icons/zakey-logo-blue.png" alt="Zakey home" class="logo-light" width="100" height="32">
+      </a>
+      <button type="button" class="mobile-drawer__close" data-drawer-dismiss="true" aria-label="Close menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-drawer__nav" aria-label="Primary mobile">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li class="mobile-drawer__accordion" data-state="closed">
+          <button type="button" class="mobile-drawer__accordion-trigger" aria-expanded="false" aria-controls="mobile-products">
+            Products
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div id="mobile-products" class="mobile-drawer__accordion-panel" hidden>
+            <ul>
+              <li><a href="./products.html#control-panels">Control Panels</a></li>
+              <li><a href="./products.html#smart-switches">Smart Switches</a></li>
+              <li><a href="./products.html#sensors">Sensors</a></li>
+              <li><a href="./products.html#security">Security</a></li>
+              <li><a href="./products.html#lighting-control">Lighting Control</a></li>
+              <li><a href="./products.html#climate">Climate</a></li>
+              <li><a href="./products.html#curtains-shading">Curtains &amp; Shading</a></li>
+              <li><a href="./products.html#energy">Energy</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mobile-drawer__accordion" data-state="closed">
+          <button type="button" class="mobile-drawer__accordion-trigger" aria-expanded="false" aria-controls="mobile-solutions">
+            Solutions
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div id="mobile-solutions" class="mobile-drawer__accordion-panel" hidden>
+            <ul>
+              <li><a href="./solutions.html#smart-villa">Smart Villa</a></li>
+              <li><a href="./solutions.html#smart-apartment">Smart Apartment</a></li>
+              <li><a href="./solutions.html#smart-hotel">Smart Hotel</a></li>
+              <li><a href="./solutions.html#smart-office">Smart Office</a></li>
+              <li><a href="./solutions.html#smart-compound">Smart Compound</a></li>
+              <li><a href="./solutions.html#gaming-room">Gaming Room</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="./technology.html">Technology</a></li>
+        <li><a href="./software.html">Software</a></li>
+        <li><a href="./partners.html">Partners</a></li>
+        <li><a href="./projects.html">Projects</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--primary mobile-drawer__cta" href="../index.html#get-quote">Get a Quote</a>
+  </div>
+</aside>
+<!-- header:end -->
+
+<main id="content">
+
+<section class="article-hero">
+  <div class="article-hero__inner">
+    <p class="article-hero__category">Hotels</p>
+    <h1 class="article-hero__title">Inside a Smart Hotel Room: The Guest Experience</h1>
+    <div class="article-hero__meta">
+      <span>1 May 2026</span>
+      <span>9 min read</span>
+      <span>By the Zakey Team</span>
+    </div>
+  </div>
+  <figure class="article-hero__media">
+    <img src="../assets/images/blog/hotel-smart-room.svg" alt="Luxury hotel room with wall-mounted control panel glowing softly in ambient welcome scene lighting" loading="eager" width="1100" height="619">
+  </figure>
+</section>
+
+<nav class="article-toc" aria-label="Table of contents">
+  <h2 class="article-toc__heading">In this article</h2>
+  <ol>
+    <li><a href="#section-1">The Welcome Scene Sets the Tone</a></li>
+    <li><a href="#section-2">Lighting and Climate as Storytelling</a></li>
+    <li><a href="#section-3">The Tablet vs. the Wall Panel</a></li>
+    <li><a href="#section-4">Privacy, DND, and the Quiet Room</a></li>
+    <li><a href="#section-5">Check-Out Without Awkwardness</a></li>
+  </ol>
+</nav>
+
+<article class="article-body">
+
+  <p>A smart hotel room is not a room with extra gadgets. It's a room that knows when a guest has arrived, when they want quiet, when they want warmth, and when they're leaving — and responds accordingly, without being asked. This is what a Zakey-powered hotel room actually feels like from the inside.</p>
+
+  <h2 id="section-1">1. The Welcome Scene Sets the Tone</h2>
+  <p>The moment a guest's key card activates the room — or, in newer properties, the moment their phone's Bluetooth proximity is detected — the Welcome scene begins. It takes about four seconds. In those four seconds, the room transforms from a cleaned, resting state into a lived-in, prepared space.</p>
+  <p>Curtains open to 60% — enough to show the view without overexposing the room to afternoon sun. The climate shifts from eco-standby (28 °C) to the property's arrival default (22 °C). Ambient lighting activates at a warm 2,800K, 40% brightness. A soft chime sounds through the in-room speaker. The in-room panel illuminates with a custom welcome greeting set by the property for that guest's stay.</p>
+  <p>None of this requires the guest to find a light switch, locate a thermostat, or work out which remote controls the curtains. The room is ready. The guest can put down their luggage.</p>
+  <blockquote>"The moment I walked in, the room felt like it had been waiting for me. Not cleaned and reset — actually waiting."</blockquote>
+  <p>That response, from a guest survey at a Zakey-equipped property in the Middle East, captures what good hospitality automation is supposed to feel like. Invisible preparation, visible care.</p>
+
+  <figure>
+    <img src="../assets/images/blog/article-inline-1.svg" alt="Hotel room welcome scene sequence diagram showing curtain, climate, and lighting automation steps on guest arrival" loading="lazy" width="800" height="600">
+    <figcaption>The Zakey Welcome scene — four seconds from key card to a fully prepared room environment.</figcaption>
+  </figure>
+
+  <h2 id="section-2">2. Lighting and Climate as Storytelling</h2>
+  <p>The best hotel rooms have always used light to tell a story about the time of day and the quality of the stay. Smart automation makes this consistent and effortless at every hour, for every guest.</p>
+  <p>In a Zakey-configured property, rooms are typically set up with four to six lighting scenes accessible from the in-room panel: Welcome, Relax, Work, Sleep, and Shower. Each is calibrated to the specific geometry and furnishings of the room during the pre-opening commissioning visit.</p>
+  <p>The Relax scene — typically warm, dimmed to 25%, with the reading lamp at 60% — is the one guests use most during their stay. The Work scene (neutral 4,000K, full brightness at the desk) is the second most used. Sleep and Shower round out the practical set. The Welcome scene runs on arrival and is rarely triggered manually afterward — which is precisely the point.</p>
+  <p>Climate in a smart hotel room works in two modes: guest-controlled and automation-assisted. Guests can adjust temperature and fan speed from the panel or bedside touchpad at any time. But the automation assists: if the room has been unoccupied for 45 minutes (occupancy sensor confirms no movement), the climate eases back toward eco mode. When the guest returns, it shifts back before they notice. Energy is saved without anyone feeling the difference.</p>
+
+  <h2 id="section-3">3. The Tablet vs. the Wall Panel</h2>
+  <p>Many hospitality technology providers push in-room tablets as the central control interface. The experience is often frustrating: the tablet is charging on the wrong side of the bed, the app is slow to load, and the interface requires more steps than it should for something as simple as dimming the lights.</p>
+  <p>Zakey's approach in hotel installations prioritises wall panels and bedside keypads over tablets for all daily functions. The panel is always in the same place. It responds immediately. It doesn't need to load. Guests can control everything essential — lights, climate, curtains, DND — without picking up a device.</p>
+  <p>Tablets, where they're included in the installation, serve a complementary role: room service ordering, hotel information, local guides, and concierge messaging. They work well for that. They don't work well as the primary light switch.</p>
+  <p>The Zakey bedside keypad is the most interaction-dense point in the room: a single panel within arm's reach of the pillow that controls all lights off, curtain position, DND status, and the Sleep scene. It's operated at 02:00, in the dark, without glasses, by guests who are half-asleep. It has to be completely intuitive. The panel design reflects that constraint.</p>
+
+  <figure>
+    <img src="../assets/images/blog/article-inline-2.svg" alt="Side-by-side diagram of bedside keypad functions versus in-room tablet functions in a hotel smart room" loading="lazy" width="800" height="600">
+    <figcaption>Bedside keypad handles the daily moments. The tablet handles the service moments. Each does one job well.</figcaption>
+  </figure>
+
+  <h2 id="section-4">4. Privacy, DND, and the Quiet Room</h2>
+  <p>Do Not Disturb in a Zakey-equipped hotel room works across three layers simultaneously. The physical DND indicator (a discreet LED strip above the door) activates. The housekeeping management system receives a real-time status update — no knock needed, no guessing. And the in-room panel confirms the DND state with a subtle indicator light.</p>
+  <p>When DND is active, all in-room notifications are suppressed. The panel doesn't chime for service reminders. The phone doesn't ring for front-desk check-ins. The room is quiet — genuinely quiet — until the guest clears the status.</p>
+  <p>Privacy mode goes one step further: all external communication to the room is blocked except emergency channels. For guests who request it at check-in (or through the pre-arrival preference form that better-managed properties now use), the room is configured with privacy mode as default throughout the stay.</p>
+  <p>This kind of layered privacy control is what separates a technology-forward hotel from one that has merely installed a smart thermostat. The guest feels the difference, even if they can't articulate exactly why the room feels more respectful of their time and space.</p>
+
+  <h2 id="section-5">5. Check-Out Without Awkwardness</h2>
+  <p>The traditional hotel check-out involves a trip to the front desk, a wait, a card machine, and a moment of mild social anxiety about whether the minibar charges are accurate. The smart check-out experience is different — and the difference begins in the room, not at the desk.</p>
+  <p>When a guest initiates check-out — via the app, the in-room panel, or a front-desk call — the Zakey system initiates the Check-Out sequence. The climate shifts toward eco mode over 20 minutes. The room lighting gently increases to full brightness (a subtle cue that the space is returning to its resting state). The DND status clears. The housekeeping management system is notified that the room will be available for cleaning within the departure window.</p>
+  <p>From the guest's perspective: they press one button (or do nothing, if the system detects departure via Bluetooth proximity loss), and the room handles the transition. No separate thermostat to turn off. No curtains to close. No lights to hunt for. The room takes care of itself as they leave.</p>
+  <p>The first-timer reaction to this is consistently the same: a pause at the door, a look back at the room in its reset state, and a comment that always sounds something like "that's clever." It is. But more importantly, it's considerate. That's the distinction a Zakey installation aims to make in every hotel room it touches.</p>
+
+</article>
+
+<section class="related-articles">
+  <h2>Related Articles</h2>
+  <div class="related-grid">
+    <a class="related-card" href="article-villa-automation.html">
+      <div class="related-card__media">
+        <img src="../assets/images/blog/villa-automation.svg" alt="Luxury villa floor plan with smart automation zones illustrated" loading="lazy" width="600" height="338">
+      </div>
+      <div class="related-card__body">
+        <p class="related-card__category">Smart Home</p>
+        <h3 class="related-card__title">12 Villa Automation Ideas That Actually Get Used</h3>
+      </div>
+    </a>
+    <a class="related-card" href="article-smart-home-guide.html">
+      <div class="related-card__media">
+        <img src="../assets/images/blog/smart-home-guide.svg" alt="Smart home beginner guide illustration with connected devices" loading="lazy" width="600" height="338">
+      </div>
+      <div class="related-card__body">
+        <p class="related-card__category">Smart Home</p>
+        <h3 class="related-card__title">Smart Home Beginner Guide: Your First 7 Days</h3>
+      </div>
+    </a>
+  </div>
+  <p class="related-articles__browse"><a href="blog.html" class="btn btn--ghost">Browse all articles</a></p>
+</section>
+
+<section class="article-final-cta">
+  <div class="article-final-cta__inner">
+    <h2>Bring This Experience to Your Property</h2>
+    <p>Talk to our hospitality team about a Zakey smart room installation — from a single pilot room to a full property rollout.</p>
+    <div class="article-final-cta__actions">
+      <a class="btn btn--primary" href="contact.html">Request a Quote</a>
+      <a class="btn btn--ghost" href="solutions.html#smart-hotel">Explore Smart Hotel</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- footer:start -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <img src="../assets/icons/zakey-logo-white.png" alt="" class="logo-dark" width="140" height="46" loading="lazy">
+              <img src="../assets/icons/zakey-logo-blue.png" alt="" class="logo-light" width="140" height="46" loading="lazy">
+      <p class="site-footer__summary">
+        Zakey crafts the premium smart-living layer for villas, hotels, offices, and signature homes — hardware, app, scenes, and analytics under one elegant ecosystem.
+      </p>
+      <div class="site-footer__contact">
+        <p><a href="mailto:hello@zakey.example">hello@zakey.example</a></p>
+        <p><a href="tel:+10000000000">+1 (000) 000-0000</a></p>
+        <p>Mon–Sun &middot; 24/7 partner desk</p>
+      </div>
+    </div>
+
+    <nav class="site-footer__col" aria-label="Products">
+      <h2 class="site-footer__heading">Products</h2>
+      <ul>
+        <li><a href="./products.html">Control Panels</a></li>
+        <li><a href="./products.html">Smart Switches</a></li>
+        <li><a href="./products.html">Sensors</a></li>
+        <li><a href="./products.html">Security</a></li>
+        <li><a href="./products.html">Lighting Control</a></li>
+        <li><a href="./products.html">Climate</a></li>
+        <li><a href="./products.html">Curtains &amp; Shading</a></li>
+        <li><a href="./products.html">Energy</a></li>
+      </ul>
+    </nav>
+
+    <nav class="site-footer__col" aria-label="Solutions">
+      <h2 class="site-footer__heading">Solutions</h2>
+      <ul>
+        <li><a href="./solutions.html">Smart Villa</a></li>
+        <li><a href="./solutions.html">Smart Apartment</a></li>
+        <li><a href="./solutions.html">Smart Hotel</a></li>
+        <li><a href="./solutions.html">Smart Office</a></li>
+        <li><a href="./solutions.html">Smart Compound</a></li>
+        <li><a href="./solutions.html">Gaming Room</a></li>
+      </ul>
+    </nav>
+
+    <nav class="site-footer__col" aria-label="Company">
+      <h2 class="site-footer__heading">Company</h2>
+      <ul>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./partners.html">Partners</a></li>
+        <li><a href="./become-a-partner.html">Become a Partner</a></li>
+        <li><a href="./projects.html">Projects</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./privacy.html">Privacy</a></li>
+        <li><a href="./terms.html">Terms</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-footer__col site-footer__connect">
+      <h2 class="site-footer__heading">Stay in the loop</h2>
+      <form class="newsletter-form" data-state="idle" novalidate>
+        <label class="field field--inline" data-required="true">
+          <span class="field__label sr-only">Email address</span>
+          <input type="email" name="email" autocomplete="email" placeholder="you@brand.com" required>
+          <p class="field__error" role="alert" data-error-for="email">Please enter a valid email.</p>
+        </label>
+        <button type="submit" class="btn btn--primary">
+          <span data-when="idle">Subscribe</span>
+          <span data-when="submitting" hidden>&hellip;</span>
+        </button>
+        <p class="newsletter-form__status" data-status="success" hidden>Thanks &mdash; you&rsquo;re on the list.</p>
+        <p class="newsletter-form__status" data-status="error" hidden>Something went wrong. Please try again.</p>
+        <p class="newsletter-form__privacy">We send one update a month. Unsubscribe anytime.</p>
+      </form>
+      <ul class="site-footer__social" aria-label="Social">
+        <li><a href="https://www.linkedin.com" aria-label="Zakey on LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a></li>
+        <li><a href="https://www.instagram.com" aria-label="Zakey on Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a></li>
+        <li><a href="https://www.youtube.com" aria-label="Zakey on YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 001.95-1.97A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="#05070d"/></svg></a></li>
+        <li><a href="https://www.x.com" aria-label="Zakey on X"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="site-footer__base">
+    <p class="site-footer__copy">&copy; <span data-copyright-year>2026</span> Zakey Smart Living. All rights reserved.</p>
+    <p class="site-footer__legal">
+      <a href="./privacy.html">Privacy</a> &middot;
+      <a href="./terms.html">Terms</a>
+    </p>
+  </div>
+</footer>
+<!-- footer:end -->
+
+<script type="module" src="../js/main.js" defer></script>
+
+<div class="floating-whatsapp">
+  <a class="floating-whatsapp__btn" href="https://wa.me/966500000000" target="_blank" rel="noopener" aria-label="Chat with Zakey on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <span class="floating-whatsapp__label">Chat on WhatsApp</span>
+</div>
+</body>
+</html>

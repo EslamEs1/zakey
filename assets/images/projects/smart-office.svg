@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="officeBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f1a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#05070d;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="wallBack" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1525;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#080e18;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#090d18;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#05070d;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="dashGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#001a22;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#000d14;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="panelGlow">
+      <feGaussianBlur stdDeviation="10" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="lightCone" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="900" fill="url(#officeBg)"/>
+  <!-- Back wall -->
+  <rect x="0" y="0" width="1600" height="580" fill="url(#wallBack)"/>
+  <!-- Floor -->
+  <rect x="0" y="580" width="1600" height="320" fill="url(#floorGrad)"/>
+  <!-- Floor grid lines (tiles) -->
+  <line x1="0" y1="620" x2="1600" y2="620" stroke="#1a2535" stroke-width="1" opacity="0.4"/>
+  <line x1="0" y1="680" x2="1600" y2="680" stroke="#1a2535" stroke-width="1" opacity="0.3"/>
+  <line x1="0" y1="740" x2="1600" y2="740" stroke="#1a2535" stroke-width="1" opacity="0.25"/>
+  <line x1="0" y1="800" x2="1600" y2="800" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+  <line x1="0" y1="860" x2="1600" y2="860" stroke="#1a2535" stroke-width="1" opacity="0.15"/>
+  <!-- Floor vertical perspective lines -->
+  <line x1="200" y1="580" x2="0" y2="900" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+  <line x1="400" y1="580" x2="200" y2="900" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+  <line x1="600" y1="580" x2="450" y2="900" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+  <line x1="800" y1="580" x2="800" y2="900" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+  <line x1="1000" y1="580" x2="1150" y2="900" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+  <line x1="1200" y1="580" x2="1400" y2="900" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+  <line x1="1400" y1="580" x2="1600" y2="900" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+
+  <!-- Ceiling with smart lighting panels -->
+  <rect x="0" y="0" width="1600" height="55" fill="#080d18"/>
+  <!-- Lighting panels row 1 -->
+  <rect x="80" y="10" width="180" height="35" fill="#1a2a40" rx="3" stroke="#1e3050" stroke-width="1"/>
+  <rect x="80" y="10" width="180" height="35" fill="#00d4ff" opacity="0.12" rx="3"/>
+  <line x1="80" y1="45" x2="260" y2="45" stroke="#00d4ff" stroke-width="1.5" opacity="0.5" filter="url(#glow)"/>
+  <!-- Light cone from panel 1 -->
+  <polygon points="80,45 260,45 340,580 0,580" fill="url(#lightCone)" opacity="0.4"/>
+
+  <rect x="310" y="10" width="180" height="35" fill="#1a2a40" rx="3" stroke="#1e3050" stroke-width="1"/>
+  <rect x="310" y="10" width="180" height="35" fill="#00d4ff" opacity="0.15" rx="3"/>
+  <line x1="310" y1="45" x2="490" y2="45" stroke="#00d4ff" stroke-width="1.5" opacity="0.6" filter="url(#glow)"/>
+  <polygon points="310,45 490,45 570,580 230,580" fill="url(#lightCone)" opacity="0.35"/>
+
+  <rect x="540" y="10" width="180" height="35" fill="#1a2a40" rx="3" stroke="#1e3050" stroke-width="1"/>
+  <rect x="540" y="10" width="180" height="35" fill="#00d4ff" opacity="0.1" rx="3"/>
+  <line x1="540" y1="45" x2="720" y2="45" stroke="#00d4ff" stroke-width="1.5" opacity="0.4" filter="url(#glow)"/>
+
+  <rect x="770" y="10" width="180" height="35" fill="#1a2a40" rx="3" stroke="#1e3050" stroke-width="1"/>
+  <rect x="770" y="10" width="180" height="35" fill="#00d4ff" opacity="0.15" rx="3"/>
+  <line x1="770" y1="45" x2="950" y2="45" stroke="#00d4ff" stroke-width="1.5" opacity="0.6" filter="url(#glow)"/>
+  <polygon points="770,45 950,45 1030,580 690,580" fill="url(#lightCone)" opacity="0.35"/>
+
+  <rect x="1000" y="10" width="180" height="35" fill="#1a2a40" rx="3" stroke="#1e3050" stroke-width="1"/>
+  <rect x="1000" y="10" width="180" height="35" fill="#00d4ff" opacity="0.12" rx="3"/>
+  <line x1="1000" y1="45" x2="1180" y2="45" stroke="#00d4ff" stroke-width="1.5" opacity="0.5" filter="url(#glow)"/>
+
+  <rect x="1230" y="10" width="180" height="35" fill="#1a2a40" rx="3" stroke="#1e3050" stroke-width="1"/>
+  <rect x="1230" y="10" width="180" height="35" fill="#00d4ff" opacity="0.14" rx="3"/>
+  <line x1="1230" y1="45" x2="1410" y2="45" stroke="#00d4ff" stroke-width="1.5" opacity="0.55" filter="url(#glow)"/>
+  <polygon points="1230,45 1410,45 1490,580 1150,580" fill="url(#lightCone)" opacity="0.35"/>
+
+  <!-- ENERGY DASHBOARD WALL SCREEN (right wall) -->
+  <rect x="1100" y="80" width="460" height="480" fill="#001015" rx="4" stroke="#00d4ff" stroke-width="2" opacity="0.8"/>
+  <!-- Screen glow -->
+  <rect x="1100" y="80" width="460" height="480" fill="#00d4ff" opacity="0.04" rx="4" filter="url(#panelGlow)"/>
+  <!-- Screen content bg -->
+  <rect x="1112" y="92" width="436" height="456" fill="url(#dashGrad)" rx="2"/>
+
+  <!-- Dashboard header -->
+  <rect x="1112" y="92" width="436" height="40" fill="#00d4ff" opacity="0.12" rx="2 2 0 0"/>
+  <text x="1330" y="118" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#00d4ff" text-anchor="middle" letter-spacing="2">ENERGY MONITORING DASHBOARD</text>
+
+  <!-- Live stat cards -->
+  <rect x="1120" y="140" width="100" height="55" fill="#001f2a" rx="2" stroke="#00d4ff" stroke-width="0.5" opacity="0.6"/>
+  <text x="1170" y="160" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.8">CONSUMPTION</text>
+  <text x="1170" y="182" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00d4ff" text-anchor="middle">42 kW</text>
+
+  <rect x="1230" y="140" width="100" height="55" fill="#001f2a" rx="2" stroke="#00d4ff" stroke-width="0.5" opacity="0.6"/>
+  <text x="1280" y="160" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.8">EFFICIENCY</text>
+  <text x="1280" y="182" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00ff88" text-anchor="middle">87%</text>
+
+  <rect x="1340" y="140" width="100" height="55" fill="#001f2a" rx="2" stroke="#00d4ff" stroke-width="0.5" opacity="0.6"/>
+  <text x="1390" y="160" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.8">SAVINGS</text>
+  <text x="1390" y="182" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">-18%</text>
+
+  <rect x="1450" y="140" width="90" height="55" fill="#001f2a" rx="2" stroke="#00d4ff" stroke-width="0.5" opacity="0.6"/>
+  <text x="1495" y="160" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.8">ZONES</text>
+  <text x="1495" y="182" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#c0c0c0" text-anchor="middle">12</text>
+
+  <!-- Bar chart -->
+  <text x="1140" y="225" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" opacity="0.6">Hourly Energy (kWh)</text>
+  <!-- Chart bars -->
+  <rect x="1125" y="340" width="22" height="45" fill="#00d4ff" opacity="0.5" rx="1"/>
+  <rect x="1155" y="315" width="22" height="70" fill="#00d4ff" opacity="0.7" rx="1"/>
+  <rect x="1185" y="295" width="22" height="90" fill="#00d4ff" opacity="0.9" rx="1"/>
+  <rect x="1215" y="310" width="22" height="75" fill="#00d4ff" opacity="0.75" rx="1"/>
+  <rect x="1245" y="330" width="22" height="55" fill="#00d4ff" opacity="0.6" rx="1"/>
+  <rect x="1275" y="300" width="22" height="85" fill="#00d4ff" opacity="0.85" rx="1"/>
+  <rect x="1305" y="285" width="22" height="100" fill="#00d4ff" opacity="1" rx="1" filter="url(#glow)"/>
+  <rect x="1335" y="320" width="22" height="65" fill="#00d4ff" opacity="0.65" rx="1"/>
+  <rect x="1365" y="340" width="22" height="45" fill="#00d4ff" opacity="0.5" rx="1"/>
+  <rect x="1395" y="325" width="22" height="60" fill="#00d4ff" opacity="0.6" rx="1"/>
+  <rect x="1425" y="305" width="22" height="80" fill="#00d4ff" opacity="0.8" rx="1"/>
+  <rect x="1455" y="295" width="22" height="90" fill="#00d4ff" opacity="0.9" rx="1"/>
+  <!-- Chart baseline -->
+  <line x1="1120" y1="385" x2="1535" y2="385" stroke="#00d4ff" stroke-width="1" opacity="0.3"/>
+  <!-- Time labels -->
+  <text x="1136" y="397" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" opacity="0.5" text-anchor="middle">8am</text>
+  <text x="1226" y="397" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" opacity="0.5" text-anchor="middle">10am</text>
+  <text x="1316" y="397" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" opacity="0.5" text-anchor="middle">12pm</text>
+  <text x="1406" y="397" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" opacity="0.5" text-anchor="middle">2pm</text>
+  <text x="1490" y="397" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" opacity="0.5" text-anchor="middle">4pm</text>
+
+  <!-- Zone indicators -->
+  <text x="1140" y="420" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" opacity="0.6">Zone Status</text>
+  <rect x="1120" y="428" width="14" height="14" fill="#00ff88" opacity="0.7" rx="2"/>
+  <text x="1140" y="440" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" opacity="0.7">Floor 1</text>
+  <rect x="1195" y="428" width="14" height="14" fill="#00d4ff" opacity="0.7" rx="2"/>
+  <text x="1215" y="440" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" opacity="0.7">Floor 2</text>
+  <rect x="1270" y="428" width="14" height="14" fill="#f59e0b" opacity="0.7" rx="2"/>
+  <text x="1290" y="440" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" opacity="0.7">Server</text>
+  <rect x="1345" y="428" width="14" height="14" fill="#00d4ff" opacity="0.5" rx="2"/>
+  <text x="1365" y="440" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" opacity="0.7">Common</text>
+
+  <!-- WORKSTATION ROWS -->
+  <!-- Row 1 (back) -->
+  <rect x="100" y="380" width="900" height="60" fill="#0a1520" rx="2" stroke="#1a2840" stroke-width="1"/>
+  <!-- Monitors row 1 -->
+  <rect x="130" y="330" width="80" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="135" y="335" width="70" height="45" fill="#001a22" rx="1"/>
+  <text x="170" y="362" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.7">●●●</text>
+  <rect x="240" y="330" width="80" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="245" y="335" width="70" height="45" fill="#001a22" rx="1"/>
+  <text x="280" y="362" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.7">●●●</text>
+  <rect x="380" y="330" width="80" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="385" y="335" width="70" height="45" fill="#001a22" rx="1"/>
+  <rect x="490" y="330" width="80" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="495" y="335" width="70" height="45" fill="#001a22" rx="1"/>
+  <rect x="630" y="330" width="80" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="635" y="335" width="70" height="45" fill="#001a22" rx="1"/>
+  <rect x="740" y="330" width="80" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="745" y="335" width="70" height="45" fill="#001a22" rx="1"/>
+  <rect x="880" y="330" width="80" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="885" y="335" width="70" height="45" fill="#001a22" rx="1"/>
+
+  <!-- Row 2 (front) -->
+  <rect x="100" y="530" width="900" height="60" fill="#0a1520" rx="2" stroke="#1a2840" stroke-width="1"/>
+  <!-- Monitors row 2 -->
+  <rect x="130" y="480" width="80" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="135" y="485" width="70" height="45" fill="#001a22" rx="1"/>
+  <rect x="240" y="480" width="80" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="245" y="485" width="70" height="45" fill="#001a22" rx="1"/>
+  <rect x="380" y="480" width="80" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="385" y="485" width="70" height="45" fill="#001a22" rx="1"/>
+  <rect x="490" y="480" width="80" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="495" y="485" width="70" height="45" fill="#001a22" rx="1"/>
+  <rect x="630" y="480" width="80" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="635" y="485" width="70" height="45" fill="#001a22" rx="1"/>
+  <rect x="740" y="480" width="80" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="745" y="485" width="70" height="45" fill="#001a22" rx="1"/>
+  <rect x="880" y="480" width="80" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="885" y="485" width="70" height="45" fill="#001a22" rx="1"/>
+
+  <!-- Label -->
+  <text x="800" y="860" font-family="Arial, sans-serif" font-size="22" font-weight="300" letter-spacing="4" fill="#c0c0c0" text-anchor="middle" opacity="0.85">SMART OFFICE COMPLEX</text>
+  <text x="800" y="885" font-family="Arial, sans-serif" font-size="12" letter-spacing="2" fill="#00d4ff" text-anchor="middle" opacity="0.6">ENERGY MONITORING · SMART LIGHTING · ZONE CONTROL</text>
+</svg>

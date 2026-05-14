@@ -1,1 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Mobile App"><rect width="800" height="600" fill="#0c1630"/><rect x="1" y="1" width="798" height="598" fill="none" stroke="rgba(34,211,238,0.15)" stroke-width="1"/><text x="400" y="310" text-anchor="middle" font-family="system-ui,sans-serif" font-size="24" font-weight="600" fill="rgba(34,211,238,0.5)">Mobile App</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 700" role="img" aria-label="Zakey Mobile App Mockup">
+  <defs>
+    <radialGradient id="am-bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#0c1a30"/>
+      <stop offset="100%" stop-color="#05070d"/>
+    </radialGradient>
+    <radialGradient id="am-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="am-ef">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="400" height="700" fill="url(#am-bg)"/>
+  <!-- Phone outer frame -->
+  <rect x="80" y="40" width="240" height="490" rx="28" fill="#0a1220" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6" filter="url(#am-ef)"/>
+  <rect x="84" y="44" width="232" height="482" rx="24" fill="#060e1a" stroke="rgba(34,211,238,0.15)" stroke-width="1"/>
+  <ellipse cx="200" cy="280" rx="100" ry="200" fill="url(#am-glow)"/>
+  <!-- Screen -->
+  <rect x="88" y="48" width="224" height="474" rx="22" fill="#071628"/>
+  <!-- Notch -->
+  <rect x="160" y="48" width="80" height="18" rx="0" fill="#060e1a"/>
+  <circle cx="200" cy="56" r="3.5" fill="#0a1828" stroke="rgba(34,211,238,0.2)" stroke-width="0.8"/>
+  <!-- Status bar -->
+  <text x="100" y="82" font-family="system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.6)">9:41</text>
+  <rect x="264" y="73" width="14" height="7" rx="1.5" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/>
+  <rect x="265" y="74" width="10" height="5" rx="1" fill="#22d3ee" opacity="0.7"/>
+  <!-- App header -->
+  <rect x="88" y="88" width="224" height="64" rx="0" fill="#091830"/>
+  <text x="112" y="110" font-family="system-ui, sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Good Morning,</text>
+  <text x="112" y="128" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="rgba(255,255,255,0.92)">Ahmed</text>
+  <circle cx="285" cy="115" r="18" fill="#0c2040" stroke="rgba(34,211,238,0.3)" stroke-width="1"/>
+  <text x="285" y="120" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#22d3ee">A</text>
+  <!-- Date strip -->
+  <rect x="88" y="152" width="224" height="22" rx="0" fill="#071220"/>
+  <text x="112" y="167" font-family="system-ui, sans-serif" font-size="8.5" fill="rgba(255,255,255,0.4)">Wednesday · May 14</text>
+  <text x="296" y="167" text-anchor="end" font-family="system-ui, sans-serif" font-size="8.5" fill="rgba(34,211,238,0.5)">4 Active</text>
+  <!-- Rooms label -->
+  <text x="112" y="192" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.5)" letter-spacing="1">ROOMS</text>
+  <!-- Room buttons 2x2 -->
+  <rect x="96" y="200" width="96" height="58" rx="8" fill="#0c1e38" stroke="rgba(34,211,238,0.2)" stroke-width="1"/>
+  <text x="144" y="226" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.8)">Living Room</text>
+  <text x="144" y="241" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="rgba(34,211,238,0.5)">4 devices</text>
+  <rect x="204" y="200" width="96" height="58" rx="8" fill="#0c1e38" stroke="rgba(34,211,238,0.2)" stroke-width="1"/>
+  <text x="252" y="226" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.8)">Bedroom</text>
+  <text x="252" y="241" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="rgba(255,255,255,0.35)">22°C</text>
+  <rect x="96" y="268" width="96" height="58" rx="8" fill="#0c1e38" stroke="rgba(34,211,238,0.2)" stroke-width="1"/>
+  <text x="144" y="294" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.8)">Kitchen</text>
+  <text x="144" y="309" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="rgba(255,255,255,0.35)">2 devices</text>
+  <rect x="204" y="268" width="96" height="58" rx="8" fill="#0c1e38" stroke="rgba(34,211,238,0.2)" stroke-width="1"/>
+  <text x="252" y="294" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.8)">Garage</text>
+  <text x="252" y="309" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="rgba(255,255,255,0.35)">Closed</text>
+  <!-- Active Scenes -->
+  <text x="112" y="348" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.5)" letter-spacing="1">ACTIVE SCENES</text>
+  <rect x="96" y="356" width="208" height="52" rx="8" fill="#22d3ee" fill-opacity="0.12" stroke="#22d3ee" stroke-width="1.2"/>
+  <circle cx="120" cy="383" r="12" fill="#091a2e" stroke="#22d3ee" stroke-width="1"/>
+  <circle cx="120" cy="383" r="4" fill="none" stroke="#22d3ee" stroke-width="1.2"/>
+  <text x="140" y="379" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#22d3ee">Morning</text>
+  <text x="140" y="393" font-family="system-ui, sans-serif" font-size="8" fill="rgba(34,211,238,0.6)">Active · 6 automations</text>
+  <!-- Energy widget -->
+  <text x="112" y="428" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.5)" letter-spacing="1">ENERGY</text>
+  <rect x="96" y="436" width="208" height="52" rx="8" fill="#0a1828" stroke="rgba(34,211,238,0.15)" stroke-width="1"/>
+  <text x="112" y="458" font-family="system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.6)">Today</text>
+  <text x="112" y="474" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#22d3ee">2.1 kWh</text>
+  <rect x="224" y="444" width="6" height="30" rx="2" fill="rgba(34,211,238,0.2)"/>
+  <rect x="224" y="454" width="6" height="20" rx="2" fill="#22d3ee" opacity="0.5"/>
+  <rect x="234" y="444" width="6" height="30" rx="2" fill="rgba(34,211,238,0.2)"/>
+  <rect x="234" y="448" width="6" height="26" rx="2" fill="#22d3ee" opacity="0.6"/>
+  <rect x="244" y="444" width="6" height="30" rx="2" fill="rgba(34,211,238,0.2)"/>
+  <rect x="244" y="450" width="6" height="24" rx="2" fill="#22d3ee" opacity="0.4"/>
+  <rect x="254" y="444" width="6" height="30" rx="2" fill="rgba(34,211,238,0.2)"/>
+  <rect x="254" y="456" width="6" height="18" rx="2" fill="#22d3ee" opacity="0.7"/>
+  <rect x="264" y="444" width="6" height="30" rx="2" fill="rgba(34,211,238,0.2)"/>
+  <rect x="264" y="454" width="6" height="20" rx="2" fill="#22d3ee" opacity="0.85"/>
+  <!-- Bottom nav -->
+  <rect x="88" y="490" width="224" height="36" rx="0" fill="#060e1a"/>
+  <rect x="88" y="490" width="224" height="1" fill="rgba(34,211,238,0.1)"/>
+  <text x="138" y="513" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="rgba(255,255,255,0.35)">Home</text>
+  <text x="200" y="513" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#22d3ee">Rooms</text>
+  <text x="262" y="513" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="rgba(255,255,255,0.35)">Settings</text>
+  <rect x="172" y="524" width="56" height="3" rx="2" fill="rgba(255,255,255,0.25)"/>
+  <!-- Label -->
+  <text x="200" y="582" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="rgba(34,211,238,0.4)" letter-spacing="2">ZAKEY APP</text>
+  <text x="200" y="598" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">iOS · Android · HarmonyOS</text>
+</svg>

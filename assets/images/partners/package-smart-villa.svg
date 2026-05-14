@@ -1,1 +1,97 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Smart Villa"><rect width="800" height="600" fill="#0c1628"/><rect x="1" y="1" width="798" height="598" fill="none" stroke="rgba(34,211,238,0.15)" stroke-width="1"/><text x="400" y="310" text-anchor="middle" font-family="system-ui,sans-serif" font-size="24" font-weight="600" fill="rgba(34,211,238,0.5)">Smart Villa</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Zakey Smart Villa Package">
+  <defs>
+    <linearGradient id="sv-sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#05070d"/>
+      <stop offset="60%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#0c2040"/>
+    </linearGradient>
+    <radialGradient id="sv-moon" cx="70%" cy="20%" r="15%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#sv-sky)"/>
+  <rect width="800" height="500" fill="url(#sv-moon)"/>
+  <rect x="1" y="1" width="798" height="498" fill="none" stroke="rgba(34,211,238,0.08)" stroke-width="1"/>
+
+  <!-- Stars -->
+  <g fill="#22d3ee" opacity="0.3">
+    <circle cx="100" cy="40" r="1"/><circle cx="180" cy="65" r="0.8"/><circle cx="260" cy="28" r="1"/>
+    <circle cx="350" cy="50" r="0.8"/><circle cx="450" cy="32" r="1"/><circle cx="550" cy="55" r="0.8"/>
+    <circle cx="640" cy="35" r="1"/><circle cx="720" cy="60" r="0.8"/><circle cx="790" cy="40" r="1"/>
+    <circle cx="80" cy="90" r="0.7"/><circle cx="300" cy="80" r="0.8"/><circle cx="490" cy="75" r="0.7"/>
+    <circle cx="660" cy="85" r="0.7"/>
+  </g>
+
+  <!-- Moon -->
+  <circle cx="700" cy="70" r="20" fill="none" stroke="rgba(34,211,238,0.2)" stroke-width="1"/>
+  <circle cx="710" cy="62" r="16" fill="#06101e"/>
+
+  <!-- Ground -->
+  <rect x="0" y="390" width="800" height="110" fill="#060e18"/>
+  <rect x="0" y="388" width="800" height="4" fill="#091628"/>
+
+  <!-- Garden/landscape -->
+  <!-- Hedge/bushes -->
+  <ellipse cx="120" cy="392" rx="45" ry="20" fill="#081820"/>
+  <ellipse cx="680" cy="392" rx="45" ry="20" fill="#081820"/>
+  <!-- Gate posts -->
+  <rect x="360" y="360" width="12" height="38" rx="2" fill="#0c1e38" stroke="rgba(34,211,238,0.3)" stroke-width="1"/>
+  <rect x="428" y="360" width="12" height="38" rx="2" fill="#0c1e38" stroke="rgba(34,211,238,0.3)" stroke-width="1"/>
+  <!-- Gate rail -->
+  <rect x="372" y="370" width="56" height="6" rx="2" fill="#0a1a30" stroke="rgba(34,211,238,0.2)" stroke-width="0.8"/>
+  <rect x="372" y="380" width="56" height="4" rx="2" fill="#0a1a30" stroke="rgba(34,211,238,0.15)" stroke-width="0.8"/>
+  <!-- Gate sensor indicator -->
+  <circle cx="366" cy="364" r="4" fill="#22d3ee" opacity="0.8"/>
+  <circle cx="434" cy="364" r="4" fill="#22d3ee" opacity="0.6"/>
+  <!-- Gate label -->
+  <text x="400" y="408" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="rgba(34,211,238,0.5)">Gate Sensor · Active</text>
+
+  <!-- Path from gate to villa -->
+  <rect x="393" y="300" width="14" height="94" rx="2" fill="#091628"/>
+
+  <!-- Villa main structure -->
+  <!-- Large two-story facade -->
+  <!-- Ground floor -->
+  <rect x="168" y="258" width="464" height="142" rx="2" fill="#0a1828" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+  <!-- Upper floor addition (recessed) -->
+  <rect x="220" y="148" width="360" height="120" rx="2" fill="#091628" stroke="rgba(255,255,255,0.1)" stroke-width="1.2"/>
+
+  <!-- Roof - low pitched -->
+  <polyline points="190,148 400,90 610,148" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <polyline points="200,148 400,96 600,148" fill="#050c18" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <!-- Chimney -->
+  <rect x="520" y="96" width="20" height="52" rx="2" fill="#081620"/>
+
+  <!-- Upper floor windows - lit (cyan glow) -->
+  <rect x="242" y="164" width="60" height="46" rx="3" fill="rgba(34,211,238,0.08)" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.6"/>
+  <rect x="340" y="164" width="60" height="46" rx="3" fill="rgba(34,211,238,0.12)" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.7"/>
+  <rect x="440" y="164" width="60" height="46" rx="3" fill="rgba(34,211,238,0.06)" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.5"/>
+  <rect x="538" y="164" width="60" height="46" rx="3" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+
+  <!-- Ground floor windows - warm lit -->
+  <rect x="186" y="276" width="80" height="60" rx="3" fill="rgba(34,211,238,0.07)" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.5"/>
+  <rect x="304" y="276" width="80" height="60" rx="3" fill="rgba(34,211,238,0.1)" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.6"/>
+  <!-- Large glazed door area -->
+  <rect x="432" y="268" width="80" height="72" rx="3" fill="rgba(34,211,238,0.06)" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.4"/>
+  <rect x="560" y="276" width="60" height="60" rx="3" fill="rgba(34,211,238,0.08)" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.5"/>
+
+  <!-- Main entrance door -->
+  <rect x="358" y="308" width="50" height="92" rx="3" fill="#060e1a" stroke="#22d3ee" stroke-width="1.2" stroke-opacity="0.7"/>
+  <!-- Door sensor dot -->
+  <circle cx="402" cy="355" r="3" fill="#22d3ee" opacity="0.8"/>
+
+  <!-- Smart device indicators -->
+  <circle cx="168" cy="258" r="5" fill="#22d3ee" opacity="0.7"/>
+  <text x="180" y="256" font-family="system-ui, sans-serif" font-size="7" fill="rgba(34,211,238,0.6)">Lighting</text>
+  <circle cx="610" cy="258" r="5" fill="#22d3ee" opacity="0.6"/>
+  <text x="598" y="256" text-anchor="end" font-family="system-ui, sans-serif" font-size="7" fill="rgba(34,211,238,0.6)">Climate</text>
+
+  <!-- Title overlay -->
+  <rect x="0" y="0" width="800" height="50" fill="rgba(5,8,14,0.6)"/>
+  <text x="40" y="22" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.5)" letter-spacing="2">ZAKEY SMART HOME</text>
+  <text x="40" y="40" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="rgba(255,255,255,0.9)">Smart Villa Package</text>
+  <text x="760" y="34" text-anchor="end" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.5)">Lights On · Gate Active · Climate 22°C</text>
+
+  <text x="400" y="468" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.3)" letter-spacing="2">PREMIUM SMART LIVING SOLUTION</text>
+</svg>

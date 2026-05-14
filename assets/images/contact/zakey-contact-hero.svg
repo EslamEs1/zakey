@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070d"/>
+      <stop offset="50%" stop-color="#080d16"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <!-- Phone glow -->
+    <radialGradient id="phoneGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Email glow -->
+    <radialGradient id="emailGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Chat glow -->
+    <radialGradient id="chatGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="iconGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="lineGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="badgeGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Subtle background grid -->
+  <g opacity="0.05" stroke="#00d4ff" stroke-width="0.5">
+    <line x1="0" y1="150" x2="1600" y2="150"/>
+    <line x1="0" y1="300" x2="1600" y2="300"/>
+    <line x1="0" y1="450" x2="1600" y2="450"/>
+    <line x1="0" y1="600" x2="1600" y2="600"/>
+    <line x1="0" y1="750" x2="1600" y2="750"/>
+    <line x1="200" y1="0" x2="200" y2="900"/>
+    <line x1="400" y1="0" x2="400" y2="900"/>
+    <line x1="600" y1="0" x2="600" y2="900"/>
+    <line x1="800" y1="0" x2="800" y2="900"/>
+    <line x1="1000" y1="0" x2="1000" y2="900"/>
+    <line x1="1200" y1="0" x2="1200" y2="900"/>
+    <line x1="1400" y1="0" x2="1400" y2="900"/>
+  </g>
+
+  <!-- ==========================================
+       PHONE ICON — Left
+       ========================================== -->
+  <g>
+    <!-- Glow halo -->
+    <ellipse cx="320" cy="450" rx="200" ry="200" fill="url(#phoneGlow)"/>
+
+    <!-- Phone shape (smartphone) -->
+    <rect x="250" y="280" width="140" height="260" rx="18" fill="#0a1020" stroke="#00d4ff" stroke-width="2" filter="url(#iconGlow)"/>
+    <!-- Screen bezel -->
+    <rect x="258" y="302" width="124" height="210" rx="6" fill="#060c18"/>
+    <!-- Screen content (call UI) -->
+    <!-- Status bar -->
+    <rect x="258" y="302" width="124" height="12" fill="#080e1e"/>
+    <!-- Screen call display -->
+    <circle cx="320" cy="360" r="28" fill="#0d1830" stroke="#00d4ff" stroke-width="1" opacity="0.6"/>
+    <!-- Person avatar on screen -->
+    <circle cx="320" cy="352" r="12" fill="#1a2840"/>
+    <ellipse cx="320" cy="380" rx="18" ry="10" fill="#1a2840"/>
+    <!-- Incoming call indicator -->
+    <text x="320" y="420" font-family="Arial, sans-serif" font-size="9" fill="#00d4ff" text-anchor="middle" opacity="0.8">Zakey Support</text>
+    <text x="320" y="435" font-family="Arial, sans-serif" font-size="8" fill="#8899aa" text-anchor="middle">Calling...</text>
+    <!-- Answer / decline buttons on phone screen -->
+    <circle cx="300" cy="465" r="12" fill="#1a3a20" stroke="#22c55e" stroke-width="1"/>
+    <circle cx="340" cy="465" r="12" fill="#3a1a1a" stroke="#ef4444" stroke-width="1"/>
+    <!-- Phone icons on buttons -->
+    <text x="300" y="469" font-family="Arial, sans-serif" font-size="10" fill="#22c55e" text-anchor="middle">✆</text>
+    <text x="340" y="469" font-family="Arial, sans-serif" font-size="10" fill="#ef4444" text-anchor="middle">✕</text>
+    <!-- Phone home button -->
+    <circle cx="320" cy="520" r="8" fill="#0d1830" stroke="#1e2a3a" stroke-width="1"/>
+    <!-- Phone notch -->
+    <rect x="300" y="286" width="40" height="5" rx="3" fill="#1a2030"/>
+    <!-- Front camera -->
+    <circle cx="325" cy="289" r="2" fill="#1a2030"/>
+
+    <!-- Phone badge — person icon -->
+    <g transform="translate(375, 295)" filter="url(#badgeGlow)">
+      <circle cx="0" cy="0" r="22" fill="#0a1525" stroke="#00d4ff" stroke-width="1.5"/>
+      <!-- Person icon -->
+      <circle cx="0" cy="-6" r="8" fill="none" stroke="#00d4ff" stroke-width="1.5"/>
+      <path d="M -12 14 Q -12 4 0 4 Q 12 4 12 14" fill="none" stroke="#00d4ff" stroke-width="1.5"/>
+    </g>
+
+    <!-- Label -->
+    <text x="320" y="575" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" opacity="0.9" letter-spacing="1">CALL US</text>
+    <text x="320" y="595" font-family="Arial, sans-serif" font-size="11" fill="#00d4ff" text-anchor="middle" opacity="0.6">+971 · Direct Line</text>
+  </g>
+
+  <!-- ==========================================
+       EMAIL ENVELOPE — Center
+       ========================================== -->
+  <g>
+    <!-- Glow halo -->
+    <ellipse cx="800" cy="430" rx="220" ry="200" fill="url(#emailGlow)"/>
+
+    <!-- Envelope shape -->
+    <!-- Envelope body -->
+    <rect x="640" y="320" width="320" height="220" rx="8" fill="#0a1020" stroke="#00d4ff" stroke-width="2" filter="url(#iconGlow)"/>
+    <!-- Envelope flap (V shape) -->
+    <polygon points="640,320 800,430 960,320" fill="#060c18" stroke="#00d4ff" stroke-width="1.5"/>
+    <!-- Envelope flap fold line -->
+    <line x1="640" y1="320" x2="800" y2="430" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
+    <line x1="960" y1="320" x2="800" y2="430" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
+    <!-- Bottom fold lines -->
+    <line x1="640" y1="540" x2="800" y2="440" stroke="#00d4ff" stroke-width="0.75" opacity="0.3"/>
+    <line x1="960" y1="540" x2="800" y2="440" stroke="#00d4ff" stroke-width="0.75" opacity="0.3"/>
+    <!-- Envelope glow lines on body -->
+    <!-- Horizontal text lines suggestion -->
+    <line x1="680" y1="460" x2="920" y2="460" stroke="#1a2a3a" stroke-width="8" opacity="0.6" stroke-linecap="round"/>
+    <line x1="680" y1="480" x2="870" y2="480" stroke="#1a2a3a" stroke-width="8" opacity="0.4" stroke-linecap="round"/>
+    <line x1="680" y1="500" x2="890" y2="500" stroke="#1a2a3a" stroke-width="8" opacity="0.3" stroke-linecap="round"/>
+    <!-- Seal / center mark -->
+    <circle cx="800" cy="435" r="16" fill="#0d1830" stroke="#00d4ff" stroke-width="1.5"/>
+    <text x="800" y="440" font-family="Arial, sans-serif" font-size="14" fill="#00d4ff" text-anchor="middle" font-weight="bold">@</text>
+
+    <!-- @ badge -->
+    <g transform="translate(945, 315)" filter="url(#badgeGlow)">
+      <circle cx="0" cy="0" r="22" fill="#0a1525" stroke="#00d4ff" stroke-width="1.5"/>
+      <text x="0" y="5" font-family="Arial, sans-serif" font-size="16" fill="#00d4ff" text-anchor="middle" font-weight="bold">@</text>
+    </g>
+
+    <!-- Label -->
+    <text x="800" y="575" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" opacity="0.9" letter-spacing="1">EMAIL US</text>
+    <text x="800" y="595" font-family="Arial, sans-serif" font-size="11" fill="#00d4ff" text-anchor="middle" opacity="0.6">hello@zakey.com</text>
+  </g>
+
+  <!-- ==========================================
+       CHAT BUBBLE — Right
+       ========================================== -->
+  <g>
+    <!-- Glow halo -->
+    <ellipse cx="1280" cy="440" rx="200" ry="200" fill="url(#chatGlow)"/>
+
+    <!-- Speech bubble shape -->
+    <path d="M 1135 300 L 1425 300 Q 1435 300 1435 310 L 1435 520 Q 1435 530 1425 530 L 1210 530 L 1185 570 L 1185 530 L 1145 530 Q 1135 530 1135 520 L 1135 310 Q 1135 300 1145 300 Z"
+      fill="#0a1020" stroke="#00d4ff" stroke-width="2" filter="url(#iconGlow)"/>
+
+    <!-- Chat content lines -->
+    <!-- Message 1 (received) -->
+    <rect x="1160" y="325" width="140" height="40" rx="8" fill="#0d1830"/>
+    <line x1="1175" y1="340" x2="1285" y2="340" stroke="#1a2a3a" stroke-width="7" opacity="0.8" stroke-linecap="round"/>
+    <line x1="1175" y1="354" x2="1260" y2="354" stroke="#1a2a3a" stroke-width="7" opacity="0.6" stroke-linecap="round"/>
+    <!-- Message 2 (sent) — right aligned -->
+    <rect x="1255" y="378" width="155" height="40" rx="8" fill="#0d2040" stroke="#00d4ff" stroke-width="0.75" opacity="0.6"/>
+    <line x1="1270" y1="393" x2="1395" y2="393" stroke="#00d4ff" stroke-width="7" opacity="0.3" stroke-linecap="round"/>
+    <line x1="1270" y1="407" x2="1350" y2="407" stroke="#00d4ff" stroke-width="7" opacity="0.25" stroke-linecap="round"/>
+    <!-- Message 3 (received) -->
+    <rect x="1160" y="430" width="160" height="40" rx="8" fill="#0d1830"/>
+    <line x1="1175" y1="445" x2="1305" y2="445" stroke="#1a2a3a" stroke-width="7" opacity="0.7" stroke-linecap="round"/>
+    <line x1="1175" y1="459" x2="1270" y2="459" stroke="#1a2a3a" stroke-width="7" opacity="0.5" stroke-linecap="round"/>
+    <!-- Typing indicator -->
+    <rect x="1160" y="483" width="70" height="32" rx="16" fill="#0d1830"/>
+    <circle cx="1183" cy="499" r="4" fill="#00d4ff" opacity="0.6"/>
+    <circle cx="1196" cy="499" r="4" fill="#00d4ff" opacity="0.4"/>
+    <circle cx="1209" cy="499" r="4" fill="#00d4ff" opacity="0.2"/>
+
+    <!-- Message badge -->
+    <g transform="translate(1135, 300)" filter="url(#badgeGlow)">
+      <circle cx="0" cy="0" r="22" fill="#0a1525" stroke="#00d4ff" stroke-width="1.5"/>
+      <!-- Checkmark -->
+      <polyline points="-8,2 -2,8 10,-6" fill="none" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Label -->
+    <text x="1280" y="610" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" opacity="0.9" letter-spacing="1">LIVE CHAT</text>
+    <text x="1280" y="630" font-family="Arial, sans-serif" font-size="11" fill="#00d4ff" text-anchor="middle" opacity="0.6">24 / 7 Support</text>
+  </g>
+
+  <!-- ==========================================
+       CONNECTING FLOWING LINES
+       ========================================== -->
+  <!-- Line from phone to email -->
+  <path d="M 390 450 C 500 430 600 430 640 430"
+    fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.3" filter="url(#lineGlow)" stroke-dasharray="8 6"/>
+  <!-- Small dots along line -->
+  <circle cx="470" cy="442" r="2.5" fill="#00d4ff" opacity="0.4"/>
+  <circle cx="540" cy="436" r="2" fill="#00d4ff" opacity="0.3"/>
+  <circle cx="610" cy="432" r="2.5" fill="#00d4ff" opacity="0.4"/>
+
+  <!-- Line from email to chat -->
+  <path d="M 960 430 C 1020 430 1080 435 1135 440"
+    fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.3" filter="url(#lineGlow)" stroke-dasharray="8 6"/>
+  <!-- Small dots along line -->
+  <circle cx="1010" cy="432" r="2.5" fill="#00d4ff" opacity="0.4"/>
+  <circle cx="1072" cy="434" r="2" fill="#00d4ff" opacity="0.3"/>
+  <circle cx="1110" cy="437" r="2.5" fill="#00d4ff" opacity="0.4"/>
+
+  <!-- Center junction nodes -->
+  <circle cx="635" cy="430" r="5" fill="#00d4ff" opacity="0.5" filter="url(#badgeGlow)"/>
+  <circle cx="965" cy="430" r="5" fill="#00d4ff" opacity="0.5" filter="url(#badgeGlow)"/>
+
+  <!-- Top heading area -->
+  <text x="800" y="95" font-family="Arial, sans-serif" font-size="11" fill="#00d4ff" text-anchor="middle" letter-spacing="6" opacity="0.35">GET IN TOUCH</text>
+  <line x1="650" y1="108" x2="750" y2="108" stroke="#00d4ff" stroke-width="0.5" opacity="0.2"/>
+  <line x1="850" y1="108" x2="950" y2="108" stroke="#00d4ff" stroke-width="0.5" opacity="0.2"/>
+  <circle cx="800" cy="108" r="2" fill="#00d4ff" opacity="0.3"/>
+
+  <!-- Corner decoration -->
+  <polyline points="30,55 30,30 55,30" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.2"/>
+  <polyline points="1545,30 1570,30 1570,55" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.2"/>
+  <polyline points="30,845 30,870 55,870" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.2"/>
+  <polyline points="1545,870 1570,870 1570,845" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.2"/>
+
+  <!-- Ambient bottom glow -->
+  <ellipse cx="800" cy="900" rx="600" ry="100" fill="#00d4ff" opacity="0.03"/>
+</svg>

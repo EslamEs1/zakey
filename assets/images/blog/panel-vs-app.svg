@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="pvsBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#060c18"/>
+      <stop offset="100%" stop-color="#05070d"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#pvsBg)"/>
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="18" font-weight="300" letter-spacing="4" fill="#c0c0c0" text-anchor="middle" opacity="0.9">WALL PANEL vs SMARTPHONE APP</text>
+  <line x1="220" y1="62" x2="580" y2="62" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+  <!-- VS divider -->
+  <line x1="400" y1="80" x2="400" y2="530" stroke="#1e3050" stroke-width="1.5" opacity="0.5" stroke-dasharray="8,4"/>
+  <circle cx="400" cy="300" r="30" fill="#001520" stroke="#00d4ff" stroke-width="1.5" opacity="0.8"/>
+  <text x="400" y="305" font-family="Arial, sans-serif" font-size="14" fill="#00d4ff" text-anchor="middle" font-weight="bold">VS</text>
+  <!-- LEFT: WALL PANEL -->
+  <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#00d4ff" text-anchor="middle" letter-spacing="2" opacity="0.9">WALL PANEL</text>
+  <!-- Panel device illustration -->
+  <rect x="130" y="120" width="140" height="200" fill="#050d18" rx="6" stroke="#00d4ff" stroke-width="2" opacity="0.9"/>
+  <rect x="140" y="132" width="120" height="75" fill="#001a22" rx="3"/>
+  <text x="200" y="153" font-family="Arial, sans-serif" font-size="9" fill="#00d4ff" text-anchor="middle" opacity="0.9">SMART PANEL</text>
+  <text x="200" y="170" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.7">Scene: Evening</text>
+  <text x="200" y="185" font-family="Arial, sans-serif" font-size="8" fill="#f59e0b" text-anchor="middle" opacity="0.7">Temp: 22C</text>
+  <!-- Panel buttons -->
+  <rect x="145" y="218" width="110" height="22" fill="#00d4ff" opacity="0.25" rx="3"/>
+  <text x="200" y="233" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle">EVENING</text>
+  <rect x="145" y="246" width="110" height="22" fill="#1a2840" rx="3"/>
+  <text x="200" y="261" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.6">SLEEP</text>
+  <rect x="145" y="274" width="110" height="22" fill="#1a2840" rx="3"/>
+  <text x="200" y="289" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.5">BRIGHT</text>
+  <!-- Panel features -->
+  <text x="65" y="350" font-family="Arial, sans-serif" font-size="10" fill="#c0c0c0" opacity="0.8">ADVANTAGES:</text>
+  <text x="65" y="370" font-family="Arial, sans-serif" font-size="9" fill="#00ff88" opacity="0.8">+ Always available</text>
+  <text x="65" y="386" font-family="Arial, sans-serif" font-size="9" fill="#00ff88" opacity="0.8">+ No battery needed</text>
+  <text x="65" y="402" font-family="Arial, sans-serif" font-size="9" fill="#00ff88" opacity="0.8">+ Tactile feel</text>
+  <text x="65" y="418" font-family="Arial, sans-serif" font-size="9" fill="#00ff88" opacity="0.8">+ Guests can use easily</text>
+  <text x="65" y="440" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" opacity="0.5">- Fixed location</text>
+  <text x="65" y="456" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" opacity="0.5">- Limited display</text>
+  <!-- RIGHT: SMARTPHONE APP -->
+  <text x="600" y="95" font-family="Arial, sans-serif" font-size="14" fill="#00d4ff" text-anchor="middle" letter-spacing="2" opacity="0.9">SMARTPHONE APP</text>
+  <!-- Phone device illustration -->
+  <rect x="540" y="115" width="120" height="210" fill="#0a1020" rx="16" stroke="#00d4ff" stroke-width="1.5" opacity="0.8"/>
+  <!-- Phone screen -->
+  <rect x="550" y="130" width="100" height="175" fill="#001015" rx="8"/>
+  <!-- App UI on screen -->
+  <rect x="555" y="136" width="90" height="25" fill="#00d4ff" opacity="0.1" rx="4"/>
+  <text x="600" y="153" font-family="Arial, sans-serif" font-size="7" fill="#00d4ff" text-anchor="middle" opacity="0.9">Zakey Home</text>
+  <!-- App status cards -->
+  <rect x="557" y="166" width="42" height="30" fill="#001a22" rx="3"/>
+  <text x="578" y="180" font-family="Arial, sans-serif" font-size="6" fill="#f59e0b" text-anchor="middle">Lights</text>
+  <text x="578" y="192" font-family="Arial, sans-serif" font-size="6" fill="#f59e0b" text-anchor="middle">70%</text>
+  <rect x="603" y="166" width="42" height="30" fill="#001a22" rx="3"/>
+  <text x="624" y="180" font-family="Arial, sans-serif" font-size="6" fill="#00d4ff" text-anchor="middle">AC</text>
+  <text x="624" y="192" font-family="Arial, sans-serif" font-size="6" fill="#00d4ff" text-anchor="middle">22C</text>
+  <!-- Scene selector -->
+  <rect x="557" y="202" width="88" height="18" fill="#00d4ff" opacity="0.2" rx="3"/>
+  <text x="601" y="214" font-family="Arial, sans-serif" font-size="6" fill="#00d4ff" text-anchor="middle">Evening Scene</text>
+  <!-- Sliders -->
+  <text x="561" y="230" font-family="Arial, sans-serif" font-size="5" fill="#c0c0c0" opacity="0.6">Brightness</text>
+  <rect x="561" y="234" width="78" height="4" fill="#1a2840" rx="2"/>
+  <rect x="561" y="234" width="55" height="4" fill="#f59e0b" opacity="0.7" rx="2"/>
+  <text x="561" y="248" font-family="Arial, sans-serif" font-size="5" fill="#c0c0c0" opacity="0.6">Temp</text>
+  <rect x="561" y="252" width="78" height="4" fill="#1a2840" rx="2"/>
+  <rect x="561" y="252" width="38" height="4" fill="#00d4ff" opacity="0.7" rx="2"/>
+  <!-- Phone home indicator -->
+  <rect x="590" y="312" width="20" height="4" fill="#1e3050" rx="2"/>
+  <!-- App features -->
+  <text x="445" y="350" font-family="Arial, sans-serif" font-size="10" fill="#c0c0c0" opacity="0.8">ADVANTAGES:</text>
+  <text x="445" y="370" font-family="Arial, sans-serif" font-size="9" fill="#00ff88" opacity="0.8">+ Remote control</text>
+  <text x="445" y="386" font-family="Arial, sans-serif" font-size="9" fill="#00ff88" opacity="0.8">+ Full dashboard view</text>
+  <text x="445" y="402" font-family="Arial, sans-serif" font-size="9" fill="#00ff88" opacity="0.8">+ Automation setup</text>
+  <text x="445" y="418" font-family="Arial, sans-serif" font-size="9" fill="#00ff88" opacity="0.8">+ Multi-property control</text>
+  <text x="445" y="440" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" opacity="0.5">- Needs phone/battery</text>
+  <text x="445" y="456" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" opacity="0.5">- Less intuitive for guests</text>
+  <!-- Bottom callout -->
+  <rect x="100" y="480" width="600" height="50" fill="#001520" rx="4" stroke="#00d4ff" stroke-width="0.5" opacity="0.6"/>
+  <text x="400" y="505" font-family="Arial, sans-serif" font-size="11" fill="#00d4ff" text-anchor="middle" opacity="0.9">Zakey provides BOTH - wall panel + app, always in sync</text>
+  <text x="400" y="522" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" text-anchor="middle" opacity="0.6">One ecosystem - all control points connected</text>
+</svg>

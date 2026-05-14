@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="showroomBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#080c15;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#05070d;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="wallBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c1425;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#080d18;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="floorRef" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1020;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#05070d;stop-opacity:1"/>
+    </linearGradient>
+    <radialGradient id="spotA" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.18"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="spotB" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="productGlow">
+      <feGaussianBlur stdDeviation="20" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#showroomBg)"/>
+  <!-- Back wall -->
+  <rect x="0" y="0" width="1600" height="600" fill="url(#wallBg)"/>
+  <!-- Floor -->
+  <rect x="0" y="600" width="1600" height="300" fill="url(#floorRef)"/>
+  <!-- Floor gloss lines -->
+  <line x1="0" y1="650" x2="1600" y2="650" stroke="#1a2535" stroke-width="1" opacity="0.3"/>
+  <line x1="0" y1="720" x2="1600" y2="720" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+  <line x1="0" y1="800" x2="1600" y2="800" stroke="#1a2535" stroke-width="1" opacity="0.15"/>
+
+  <!-- Ceiling track lighting system -->
+  <rect x="0" y="0" width="1600" height="50" fill="#06090f"/>
+  <!-- Track rails -->
+  <rect x="100" y="20" width="1400" height="8" fill="#1a2535" rx="2"/>
+  <rect x="100" y="38" width="1400" height="4" fill="#1e2a40" rx="1"/>
+  <!-- Track 2 -->
+  <rect x="200" y="20" width="1200" height="6" fill="#1a2535" rx="2" transform="translate(0,200)"/>
+
+  <!-- Track spotlights (triangular cones + fixture dots) -->
+  <!-- Spotlight 1 - on product pedestal left -->
+  <circle cx="320" cy="28" r="8" fill="#ffffff" opacity="0.8" filter="url(#glow)"/>
+  <polygon points="280,50 360,50 450,600 190,600" fill="url(#spotA)" opacity="0.6"/>
+  <!-- Spotlight 2 -->
+  <circle cx="600" cy="28" r="8" fill="#00d4ff" opacity="0.7" filter="url(#glow)"/>
+  <polygon points="560,50 640,50 720,600 480,600" fill="url(#spotB)" opacity="0.5"/>
+  <!-- Spotlight 3 center -->
+  <circle cx="880" cy="28" r="10" fill="#ffffff" opacity="0.9" filter="url(#glow)"/>
+  <polygon points="830,50 930,50 980,600 780,600" fill="url(#spotA)" opacity="0.7"/>
+  <!-- Spotlight 4 -->
+  <circle cx="1100" cy="28" r="8" fill="#00d4ff" opacity="0.7" filter="url(#glow)"/>
+  <polygon points="1060,50 1140,50 1200,600 1000,600" fill="url(#spotB)" opacity="0.5"/>
+  <!-- Spotlight 5 right -->
+  <circle cx="1360" cy="28" r="8" fill="#ffffff" opacity="0.8" filter="url(#glow)"/>
+  <polygon points="1320,50 1400,50 1450,600 1270,600" fill="url(#spotA)" opacity="0.6"/>
+
+  <!-- Track 2 spotlights (background row) -->
+  <circle cx="460" cy="228" r="6" fill="#ffffff" opacity="0.6"/>
+  <circle cx="760" cy="228" r="6" fill="#00d4ff" opacity="0.5"/>
+  <circle cx="1060" cy="228" r="6" fill="#ffffff" opacity="0.6"/>
+  <circle cx="1260" cy="228" r="6" fill="#00d4ff" opacity="0.5"/>
+
+  <!-- Wall display panels (back wall) -->
+  <rect x="60" y="80" width="280" height="380" fill="#0a1525" stroke="#1e3050" stroke-width="1" rx="2"/>
+  <rect x="70" y="90" width="260" height="350" fill="#060d18" rx="1"/>
+  <!-- Smart panel product on left wall -->
+  <rect x="120" y="130" width="160" height="270" fill="#0f1e30" rx="3" stroke="#00d4ff" stroke-width="1.5" opacity="0.8"/>
+  <rect x="130" y="145" width="140" height="80" fill="#001a22" rx="2"/>
+  <text x="200" y="175" font-family="Arial, sans-serif" font-size="11" fill="#00d4ff" text-anchor="middle" opacity="0.9">SMART PANEL</text>
+  <text x="200" y="195" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" text-anchor="middle" opacity="0.7">PRO Series</text>
+  <circle cx="200" cy="300" r="25" fill="#001a22" stroke="#00d4ff" stroke-width="1" opacity="0.7"/>
+  <circle cx="200" cy="300" r="18" fill="#00d4ff" opacity="0.2"/>
+  <text x="200" y="305" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle">ON</text>
+
+  <!-- Center display -->
+  <rect x="620" y="70" width="360" height="430" fill="#0a1525" stroke="#1e3050" stroke-width="1.5" rx="2"/>
+  <rect x="635" y="85" width="330" height="400" fill="#060d18" rx="1"/>
+  <!-- Center product showcase -->
+  <rect x="680" y="120" width="240" height="300" fill="#0d1a2a" rx="4" stroke="#00d4ff" stroke-width="2" opacity="0.9"/>
+  <!-- Glow halo -->
+  <ellipse cx="800" cy="270" rx="140" ry="160" fill="#00d4ff" opacity="0.06" filter="url(#productGlow)"/>
+  <text x="800" y="155" font-family="Arial, sans-serif" font-size="12" fill="#00d4ff" text-anchor="middle" opacity="0.9" letter-spacing="2">ZAKEY PANEL</text>
+  <text x="800" y="175" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" text-anchor="middle" opacity="0.7">Ultra Pro Series</text>
+  <rect x="720" y="190" width="160" height="120" fill="#001a22" rx="3"/>
+  <!-- Interface mockup -->
+  <rect x="730" y="200" width="140" height="30" fill="#00d4ff" opacity="0.15" rx="2"/>
+  <text x="800" y="220" font-family="Arial, sans-serif" font-size="9" fill="#00d4ff" text-anchor="middle">Scene: Showroom</text>
+  <line x1="730" y1="238" x2="870" y2="238" stroke="#00d4ff" stroke-width="0.5" opacity="0.4"/>
+  <rect x="730" y="246" width="60" height="14" fill="#00d4ff" opacity="0.3" rx="2"/>
+  <rect x="800" y="246" width="70" height="14" fill="#1a2840" rx="2"/>
+  <text x="760" y="257" font-family="Arial, sans-serif" font-size="7" fill="#00d4ff" text-anchor="middle">Lighting</text>
+  <text x="835" y="257" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Climate</text>
+  <rect x="730" y="268" width="140" height="14" fill="#1a2840" rx="2"/>
+  <text x="800" y="279" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.5">Security</text>
+  <!-- Large display knob -->
+  <circle cx="800" cy="340" rx="30" r="30" fill="#0a1828" stroke="#00d4ff" stroke-width="2" opacity="0.8"/>
+  <circle cx="800" cy="340" r="20" fill="#001520" opacity="0.9"/>
+  <line cx="800" y1="320" x2="800" y2="330" stroke="#00d4ff" stroke-width="2" opacity="0.7"/>
+  <circle cx="800" cy="340" r="5" fill="#00d4ff" opacity="0.8" filter="url(#glow)"/>
+  <!-- Price tag -->
+  <text x="800" y="408" font-family="Arial, sans-serif" font-size="13" fill="#c0c0c0" text-anchor="middle" opacity="0.8">from 2,400 AED</text>
+
+  <!-- Right wall display -->
+  <rect x="1260" y="80" width="280" height="380" fill="#0a1525" stroke="#1e3050" stroke-width="1" rx="2"/>
+  <rect x="1270" y="90" width="260" height="350" fill="#060d18" rx="1"/>
+  <!-- Dimmer/switch product -->
+  <rect x="1310" y="130" width="180" height="270" fill="#0f1e30" rx="3" stroke="#00d4ff" stroke-width="1.5" opacity="0.7"/>
+  <text x="1400" y="160" font-family="Arial, sans-serif" font-size="10" fill="#00d4ff" text-anchor="middle" opacity="0.8">SMART DIMMER</text>
+  <circle cx="1400" cy="260" r="45" fill="#001a22" stroke="#00d4ff" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="1400" cy="260" r="32" fill="#00d4ff" opacity="0.1"/>
+  <line x1="1400" y1="220" x2="1400" y2="238" stroke="#00d4ff" stroke-width="3" opacity="0.8" stroke-linecap="round"/>
+
+  <!-- Product pedestals -->
+  <!-- Left pedestal -->
+  <rect x="250" y="570" width="120" height="30" fill="#0d1828" stroke="#1e3050" stroke-width="1" rx="1"/>
+  <rect x="270" y="550" width="80" height="22" fill="#0f1e30" rx="1"/>
+  <!-- Center pedestal -->
+  <rect x="700" y="570" width="200" height="30" fill="#0d1828" stroke="#1e3050" stroke-width="1" rx="1"/>
+  <rect x="730" y="548" width="140" height="24" fill="#0f1e30" rx="1"/>
+  <!-- Right pedestal -->
+  <rect x="1200" y="570" width="120" height="30" fill="#0d1828" stroke="#1e3050" stroke-width="1" rx="1"/>
+  <rect x="1220" y="550" width="80" height="22" fill="#0f1e30" rx="1"/>
+
+  <!-- Cyan edge lighting strip on ceiling junction -->
+  <line x1="0" y1="50" x2="1600" y2="50" stroke="#00d4ff" stroke-width="1.5" opacity="0.4" filter="url(#glow)"/>
+  <!-- Floor edge lighting -->
+  <line x1="0" y1="600" x2="1600" y2="600" stroke="#00d4ff" stroke-width="1" opacity="0.25"/>
+
+  <!-- Label -->
+  <text x="800" y="860" font-family="Arial, sans-serif" font-size="22" font-weight="300" letter-spacing="4" fill="#c0c0c0" text-anchor="middle" opacity="0.85">SMART RETAIL SHOWROOM</text>
+  <text x="800" y="885" font-family="Arial, sans-serif" font-size="12" letter-spacing="2" fill="#00d4ff" text-anchor="middle" opacity="0.6">ADAPTIVE LIGHTING · LIVE PRODUCT DEMOS · SMART DISPLAYS</text>
+</svg>

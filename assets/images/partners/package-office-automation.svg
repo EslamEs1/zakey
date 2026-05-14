@@ -1,1 +1,159 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Office Auto"><rect width="800" height="600" fill="#0a1628"/><rect x="1" y="1" width="798" height="598" fill="none" stroke="rgba(34,211,238,0.15)" stroke-width="1"/><text x="400" y="310" text-anchor="middle" font-family="system-ui,sans-serif" font-size="24" font-weight="600" fill="rgba(34,211,238,0.5)">Office Auto</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Zakey Office Automation Package">
+  <defs>
+    <linearGradient id="oa-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060a14"/>
+      <stop offset="100%" stop-color="#0a1828"/>
+    </linearGradient>
+    <pattern id="oa-grid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20,0 L0,0 0,20" fill="none" stroke="rgba(34,211,238,0.03)" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#oa-bg)"/>
+  <rect width="800" height="500" fill="url(#oa-grid)"/>
+  <rect x="1" y="1" width="798" height="498" fill="none" stroke="rgba(34,211,238,0.08)" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="40" y="36" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="rgba(255,255,255,0.9)">Office Automation Package</text>
+  <text x="40" y="54" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.5)" letter-spacing="2">OPEN-PLAN OFFICE SCHEMATIC</text>
+
+  <!-- Office outer boundary -->
+  <rect x="40" y="75" width="720" height="360" rx="4" fill="#071220" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+
+  <!-- MEETING ROOM (top-left) - enclosed -->
+  <rect x="50" y="85" width="220" height="160" rx="3" fill="#091628" stroke="rgba(34,211,238,0.2)" stroke-width="1.2"/>
+  <text x="160" y="108" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.55)" letter-spacing="1">MEETING ROOM</text>
+  <!-- Meeting table -->
+  <rect x="80" y="118" width="160" height="80" rx="4" fill="#0c1e38" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <!-- Chairs around table -->
+  <rect x="86" y="108" width="20" height="10" rx="2" fill="rgba(255,255,255,0.06)"/>
+  <rect x="114" y="108" width="20" height="10" rx="2" fill="rgba(255,255,255,0.06)"/>
+  <rect x="142" y="108" width="20" height="10" rx="2" fill="rgba(255,255,255,0.06)"/>
+  <rect x="170" y="108" width="20" height="10" rx="2" fill="rgba(255,255,255,0.06)"/>
+  <rect x="86" y="198" width="20" height="10" rx="2" fill="rgba(255,255,255,0.06)"/>
+  <rect x="114" y="198" width="20" height="10" rx="2" fill="rgba(255,255,255,0.06)"/>
+  <rect x="142" y="198" width="20" height="10" rx="2" fill="rgba(255,255,255,0.06)"/>
+  <rect x="170" y="198" width="20" height="10" rx="2" fill="rgba(255,255,255,0.06)"/>
+  <!-- Screen at front -->
+  <rect x="54" y="128" width="22" height="55" rx="2" fill="#091e38" stroke="#22d3ee" stroke-width="0.8" stroke-opacity="0.5"/>
+  <!-- Meeting room AC + lighting -->
+  <circle cx="100" cy="92" r="4" fill="#22d3ee" opacity="0.6"/>
+  <circle cx="160" cy="92" r="4" fill="#22d3ee" opacity="0.7"/>
+  <circle cx="220" cy="92" r="4" fill="#22d3ee" opacity="0.5"/>
+  <!-- Meeting room label: "Work Mode" -->
+  <rect x="80" y="218" width="100" height="16" rx="4" fill="#22d3ee" fill-opacity="0.1" stroke="#22d3ee" stroke-width="0.7"/>
+  <text x="130" y="229" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#22d3ee">Work Scene · Active</text>
+  <!-- Door into meeting room -->
+  <rect x="252" y="140" width="16" height="32" rx="1" fill="#060e1a" stroke="rgba(34,211,238,0.4)" stroke-width="1"/>
+  <path d="M252,172 Q240,156 252,140" fill="none" stroke="rgba(34,211,238,0.2)" stroke-width="0.8"/>
+
+  <!-- OPEN WORKSTATIONS (center/right area) -->
+  <text x="480" y="108" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.3)" letter-spacing="1">OPEN WORKSPACE</text>
+
+  <!-- Workstation pods: 4x2 grid -->
+  <!-- Row 1 -->
+  <g>
+    <!-- WS1 -->
+    <rect x="295" y="95" width="50" height="36" rx="2" fill="#091628" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+    <rect x="297" y="97" width="46" height="22" rx="1" fill="rgba(34,211,238,0.04)"/>
+    <circle cx="320" cy="135" r="4" fill="rgba(255,255,255,0.05)"/>
+    <!-- WS2 -->
+    <rect x="365" y="95" width="50" height="36" rx="2" fill="#091628" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+    <rect x="367" y="97" width="46" height="22" rx="1" fill="rgba(34,211,238,0.07)"/>
+    <circle cx="390" cy="135" r="4" fill="rgba(255,255,255,0.05)"/>
+    <!-- WS3 -->
+    <rect x="435" y="95" width="50" height="36" rx="2" fill="#091628" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+    <rect x="437" y="97" width="46" height="22" rx="1" fill="rgba(34,211,238,0.04)"/>
+    <circle cx="460" cy="135" r="4" fill="rgba(255,255,255,0.05)"/>
+    <!-- WS4 -->
+    <rect x="505" y="95" width="50" height="36" rx="2" fill="#091628" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+    <rect x="507" y="97" width="46" height="22" rx="1" fill="rgba(34,211,238,0.05)"/>
+    <circle cx="530" cy="135" r="4" fill="rgba(255,255,255,0.05)"/>
+  </g>
+  <!-- Row 2 -->
+  <g>
+    <rect x="295" y="155" width="50" height="36" rx="2" fill="#091628" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+    <rect x="297" y="157" width="46" height="22" rx="1" fill="rgba(34,211,238,0.06)"/>
+    <rect x="365" y="155" width="50" height="36" rx="2" fill="#091628" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+    <rect x="367" y="157" width="46" height="22" rx="1" fill="rgba(34,211,238,0.03)"/>
+    <rect x="435" y="155" width="50" height="36" rx="2" fill="#091628" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+    <rect x="437" y="157" width="46" height="22" rx="1" fill="rgba(34,211,238,0.08)"/>
+    <rect x="505" y="155" width="50" height="36" rx="2" fill="#091628" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+    <rect x="507" y="157" width="46" height="22" rx="1" fill="rgba(34,211,238,0.04)"/>
+  </g>
+
+  <!-- Lighting zones labeled -->
+  <!-- Zone A (meeting room) - already handled -->
+  <!-- Zone B (workstations) -->
+  <rect x="290" y="85" width="280" height="115" rx="2" fill="none" stroke="rgba(34,211,238,0.12)" stroke-width="0.8" stroke-dasharray="4,2"/>
+  <text x="310" y="93" font-family="system-ui, sans-serif" font-size="7" fill="rgba(34,211,238,0.4)">Zone B · 70%</text>
+  <!-- Light icons at top of zone -->
+  <circle cx="320" cy="87" r="3" fill="#22d3ee" opacity="0.6"/>
+  <circle cx="390" cy="87" r="3" fill="#22d3ee" opacity="0.7"/>
+  <circle cx="460" cy="87" r="3" fill="#22d3ee" opacity="0.6"/>
+  <circle cx="530" cy="87" r="3" fill="#22d3ee" opacity="0.5"/>
+
+  <!-- RECEPTION area (right edge) -->
+  <rect x="590" y="85" width="160" height="160" rx="3" fill="#091628" stroke="rgba(34,211,238,0.15)" stroke-width="1"/>
+  <text x="670" y="108" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">Reception</text>
+  <!-- Reception desk -->
+  <rect x="610" y="120" width="120" height="50" rx="4" fill="#0c1e38" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <!-- Screen -->
+  <rect x="630" y="128" width="50" height="32" rx="2" fill="rgba(34,211,238,0.06)" stroke="#22d3ee" stroke-width="0.8" stroke-opacity="0.4"/>
+  <!-- Signage -->
+  <rect x="616" y="176" width="108" height="22" rx="3" fill="#22d3ee" fill-opacity="0.1" stroke="#22d3ee" stroke-width="0.8"/>
+  <text x="670" y="191" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7.5" fill="#22d3ee">Welcome · 23°C</text>
+  <circle cx="720" cy="92" r="3" fill="#22d3ee" opacity="0.6"/>
+
+  <!-- LOWER HALF: More workstations + server room -->
+  <!-- Large open workspace lower -->
+  <text x="290" y="280" font-family="system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.25)" letter-spacing="1">EXPANDED WORKSPACE · ZONE C</text>
+  <rect x="50" y="260" width="560" height="155" rx="3" fill="none" stroke="rgba(34,211,238,0.1)" stroke-width="0.8" stroke-dasharray="4,2"/>
+  <text x="60" y="274" font-family="system-ui, sans-serif" font-size="7" fill="rgba(34,211,238,0.35)">Zone C · Sensor-Controlled Lighting</text>
+  <!-- Workstation cluster simplified -->
+  <g stroke="rgba(255,255,255,0.07)" stroke-width="0.8" fill="#091628">
+    <rect x="64" y="278" width="44" height="30" rx="2"/>
+    <rect x="64" y="316" width="44" height="30" rx="2"/>
+    <rect x="118" y="278" width="44" height="30" rx="2"/>
+    <rect x="118" y="316" width="44" height="30" rx="2"/>
+    <rect x="172" y="278" width="44" height="30" rx="2"/>
+    <rect x="172" y="316" width="44" height="30" rx="2"/>
+    <rect x="226" y="278" width="44" height="30" rx="2"/>
+    <rect x="226" y="316" width="44" height="30" rx="2"/>
+    <rect x="280" y="278" width="44" height="30" rx="2"/>
+    <rect x="280" y="316" width="44" height="30" rx="2"/>
+    <rect x="334" y="278" width="44" height="30" rx="2"/>
+    <rect x="334" y="316" width="44" height="30" rx="2"/>
+    <rect x="388" y="278" width="44" height="30" rx="2"/>
+    <rect x="388" y="316" width="44" height="30" rx="2"/>
+    <rect x="442" y="278" width="44" height="30" rx="2"/>
+    <rect x="442" y="316" width="44" height="30" rx="2"/>
+  </g>
+  <!-- Motion sensors in Zone C -->
+  <circle cx="200" cy="268" r="3" fill="#22d3ee" opacity="0.4"/>
+  <circle cx="350" cy="268" r="3" fill="#22d3ee" opacity="0.5"/>
+  <circle cx="500" cy="268" r="3" fill="#22d3ee" opacity="0.4"/>
+  <text x="200" y="262" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6" fill="rgba(34,211,238,0.35)">PIR</text>
+  <text x="350" y="262" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6" fill="rgba(34,211,238,0.35)">PIR</text>
+  <text x="500" y="262" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6" fill="rgba(34,211,238,0.35)">PIR</text>
+
+  <!-- SERVER / Network room -->
+  <rect x="630" y="260" width="120" height="155" rx="3" fill="#060e1a" stroke="rgba(34,211,238,0.25)" stroke-width="1.2"/>
+  <text x="690" y="280" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="rgba(34,211,238,0.5)">Server Room</text>
+  <!-- Server rack icons -->
+  <rect x="650" y="288" width="80" height="100" rx="2" fill="#091628" stroke="rgba(34,211,238,0.2)" stroke-width="0.8"/>
+  <line x1="650" y1="300" x2="730" y2="300" stroke="rgba(34,211,238,0.1)" stroke-width="0.5"/>
+  <line x1="650" y1="312" x2="730" y2="312" stroke="rgba(34,211,238,0.1)" stroke-width="0.5"/>
+  <line x1="650" y1="324" x2="730" y2="324" stroke="rgba(34,211,238,0.1)" stroke-width="0.5"/>
+  <circle cx="722" cy="295" r="2" fill="#22d3ee" opacity="0.8"/>
+  <circle cx="722" cy="307" r="2" fill="#22d3ee" opacity="0.7"/>
+  <circle cx="722" cy="319" r="2" fill="rgba(255,255,255,0.2)"/>
+  <text x="690" y="400" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="rgba(34,211,238,0.4)">Zakey Hub</text>
+
+  <!-- Bottom status bar -->
+  <rect x="40" y="443" width="720" height="28" rx="4" fill="#060e1c" stroke="rgba(34,211,238,0.08)" stroke-width="0.8"/>
+  <circle cx="62" cy="457" r="4" fill="#22d3ee" opacity="0.7"/>
+  <text x="74" y="461" font-family="system-ui, sans-serif" font-size="8" fill="rgba(255,255,255,0.4)">Office connected · 3 zones · 42 devices · Motion-triggered lighting</text>
+  <text x="748" y="461" text-anchor="end" font-family="system-ui, sans-serif" font-size="8" fill="rgba(34,211,238,0.5)">-22% Energy</text>
+
+  <text x="400" y="490" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="rgba(34,211,238,0.25)" letter-spacing="2">ZAKEY COMMERCIAL OFFICE AUTOMATION</text>
+</svg>

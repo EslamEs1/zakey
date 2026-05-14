@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070d"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <!-- Floor marble gradient -->
+    <linearGradient id="floorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141c28" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0a0f1a"/>
+    </linearGradient>
+    <!-- Back wall gradient -->
+    <linearGradient id="wallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d1420"/>
+      <stop offset="100%" stop-color="#0a1020"/>
+    </linearGradient>
+    <!-- Reception desk gradient -->
+    <linearGradient id="deskGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a2438"/>
+      <stop offset="100%" stop-color="#0f1828"/>
+    </linearGradient>
+    <!-- Ceiling light gradient -->
+    <linearGradient id="ceilGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#080c14"/>
+      <stop offset="50%" stop-color="#0a1020"/>
+      <stop offset="100%" stop-color="#080c14"/>
+    </linearGradient>
+    <!-- Ambient ceiling light cone -->
+    <radialGradient id="lightCone1" cx="25%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lightCone2" cx="75%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Logo glow -->
+    <radialGradient id="logoGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glowFilter">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="subtleGlow">
+      <feGaussianBlur stdDeviation="10" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="screenGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Perspective transform for desk (simulated with basic shapes) -->
+    <clipPath id="roomClip">
+      <rect x="0" y="0" width="800" height="600"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+
+  <!-- ==========================================
+       CEILING
+       ========================================== -->
+  <rect x="0" y="0" width="800" height="90" fill="url(#ceilGrad)"/>
+  <!-- Ceiling panel lines (acoustic panels) -->
+  <line x1="0" y1="88" x2="800" y2="88" stroke="#1a2030" stroke-width="2"/>
+  <line x1="0" y1="30" x2="800" y2="30" stroke="#101828" stroke-width="1" opacity="0.5"/>
+  <line x1="150" y1="0" x2="150" y2="88" stroke="#0f1825" stroke-width="1" opacity="0.4"/>
+  <line x1="350" y1="0" x2="350" y2="88" stroke="#0f1825" stroke-width="1" opacity="0.4"/>
+  <line x1="450" y1="0" x2="450" y2="88" stroke="#0f1825" stroke-width="1" opacity="0.4"/>
+  <line x1="650" y1="0" x2="650" y2="88" stroke="#0f1825" stroke-width="1" opacity="0.4"/>
+
+  <!-- Recessed ceiling lights (LED strips) -->
+  <!-- Light strip 1 -->
+  <rect x="120" y="72" width="120" height="6" rx="3" fill="#f59e0b" opacity="0.5"/>
+  <rect x="120" y="72" width="120" height="6" rx="3" fill="none" stroke="#f59e0b" stroke-width="0.5" opacity="0.3"/>
+  <!-- Light strip 2 -->
+  <rect x="560" y="72" width="120" height="6" rx="3" fill="#f59e0b" opacity="0.4"/>
+
+  <!-- Individual spotlights (over reception) -->
+  <ellipse cx="220" cy="82" rx="12" ry="5" fill="#f59e0b" opacity="0.6"/>
+  <ellipse cx="580" cy="82" rx="12" ry="5" fill="#f59e0b" opacity="0.5"/>
+  <ellipse cx="400" cy="82" rx="14" ry="6" fill="#f59e0b" opacity="0.55"/>
+
+  <!-- Light ambient cones -->
+  <polygon points="150,88 290,88 380,400 60,400" fill="#f59e0b" opacity="0.025"/>
+  <polygon points="510,88 650,88 740,400 420,400" fill="#f59e0b" opacity="0.025"/>
+  <polygon points="340,88 460,88 520,400 280,400" fill="#f59e0b" opacity="0.03"/>
+
+  <!-- ==========================================
+       BACK WALL
+       ========================================== -->
+  <!-- Perspective: back wall sits ~y=88 to y=320 in the middle -->
+  <polygon points="0,88 800,88 800,350 0,350" fill="url(#wallGrad)"/>
+
+  <!-- Wall vertical panels / pilasters -->
+  <rect x="0" y="88" width="60" height="262" fill="#0a0f1c"/>
+  <rect x="740" y="88" width="60" height="262" fill="#0a0f1c"/>
+
+  <!-- Wall horizontal dado rail line -->
+  <line x1="60" y1="240" x2="740" y2="240" stroke="#1a2430" stroke-width="2"/>
+  <line x1="60" y1="244" x2="740" y2="244" stroke="#0d1525" stroke-width="1"/>
+
+  <!-- Wall lower panel (below dado) -->
+  <rect x="60" y="244" width="680" height="106" fill="#0c1320"/>
+
+  <!-- Wall vertical divisions -->
+  <line x1="200" y1="88" x2="200" y2="240" stroke="#1a2435" stroke-width="1" opacity="0.5"/>
+  <line x1="600" y1="88" x2="600" y2="240" stroke="#1a2435" stroke-width="1" opacity="0.5"/>
+
+  <!-- ==========================================
+       ZAKEY LOGO ON WALL (center)
+       ========================================== -->
+  <!-- Logo glow aura -->
+  <ellipse cx="400" cy="170" rx="140" ry="80" fill="url(#logoGlow)"/>
+  <!-- Logo backing panel -->
+  <rect x="295" y="115" width="210" height="90" rx="4" fill="#060a14" opacity="0.8"/>
+  <!-- Logo border glow line -->
+  <rect x="295" y="115" width="210" height="90" rx="4" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+  <!-- Z lettermark (stylized) -->
+  <!-- Large Z -->
+  <text x="360" y="185" font-family="Arial, sans-serif" font-size="60" fill="#00d4ff" font-weight="bold" opacity="0.15">Z</text>
+  <!-- Zakey wordmark -->
+  <text x="400" y="162" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold" letter-spacing="6" filter="url(#glowFilter)">ZAKEY</text>
+  <line x1="315" y1="172" x2="485" y2="172" stroke="#00d4ff" stroke-width="0.75" opacity="0.5"/>
+  <text x="400" y="188" font-family="Arial, sans-serif" font-size="9" fill="#00d4ff" text-anchor="middle" letter-spacing="4" opacity="0.7">SMART LIVING</text>
+
+  <!-- Small decorative dots flanking logo -->
+  <circle cx="305" cy="160" r="3" fill="#00d4ff" opacity="0.3"/>
+  <circle cx="495" cy="160" r="3" fill="#00d4ff" opacity="0.3"/>
+
+  <!-- Wall planters / decorative elements (sides) -->
+  <!-- Left wall art -->
+  <rect x="80" y="115" width="90" height="100" rx="3" fill="#080e1c" stroke="#1a2435" stroke-width="1"/>
+  <rect x="88" y="122" width="74" height="86" fill="#060c18"/>
+  <!-- Abstract line art inside -->
+  <line x1="88" y1="165" x2="162" y2="140" stroke="#00d4ff" stroke-width="0.5" opacity="0.3"/>
+  <line x1="88" y1="175" x2="162" y2="180" stroke="#00d4ff" stroke-width="0.5" opacity="0.2"/>
+  <circle cx="125" cy="160" r="18" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.25"/>
+  <!-- Right wall art -->
+  <rect x="630" y="115" width="90" height="100" rx="3" fill="#080e1c" stroke="#1a2435" stroke-width="1"/>
+  <rect x="638" y="122" width="74" height="86" fill="#060c18"/>
+  <line x1="638" y1="155" x2="712" y2="175" stroke="#00d4ff" stroke-width="0.5" opacity="0.3"/>
+  <circle cx="675" cy="162" r="20" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.2"/>
+  <line x1="660" y1="145" x2="690" y2="178" stroke="#00d4ff" stroke-width="0.5" opacity="0.25"/>
+
+  <!-- ==========================================
+       SIDE WALLS (perspective)
+       ========================================== -->
+  <!-- Left side wall -->
+  <polygon points="0,88 0,600 100,500 100,88" fill="#09101c"/>
+  <!-- Right side wall -->
+  <polygon points="800,88 800,600 700,500 700,88" fill="#09101c"/>
+  <!-- Wall corner edges -->
+  <line x1="100" y1="88" x2="100" y2="500" stroke="#1a2435" stroke-width="1.5"/>
+  <line x1="700" y1="88" x2="700" y2="500" stroke="#1a2435" stroke-width="1.5"/>
+
+  <!-- ==========================================
+       FLOOR (marble effect)
+       ========================================== -->
+  <!-- Floor perspective trapezoid -->
+  <polygon points="100,500 700,500 800,600 0,600" fill="url(#floorGrad)"/>
+  <!-- Floor join line -->
+  <line x1="100" y1="500" x2="700" y2="500" stroke="#1e2a3a" stroke-width="2"/>
+
+  <!-- Marble veining lines (subtle) -->
+  <!-- Vein 1 -->
+  <path d="M 0 540 C 100 535 200 545 300 538 C 400 531 500 542 600 536 C 700 530 800 545 800 540"
+    fill="none" stroke="#1a2535" stroke-width="1.5" opacity="0.4"/>
+  <!-- Vein 2 -->
+  <path d="M 50 575 C 180 568 300 578 440 572 C 580 566 700 575 800 570"
+    fill="none" stroke="#1a2535" stroke-width="1" opacity="0.3"/>
+  <!-- Floor reflection of logo -->
+  <ellipse cx="400" cy="520" rx="120" ry="20" fill="#00d4ff" opacity="0.04"/>
+  <!-- Floor tiles grid lines -->
+  <line x1="100" y1="500" x2="0" y2="600" stroke="#161e2c" stroke-width="1" opacity="0.5"/>
+  <line x1="300" y1="500" x2="250" y2="600" stroke="#161e2c" stroke-width="1" opacity="0.4"/>
+  <line x1="500" y1="500" x2="500" y2="600" stroke="#161e2c" stroke-width="1" opacity="0.4"/>
+  <line x1="700" y1="500" x2="750" y2="600" stroke="#161e2c" stroke-width="1" opacity="0.4"/>
+  <!-- Horizontal tile lines -->
+  <line x1="80" y1="530" x2="720" y2="530" stroke="#161e2c" stroke-width="1" opacity="0.25"/>
+  <line x1="40" y1="565" x2="760" y2="565" stroke="#161e2c" stroke-width="1" opacity="0.2"/>
+
+  <!-- ==========================================
+       RECEPTION DESK
+       ========================================== -->
+  <!-- Desk top surface (perspective) -->
+  <polygon points="180,380 620,380 680,430 120,430" fill="url(#deskGrad)" stroke="#1e2e44" stroke-width="1.5"/>
+  <!-- Desk face panel -->
+  <polygon points="120,430 680,430 680,490 120,490" fill="#111828"/>
+  <!-- Desk face edge highlight -->
+  <line x1="120" y1="430" x2="680" y2="430" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+  <!-- Desk face panel decorative lines -->
+  <line x1="140" y1="445" x2="660" y2="445" stroke="#1a2840" stroke-width="1" opacity="0.5"/>
+  <line x1="140" y1="475" x2="660" y2="475" stroke="#1a2840" stroke-width="1" opacity="0.4"/>
+  <!-- Desk face LED strip -->
+  <rect x="150" y="458" width="500" height="3" rx="1.5" fill="#00d4ff" opacity="0.2"/>
+  <rect x="150" y="458" width="500" height="3" rx="1.5" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.4" filter="url(#glowFilter)"/>
+  <!-- Desk corners -->
+  <rect x="120" y="430" width="20" height="60" fill="#0f1828" stroke="#1e2e44" stroke-width="1"/>
+  <rect x="660" y="430" width="20" height="60" fill="#0f1828" stroke="#1e2e44" stroke-width="1"/>
+
+  <!-- Items on desk top -->
+  <!-- Monitor (left of center) -->
+  <rect x="225" y="340" width="80" height="45" rx="3" fill="#060c18" stroke="#1a2840" stroke-width="1"/>
+  <!-- Screen content -->
+  <rect x="228" y="342" width="74" height="40" rx="2" fill="#05090f"/>
+  <!-- Dashboard on screen -->
+  <rect x="232" y="346" width="30" height="12" rx="1" fill="#0d1830"/>
+  <rect x="265" y="346" width="33" height="12" rx="1" fill="#0d1830"/>
+  <line x1="232" y1="362" x2="298" y2="362" stroke="#1a2840" stroke-width="1" opacity="0.5"/>
+  <line x1="232" y1="367" x2="280" y2="367" stroke="#1a2840" stroke-width="1" opacity="0.4"/>
+  <circle cx="240" cy="350" r="3" fill="#00d4ff" opacity="0.5"/>
+  <!-- Monitor stand -->
+  <rect x="258" y="383" width="14" height="6" rx="1" fill="#1a2030"/>
+  <rect x="252" y="388" width="26" height="3" rx="1" fill="#1a2030"/>
+
+  <!-- Tablet (right of center) -->
+  <rect x="460" y="348" width="55" height="38" rx="4" fill="#060c18" stroke="#1a2840" stroke-width="1"/>
+  <rect x="463" y="351" width="49" height="32" rx="2" fill="#05090f"/>
+  <!-- Tablet content -->
+  <circle cx="487" cy="362" r="8" fill="#0d1830"/>
+  <circle cx="487" cy="362" r="4" fill="#00d4ff" opacity="0.25"/>
+  <line x1="466" y1="374" x2="510" y2="374" stroke="#1a2840" stroke-width="1" opacity="0.4"/>
+  <line x1="466" y1="378" x2="502" y2="378" stroke="#1a2840" stroke-width="1" opacity="0.3"/>
+
+  <!-- Small potted plant -->
+  <ellipse cx="610" cy="383" rx="16" ry="6" fill="#0f1828" stroke="#1a2840" stroke-width="1"/>
+  <rect x="604" y="360" width="12" height="24" rx="2" fill="#0f1828" stroke="#1a2840" stroke-width="1"/>
+  <!-- Plant leaves -->
+  <path d="M 610 360 C 610 355 620 348 622 355 C 618 358 610 360 610 360 Z" fill="#0d2010"/>
+  <path d="M 610 358 C 610 350 598 345 596 352 C 601 356 610 358 610 358 Z" fill="#0d2010"/>
+  <path d="M 610 355 C 612 347 608 340 604 345 C 606 350 610 355 610 355 Z" fill="#0d2010"/>
+
+  <!-- Name/brand plate on desk front -->
+  <rect x="330" y="450" width="140" height="22" rx="3" fill="#0a1020" stroke="#00d4ff" stroke-width="0.75" opacity="0.7"/>
+  <text x="400" y="465" font-family="Arial, sans-serif" font-size="10" fill="#00d4ff" text-anchor="middle" letter-spacing="3" opacity="0.8">ZAKEY</text>
+
+  <!-- ==========================================
+       SMART LIGHTING VISIBLE IN CEILING
+       ========================================== -->
+  <!-- Ceiling track lighting rail (left) -->
+  <rect x="120" y="88" width="220" height="5" rx="2" fill="#1a2030"/>
+  <!-- Track light fixtures -->
+  <rect x="150" y="83" width="10" height="10" rx="2" fill="#1a2030" stroke="#2a3545" stroke-width="0.5"/>
+  <rect x="200" y="83" width="10" height="10" rx="2" fill="#1a2030" stroke="#2a3545" stroke-width="0.5"/>
+  <rect x="250" y="83" width="10" height="10" rx="2" fill="#1a2030" stroke="#2a3545" stroke-width="0.5"/>
+  <rect x="300" y="83" width="10" height="10" rx="2" fill="#1a2030" stroke="#2a3545" stroke-width="0.5"/>
+  <!-- Light dots -->
+  <circle cx="155" cy="88" r="3" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="205" cy="88" r="3" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="255" cy="88" r="3" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="305" cy="88" r="3" fill="#f59e0b" opacity="0.7"/>
+
+  <!-- Ceiling track lighting rail (right) -->
+  <rect x="460" y="88" width="220" height="5" rx="2" fill="#1a2030"/>
+  <rect x="500" y="83" width="10" height="10" rx="2" fill="#1a2030" stroke="#2a3545" stroke-width="0.5"/>
+  <rect x="550" y="83" width="10" height="10" rx="2" fill="#1a2030" stroke="#2a3545" stroke-width="0.5"/>
+  <rect x="600" y="83" width="10" height="10" rx="2" fill="#1a2030" stroke="#2a3545" stroke-width="0.5"/>
+  <rect x="640" y="83" width="10" height="10" rx="2" fill="#1a2030" stroke="#2a3545" stroke-width="0.5"/>
+  <circle cx="505" cy="88" r="3" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="555" cy="88" r="3" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="605" cy="88" r="3" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="645" cy="88" r="3" fill="#f59e0b" opacity="0.8"/>
+
+  <!-- Smart lighting panel (wall right side) -->
+  <rect x="680" y="150" width="12" height="80" rx="4" fill="#0a0f1a" stroke="#00d4ff" stroke-width="0.75" opacity="0.6"/>
+  <circle cx="686" cy="168" r="3" fill="#00d4ff" opacity="0.7"/>
+  <circle cx="686" cy="185" r="3" fill="#00d4ff" opacity="0.4"/>
+  <circle cx="686" cy="202" r="3" fill="#f59e0b" opacity="0.6"/>
+  <circle cx="686" cy="219" r="3" fill="#00d4ff" opacity="0.3"/>
+
+  <!-- Smart lighting panel (wall left side) -->
+  <rect x="108" y="150" width="12" height="80" rx="4" fill="#0a0f1a" stroke="#00d4ff" stroke-width="0.75" opacity="0.6"/>
+  <circle cx="114" cy="168" r="3" fill="#00d4ff" opacity="0.6"/>
+  <circle cx="114" cy="185" r="3" fill="#00d4ff" opacity="0.35"/>
+  <circle cx="114" cy="202" r="3" fill="#f59e0b" opacity="0.5"/>
+  <circle cx="114" cy="219" r="3" fill="#00d4ff" opacity="0.25"/>
+
+  <!-- Ambient warm light from reception area onto floor -->
+  <ellipse cx="400" cy="490" rx="260" ry="30" fill="#f59e0b" opacity="0.03"/>
+
+  <!-- Subtle vignette -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+    <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0.45"/>
+  </radialGradient>
+  <rect width="800" height="600" fill="url(#vignette)"/>
+</svg>

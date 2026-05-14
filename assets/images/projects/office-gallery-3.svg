@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="meetBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1020;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#05070d;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <radialGradient id="screenAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#meetBg)"/>
+  <!-- Wall -->
+  <rect x="0" y="0" width="800" height="440" fill="#0d1828"/>
+  <!-- Glass partition wall -->
+  <rect x="0" y="50" width="12" height="390" fill="#1a2535" opacity="0.6"/>
+  <rect x="788" y="50" width="12" height="390" fill="#1a2535" opacity="0.6"/>
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="800" height="50" fill="#08101e"/>
+  <!-- Floor -->
+  <rect x="0" y="440" width="800" height="160" fill="#070a12"/>
+  <!-- Floor reflections -->
+  <line x1="0" y1="480" x2="800" y2="480" stroke="#1a2535" stroke-width="1" opacity="0.3"/>
+  <!-- Ceiling lighting (presentation mode) -->
+  <rect x="100" y="10" width="600" height="30" fill="#1a2840" rx="2"/>
+  <rect x="100" y="10" width="600" height="30" fill="#00d4ff" opacity="0.08" rx="2"/>
+  <line x1="100" y1="40" x2="700" y2="40" stroke="#00d4ff" stroke-width="1" opacity="0.3"/>
+  <!-- Downlights focused on table -->
+  <circle cx="250" cy="25" r="7" fill="#f59e0b" opacity="0.3" filter="url(#glow)"/>
+  <circle cx="400" cy="25" r="7" fill="#f59e0b" opacity="0.35" filter="url(#glow)"/>
+  <circle cx="550" cy="25" r="7" fill="#f59e0b" opacity="0.3" filter="url(#glow)"/>
+  <!-- PRESENTATION SCREEN (main feature) -->
+  <rect x="100" y="70" width="400" height="270" fill="#001015" rx="3" stroke="#00d4ff" stroke-width="2" opacity="0.8"/>
+  <ellipse cx="300" cy="205" rx="220" ry="155" fill="url(#screenAura)" opacity="0.5"/>
+  <!-- Screen content: slide deck -->
+  <rect x="108" y="78" width="384" height="254" fill="#000d14" rx="2"/>
+  <rect x="108" y="78" width="384" height="40" fill="#00d4ff" opacity="0.1" rx="2 2 0 0"/>
+  <text x="300" y="105" font-family="Arial, sans-serif" font-size="14" fill="#00d4ff" text-anchor="middle" letter-spacing="2" opacity="0.9">Q2 SMART BUILDING REVIEW</text>
+  <line x1="115" y1="120" x2="485" y2="120" stroke="#00d4ff" stroke-width="0.5" opacity="0.4"/>
+  <!-- Chart on slide -->
+  <rect x="130" y="185" width="20" height="50" fill="#00d4ff" opacity="0.6" rx="1"/>
+  <rect x="160" y="165" width="20" height="70" fill="#00d4ff" opacity="0.8" rx="1"/>
+  <rect x="190" y="155" width="20" height="80" fill="#00d4ff" opacity="1" rx="1"/>
+  <rect x="220" y="170" width="20" height="65" fill="#00d4ff" opacity="0.75" rx="1"/>
+  <rect x="250" y="185" width="20" height="50" fill="#00d4ff" opacity="0.55" rx="1"/>
+  <rect x="280" y="175" width="20" height="60" fill="#00d4ff" opacity="0.7" rx="1"/>
+  <line x1="125" y1="235" x2="470" y2="235" stroke="#1a2840" stroke-width="1" opacity="0.5"/>
+  <!-- Text lines on slide -->
+  <rect x="340" y="145" width="130" height="10" fill="#c0c0c0" opacity="0.2" rx="1"/>
+  <rect x="340" y="162" width="110" height="8" fill="#c0c0c0" opacity="0.15" rx="1"/>
+  <rect x="340" y="178" width="120" height="8" fill="#c0c0c0" opacity="0.12" rx="1"/>
+  <rect x="340" y="194" width="100" height="8" fill="#c0c0c0" opacity="0.15" rx="1"/>
+  <text x="300" y="270" font-family="Arial, sans-serif" font-size="9" fill="#00d4ff" text-anchor="middle" opacity="0.7">Energy Reduction · Q1: -18% vs target</text>
+  <!-- Meeting table -->
+  <ellipse cx="400" cy="390" rx="320" ry="65" fill="#0d1828" stroke="#1e3050" stroke-width="1.5"/>
+  <!-- Table surface shine -->
+  <ellipse cx="400" cy="388" rx="316" ry="60" fill="#0f1e30" opacity="0.5"/>
+  <!-- Table legs -->
+  <rect x="250" y="420" width="20" height="25" fill="#0a1020"/>
+  <rect x="530" y="420" width="20" height="25" fill="#0a1020"/>
+  <!-- Chairs around table (simple silhouettes) -->
+  <rect x="100" y="370" width="45" height="35" fill="#0a1525" rx="3" stroke="#1a2840" stroke-width="1"/>
+  <rect x="155" y="355" width="45" height="35" fill="#0a1525" rx="3" stroke="#1a2840" stroke-width="1"/>
+  <rect x="210" y="348" width="45" height="35" fill="#0a1525" rx="3" stroke="#1a2840" stroke-width="1"/>
+  <rect x="550" y="348" width="45" height="35" fill="#0a1525" rx="3" stroke="#1a2840" stroke-width="1"/>
+  <rect x="605" y="355" width="45" height="35" fill="#0a1525" rx="3" stroke="#1a2840" stroke-width="1"/>
+  <rect x="655" y="370" width="45" height="35" fill="#0a1525" rx="3" stroke="#1a2840" stroke-width="1"/>
+  <!-- SMART ROOM CONTROLLER PANEL (right wall) -->
+  <rect x="660" y="100" width="100" height="200" fill="#040a12" rx="4" stroke="#00d4ff" stroke-width="1.5" opacity="0.9"/>
+  <rect x="668" y="110" width="84" height="38" fill="#001a22" rx="2"/>
+  <text x="710" y="127" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.9">MEETING RM 3</text>
+  <text x="710" y="141" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.7">Presentation</text>
+  <rect x="668" y="158" width="84" height="18" fill="#00d4ff" opacity="0.25" rx="2"/>
+  <text x="710" y="171" font-family="Arial, sans-serif" font-size="7" fill="#00d4ff" text-anchor="middle">● Presentation</text>
+  <rect x="668" y="182" width="84" height="18" fill="#1a2840" rx="2"/>
+  <text x="710" y="195" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Collaboration</text>
+  <rect x="668" y="206" width="84" height="18" fill="#1a2840" rx="2"/>
+  <text x="710" y="219" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Standby</text>
+  <rect x="668" y="232" width="84" height="18" fill="#1a2840" rx="2"/>
+  <text x="710" y="245" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.5">Whiteboard</text>
+  <!-- Booking display on door -->
+  <rect x="20" y="110" width="80" height="60" fill="#001520" rx="2" stroke="#00d4ff" stroke-width="1" opacity="0.7"/>
+  <text x="60" y="128" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.9">IN USE</text>
+  <text x="60" y="143" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.7">14:00-15:30</text>
+  <text x="60" y="157" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Q2 Review</text>
+  <!-- Label -->
+  <text x="400" y="575" font-family="Arial, sans-serif" font-size="14" font-weight="300" letter-spacing="3" fill="#c0c0c0" text-anchor="middle" opacity="0.8">MEETING ROOM · SMART CONTROLS</text>
+</svg>

@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="hboBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#040810"/>
+      <stop offset="100%" stop-color="#03060e"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#hboBg)"/>
+  <!-- Screen frame -->
+  <rect x="30" y="25" width="740" height="530" fill="#000d14" rx="6" stroke="#00d4ff" stroke-width="1.5" opacity="0.7"/>
+  <!-- Top header bar -->
+  <rect x="30" y="25" width="740" height="40" fill="#00d4ff" opacity="0.1" rx="6"/>
+  <text x="400" y="51" font-family="Arial, sans-serif" font-size="13" fill="#00d4ff" text-anchor="middle" letter-spacing="3" opacity="0.9">HOTEL MANAGEMENT SYSTEM</text>
+  <circle cx="55" cy="45" r="7" fill="#00ff88" opacity="0.8"/>
+  <text x="720" y="51" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" opacity="0.6">LIVE</text>
+  <!-- Sub-nav tabs -->
+  <rect x="38" y="72" width="95" height="25" fill="#00d4ff" opacity="0.2" rx="3"/>
+  <text x="85" y="89" font-family="Arial, sans-serif" font-size="9" fill="#00d4ff" text-anchor="middle">Overview</text>
+  <rect x="140" y="72" width="80" height="25" fill="#1a2840" rx="3"/>
+  <text x="180" y="89" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Rooms</text>
+  <rect x="227" y="72" width="80" height="25" fill="#1a2840" rx="3"/>
+  <text x="267" y="89" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Energy</text>
+  <rect x="314" y="72" width="80" height="25" fill="#1a2840" rx="3"/>
+  <text x="354" y="89" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Staff</text>
+  <rect x="401" y="72" width="80" height="25" fill="#1a2840" rx="3"/>
+  <text x="441" y="89" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" text-anchor="middle" opacity="0.6">Alerts</text>
+  <!-- KPI row -->
+  <rect x="38" y="105" width="155" height="60" fill="#001a22" rx="3" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+  <text x="115" y="125" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.8">OCCUPANCY</text>
+  <text x="115" y="153" font-family="Arial, sans-serif" font-size="22" fill="#00d4ff" text-anchor="middle" font-weight="bold">78%</text>
+  <rect x="203" y="105" width="155" height="60" fill="#001a22" rx="3" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+  <text x="280" y="125" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.8">ROOMS ONLINE</text>
+  <text x="280" y="153" font-family="Arial, sans-serif" font-size="22" fill="#00ff88" text-anchor="middle" font-weight="bold">47</text>
+  <rect x="368" y="105" width="155" height="60" fill="#001a22" rx="3" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+  <text x="445" y="125" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.8">ALERTS ACTIVE</text>
+  <text x="445" y="153" font-family="Arial, sans-serif" font-size="22" fill="#f59e0b" text-anchor="middle" font-weight="bold">3</text>
+  <rect x="533" y="105" width="230" height="60" fill="#001a22" rx="3" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+  <text x="648" y="125" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.8">ENERGY SAVING TODAY</text>
+  <text x="648" y="153" font-family="Arial, sans-serif" font-size="22" fill="#00ff88" text-anchor="middle" font-weight="bold">-18%</text>
+  <!-- Room grid (main content) -->
+  <rect x="38" y="175" width="460" height="330" fill="#000d14" rx="3" stroke="#1a2535" stroke-width="0.5"/>
+  <text x="268" y="195" font-family="Arial, sans-serif" font-size="10" fill="#00d4ff" text-anchor="middle" opacity="0.8">Room Status Grid</text>
+  <!-- Room grid cells (6x5) -->
+  <!-- Row 1 -->
+  <rect x="48" y="202" width="65" height="45" fill="#001a0a" rx="2" stroke="#00ff88" stroke-width="0.5" opacity="0.7"/>
+  <text x="80" y="220" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.7">1201</text>
+  <text x="80" y="235" font-family="Arial, sans-serif" font-size="6" fill="#00ff88" text-anchor="middle">Occupied</text>
+  <text x="80" y="244" font-family="Arial, sans-serif" font-size="6" fill="#f59e0b" text-anchor="middle">Warm</text>
+  <rect x="120" y="202" width="65" height="45" fill="#001a0a" rx="2" stroke="#00ff88" stroke-width="0.5" opacity="0.7"/>
+  <text x="152" y="220" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.7">1202</text>
+  <text x="152" y="235" font-family="Arial, sans-serif" font-size="6" fill="#00ff88" text-anchor="middle">Occupied</text>
+  <rect x="192" y="202" width="65" height="45" fill="#001015" rx="2" stroke="#1e3050" stroke-width="0.5" opacity="0.5"/>
+  <text x="224" y="220" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.5">1203</text>
+  <text x="224" y="235" font-family="Arial, sans-serif" font-size="6" fill="#c0c0c0" text-anchor="middle" opacity="0.4">Vacant</text>
+  <rect x="264" y="202" width="65" height="45" fill="#001a0a" rx="2" stroke="#00ff88" stroke-width="0.5" opacity="0.7"/>
+  <text x="296" y="220" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.7">1204</text>
+  <text x="296" y="235" font-family="Arial, sans-serif" font-size="6" fill="#00ff88" text-anchor="middle">Occupied</text>
+  <text x="296" y="244" font-family="Arial, sans-serif" font-size="6" fill="#00d4ff" text-anchor="middle">Welcome</text>
+  <rect x="336" y="202" width="65" height="45" fill="#1a0a0a" rx="2" stroke="#f59e0b" stroke-width="0.5" opacity="0.7"/>
+  <text x="368" y="220" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.7">1205</text>
+  <text x="368" y="235" font-family="Arial, sans-serif" font-size="6" fill="#f59e0b" text-anchor="middle">DND Active</text>
+  <rect x="408" y="202" width="65" height="45" fill="#001a0a" rx="2" stroke="#00ff88" stroke-width="0.5" opacity="0.7"/>
+  <text x="440" y="220" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.7">1206</text>
+  <text x="440" y="235" font-family="Arial, sans-serif" font-size="6" fill="#00ff88" text-anchor="middle">Occupied</text>
+  <!-- Row 2 (similar but abbreviated) -->
+  <rect x="48" y="254" width="65" height="45" fill="#001015" rx="2" stroke="#1e3050" stroke-width="0.5" opacity="0.5"/>
+  <text x="80" y="272" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.5">1207</text>
+  <text x="80" y="287" font-family="Arial, sans-serif" font-size="6" fill="#c0c0c0" text-anchor="middle" opacity="0.4">Cleaning</text>
+  <rect x="120" y="254" width="65" height="45" fill="#001a0a" rx="2" stroke="#00ff88" stroke-width="0.5" opacity="0.7"/>
+  <text x="152" y="272" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.7">1208</text>
+  <text x="152" y="287" font-family="Arial, sans-serif" font-size="6" fill="#00ff88" text-anchor="middle">Occupied</text>
+  <rect x="192" y="254" width="65" height="45" fill="#001a0a" rx="2" stroke="#00ff88" stroke-width="0.5" opacity="0.7"/>
+  <text x="224" y="272" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.7">1209</text>
+  <rect x="264" y="254" width="65" height="45" fill="#001015" rx="2" stroke="#1e3050" stroke-width="0.5" opacity="0.5"/>
+  <text x="296" y="272" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.5">1210</text>
+  <text x="296" y="287" font-family="Arial, sans-serif" font-size="6" fill="#c0c0c0" text-anchor="middle" opacity="0.4">Vacant</text>
+  <rect x="336" y="254" width="65" height="45" fill="#001a0a" rx="2" stroke="#00ff88" stroke-width="0.5" opacity="0.7"/>
+  <text x="368" y="272" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.7">1211</text>
+  <rect x="408" y="254" width="65" height="45" fill="#1a0a0a" rx="2" stroke="#f59e0b" stroke-width="0.5" opacity="0.5"/>
+  <text x="440" y="272" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" text-anchor="middle" opacity="0.7">1212</text>
+  <text x="440" y="287" font-family="Arial, sans-serif" font-size="6" fill="#f59e0b" text-anchor="middle">Alert</text>
+  <!-- More rows abbreviated -->
+  <text x="268" y="335" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" text-anchor="middle" opacity="0.4">... 35 more rooms ...</text>
+  <!-- Alert log (right panel) -->
+  <rect x="508" y="175" width="255" height="330" fill="#000d14" rx="3" stroke="#1a2535" stroke-width="0.5"/>
+  <text x="635" y="195" font-family="Arial, sans-serif" font-size="10" fill="#00d4ff" text-anchor="middle" opacity="0.8">Live Alerts</text>
+  <rect x="518" y="205" width="235" height="45" fill="#1a0a0a" rx="2" stroke="#f59e0b" stroke-width="0.5" opacity="0.7"/>
+  <text x="530" y="222" font-family="Arial, sans-serif" font-size="8" fill="#f59e0b" opacity="0.9">Room 1212 - High Temp</text>
+  <text x="530" y="238" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" opacity="0.7">AC not responding - 14:28</text>
+  <rect x="518" y="256" width="235" height="45" fill="#1a0a0a" rx="2" stroke="#f59e0b" stroke-width="0.5" opacity="0.6"/>
+  <text x="530" y="273" font-family="Arial, sans-serif" font-size="8" fill="#f59e0b" opacity="0.8">Room 1205 - DND 4+ hrs</text>
+  <text x="530" y="289" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" opacity="0.7">Schedule housekeeping</text>
+  <rect x="518" y="307" width="235" height="45" fill="#0a1a0a" rx="2" stroke="#00d4ff" stroke-width="0.5" opacity="0.6"/>
+  <text x="530" y="324" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" opacity="0.8">Check-in pending: 1215</text>
+  <text x="530" y="340" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" opacity="0.7">Guest arriving 15:00</text>
+  <text x="635" y="380" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.5">+2 resolved alerts</text>
+  <!-- Legend -->
+  <rect x="38" y="515" width="724" height="30" fill="#001015" rx="2"/>
+  <circle cx="60" cy="530" r="6" fill="#00ff88" opacity="0.7"/>
+  <text x="72" y="534" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" opacity="0.7">Occupied</text>
+  <circle cx="155" cy="530" r="6" fill="#1a2840" opacity="0.7" stroke="#1e3050" stroke-width="1"/>
+  <text x="167" y="534" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" opacity="0.7">Vacant</text>
+  <circle cx="240" cy="530" r="6" fill="#f59e0b" opacity="0.7"/>
+  <text x="252" y="534" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" opacity="0.7">Alert/DND</text>
+  <circle cx="340" cy="530" r="6" fill="#00d4ff" opacity="0.5"/>
+  <text x="352" y="534" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" opacity="0.7">Scene Active</text>
+  <!-- Label -->
+  <text x="400" y="570" font-family="Arial, sans-serif" font-size="12" font-weight="300" letter-spacing="3" fill="#c0c0c0" text-anchor="middle" opacity="0.8">HOTEL BACK OFFICE MANAGEMENT</text>
+</svg>

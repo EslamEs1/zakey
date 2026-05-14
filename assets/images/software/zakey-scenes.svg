@@ -1,1 +1,108 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Smart Scenes"><rect width="800" height="600" fill="#0c1830"/><rect x="1" y="1" width="798" height="598" fill="none" stroke="rgba(34,211,238,0.15)" stroke-width="1"/><text x="400" y="310" text-anchor="middle" font-family="system-ui,sans-serif" font-size="24" font-weight="600" fill="rgba(34,211,238,0.5)">Smart Scenes</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Zakey Scene Builder">
+  <defs>
+    <linearGradient id="sb-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060b18"/>
+      <stop offset="100%" stop-color="#0a1830"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sb-bg)"/>
+  <rect x="1" y="1" width="798" height="598" fill="none" stroke="rgba(34,211,238,0.08)" stroke-width="1"/>
+
+  <!-- Header -->
+  <text x="400" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="rgba(34,211,238,0.5)" letter-spacing="3">SCENE BUILDER</text>
+  <text x="400" y="72" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="rgba(255,255,255,0.9)">Morning Scene</text>
+  <line x1="200" y1="86" x2="600" y2="86" stroke="rgba(34,211,238,0.15)" stroke-width="1"/>
+
+  <!-- Column headers -->
+  <text x="200" y="114" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="rgba(34,211,238,0.55)" letter-spacing="2">CONDITIONS</text>
+  <text x="600" y="114" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="rgba(34,211,238,0.55)" letter-spacing="2">ACTIONS</text>
+  <line x1="80" y1="120" x2="320" y2="120" stroke="rgba(34,211,238,0.1)" stroke-width="0.8"/>
+  <line x1="480" y1="120" x2="720" y2="120" stroke="rgba(34,211,238,0.1)" stroke-width="0.8"/>
+
+  <!-- Left column: Conditions -->
+  <!-- Condition 1: Sunrise -->
+  <rect x="80" y="135" width="240" height="58" rx="8" fill="#0c1e38" stroke="rgba(34,211,238,0.3)" stroke-width="1.2"/>
+  <circle cx="110" cy="164" r="12" fill="#091428" stroke="rgba(34,211,238,0.25)" stroke-width="1"/>
+  <!-- sun icon -->
+  <circle cx="110" cy="164" r="5" fill="none" stroke="#22d3ee" stroke-width="1.2"/>
+  <line x1="110" y1="156" x2="110" y2="154" stroke="#22d3ee" stroke-width="1"/>
+  <line x1="110" y1="174" x2="110" y2="172" stroke="#22d3ee" stroke-width="1"/>
+  <line x1="102" y1="164" x2="100" y2="164" stroke="#22d3ee" stroke-width="1"/>
+  <line x1="120" y1="164" x2="118" y2="164" stroke="#22d3ee" stroke-width="1"/>
+  <text x="134" y="159" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)">Sunrise</text>
+  <text x="134" y="174" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.5)">At 6:15 AM daily</text>
+  <text x="308" y="168" text-anchor="end" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.6)">IF</text>
+
+  <!-- Condition 2: Motion Detected -->
+  <rect x="80" y="207" width="240" height="58" rx="8" fill="#0c1e38" stroke="rgba(34,211,238,0.3)" stroke-width="1.2"/>
+  <circle cx="110" cy="236" r="12" fill="#091428" stroke="rgba(34,211,238,0.25)" stroke-width="1"/>
+  <!-- motion icon: person -->
+  <circle cx="110" cy="228" r="3.5" fill="none" stroke="#22d3ee" stroke-width="1.2"/>
+  <line x1="110" y1="232" x2="110" y2="242" stroke="#22d3ee" stroke-width="1.5"/>
+  <line x1="104" y1="237" x2="116" y2="237" stroke="#22d3ee" stroke-width="1.2"/>
+  <text x="134" y="231" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)">Motion Detected</text>
+  <text x="134" y="246" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.5)">Hallway sensor</text>
+  <text x="308" y="240" text-anchor="end" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.6)">OR</text>
+
+  <!-- Condition 3: Time -->
+  <rect x="80" y="279" width="240" height="58" rx="8" fill="#0c1e38" stroke="rgba(34,211,238,0.3)" stroke-width="1.2"/>
+  <circle cx="110" cy="308" r="12" fill="#091428" stroke="rgba(34,211,238,0.25)" stroke-width="1"/>
+  <!-- clock icon -->
+  <circle cx="110" cy="308" r="7" fill="none" stroke="#22d3ee" stroke-width="1.2"/>
+  <line x1="110" y1="301" x2="110" y2="308" stroke="#22d3ee" stroke-width="1.2"/>
+  <line x1="110" y1="308" x2="114" y2="311" stroke="#22d3ee" stroke-width="1.2"/>
+  <text x="134" y="303" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)">6:00 AM</text>
+  <text x="134" y="318" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.5)">Weekdays only</text>
+
+  <!-- Center arrow/connector -->
+  <line x1="330" y1="290" x2="466" y2="290" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.5"/>
+  <polygon points="462,285 474,290 462,295" fill="#22d3ee" opacity="0.5"/>
+  <circle cx="400" cy="290" r="20" fill="#091828" stroke="rgba(34,211,238,0.3)" stroke-width="1"/>
+  <text x="400" y="294" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#22d3ee">THEN</text>
+
+  <!-- Right column: Actions -->
+  <!-- Action 1: Lights -->
+  <rect x="480" y="135" width="240" height="58" rx="8" fill="#0c1e38" stroke="rgba(34,211,238,0.4)" stroke-width="1.2"/>
+  <circle cx="510" cy="164" r="12" fill="#091428" stroke="rgba(34,211,238,0.3)" stroke-width="1"/>
+  <circle cx="510" cy="162" r="5" fill="none" stroke="#22d3ee" stroke-width="1.2"/>
+  <line x1="510" y1="167" x2="510" y2="171" stroke="#22d3ee" stroke-width="1.3"/>
+  <text x="532" y="159" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)">Lights</text>
+  <text x="532" y="174" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.5)">Set to 80%</text>
+  <rect x="620" y="148" width="48" height="8" rx="4" fill="rgba(255,255,255,0.06)"/>
+  <rect x="620" y="148" width="38" height="8" rx="4" fill="#22d3ee" opacity="0.6"/>
+
+  <!-- Action 2: AC -->
+  <rect x="480" y="207" width="240" height="58" rx="8" fill="#0c1e38" stroke="rgba(34,211,238,0.4)" stroke-width="1.2"/>
+  <circle cx="510" cy="236" r="12" fill="#091428" stroke="rgba(34,211,238,0.3)" stroke-width="1"/>
+  <rect x="503" y="230" width="14" height="9" rx="2" fill="none" stroke="#22d3ee" stroke-width="1.2"/>
+  <line x1="505" y1="239" x2="504" y2="244" stroke="#22d3ee" stroke-width="1"/>
+  <line x1="510" y1="239" x2="510" y2="244" stroke="#22d3ee" stroke-width="1"/>
+  <line x1="515" y1="239" x2="516" y2="244" stroke="#22d3ee" stroke-width="1"/>
+  <text x="532" y="231" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)">AC</text>
+  <text x="532" y="246" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.5)">Set to 22°C</text>
+
+  <!-- Action 3: Blinds -->
+  <rect x="480" y="279" width="240" height="58" rx="8" fill="#0c1e38" stroke="rgba(34,211,238,0.4)" stroke-width="1.2"/>
+  <circle cx="510" cy="308" r="12" fill="#091428" stroke="rgba(34,211,238,0.3)" stroke-width="1"/>
+  <!-- blinds icon -->
+  <line x1="503" y1="302" x2="517" y2="302" stroke="#22d3ee" stroke-width="1.2"/>
+  <line x1="503" y1="306" x2="517" y2="306" stroke="#22d3ee" stroke-width="1.2"/>
+  <line x1="503" y1="310" x2="517" y2="310" stroke="#22d3ee" stroke-width="1.2"/>
+  <line x1="503" y1="314" x2="517" y2="314" stroke="#22d3ee" stroke-width="1.2"/>
+  <text x="532" y="303" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)">Blinds</text>
+  <text x="532" y="318" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.5)">Open to 50%</text>
+
+  <!-- Action 4: Welcome Scene -->
+  <rect x="480" y="351" width="240" height="58" rx="8" fill="#22d3ee" fill-opacity="0.1" stroke="#22d3ee" stroke-width="1.4"/>
+  <circle cx="510" cy="380" r="12" fill="#091428" stroke="#22d3ee" stroke-width="1"/>
+  <polyline points="503,385 510,377 517,385" fill="none" stroke="#22d3ee" stroke-width="1.3"/>
+  <rect x="506" y="385" width="8" height="7" rx="1" fill="none" stroke="#22d3ee" stroke-width="1"/>
+  <text x="532" y="375" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.9)">Welcome Scene</text>
+  <text x="532" y="390" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.6)">Activate full sequence</text>
+
+  <!-- Save button -->
+  <rect x="300" y="472" width="200" height="44" rx="10" fill="#22d3ee" fill-opacity="0.15" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="400" y="499" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#22d3ee">Save Scene</text>
+
+  <text x="400" y="560" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.3)" letter-spacing="2">ZAKEY · SMART AUTOMATION PLATFORM</text>
+</svg>

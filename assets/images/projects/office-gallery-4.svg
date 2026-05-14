@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="dashBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#050a12;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#03060e;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#001520;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#000d14;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="barGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <radialGradient id="screenGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#dashBg)"/>
+  <!-- Dark room background with screen as main light source -->
+  <rect x="0" y="0" width="800" height="600" fill="#030810"/>
+  <!-- Screen glow effect on room -->
+  <ellipse cx="400" cy="300" rx="450" ry="350" fill="url(#screenGlow)" opacity="0.8"/>
+  <!-- Screen frame -->
+  <rect x="40" y="40" width="720" height="490" fill="#040810" rx="4" stroke="#00d4ff" stroke-width="2" opacity="0.8"/>
+  <rect x="52" y="52" width="696" height="466" fill="url(#screenGrad)" rx="2"/>
+  <!-- FULL ENERGY DASHBOARD DISPLAY -->
+  <!-- Dashboard header bar -->
+  <rect x="52" y="52" width="696" height="45" fill="#00d4ff" opacity="0.1" rx="2 2 0 0"/>
+  <circle cx="75" cy="74" r="8" fill="#00ff88" opacity="0.8"/>
+  <text x="400" y="82" font-family="Arial, sans-serif" font-size="15" fill="#00d4ff" text-anchor="middle" letter-spacing="3" opacity="0.95">ENERGY MANAGEMENT DASHBOARD</text>
+  <text x="700" y="82" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" opacity="0.6">LIVE ●</text>
+  <!-- KPI cards row -->
+  <rect x="60" y="105" width="150" height="70" fill="#001a22" rx="3" stroke="#00d4ff" stroke-width="0.5" opacity="0.6"/>
+  <text x="135" y="128" font-family="Arial, sans-serif" font-size="9" fill="#00d4ff" text-anchor="middle" opacity="0.8">TODAY'S kWh</text>
+  <text x="135" y="158" font-family="Arial, sans-serif" font-size="24" fill="#00d4ff" text-anchor="middle" font-weight="bold">284</text>
+  <rect x="222" y="105" width="150" height="70" fill="#001a22" rx="3" stroke="#00d4ff" stroke-width="0.5" opacity="0.6"/>
+  <text x="297" y="128" font-family="Arial, sans-serif" font-size="9" fill="#00d4ff" text-anchor="middle" opacity="0.8">EFFICIENCY</text>
+  <text x="297" y="158" font-family="Arial, sans-serif" font-size="24" fill="#00ff88" text-anchor="middle" font-weight="bold">89%</text>
+  <rect x="384" y="105" width="150" height="70" fill="#001a22" rx="3" stroke="#00d4ff" stroke-width="0.5" opacity="0.6"/>
+  <text x="459" y="128" font-family="Arial, sans-serif" font-size="9" fill="#00d4ff" text-anchor="middle" opacity="0.8">MONTHLY SAVE</text>
+  <text x="459" y="158" font-family="Arial, sans-serif" font-size="24" fill="#f59e0b" text-anchor="middle" font-weight="bold">18%</text>
+  <rect x="546" y="105" width="150" height="70" fill="#001a22" rx="3" stroke="#00d4ff" stroke-width="0.5" opacity="0.6"/>
+  <text x="621" y="128" font-family="Arial, sans-serif" font-size="9" fill="#00d4ff" text-anchor="middle" opacity="0.8">CARBON SAVED</text>
+  <text x="621" y="158" font-family="Arial, sans-serif" font-size="24" fill="#00ff88" text-anchor="middle" font-weight="bold">142kg</text>
+  <!-- Main chart area (large bar chart) -->
+  <rect x="60" y="185" width="440" height="210" fill="#001015" rx="2" stroke="#1a2535" stroke-width="0.5"/>
+  <text x="280" y="205" font-family="Arial, sans-serif" font-size="10" fill="#00d4ff" text-anchor="middle" opacity="0.8">Hourly Consumption (kWh)</text>
+  <!-- Bar chart bars -->
+  <rect x="72" y="335" width="16" height="50" fill="#00d4ff" opacity="0.4" rx="1"/>
+  <rect x="94" y="310" width="16" height="75" fill="#00d4ff" opacity="0.6" rx="1"/>
+  <rect x="116" y="295" width="16" height="90" fill="#00d4ff" opacity="0.75" rx="1"/>
+  <rect x="138" y="280" width="16" height="105" fill="#00d4ff" opacity="0.9" rx="1" filter="url(#barGlow)"/>
+  <rect x="160" y="290" width="16" height="95" fill="#00d4ff" opacity="0.8" rx="1"/>
+  <rect x="182" y="300" width="16" height="85" fill="#00d4ff" opacity="0.7" rx="1"/>
+  <rect x="204" y="265" width="16" height="120" fill="#00d4ff" opacity="1" rx="1" filter="url(#barGlow)"/>
+  <rect x="226" y="285" width="16" height="100" fill="#00d4ff" opacity="0.85" rx="1"/>
+  <rect x="248" y="310" width="16" height="75" fill="#00d4ff" opacity="0.65" rx="1"/>
+  <rect x="270" y="340" width="16" height="45" fill="#00d4ff" opacity="0.45" rx="1"/>
+  <rect x="292" y="320" width="16" height="65" fill="#00d4ff" opacity="0.6" rx="1"/>
+  <rect x="314" y="295" width="16" height="90" fill="#00d4ff" opacity="0.8" rx="1"/>
+  <rect x="336" y="280" width="16" height="105" fill="#00d4ff" opacity="0.9" rx="1"/>
+  <rect x="358" y="300" width="16" height="85" fill="#00d4ff" opacity="0.7" rx="1"/>
+  <rect x="380" y="325" width="16" height="60" fill="#00d4ff" opacity="0.55" rx="1"/>
+  <rect x="402" y="310" width="16" height="75" fill="#00d4ff" opacity="0.65" rx="1"/>
+  <rect x="424" y="285" width="16" height="100" fill="#00d4ff" opacity="0.85" rx="1"/>
+  <!-- Target line -->
+  <line x1="65" y1="310" x2="495" y2="310" stroke="#f59e0b" stroke-width="1" stroke-dasharray="6,3" opacity="0.6"/>
+  <text x="502" y="313" font-family="Arial, sans-serif" font-size="7" fill="#f59e0b" opacity="0.7">Target</text>
+  <!-- Chart baseline -->
+  <line x1="65" y1="385" x2="495" y2="385" stroke="#1a2535" stroke-width="1" opacity="0.6"/>
+  <!-- Time labels -->
+  <text x="80" y="398" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" opacity="0.5">6am</text>
+  <text x="204" y="398" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" opacity="0.5">10am</text>
+  <text x="314" y="398" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" opacity="0.5">2pm</text>
+  <text x="440" y="398" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" opacity="0.5">6pm</text>
+  <!-- Donut / gauge charts (right side) -->
+  <rect x="510" y="185" width="230" height="210" fill="#001015" rx="2" stroke="#1a2535" stroke-width="0.5"/>
+  <text x="625" y="205" font-family="Arial, sans-serif" font-size="10" fill="#00d4ff" text-anchor="middle" opacity="0.8">Zone Breakdown</text>
+  <!-- Zone list -->
+  <rect x="525" y="218" width="10" height="10" fill="#00d4ff" rx="1"/>
+  <text x="542" y="228" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" opacity="0.8">Floor 1 Open Plan</text>
+  <text x="728" y="228" font-family="Arial, sans-serif" font-size="9" fill="#00d4ff" opacity="0.9" text-anchor="end">38%</text>
+  <rect x="525" y="240" width="10" height="10" fill="#00ff88" rx="1"/>
+  <text x="542" y="250" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" opacity="0.8">Floor 2 Offices</text>
+  <text x="728" y="250" font-family="Arial, sans-serif" font-size="9" fill="#00ff88" opacity="0.9" text-anchor="end">26%</text>
+  <rect x="525" y="262" width="10" height="10" fill="#f59e0b" rx="1"/>
+  <text x="542" y="272" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" opacity="0.8">Meeting Rooms</text>
+  <text x="728" y="272" font-family="Arial, sans-serif" font-size="9" fill="#f59e0b" opacity="0.9" text-anchor="end">18%</text>
+  <rect x="525" y="284" width="10" height="10" fill="#8b5cf6" rx="1"/>
+  <text x="542" y="294" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" opacity="0.8">Reception/Common</text>
+  <text x="728" y="294" font-family="Arial, sans-serif" font-size="9" fill="#8b5cf6" opacity="0.9" text-anchor="end">12%</text>
+  <rect x="525" y="306" width="10" height="10" fill="#c0c0c0" rx="1" opacity="0.5"/>
+  <text x="542" y="316" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" opacity="0.6">Server / Misc</text>
+  <text x="728" y="316" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" opacity="0.6" text-anchor="end">6%</text>
+  <!-- Gauge circle -->
+  <circle cx="625" cy="360" r="30" fill="none" stroke="#1a2535" stroke-width="8"/>
+  <circle cx="625" cy="360" r="30" fill="none" stroke="#00d4ff" stroke-width="8" stroke-dasharray="168,26" stroke-dashoffset="0" opacity="0.8"/>
+  <text x="625" y="365" font-family="Arial, sans-serif" font-size="10" fill="#00d4ff" text-anchor="middle" font-weight="bold">89%</text>
+  <!-- Bottom rows / alerts table -->
+  <rect x="60" y="405" width="680" height="100" fill="#001015" rx="2" stroke="#1a2535" stroke-width="0.5"/>
+  <rect x="60" y="405" width="680" height="22" fill="#00d4ff" opacity="0.08" rx="2 2 0 0"/>
+  <text x="400" y="421" font-family="Arial, sans-serif" font-size="9" fill="#00d4ff" text-anchor="middle" opacity="0.8">RECENT AUTOMATIONS</text>
+  <text x="75" y="443" font-family="Arial, sans-serif" font-size="8" fill="#00ff88" opacity="0.8">✓ 14:20 - Zone B lights dimmed (vacancy detected)</text>
+  <text x="420" y="443" font-family="Arial, sans-serif" font-size="8" fill="#00ff88" opacity="0.8">✓ 14:15 - HVAC optimized for 78% occupancy</text>
+  <text x="75" y="460" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" opacity="0.6">○ 14:10 - Meeting Room 3: Presentation scene activated</text>
+  <text x="420" y="460" font-family="Arial, sans-serif" font-size="8" fill="#f59e0b" opacity="0.7">! 13:55 - Peak demand threshold at 85%</text>
+  <text x="75" y="477" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" opacity="0.6">○ 13:40 - Lobby lights: Motion-activated</text>
+  <text x="420" y="477" font-family="Arial, sans-serif" font-size="8" fill="#00ff88" opacity="0.8">✓ 13:30 - Scheduled dim cycle complete</text>
+  <text x="75" y="494" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" opacity="0.5">○ 13:00 - Lunch mode: Common areas brightened</text>
+  <!-- Screen stand -->
+  <rect x="360" y="530" width="80" height="10" fill="#1a2535" rx="2"/>
+  <rect x="380" y="540" width="40" height="30" fill="#1a2535" rx="1"/>
+  <rect x="340" y="565" width="120" height="8" fill="#1a2535" rx="2"/>
+  <!-- Label -->
+  <text x="400" y="590" font-family="Arial, sans-serif" font-size="12" font-weight="300" letter-spacing="3" fill="#c0c0c0" text-anchor="middle" opacity="0.8">ENERGY DASHBOARD DISPLAY</text>
+</svg>

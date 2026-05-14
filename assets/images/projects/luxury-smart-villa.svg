@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0a2e;stop-opacity:1"/>
+      <stop offset="40%" style="stop-color:#0d0a1e;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#05070d;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="groundGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1520;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#05070d;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="villaWall" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#142030;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0a1520;stop-opacity:1"/>
+    </linearGradient>
+    <radialGradient id="ambWarm" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.35"/>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="cyanAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="warmGlow">
+      <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="1600" height="900" fill="url(#skyGrad)"/>
+
+  <!-- Stars -->
+  <circle cx="100" cy="60" r="1.5" fill="#ffffff" opacity="0.8"/>
+  <circle cx="280" cy="30" r="1" fill="#ffffff" opacity="0.6"/>
+  <circle cx="450" cy="80" r="1.5" fill="#ffffff" opacity="0.7"/>
+  <circle cx="620" cy="45" r="1" fill="#ffffff" opacity="0.5"/>
+  <circle cx="800" cy="25" r="2" fill="#ffffff" opacity="0.9"/>
+  <circle cx="980" cy="70" r="1" fill="#ffffff" opacity="0.6"/>
+  <circle cx="1150" cy="40" r="1.5" fill="#ffffff" opacity="0.8"/>
+  <circle cx="1320" cy="90" r="1" fill="#ffffff" opacity="0.5"/>
+  <circle cx="1480" cy="55" r="1.5" fill="#ffffff" opacity="0.7"/>
+  <circle cx="180" cy="150" r="1" fill="#ffffff" opacity="0.4"/>
+  <circle cx="380" cy="130" r="1.5" fill="#00d4ff" opacity="0.5"/>
+  <circle cx="560" cy="170" r="1" fill="#ffffff" opacity="0.6"/>
+  <circle cx="750" cy="120" r="1" fill="#ffffff" opacity="0.4"/>
+  <circle cx="1050" cy="160" r="1.5" fill="#ffffff" opacity="0.5"/>
+  <circle cx="1250" cy="110" r="1" fill="#00d4ff" opacity="0.4"/>
+  <circle cx="1420" cy="145" r="1.5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="70" cy="220" r="1" fill="#ffffff" opacity="0.3"/>
+  <circle cx="1530" cy="200" r="1" fill="#ffffff" opacity="0.4"/>
+  <circle cx="900" cy="180" r="1" fill="#ffffff" opacity="0.5"/>
+
+  <!-- Moon -->
+  <circle cx="1420" cy="100" r="45" fill="#1a1a35" opacity="0.9"/>
+  <circle cx="1430" cy="90" r="40" fill="#c8c0d8" opacity="0.15"/>
+
+  <!-- Dot grid subtle -->
+  <pattern id="dots" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+    <circle cx="30" cy="30" r="0.8" fill="#ffffff" opacity="0.04"/>
+  </pattern>
+  <rect width="1600" height="900" fill="url(#dots)"/>
+
+  <!-- Ground -->
+  <rect x="0" y="680" width="1600" height="220" fill="url(#groundGrad)"/>
+
+  <!-- Garden path -->
+  <ellipse cx="800" cy="820" rx="120" ry="25" fill="#0a1828" opacity="0.8"/>
+  <rect x="760" y="720" width="80" height="100" fill="#0c1e30" rx="2"/>
+  <!-- Path lights -->
+  <circle cx="750" cy="730" r="4" fill="#f59e0b" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="850" cy="730" r="4" fill="#f59e0b" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="740" cy="780" r="3" fill="#f59e0b" opacity="0.6"/>
+  <circle cx="860" cy="780" r="3" fill="#f59e0b" opacity="0.6"/>
+
+  <!-- Left palm tree -->
+  <rect x="190" y="550" width="12" height="180" fill="#0a1828" rx="3"/>
+  <!-- Palm fronds -->
+  <ellipse cx="196" cy="550" rx="60" ry="18" fill="#0d2010" transform="rotate(-30,196,550)"/>
+  <ellipse cx="196" cy="550" rx="60" ry="18" fill="#0d2010" transform="rotate(20,196,550)"/>
+  <ellipse cx="196" cy="550" rx="60" ry="18" fill="#0d2010" transform="rotate(-5,196,550)"/>
+  <ellipse cx="196" cy="550" rx="50" ry="15" fill="#112515" transform="rotate(50,196,550)"/>
+  <ellipse cx="196" cy="550" rx="50" ry="15" fill="#112515" transform="rotate(-55,196,550)"/>
+
+  <!-- Right palm tree -->
+  <rect x="1400" y="560" width="12" height="170" fill="#0a1828" rx="3"/>
+  <ellipse cx="1406" cy="560" rx="60" ry="18" fill="#0d2010" transform="rotate(30,1406,560)"/>
+  <ellipse cx="1406" cy="560" rx="60" ry="18" fill="#0d2010" transform="rotate(-20,1406,560)"/>
+  <ellipse cx="1406" cy="560" rx="60" ry="18" fill="#0d2010" transform="rotate(5,1406,560)"/>
+  <ellipse cx="1406" cy="560" rx="50" ry="15" fill="#112515" transform="rotate(-50,1406,560)"/>
+  <ellipse cx="1406" cy="560" rx="50" ry="15" fill="#112515" transform="rotate(55,1406,560)"/>
+
+  <!-- Villa main structure -->
+  <!-- Left wing -->
+  <rect x="280" y="540" width="260" height="160" fill="url(#villaWall)" stroke="#1e3a50" stroke-width="1"/>
+  <!-- Main body -->
+  <rect x="450" y="420" width="700" height="280" fill="url(#villaWall)" stroke="#1e3a50" stroke-width="1.5"/>
+  <!-- Right wing -->
+  <rect x="1060" y="540" width="260" height="160" fill="url(#villaWall)" stroke="#1e3a50" stroke-width="1"/>
+
+  <!-- Flat roof lines -->
+  <rect x="450" y="415" width="700" height="12" fill="#1e3a50"/>
+  <rect x="280" y="535" width="260" height="10" fill="#162840"/>
+  <rect x="1060" y="535" width="260" height="10" fill="#162840"/>
+
+  <!-- Roof parapet details -->
+  <rect x="460" y="400" width="680" height="20" fill="#0f2030" stroke="#1e3a50" stroke-width="1"/>
+
+  <!-- Large living room window with warm glow -->
+  <rect x="500" y="460" width="200" height="180" fill="#f59e0b" opacity="0.12" rx="3"/>
+  <rect x="500" y="460" width="200" height="180" fill="none" stroke="#f59e0b" stroke-width="2" rx="3" opacity="0.5"/>
+  <!-- Window warm aura -->
+  <ellipse cx="600" cy="550" rx="130" ry="100" fill="url(#ambWarm)" opacity="0.6"/>
+  <!-- Window frame detail -->
+  <line x1="600" y1="460" x2="600" y2="640" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
+  <line x1="500" y1="550" x2="700" y2="550" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
+
+  <!-- Smart control panel window -->
+  <rect x="740" y="460" width="120" height="180" fill="#00d4ff" opacity="0.08" rx="3"/>
+  <rect x="740" y="460" width="120" height="180" fill="none" stroke="#00d4ff" stroke-width="2.5" rx="3" opacity="0.9" filter="url(#glow)"/>
+  <!-- Panel interior -->
+  <rect x="755" y="480" width="90" height="60" fill="#00d4ff" opacity="0.15" rx="2"/>
+  <line x1="755" y1="555" x2="845" y2="555" stroke="#00d4ff" stroke-width="1.5" opacity="0.6"/>
+  <line x1="755" y1="568" x2="835" y2="568" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
+  <line x1="755" y1="580" x2="820" y2="580" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+  <!-- Cyan window aura -->
+  <ellipse cx="800" cy="550" rx="90" ry="110" fill="url(#cyanAura)" opacity="0.5"/>
+
+  <!-- Right large window with warm glow -->
+  <rect x="900" y="460" width="200" height="180" fill="#f59e0b" opacity="0.15" rx="3"/>
+  <rect x="900" y="460" width="200" height="180" fill="none" stroke="#f59e0b" stroke-width="2" rx="3" opacity="0.5"/>
+  <ellipse cx="1000" cy="550" rx="130" ry="100" fill="url(#ambWarm)" opacity="0.5"/>
+  <line x1="1000" y1="460" x2="1000" y2="640" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
+  <line x1="900" y1="550" x2="1100" y2="550" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
+
+  <!-- Left wing window -->
+  <rect x="310" y="570" width="100" height="100" fill="#f59e0b" opacity="0.1" rx="2"/>
+  <rect x="310" y="570" width="100" height="100" fill="none" stroke="#f59e0b" stroke-width="1.5" rx="2" opacity="0.4"/>
+  <rect x="420" y="570" width="80" height="100" fill="#f59e0b" opacity="0.08" rx="2"/>
+  <rect x="420" y="570" width="80" height="100" fill="none" stroke="#f59e0b" stroke-width="1" rx="2" opacity="0.3"/>
+
+  <!-- Right wing windows -->
+  <rect x="1090" y="570" width="80" height="100" fill="#f59e0b" opacity="0.08" rx="2"/>
+  <rect x="1090" y="570" width="80" height="100" fill="none" stroke="#f59e0b" stroke-width="1" rx="2" opacity="0.3"/>
+  <rect x="1190" y="570" width="100" height="100" fill="#f59e0b" opacity="0.12" rx="2"/>
+  <rect x="1190" y="570" width="100" height="100" fill="none" stroke="#f59e0b" stroke-width="1.5" rx="2" opacity="0.4"/>
+
+  <!-- Main door -->
+  <rect x="750" y="590" width="100" height="110" fill="#05070d" stroke="#1e3a50" stroke-width="2" rx="3"/>
+  <rect x="762" y="600" width="35" height="90" fill="#0a1828" rx="1"/>
+  <rect x="803" y="600" width="35" height="90" fill="#0a1828" rx="1"/>
+  <circle cx="800" cy="650" r="4" fill="#00d4ff" opacity="0.7" filter="url(#glow)"/>
+
+  <!-- Perimeter cyan lighting strips -->
+  <line x1="280" y1="700" x2="1320" y2="700" stroke="#00d4ff" stroke-width="2" opacity="0.5" filter="url(#glow)"/>
+  <line x1="450" y1="700" x2="450" y2="415" stroke="#00d4ff" stroke-width="1" opacity="0.2"/>
+  <line x1="1150" y1="700" x2="1150" y2="415" stroke="#00d4ff" stroke-width="1" opacity="0.2"/>
+  <!-- Corner accent dots -->
+  <circle cx="280" cy="700" r="4" fill="#00d4ff" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="1320" cy="700" r="4" fill="#00d4ff" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="450" cy="415" r="3" fill="#00d4ff" opacity="0.6"/>
+  <circle cx="1150" cy="415" r="3" fill="#00d4ff" opacity="0.6"/>
+
+  <!-- Landscaping -->
+  <!-- Left bushes -->
+  <ellipse cx="350" cy="705" rx="50" ry="20" fill="#0d2015" opacity="0.9"/>
+  <ellipse cx="420" cy="708" rx="40" ry="18" fill="#0f2518" opacity="0.9"/>
+  <!-- Right bushes -->
+  <ellipse cx="1180" cy="705" rx="40" ry="18" fill="#0f2518" opacity="0.9"/>
+  <ellipse cx="1250" cy="708" rx="50" ry="20" fill="#0d2015" opacity="0.9"/>
+
+  <!-- Label -->
+  <text x="800" y="860" font-family="Arial, sans-serif" font-size="22" font-weight="300" letter-spacing="4" fill="#c0c0c0" text-anchor="middle" opacity="0.85">LUXURY SMART VILLA</text>
+  <text x="800" y="885" font-family="Arial, sans-serif" font-size="12" letter-spacing="2" fill="#00d4ff" text-anchor="middle" opacity="0.6">FULL HOME AUTOMATION · SMART LIGHTING · SCENE CONTROL</text>
+</svg>

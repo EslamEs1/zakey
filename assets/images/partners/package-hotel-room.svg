@@ -1,1 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Hotel Room"><rect width="800" height="600" fill="#0c1a28"/><rect x="1" y="1" width="798" height="598" fill="none" stroke="rgba(34,211,238,0.15)" stroke-width="1"/><text x="400" y="310" text-anchor="middle" font-family="system-ui,sans-serif" font-size="24" font-weight="600" fill="rgba(34,211,238,0.5)">Hotel Room</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Zakey Hotel Room Package">
+  <defs>
+    <linearGradient id="hr-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060c18"/>
+      <stop offset="100%" stop-color="#0c1a28"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#hr-bg)"/>
+  <rect x="1" y="1" width="798" height="498" fill="none" stroke="rgba(34,211,238,0.08)" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="40" y="36" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="rgba(255,255,255,0.9)">Hotel Room Package</text>
+  <text x="40" y="54" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.5)" letter-spacing="2">ROOM LAYOUT SCHEMATIC</text>
+
+  <!-- Room outer boundary -->
+  <rect x="60" y="75" width="680" height="360" rx="4" fill="#071220" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+
+  <!-- Room label: Deluxe Suite -->
+  <text x="400" y="98" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">Deluxe Room 412 · Floor 4</text>
+
+  <!-- BED area (center-left) -->
+  <!-- Bed base -->
+  <rect x="100" y="160" width="240" height="160" rx="6" fill="#0a1828" stroke="rgba(255,255,255,0.1)" stroke-width="1.2"/>
+  <!-- Headboard -->
+  <rect x="100" y="160" width="240" height="22" rx="6" fill="#0c1e38" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <!-- Pillows -->
+  <rect x="112" y="166" width="80" height="14" rx="4" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <rect x="248" y="166" width="80" height="14" rx="4" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <!-- Blanket line -->
+  <line x1="100" y1="290" x2="340" y2="290" stroke="rgba(255,255,255,0.06)" stroke-width="0.8"/>
+  <!-- Bed status indicator -->
+  <circle cx="340" cy="168" r="4" fill="#22d3ee" opacity="0.6"/>
+  <text x="348" y="172" font-family="system-ui, sans-serif" font-size="7" fill="rgba(34,211,238,0.5)">Sensors</text>
+  <text x="218" y="150" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="rgba(255,255,255,0.3)">King Bed</text>
+
+  <!-- TV / Media wall -->
+  <rect x="100" y="108" width="150" height="38" rx="3" fill="#091628" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="175" y="122" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="rgba(34,211,238,0.6)">Smart TV</text>
+  <text x="175" y="134" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="rgba(255,255,255,0.3)">55" · AirPlay</text>
+  <!-- TV stand -->
+  <rect x="154" y="146" width="42" height="14" rx="2" fill="#071020" stroke="rgba(255,255,255,0.07)" stroke-width="0.8"/>
+
+  <!-- SITTING AREA (right side) -->
+  <!-- Armchair -->
+  <rect x="420" y="120" width="70" height="60" rx="6" fill="#0a1828" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <rect x="420" y="120" width="70" height="16" rx="6" fill="#0c1e38"/>
+  <rect x="420" y="136" width="12" height="44" rx="3" fill="#0c1e38"/>
+  <rect x="478" y="136" width="12" height="44" rx="3" fill="#0c1e38"/>
+  <text x="455" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="rgba(255,255,255,0.25)">Armchair</text>
+
+  <!-- Coffee table -->
+  <rect x="510" y="140" width="50" height="36" rx="3" fill="#091628" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+  <text x="535" y="162" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="rgba(255,255,255,0.2)">Table</text>
+
+  <!-- AC unit on wall -->
+  <rect x="560" y="108" width="130" height="30" rx="3" fill="#091628" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="625" y="120" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="rgba(34,211,238,0.6)">AC Unit</text>
+  <text x="625" y="131" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="rgba(255,255,255,0.3)">22°C · Cooling</text>
+  <!-- AC vents -->
+  <line x1="568" y1="125" x2="686" y2="125" stroke="#22d3ee" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- BATHROOM / closet area (bottom) -->
+  <rect x="400" y="270" width="320" height="140" rx="3" fill="#060e1a" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="560" y="292" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="rgba(255,255,255,0.25)">Bathroom</text>
+  <!-- Bathtub outline -->
+  <rect x="420" y="300" width="90" height="40" rx="8" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <!-- Mirror -->
+  <rect x="540" y="296" width="50" height="36" rx="2" fill="rgba(34,211,238,0.04)" stroke="rgba(34,211,238,0.2)" stroke-width="1"/>
+  <!-- Humidity sensor -->
+  <circle cx="680" cy="285" r="4" fill="#22d3ee" opacity="0.4"/>
+  <text x="688" y="289" font-family="system-ui, sans-serif" font-size="6.5" fill="rgba(34,211,238,0.4)">Sensor</text>
+
+  <!-- Door -->
+  <rect x="360" y="380" width="38" height="55" rx="2" fill="#060e1a" stroke="#22d3ee" stroke-width="1.2" stroke-opacity="0.6"/>
+  <!-- Door swing arc -->
+  <path d="M360,435 Q338,412 360,390" fill="none" stroke="rgba(34,211,238,0.2)" stroke-width="0.8"/>
+  <text x="379" y="370" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="rgba(34,211,238,0.5)">Entry</text>
+  <!-- Door lock sensor -->
+  <circle cx="394" cy="410" r="3" fill="#22d3ee" opacity="0.7"/>
+
+  <!-- Status indicators on walls -->
+  <!-- Ceiling lights -->
+  <circle cx="170" cy="110" r="5" fill="#22d3ee" opacity="0.5"/>
+  <circle cx="300" cy="110" r="5" fill="#22d3ee" opacity="0.6"/>
+  <circle cx="500" cy="220" r="5" fill="#22d3ee" opacity="0.4"/>
+  <circle cx="620" cy="220" r="5" fill="#22d3ee" opacity="0.5"/>
+
+  <!-- Smart panel (control panel on wall near door) -->
+  <rect x="680" y="310" width="36" height="80" rx="4" fill="#091828" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.7"/>
+  <text x="698" y="328" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6" fill="#22d3ee">Z</text>
+  <rect x="686" y="333" width="24" height="5" rx="1" fill="#22d3ee" opacity="0.4"/>
+  <rect x="686" y="342" width="24" height="5" rx="1" fill="rgba(255,255,255,0.15)"/>
+  <rect x="686" y="351" width="24" height="5" rx="1" fill="rgba(255,255,255,0.15)"/>
+  <text x="698" y="375" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6" fill="rgba(34,211,238,0.5)">Panel</text>
+
+  <!-- Status strip at bottom -->
+  <rect x="60" y="443" width="680" height="28" rx="4" fill="#060e1c" stroke="rgba(34,211,238,0.08)" stroke-width="0.8"/>
+  <circle cx="82" cy="457" r="4" fill="#22d3ee" opacity="0.7"/>
+  <text x="94" y="461" font-family="system-ui, sans-serif" font-size="8" fill="rgba(255,255,255,0.45)">All smart systems active</text>
+  <text x="720" y="461" text-anchor="end" font-family="system-ui, sans-serif" font-size="8" fill="rgba(34,211,238,0.5)">Zakey Hotel · Connected</text>
+
+  <text x="400" y="490" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="rgba(34,211,238,0.25)" letter-spacing="2">ZAKEY HOTEL ROOM AUTOMATION PACKAGE</text>
+</svg>

@@ -78,4 +78,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.body.dataset.page === 'technology' && document.querySelector('.pillar-nav')) {
     import('./scroll-spy.js').then(m => m.initScrollSpy());
   }
+  if (document.body.dataset.page === 'projects') {
+    import('./projects.js').then(m => m.initProjectsFilter());
+  }
+  if (document.body.dataset.page === 'blog') {
+    import('./blog.js').then(m => m.initBlogFilter());
+  }
+  if (document.body.dataset.page === 'contact') {
+    import('./contact.js').then(m => m.initContactForm());
+  }
 });

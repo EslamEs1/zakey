@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="recBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1020;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#05070d;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <radialGradient id="displayAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#recBg)"/>
+  <!-- Back wall -->
+  <rect x="0" y="0" width="800" height="440" fill="#0c1525"/>
+  <!-- Floor -->
+  <rect x="0" y="440" width="800" height="160" fill="#07090f"/>
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="800" height="50" fill="#080c18"/>
+  <!-- Ceiling lighting panels -->
+  <rect x="150" y="10" width="180" height="30" fill="#00d4ff" opacity="0.15" rx="2" filter="url(#glow)"/>
+  <rect x="400" y="10" width="180" height="30" fill="#00d4ff" opacity="0.12" rx="2"/>
+  <rect x="600" y="10" width="150" height="30" fill="#00d4ff" opacity="0.1" rx="2"/>
+  <!-- Floor lines (polished concrete) -->
+  <line x1="0" y1="480" x2="800" y2="480" stroke="#1a2535" stroke-width="1" opacity="0.3"/>
+  <line x1="0" y1="530" x2="800" y2="530" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+  <!-- LARGE SMART DISPLAY WALL (main feature) -->
+  <rect x="100" y="80" width="500" height="320" fill="#001015" rx="4" stroke="#00d4ff" stroke-width="2" opacity="0.8"/>
+  <ellipse cx="350" cy="240" rx="280" ry="200" fill="url(#displayAura)" opacity="0.4"/>
+  <!-- Display header -->
+  <rect x="108" y="88" width="484" height="40" fill="#00d4ff" opacity="0.1" rx="2"/>
+  <text x="350" y="114" font-family="Arial, sans-serif" font-size="14" fill="#00d4ff" text-anchor="middle" letter-spacing="3" opacity="0.9">BUILDING INTELLIGENCE CENTER</text>
+  <!-- Display stats row -->
+  <rect x="115" y="138" width="100" height="55" fill="#001f2a" rx="2" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+  <text x="165" y="157" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.8">VISITORS</text>
+  <text x="165" y="182" font-family="Arial, sans-serif" font-size="18" fill="#00d4ff" text-anchor="middle" font-weight="bold">247</text>
+  <rect x="225" y="138" width="100" height="55" fill="#001f2a" rx="2" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+  <text x="275" y="157" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.8">OCCUPANCY</text>
+  <text x="275" y="182" font-family="Arial, sans-serif" font-size="18" fill="#00ff88" text-anchor="middle" font-weight="bold">78%</text>
+  <rect x="335" y="138" width="100" height="55" fill="#001f2a" rx="2" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+  <text x="385" y="157" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.8">ENERGY</text>
+  <text x="385" y="182" font-family="Arial, sans-serif" font-size="18" fill="#f59e0b" text-anchor="middle" font-weight="bold">42kW</text>
+  <rect x="445" y="138" width="100" height="55" fill="#001f2a" rx="2" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+  <text x="495" y="157" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.8">ZONES</text>
+  <text x="495" y="182" font-family="Arial, sans-serif" font-size="18" fill="#c0c0c0" text-anchor="middle" font-weight="bold">12</text>
+  <!-- Floor plan minimap -->
+  <rect x="115" y="208" width="180" height="140" fill="#001520" rx="2" stroke="#1e3050" stroke-width="0.5"/>
+  <text x="205" y="224" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.7">FLOOR PLAN</text>
+  <!-- Zones on floorplan -->
+  <rect x="125" y="232" width="55" height="40" fill="#00d4ff" opacity="0.15" stroke="#00d4ff" stroke-width="0.5" rx="1"/>
+  <rect x="185" y="232" width="55" height="40" fill="#00ff88" opacity="0.12" stroke="#00ff88" stroke-width="0.5" rx="1"/>
+  <rect x="245" y="232" width="45" height="40" fill="#f59e0b" opacity="0.12" stroke="#f59e0b" stroke-width="0.5" rx="1"/>
+  <rect x="125" y="278" width="80" height="35" fill="#00d4ff" opacity="0.1" stroke="#00d4ff" stroke-width="0.5" rx="1"/>
+  <rect x="210" y="278" width="80" height="35" fill="#00ff88" opacity="0.08" stroke="#00d4ff" stroke-width="0.5" rx="1"/>
+  <!-- Alert log right side of display -->
+  <rect x="305" y="208" width="275" height="140" fill="#001520" rx="2" stroke="#1e3050" stroke-width="0.5"/>
+  <text x="442" y="224" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.7">SYSTEM LOG</text>
+  <text x="315" y="244" font-family="Arial, sans-serif" font-size="7" fill="#00ff88" opacity="0.8">✓ Zone A: Lighting auto-adjusted</text>
+  <text x="315" y="259" font-family="Arial, sans-serif" font-size="7" fill="#00ff88" opacity="0.8">✓ Meeting room: Scene set</text>
+  <text x="315" y="274" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" opacity="0.6">○ Zone C: Occupancy check</text>
+  <text x="315" y="289" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" opacity="0.6">○ HVAC: Cooling mode</text>
+  <text x="315" y="304" font-family="Arial, sans-serif" font-size="7" fill="#f59e0b" opacity="0.7">! Energy peak - 14:20</text>
+  <text x="315" y="319" font-family="Arial, sans-serif" font-size="7" fill="#c0c0c0" opacity="0.5">○ Lobby: motion detected</text>
+  <text x="315" y="334" font-family="Arial, sans-serif" font-size="7" fill="#00ff88" opacity="0.8">✓ All systems nominal</text>
+  <!-- Display footer -->
+  <rect x="108" y="358" width="484" height="36" fill="#00d4ff" opacity="0.06" rx="0 0 2 2"/>
+  <text x="350" y="380" font-family="Arial, sans-serif" font-size="9" fill="#00d4ff" text-anchor="middle" opacity="0.7">● LIVE · Zakey BMS v4.2 · Last sync: 14:32:07</text>
+  <!-- Reception desk -->
+  <rect x="200" y="370" width="350" height="80" fill="#0d1828" stroke="#1e3050" stroke-width="1" rx="2"/>
+  <rect x="198" y="362" width="354" height="14" fill="#1e3050" rx="2"/>
+  <!-- Desk computer -->
+  <rect x="340" y="300" width="90" height="60" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="345" y="305" width="80" height="52" fill="#001520" rx="1"/>
+  <!-- Company logo on wall -->
+  <text x="700" y="200" font-family="Arial, sans-serif" font-size="13" fill="#00d4ff" text-anchor="middle" opacity="0.5" letter-spacing="2">ZAKEY</text>
+  <text x="700" y="218" font-family="Arial, sans-serif" font-size="8" fill="#c0c0c0" text-anchor="middle" opacity="0.4" letter-spacing="1">SMART SYSTEMS</text>
+  <!-- Label -->
+  <text x="400" y="580" font-family="Arial, sans-serif" font-size="14" font-weight="300" letter-spacing="3" fill="#c0c0c0" text-anchor="middle" opacity="0.8">OFFICE RECEPTION · SMART DISPLAY</text>
+</svg>

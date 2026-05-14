@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <!-- Room background gradient -->
+    <linearGradient id="roomBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070d"/>
+      <stop offset="50%" stop-color="#0a0f1a"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <!-- Floor gradient -->
+    <linearGradient id="floorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1f2e"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <!-- Wall gradient -->
+    <linearGradient id="wallGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <!-- Window city glow -->
+    <radialGradient id="cityGlow" cx="50%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#1a2a4a" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#0d1a30" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#05070d" stop-opacity="1"/>
+    </radialGradient>
+    <!-- Cyan panel glow -->
+    <radialGradient id="panelGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Warm ambient light from ceiling -->
+    <radialGradient id="ceilingLight" cx="50%" cy="0%" r="60%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Sofa ambient -->
+    <radialGradient id="sofaGlow" cx="50%" cy="100%" r="50%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Lamp glow -->
+    <radialGradient id="lampGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="panelFilter">
+      <feGaussianBlur stdDeviation="20" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="windowClip">
+      <rect x="280" y="160" width="420" height="480" rx="4"/>
+    </clipPath>
+  </defs>
+
+  <!-- Main background -->
+  <rect width="1600" height="900" fill="url(#roomBg)"/>
+
+  <!-- Ceiling ambient warm light spread -->
+  <ellipse cx="800" cy="0" rx="900" ry="300" fill="url(#ceilingLight)"/>
+
+  <!-- Back wall -->
+  <rect x="0" y="0" width="1600" height="720" fill="url(#wallGrad)"/>
+
+  <!-- Floor -->
+  <polygon points="0,720 1600,720 1600,900 0,900" fill="url(#floorGrad)"/>
+
+  <!-- Floor reflection lines (marble effect) -->
+  <line x1="0" y1="780" x2="1600" y2="760" stroke="#1a2030" stroke-width="1" opacity="0.5"/>
+  <line x1="0" y1="830" x2="1600" y2="810" stroke="#1a2030" stroke-width="1" opacity="0.4"/>
+  <line x1="0" y1="870" x2="1600" y2="855" stroke="#1a2030" stroke-width="1" opacity="0.3"/>
+  <!-- Vertical marble lines -->
+  <line x1="200" y1="720" x2="180" y2="900" stroke="#151c28" stroke-width="1.5" opacity="0.6"/>
+  <line x1="500" y1="720" x2="490" y2="900" stroke="#151c28" stroke-width="1.5" opacity="0.4"/>
+  <line x1="900" y1="720" x2="900" y2="900" stroke="#151c28" stroke-width="1.5" opacity="0.5"/>
+  <line x1="1200" y1="720" x2="1210" y2="900" stroke="#151c28" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Large Window (left-center) -->
+  <!-- Window frame -->
+  <rect x="275" y="155" width="430" height="490" rx="6" fill="#0a0e18" stroke="#1e2a3a" stroke-width="3"/>
+  <!-- Window glass with city view -->
+  <rect x="280" y="160" width="420" height="480" rx="4" fill="url(#cityGlow)" clip-path="url(#windowClip)"/>
+
+  <!-- City skyline silhouette in window -->
+  <!-- Buildings -->
+  <g clip-path="url(#windowClip)">
+    <!-- Sky gradient inside window -->
+    <rect x="280" y="160" width="420" height="480" fill="#05101f"/>
+    <!-- Stars -->
+    <circle cx="310" cy="200" r="1" fill="#ffffff" opacity="0.7"/>
+    <circle cx="380" cy="185" r="1.5" fill="#ffffff" opacity="0.9"/>
+    <circle cx="450" cy="210" r="1" fill="#ffffff" opacity="0.6"/>
+    <circle cx="520" cy="195" r="1" fill="#ffffff" opacity="0.8"/>
+    <circle cx="580" cy="220" r="1.5" fill="#ffffff" opacity="0.7"/>
+    <circle cx="640" cy="190" r="1" fill="#ffffff" opacity="0.5"/>
+    <circle cx="330" cy="240" r="0.8" fill="#ffffff" opacity="0.6"/>
+    <circle cx="410" cy="230" r="1" fill="#ffffff" opacity="0.8"/>
+    <circle cx="490" cy="245" r="0.8" fill="#ffffff" opacity="0.7"/>
+    <circle cx="610" cy="205" r="1.2" fill="#ffffff" opacity="0.9"/>
+    <!-- Building silhouettes -->
+    <rect x="285" y="450" width="40" height="190" fill="#0a1520"/>
+    <rect x="295" y="400" width="20" height="50" fill="#0a1520"/>
+    <rect x="330" y="420" width="55" height="220" fill="#0c1825"/>
+    <rect x="390" y="390" width="30" height="250" fill="#0a1520"/>
+    <rect x="425" y="430" width="45" height="210" fill="#0c1825"/>
+    <rect x="475" y="400" width="35" height="240" fill="#0a1520"/>
+    <rect x="515" y="370" width="50" height="270" fill="#0c1825"/>
+    <rect x="570" y="410" width="30" height="230" fill="#0a1520"/>
+    <rect x="605" y="440" width="55" height="200" fill="#0c1825"/>
+    <rect x="665" y="395" width="35" height="245" fill="#0a1520"/>
+    <!-- Building windows (lit) -->
+    <rect x="340" y="430" width="5" height="5" fill="#f59e0b" opacity="0.7"/>
+    <rect x="350" y="430" width="5" height="5" fill="#f59e0b" opacity="0.4"/>
+    <rect x="340" y="445" width="5" height="5" fill="#f59e0b" opacity="0.6"/>
+    <rect x="395" y="400" width="5" height="5" fill="#f59e0b" opacity="0.8"/>
+    <rect x="395" y="415" width="5" height="5" fill="#f59e0b" opacity="0.5"/>
+    <rect x="480" y="410" width="5" height="5" fill="#00d4ff" opacity="0.5"/>
+    <rect x="490" y="410" width="5" height="5" fill="#00d4ff" opacity="0.3"/>
+    <rect x="525" y="380" width="6" height="6" fill="#f59e0b" opacity="0.7"/>
+    <rect x="537" y="380" width="6" height="6" fill="#f59e0b" opacity="0.5"/>
+    <rect x="525" y="395" width="6" height="6" fill="#f59e0b" opacity="0.4"/>
+    <rect x="615" y="450" width="5" height="5" fill="#00d4ff" opacity="0.4"/>
+    <rect x="625" y="450" width="5" height="5" fill="#00d4ff" opacity="0.3"/>
+    <!-- City horizon glow -->
+    <ellipse cx="490" cy="460" rx="200" ry="40" fill="#f59e0b" opacity="0.06"/>
+    <ellipse cx="490" cy="470" rx="180" ry="30" fill="#00d4ff" opacity="0.04"/>
+  </g>
+  <!-- Window frame cross bars -->
+  <line x1="490" y1="160" x2="490" y2="640" stroke="#1e2a3a" stroke-width="2"/>
+  <line x1="280" y1="400" x2="700" y2="400" stroke="#1e2a3a" stroke-width="2"/>
+  <!-- Window glow on room -->
+  <ellipse cx="490" cy="640" rx="200" ry="30" fill="#0d2040" opacity="0.4"/>
+
+  <!-- Ceiling with recessed lighting -->
+  <rect x="0" y="0" width="1600" height="80" fill="#080c14"/>
+  <!-- Ceiling edge molding -->
+  <rect x="0" y="78" width="1600" height="4" fill="#0f1520"/>
+  <!-- Recessed ceiling lights -->
+  <ellipse cx="350" cy="70" rx="18" ry="8" fill="#1a2030"/>
+  <ellipse cx="350" cy="68" rx="10" ry="5" fill="#f59e0b" opacity="0.7"/>
+  <ellipse cx="800" cy="70" rx="18" ry="8" fill="#1a2030"/>
+  <ellipse cx="800" cy="68" rx="10" ry="5" fill="#f59e0b" opacity="0.6"/>
+  <ellipse cx="1250" cy="70" rx="18" ry="8" fill="#1a2030"/>
+  <ellipse cx="1250" cy="68" rx="10" ry="5" fill="#f59e0b" opacity="0.7"/>
+  <!-- Light cones -->
+  <polygon points="335,80 365,80 420,450 280,450" fill="#f59e0b" opacity="0.025"/>
+  <polygon points="785,80 815,80 900,600 700,600" fill="#f59e0b" opacity="0.025"/>
+  <polygon points="1235,80 1265,80 1350,500 1150,500" fill="#f59e0b" opacity="0.025"/>
+
+  <!-- Right side wall panel area -->
+  <!-- Wall texture strips -->
+  <rect x="1050" y="80" width="550" height="640" fill="#0d1117"/>
+  <line x1="1100" y1="80" x2="1100" y2="720" stroke="#111827" stroke-width="1" opacity="0.5"/>
+  <line x1="1400" y1="80" x2="1400" y2="720" stroke="#111827" stroke-width="1" opacity="0.5"/>
+
+  <!-- Zakey Smart Panel on right wall -->
+  <!-- Panel glow aura -->
+  <ellipse cx="1420" cy="380" rx="160" ry="200" fill="url(#panelGlow)"/>
+  <!-- Panel body -->
+  <rect x="1350" y="200" width="130" height="360" rx="12" fill="#0a0f1a" stroke="#00d4ff" stroke-width="1.5"/>
+  <!-- Panel screen -->
+  <rect x="1360" y="215" width="110" height="240" rx="6" fill="#060a12"/>
+  <!-- Panel screen content - home display -->
+  <!-- Room icons on panel -->
+  <text x="1415" y="255" font-family="Arial, sans-serif" font-size="10" fill="#00d4ff" text-anchor="middle" opacity="0.9">ZAKEY</text>
+  <line x1="1365" y1="262" x2="1465" y2="262" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+  <!-- Temp reading -->
+  <text x="1415" y="295" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">22°</text>
+  <text x="1415" y="310" font-family="Arial, sans-serif" font-size="8" fill="#8899aa" text-anchor="middle">CLIMATE</text>
+  <!-- Divider -->
+  <line x1="1365" y1="322" x2="1465" y2="322" stroke="#1a2a3a" stroke-width="0.5"/>
+  <!-- Light level bar -->
+  <text x="1370" y="338" font-family="Arial, sans-serif" font-size="7" fill="#8899aa">LIGHTS</text>
+  <rect x="1370" y="342" width="90" height="4" rx="2" fill="#1a2030"/>
+  <rect x="1370" y="342" width="65" height="4" rx="2" fill="#00d4ff" opacity="0.8"/>
+  <!-- Security -->
+  <text x="1370" y="360" font-family="Arial, sans-serif" font-size="7" fill="#8899aa">SECURITY</text>
+  <circle cx="1455" cy="356" r="5" fill="#00d4ff" opacity="0.3"/>
+  <text x="1455" y="359" font-family="Arial, sans-serif" font-size="7" fill="#00d4ff" text-anchor="middle">✓</text>
+  <!-- Time -->
+  <text x="1415" y="390" font-family="Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" opacity="0.7">21:45</text>
+  <!-- Panel touch buttons -->
+  <circle cx="1385" cy="485" r="14" fill="#0f1828" stroke="#1e2a3a" stroke-width="1"/>
+  <circle cx="1385" cy="485" r="6" fill="#00d4ff" opacity="0.4"/>
+  <circle cx="1415" cy="485" r="14" fill="#0f1828" stroke="#1e2a3a" stroke-width="1"/>
+  <circle cx="1415" cy="485" r="6" fill="#ffffff" opacity="0.15"/>
+  <circle cx="1445" cy="485" r="14" fill="#0f1828" stroke="#1e2a3a" stroke-width="1"/>
+  <circle cx="1445" cy="485" r="6" fill="#f59e0b" opacity="0.3"/>
+  <!-- Home button -->
+  <circle cx="1415" cy="530" r="16" fill="#0f1828" stroke="#00d4ff" stroke-width="1.5"/>
+  <circle cx="1415" cy="530" r="8" fill="#00d4ff" opacity="0.2"/>
+  <!-- Panel edge glow lines -->
+  <line x1="1350" y1="220" x2="1350" y2="540" stroke="#00d4ff" stroke-width="1" opacity="0.4" filter="url(#glow)"/>
+  <line x1="1480" y1="220" x2="1480" y2="540" stroke="#00d4ff" stroke-width="1" opacity="0.4" filter="url(#glow)"/>
+
+  <!-- Sofa (modern, low-profile) -->
+  <!-- Sofa body -->
+  <rect x="580" y="600" width="580" height="120" rx="8" fill="#111827"/>
+  <!-- Sofa back -->
+  <rect x="580" y="530" width="580" height="80" rx="8" fill="#141c2a"/>
+  <!-- Sofa cushions (top view suggestion) -->
+  <rect x="592" y="535" width="175" height="70" rx="6" fill="#1a2435"/>
+  <rect x="779" y="535" width="175" height="70" rx="6" fill="#1a2435"/>
+  <rect x="966" y="535" width="175" height="70" rx="6" fill="#1a2435"/>
+  <!-- Sofa seat cushions -->
+  <rect x="592" y="607" width="175" height="105" rx="4" fill="#151e2d"/>
+  <rect x="779" y="607" width="175" height="105" rx="4" fill="#151e2d"/>
+  <rect x="966" y="607" width="175" height="105" rx="4" fill="#151e2d"/>
+  <!-- Sofa arms -->
+  <rect x="572" y="535" width="25" height="185" rx="6" fill="#1a2435"/>
+  <rect x="1143" y="535" width="25" height="185" rx="6" fill="#1a2435"/>
+  <!-- Sofa legs -->
+  <rect x="600" y="715" width="15" height="20" rx="3" fill="#0d1117"/>
+  <rect x="1125" y="715" width="15" height="20" rx="3" fill="#0d1117"/>
+  <rect x="820" y="715" width="15" height="20" rx="3" fill="#0d1117"/>
+  <!-- Sofa LED underglow (cyan) -->
+  <rect x="580" y="718" width="580" height="2" fill="#00d4ff" opacity="0.15"/>
+  <ellipse cx="870" cy="735" rx="280" ry="15" fill="#00d4ff" opacity="0.05"/>
+
+  <!-- Coffee table -->
+  <rect x="680" y="740" width="380" height="10" rx="3" fill="#1a2030" stroke="#2a3a4a" stroke-width="1"/>
+  <rect x="700" y="748" width="5" height="30" fill="#151c25"/>
+  <rect x="1055" y="748" width="5" height="30" fill="#151c25"/>
+  <rect x="820" y="748" width="5" height="30" fill="#151c25"/>
+  <!-- Items on coffee table -->
+  <ellipse cx="870" cy="741" rx="25" ry="8" fill="#0d1520" stroke="#1e2a3a" stroke-width="1"/>
+
+  <!-- Floor lamp (left side) -->
+  <rect x="180" y="480" width="6" height="240" fill="#1a2030"/>
+  <ellipse cx="183" cy="480" rx="30" ry="12" fill="#1e2838" stroke="#2a3845" stroke-width="1"/>
+  <!-- Lamp light -->
+  <ellipse cx="183" cy="474" rx="20" ry="8" fill="#f59e0b" opacity="0.6"/>
+  <!-- Lamp glow -->
+  <ellipse cx="183" cy="474" rx="80" ry="80" fill="#f59e0b" opacity="0.05"/>
+  <polygon points="155,480 211,480 250,600 116,600" fill="#f59e0b" opacity="0.04"/>
+
+  <!-- Side table (left) -->
+  <rect x="130" y="620" width="100" height="8" rx="2" fill="#1a2030"/>
+  <rect x="140" y="626" width="5" height="50" fill="#151c25"/>
+  <rect x="225" y="626" width="5" height="50" fill="#151c25"/>
+  <!-- Decorative object on side table -->
+  <rect x="165" y="600" width="35" height="22" rx="3" fill="#0d1520" stroke="#1e2a3a" stroke-width="1"/>
+  <rect x="168" y="605" width="29" height="12" fill="#060a12"/>
+  <circle cx="172" cy="611" r="2" fill="#00d4ff" opacity="0.5"/>
+
+  <!-- Decorative wall art (abstract panel) -->
+  <rect x="760" y="150" width="220" height="280" rx="4" fill="#0a0f1a" stroke="#1a2030" stroke-width="1.5"/>
+  <!-- Abstract art inside -->
+  <rect x="768" y="158" width="204" height="264" fill="#060a12"/>
+  <!-- Geometric abstract shapes -->
+  <polygon points="870,180 920,250 820,250" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.3"/>
+  <circle cx="870" cy="290" r="40" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.2"/>
+  <line x1="768" y1="290" x2="972" y2="290" stroke="#1a2a3a" stroke-width="0.5"/>
+  <rect x="820" y="320" width="60" height="60" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.2" transform="rotate(45 850 350)"/>
+  <circle cx="870" cy="215" r="20" fill="none" stroke="#f59e0b" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Subtle ambient glow on floor from sofa LED -->
+  <ellipse cx="870" cy="730" rx="300" ry="25" fill="url(#sofaGlow)"/>
+
+  <!-- Wall baseboard -->
+  <rect x="0" y="708" width="1600" height="12" fill="#0a0e18"/>
+
+  <!-- Brand logo subtle on wall -->
+  <text x="1060" y="600" font-family="Arial, sans-serif" font-size="11" fill="#1a2a3a" letter-spacing="4" opacity="0.6">ZAKEY</text>
+
+  <!-- Subtle vignette overlay -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+    <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0.5"/>
+  </radialGradient>
+  <rect width="1600" height="900" fill="url(#vignette)"/>
+</svg>

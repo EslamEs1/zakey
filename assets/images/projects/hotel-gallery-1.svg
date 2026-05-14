@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="lobbyBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c1525;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#05070d;stop-opacity:1"/>
+    </linearGradient>
+    <radialGradient id="warmLobby" cx="50%" cy="20%" r="60%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#lobbyBg)"/>
+  <!-- Back wall -->
+  <rect x="0" y="0" width="800" height="450" fill="#0e1a2e"/>
+  <!-- Floor -->
+  <rect x="0" y="450" width="800" height="150" fill="#080d18"/>
+  <!-- Marble floor lines -->
+  <line x1="0" y1="490" x2="800" y2="490" stroke="#1a2535" stroke-width="1" opacity="0.3"/>
+  <line x1="0" y1="540" x2="800" y2="540" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+  <line x1="200" y1="450" x2="130" y2="600" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+  <line x1="400" y1="450" x2="400" y2="600" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+  <line x1="600" y1="450" x2="670" y2="600" stroke="#1a2535" stroke-width="1" opacity="0.2"/>
+  <!-- Warm ambient -->
+  <ellipse cx="400" cy="80" rx="400" ry="200" fill="url(#warmLobby)" opacity="0.8"/>
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="800" height="50" fill="#09101e"/>
+  <!-- Grand chandelier -->
+  <line x1="400" y1="0" x2="400" y2="60" stroke="#1e3050" stroke-width="4"/>
+  <ellipse cx="400" cy="75" rx="80" ry="20" fill="#0f1828" stroke="#1e3050" stroke-width="1.5"/>
+  <ellipse cx="400" cy="78" rx="70" ry="14" fill="#f59e0b" opacity="0.35" filter="url(#glow)"/>
+  <!-- Chandelier arms -->
+  <line x1="340" y1="75" x2="300" y2="95" stroke="#1e3050" stroke-width="1.5"/>
+  <circle cx="298" cy="97" r="5" fill="#f59e0b" opacity="0.6" filter="url(#glow)"/>
+  <line x1="360" y1="75" x2="330" y2="100" stroke="#1e3050" stroke-width="1.5"/>
+  <circle cx="328" cy="102" r="5" fill="#f59e0b" opacity="0.5" filter="url(#glow)"/>
+  <line x1="460" y1="75" x2="470" y2="95" stroke="#1e3050" stroke-width="1.5"/>
+  <circle cx="472" cy="97" r="5" fill="#f59e0b" opacity="0.6" filter="url(#glow)"/>
+  <line x1="440" y1="75" x2="460" y2="100" stroke="#1e3050" stroke-width="1.5"/>
+  <circle cx="462" cy="102" r="5" fill="#f59e0b" opacity="0.5" filter="url(#glow)"/>
+  <!-- RECEPTION DESK -->
+  <rect x="200" y="350" width="400" height="100" fill="#0d1828" stroke="#1e3050" stroke-width="1.5" rx="3"/>
+  <rect x="200" y="350" width="400" height="15" fill="#1a2840" rx="3 3 0 0"/>
+  <!-- Desk counter top -->
+  <rect x="198" y="345" width="404" height="12" fill="#1e3050" rx="2"/>
+  <!-- SMART RECEPTION DISPLAY -->
+  <rect x="280" y="270" width="240" height="80" fill="#001a22" rx="3" stroke="#00d4ff" stroke-width="1.5" opacity="0.8"/>
+  <text x="400" y="298" font-family="Arial, sans-serif" font-size="12" fill="#00d4ff" text-anchor="middle" opacity="0.9">ZAKEY HOTEL</text>
+  <text x="400" y="316" font-family="Arial, sans-serif" font-size="9" fill="#c0c0c0" text-anchor="middle" opacity="0.7">Smart Reception System</text>
+  <line x1="290" y1="323" x2="510" y2="323" stroke="#00d4ff" stroke-width="0.5" opacity="0.4"/>
+  <text x="400" y="338" font-family="Arial, sans-serif" font-size="8" fill="#00d4ff" text-anchor="middle" opacity="0.7">● 47 Rooms Active · 3 Check-in</text>
+  <!-- Desk items -->
+  <rect x="220" y="348" width="80" height="5" fill="#1e3050" rx="1"/>
+  <!-- Receptionist monitor -->
+  <rect x="490" y="280" width="80" height="55" fill="#050a10" rx="2" stroke="#1a2535" stroke-width="1"/>
+  <rect x="494" y="284" width="72" height="47" fill="#001520" rx="1"/>
+  <rect x="496" y="286" width="68" height="43" fill="#001a22" rx="1"/>
+  <!-- Hotel signage on wall -->
+  <text x="400" y="180" font-family="Arial, sans-serif" font-size="24" font-weight="300" letter-spacing="6" fill="#c0c0c0" text-anchor="middle" opacity="0.6">ZAKEY HOTEL</text>
+  <line x1="250" y1="190" x2="550" y2="190" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+  <!-- Decorative wall panels -->
+  <rect x="60" y="100" width="140" height="330" fill="#0a1525" stroke="#1e3050" stroke-width="1" rx="2"/>
+  <rect x="600" y="100" width="140" height="330" fill="#0a1525" stroke="#1e3050" stroke-width="1" rx="2"/>
+  <!-- Wall sconces -->
+  <rect x="85" y="220" width="12" height="35" fill="#0f1825" rx="2"/>
+  <ellipse cx="91" cy="220" rx="10" ry="5" fill="#f59e0b" opacity="0.4" filter="url(#glow)"/>
+  <rect x="700" y="220" width="12" height="35" fill="#0f1825" rx="2"/>
+  <ellipse cx="706" cy="220" rx="10" ry="5" fill="#f59e0b" opacity="0.4" filter="url(#glow)"/>
+  <!-- Planters/plants near reception -->
+  <ellipse cx="160" cy="450" rx="35" ry="12" fill="#0a1020"/>
+  <ellipse cx="160" cy="420" rx="20" ry="35" fill="#0d2015"/>
+  <ellipse cx="640" cy="450" rx="35" ry="12" fill="#0a1020"/>
+  <ellipse cx="640" cy="420" rx="20" ry="35" fill="#0d2015"/>
+  <!-- Label -->
+  <text x="400" y="580" font-family="Arial, sans-serif" font-size="14" font-weight="300" letter-spacing="3" fill="#c0c0c0" text-anchor="middle" opacity="0.8">HOTEL LOBBY · SMART RECEPTION</text>
+</svg>
