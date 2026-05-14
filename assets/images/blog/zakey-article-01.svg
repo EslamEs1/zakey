@@ -1,19 +1,133 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 338" width="600" height="338">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0c0f17"/>
-      <stop offset="100%" stop-color="#05070d"/>
+    <linearGradient id="leftBgGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0e1228"/>
+      <stop offset="100%" stop-color="#1a1f35"/>
     </linearGradient>
-    <radialGradient id="r" cx="70%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <linearGradient id="ledLineGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#00e5ff" stop-opacity="0.9"/>
+      <stop offset="75%" stop-color="#00e5ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="bottomBarGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#0088cc"/>
+    </linearGradient>
+    <radialGradient id="panelGlowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="furnitureAmbient" cx="50%" cy="60%" r="55%">
+      <stop offset="0%" stop-color="#1e3055" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0e1228" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="blur5">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
   </defs>
-  <rect width="1280" height="720" fill="url(#g)"/>
-  <rect width="1280" height="720" fill="url(#r)"/>
-  <text x="640" y="380" font-family="Manrope,Inter,system-ui,sans-serif" font-size="48" font-weight="700"
-        fill="#22d3ee" fill-opacity="0.15" text-anchor="middle" dominant-baseline="middle"
-        letter-spacing="-1">Article 01</text>
-  <circle cx="640" cy="260" r="60" fill="none" stroke="#22d3ee" stroke-opacity="0.1" stroke-width="1"/>
-  <circle cx="640" cy="260" r="100" fill="none" stroke="#22d3ee" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- ===== LEFT HALF: Stylized smart living room ===== -->
+  <rect x="0" y="0" width="300" height="338" fill="url(#leftBgGrad)"/>
+
+  <!-- Room wall back -->
+  <rect x="0" y="60" width="300" height="200" fill="#131828" opacity="0.8"/>
+  <!-- Floor -->
+  <rect x="0" y="200" width="300" height="138" fill="#0e1220"/>
+  <!-- Subtle wood floor stripes -->
+  <line x1="0" y1="215" x2="300" y2="215" stroke="#1a2040" stroke-width="8" opacity="0.5"/>
+  <line x1="0" y1="232" x2="300" y2="232" stroke="#1a2040" stroke-width="8" opacity="0.5"/>
+  <line x1="0" y1="249" x2="300" y2="249" stroke="#1a2040" stroke-width="8" opacity="0.5"/>
+  <line x1="0" y1="266" x2="300" y2="266" stroke="#1a2040" stroke-width="8" opacity="0.5"/>
+  <!-- Ceiling zone -->
+  <rect x="0" y="0" width="300" height="62" fill="#0c0f1e"/>
+
+  <!-- Sofa silhouette -->
+  <rect x="30" y="232" width="180" height="65" rx="8" fill="#151c30"/>
+  <rect x="30" y="210" width="180" height="32" rx="6" fill="#1a2240"/>
+  <rect x="25" y="218" width="18" height="55" rx="5" fill="#151c30"/>
+  <rect x="192" y="218" width="18" height="55" rx="5" fill="#151c30"/>
+  <!-- Sofa cyan accent lines -->
+  <line x1="38" y1="240" x2="198" y2="238" stroke="#00e5ff" stroke-width="1" opacity="0.3"/>
+  <line x1="38" y1="252" x2="198" y2="250" stroke="#00e5ff" stroke-width="0.8" opacity="0.2"/>
+
+  <!-- Coffee table silhouette -->
+  <rect x="60" y="290" width="130" height="18" rx="3" fill="#12182a"/>
+  <line x1="68" y1="292" x2="180" y2="292" stroke="#00e5ff" stroke-width="0.8" opacity="0.25"/>
+
+  <!-- TV unit back wall -->
+  <rect x="80" y="130" width="140" height="78" rx="3" fill="#0a0d18"/>
+  <rect x="84" y="134" width="132" height="70" rx="2" fill="#080b14"/>
+  <!-- TV screen cyan tint -->
+  <rect x="86" y="136" width="128" height="66" rx="1" fill="#061018" opacity="0.8"/>
+  <rect x="90" y="145" width="60" height="3" rx="1" fill="#1a3560" opacity="0.6"/>
+  <rect x="90" y="152" width="45" height="2" rx="1" fill="#1a3560" opacity="0.45"/>
+  <!-- TV LED strip cyan (under TV unit) -->
+  <rect x="72" y="208" width="156" height="2.5" rx="1" fill="#00e5ff" opacity="0.45"/>
+  <rect x="72" y="208" width="156" height="8" rx="2" fill="#00e5ff" opacity="0.04" filter="url(#blur2)"/>
+  <!-- Ceiling LED strip -->
+  <rect x="0" y="58" width="300" height="2.5" rx="1" fill="#00e5ff" opacity="0.25"/>
+  <rect x="20" y="58" width="260" height="6" rx="2" fill="#00e5ff" opacity="0.04" filter="url(#blur2)"/>
+
+  <!-- ===== TALL VERTICAL LED STRIP (center-left) ===== -->
+  <rect x="268" y="0" width="5" height="338" rx="2" fill="url(#ledLineGrad)"/>
+  <rect x="263" y="50" width="15" height="238" rx="4" fill="#00e5ff" opacity="0.06" filter="url(#blur5)"/>
+
+  <!-- ===== ZAKEY TOUCH PANEL (floating center-left) ===== -->
+  <rect x="120" y="100" width="42" height="105" rx="7" fill="#181828"/>
+  <rect x="124" y="108" width="34" height="62" rx="3" fill="#0d1520"/>
+  <!-- Panel glowing zones -->
+  <rect x="127" y="112" width="28" height="2.5" rx="1" fill="#00e5ff" opacity="0.85"/>
+  <rect x="127" y="120" width="20" height="2" rx="1" fill="#00e5ff" opacity="0.6"/>
+  <rect x="127" y="128" width="28" height="2" rx="1" fill="#00e5ff" opacity="0.5"/>
+  <rect x="127" y="136" width="28" height="14" rx="3" fill="#00e5ff" opacity="0.1"/>
+  <rect x="130" y="139" width="10" height="7" rx="2" fill="#00e5ff" opacity="0.4"/>
+  <rect x="143" y="141" width="8" height="5" rx="1" fill="#00e5ff" opacity="0.35"/>
+  <rect x="127" y="155" width="28" height="2" rx="1" fill="#00e5ff" opacity="0.4"/>
+  <rect x="127" y="161" width="18" height="2" rx="1" fill="#00e5ff" opacity="0.35"/>
+  <!-- Status dot -->
+  <circle cx="141" cy="190" r="5" fill="#00e5ff" opacity="0.92"/>
+  <circle cx="141" cy="190" r="10" fill="#00e5ff" opacity="0.2"/>
+  <!-- Panel glow halo -->
+  <ellipse cx="141" cy="152" rx="34" ry="65" fill="url(#panelGlowGrad)" opacity="0.55"/>
+
+  <!-- ===== RIGHT HALF: Clean white editorial area ===== -->
+  <rect x="300" y="0" width="300" height="338" fill="#fafaf9"/>
+  <!-- Subtle right half texture lines -->
+  <line x1="300" y1="0" x2="300" y2="338" stroke="#00e5ff" stroke-width="2.5" opacity="0.4"/>
+
+  <!-- TOP LEFT BADGE -->
+  <rect x="12" y="14" width="130" height="24" rx="4" fill="#00e5ff" opacity="0.18"/>
+  <rect x="12" y="14" width="130" height="24" rx="4" fill="none" stroke="#00e5ff" stroke-width="1" opacity="0.6"/>
+  <text x="77" y="30" font-family="Arial, sans-serif" font-size="8.5" fill="#00e5ff" text-anchor="middle" letter-spacing="2" font-weight="bold">SMART HOME · 2025</text>
+
+  <!-- Right half text placeholders -->
+  <!-- Heading bar (wide) -->
+  <rect x="320" y="55" width="255" height="12" rx="3" fill="#2a2a3a" opacity="0.75"/>
+  <rect x="320" y="73" width="220" height="12" rx="3" fill="#2a2a3a" opacity="0.65"/>
+  <!-- Subheading lines -->
+  <rect x="320" y="100" width="240" height="7" rx="2" fill="#666680" opacity="0.45"/>
+  <rect x="320" y="114" width="210" height="7" rx="2" fill="#666680" opacity="0.4"/>
+  <rect x="320" y="128" width="230" height="7" rx="2" fill="#666680" opacity="0.38"/>
+  <rect x="320" y="142" width="185" height="7" rx="2" fill="#666680" opacity="0.35"/>
+  <!-- Divider line -->
+  <rect x="320" y="162" width="255" height="1.5" rx="1" fill="#d0d0e0" opacity="0.55"/>
+  <!-- Body text lines -->
+  <rect x="320" y="175" width="245" height="5.5" rx="2" fill="#888899" opacity="0.35"/>
+  <rect x="320" y="187" width="220" height="5.5" rx="2" fill="#888899" opacity="0.32"/>
+  <rect x="320" y="199" width="240" height="5.5" rx="2" fill="#888899" opacity="0.3"/>
+  <rect x="320" y="211" width="200" height="5.5" rx="2" fill="#888899" opacity="0.28"/>
+  <!-- "Read More" button outline -->
+  <rect x="320" y="238" width="110" height="30" rx="5" fill="none" stroke="#00b8d9" stroke-width="1.8"/>
+  <text x="375" y="257" font-family="Arial, sans-serif" font-size="9" fill="#00b8d9" text-anchor="middle" letter-spacing="1">Read More →</text>
+  <!-- Small decorative element -->
+  <rect x="320" y="285" width="40" height="4" rx="2" fill="#00e5ff" opacity="0.35"/>
+  <rect x="366" y="285" width="25" height="4" rx="2" fill="#00e5ff" opacity="0.2"/>
+  <rect x="397" y="285" width="35" height="4" rx="2" fill="#00e5ff" opacity="0.28"/>
+
+  <!-- ===== BOTTOM CYAN BAR ===== -->
+  <rect x="0" y="333" width="600" height="5" rx="0" fill="url(#bottomBarGrad)"/>
 </svg>

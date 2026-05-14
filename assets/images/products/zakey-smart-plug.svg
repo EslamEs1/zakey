@@ -1,16 +1,133 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
   <defs>
-    <linearGradient id="bg-SMART PLUG" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
+    <radialGradient id="sp-bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
+    </radialGradient>
+    <pattern id="sp-hex" x="0" y="0" width="20" height="17.3" patternUnits="userSpaceOnUse">
+      <polygon points="10,1 19,5.5 19,11.8 10,16.3 1,11.8 1,5.5" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+    <!-- Body — cream/white -->
+    <radialGradient id="sp-body-grad" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#f8f4ee"/>
+      <stop offset="55%" stop-color="#f0ece6"/>
+      <stop offset="100%" stop-color="#d8d4ce"/>
+    </radialGradient>
+    <!-- Right side -->
+    <linearGradient id="sp-side-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d4d0ca"/>
+      <stop offset="100%" stop-color="#b8b4ae"/>
     </linearGradient>
-    <radialGradient id="gl-SMART PLUG" cx="240" cy="185" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <!-- Top face -->
+    <linearGradient id="sp-top-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e8e4de"/>
+    </linearGradient>
+    <!-- Outlet socket recessed -->
+    <linearGradient id="sp-socket-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e0dcd8"/>
+      <stop offset="100%" stop-color="#c8c4c0"/>
+    </linearGradient>
+    <!-- Prong metallic -->
+    <linearGradient id="sp-prong-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d8d8d8"/>
+      <stop offset="50%" stop-color="#a0a0a0"/>
+      <stop offset="100%" stop-color="#686868"/>
+    </linearGradient>
+    <!-- Power button -->
+    <radialGradient id="sp-btn-grad" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#e8e4de"/>
+      <stop offset="100%" stop-color="#c8c4be"/>
+    </radialGradient>
+    <!-- Cyan LED ring glow -->
+    <radialGradient id="sp-led-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Ambient glow -->
+    <radialGradient id="sp-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00cfaa" stop-opacity="0.14"/>
+      <stop offset="55%" stop-color="#ffaa22" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#ffaa22" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Shadow -->
+    <radialGradient id="sp-shadow" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.52"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-SMART PLUG)"/>
-  <ellipse cx="240" cy="185" rx="180" ry="140" fill="url(#gl-SMART PLUG)"/>
-  <rect x="190" y="110" width="100" height="130" rx="12" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><rect x="215" y="200" width="14" height="24" rx="3" fill="#22d3ee" fill-opacity="0.4"/><rect x="251" y="200" width="14" height="24" rx="3" fill="#22d3ee" fill-opacity="0.4"/><circle cx="240" cy="155" r="16" fill="#22d3ee" fill-opacity="0.15"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">SMART PLUG</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#sp-bg)"/>
+  <rect width="480" height="360" fill="url(#sp-hex)"/>
+
+  <!-- Ambient glow -->
+  <ellipse cx="240" cy="192" rx="130" ry="110" fill="url(#sp-glow)"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="250" cy="312" rx="72" ry="12" fill="url(#sp-shadow)"/>
+
+  <!-- === SMART PLUG BODY — 3D perspective === -->
+  <!-- Right side depth -->
+  <polygon points="288,130 302,124 302,258 288,264" fill="url(#sp-side-grad)"/>
+  <!-- Bottom face (visible at angle) -->
+  <polygon points="208,264 288,264 302,258 222,258" fill="#c0bbb4"/>
+  <!-- Top face -->
+  <polygon points="208,130 288,130 302,124 222,124" fill="url(#sp-top-grad)"/>
+  <!-- Main front face -->
+  <rect x="208" y="130" width="80" height="134" rx="12" fill="url(#sp-body-grad)"/>
+  <!-- Front left highlight -->
+  <rect x="208" y="130" width="5" height="134" rx="2.5" fill="#ffffff" opacity="0.45"/>
+  <!-- Front top highlight -->
+  <rect x="210" y="131" width="76" height="4" rx="2" fill="#ffffff" opacity="0.50"/>
+  <!-- Front face border -->
+  <rect x="208" y="130" width="80" height="134" rx="12" fill="none" stroke="#c8c4be" stroke-width="1.2"/>
+  <!-- Face sheen -->
+  <ellipse cx="230" cy="148" rx="25" ry="10" fill="#ffffff" opacity="0.20"/>
+
+  <!-- Power button — top center of face -->
+  <circle cx="248" cy="160" r="14" fill="url(#sp-btn-grad)"/>
+  <circle cx="248" cy="160" r="14" fill="none" stroke="#c0bcb6" stroke-width="1.2"/>
+  <!-- Power icon on button -->
+  <path d="M248,151 L248,158" stroke="#888480" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M242,155 A8,8 0 1 0 254,155" stroke="#888480" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Button highlight -->
+  <ellipse cx="244" cy="156" rx="5" ry="3" fill="#ffffff" opacity="0.25"/>
+
+  <!-- Socket face area (recessed panel) -->
+  <rect x="218" y="182" width="60" height="56" rx="8" fill="url(#sp-socket-grad)"/>
+  <rect x="218" y="182" width="60" height="56" rx="8" fill="none" stroke="#b8b4ae" stroke-width="1"/>
+  <!-- Inner recess depth shadow -->
+  <rect x="220" y="184" width="56" height="52" rx="6" fill="#d0ccc6" opacity="0.5"/>
+
+  <!-- Type A socket holes (2 rectangular slots) -->
+  <rect x="232" y="196" width="8" height="18" rx="3" fill="#111520"/>
+  <rect x="232" y="196" width="8" height="18" rx="3" fill="none" stroke="#908c88" stroke-width="0.8"/>
+  <rect x="256" y="196" width="8" height="18" rx="3" fill="#111520"/>
+  <rect x="256" y="196" width="8" height="18" rx="3" fill="none" stroke="#908c88" stroke-width="0.8"/>
+  <!-- Socket slot inner highlight (3D slot depth) -->
+  <rect x="233" y="197" width="3" height="4" rx="1" fill="#ffffff" opacity="0.08"/>
+  <rect x="257" y="197" width="3" height="4" rx="1" fill="#ffffff" opacity="0.08"/>
+
+  <!-- Cyan LED ring around socket area -->
+  <rect x="216" y="180" width="64" height="60" rx="10" fill="none" stroke="#00e5ff" stroke-width="2" opacity="0.65"/>
+  <rect x="216" y="180" width="64" height="60" rx="10" fill="none" stroke="#00e5ff" stroke-width="4" opacity="0.15"/>
+  <!-- LED ring glow -->
+  <rect x="214" y="178" width="68" height="64" rx="12" fill="url(#sp-led-glow)" opacity="0.35"/>
+
+  <!-- Energy indicator small text -->
+  <text x="248" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="7.5" fill="#888480" opacity="0.85">0.4 kW</text>
+
+  <!-- Prongs on back (visible at bottom of 3D view) -->
+  <!-- Left prong -->
+  <rect x="226" y="262" width="10" height="22" rx="2" fill="url(#sp-prong-grad)"/>
+  <rect x="226" y="262" width="10" height="22" rx="2" fill="none" stroke="#909090" stroke-width="0.8"/>
+  <rect x="227" y="263" width="3" height="6" rx="1" fill="#ffffff" opacity="0.15"/>
+  <!-- Right prong -->
+  <rect x="260" y="262" width="10" height="22" rx="2" fill="url(#sp-prong-grad)"/>
+  <rect x="260" y="262" width="10" height="22" rx="2" fill="none" stroke="#909090" stroke-width="0.8"/>
+  <rect x="261" y="263" width="3" height="6" rx="1" fill="#ffffff" opacity="0.15"/>
+
+  <!-- Product label -->
+  <text x="240" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" opacity="0.40" letter-spacing="2.5">SMART PLUG</text>
 </svg>

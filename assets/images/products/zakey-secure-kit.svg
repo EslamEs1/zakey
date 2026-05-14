@@ -1,19 +1,217 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <title>Zakey Secure Kit — Smart Security Bundle</title>
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080b12"/>
-      <stop offset="100%" stop-color="#05070d"/>
-    </linearGradient>
-    <radialGradient id="r" cx="70%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <!-- Dark background gradient -->
+    <radialGradient id="sk-bg" cx="50%" cy="55%" r="60%">
+      <stop offset="0%" stop-color="#080b16"/>
+      <stop offset="100%" stop-color="#030508"/>
     </radialGradient>
+    <!-- Warm gold glow behind group -->
+    <radialGradient id="sk-glow" cx="50%" cy="52%" r="45%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.09"/>
+      <stop offset="70%" stop-color="#f59e0b" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Door lock body gradient (dark gunmetal) -->
+    <linearGradient id="sk-lock-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2e3240"/>
+      <stop offset="50%" stop-color="#252833"/>
+      <stop offset="100%" stop-color="#1a1c26"/>
+    </linearGradient>
+    <!-- Lock face highlight -->
+    <linearGradient id="sk-lock-face" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#30344a"/>
+      <stop offset="100%" stop-color="#1e2130"/>
+    </linearGradient>
+    <!-- Sensor body gradient (white/light) -->
+    <linearGradient id="sk-sensor-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f2f8"/>
+      <stop offset="100%" stop-color="#dde0ec"/>
+    </linearGradient>
+    <!-- Camera dome gradient -->
+    <linearGradient id="sk-cam-dome" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2e40"/>
+      <stop offset="100%" stop-color="#1a1d2a"/>
+    </linearGradient>
+    <!-- Camera body gradient -->
+    <linearGradient id="sk-cam-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#252838"/>
+      <stop offset="100%" stop-color="#1e2130"/>
+    </linearGradient>
+    <!-- Lens gradient -->
+    <radialGradient id="sk-lens" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#1e3a4a"/>
+      <stop offset="60%" stop-color="#060d12"/>
+      <stop offset="100%" stop-color="#030608"/>
+    </radialGradient>
+    <!-- Lens reflection -->
+    <radialGradient id="sk-lens-reflect" cx="30%" cy="25%" r="40%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Fingerprint sensor radial -->
+    <radialGradient id="sk-fp" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a2e3c"/>
+      <stop offset="100%" stop-color="#1a1d28"/>
+    </radialGradient>
+    <!-- Amber LED glow -->
+    <radialGradient id="sk-amber-led" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#f59e0b" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Sensor white glow -->
+    <radialGradient id="sk-sensor-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Shadow ellipse -->
+    <radialGradient id="sk-shadow" cx="50%" cy="20%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Cyan connection line glow -->
+    <filter id="sk-line-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <!-- Floor reflection gradient -->
+    <linearGradient id="sk-reflect" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </linearGradient>
   </defs>
-  <rect width="1280" height="720" fill="url(#g)"/>
-  <rect width="1280" height="720" fill="url(#r)"/>
-  <text x="640" y="380" font-family="Manrope,Inter,system-ui,sans-serif" font-size="48" font-weight="700"
-        fill="#22d3ee" fill-opacity="0.15" text-anchor="middle" dominant-baseline="middle"
-        letter-spacing="-1">Secure Kit</text>
-  <circle cx="640" cy="260" r="60" fill="none" stroke="#22d3ee" stroke-opacity="0.1" stroke-width="1"/>
-  <circle cx="640" cy="260" r="100" fill="none" stroke="#22d3ee" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#sk-bg)"/>
+  <!-- Warm gold glow behind product group -->
+  <ellipse cx="255" cy="190" rx="160" ry="120" fill="url(#sk-glow)"/>
+
+  <!-- ══ SMART DOOR LOCK (left-center, ~190,180) ══ -->
+  <!-- Drop shadow -->
+  <ellipse cx="190" cy="288" rx="36" ry="8" fill="url(#sk-shadow)"/>
+
+  <!-- Lock body 60×100 centered at 190,180 → top-left at 160,130 -->
+  <rect x="160" y="130" width="60" height="100" rx="7" ry="7" fill="url(#sk-lock-body)"/>
+  <!-- Left edge highlight -->
+  <rect x="160" y="130" width="2" height="100" rx="1" fill="#404866" opacity="0.7"/>
+  <!-- Top highlight strip -->
+  <rect x="162" y="130" width="56" height="3" rx="1.5" fill="#3a4060" opacity="0.6"/>
+
+  <!-- Padlock icon at top: 190,148 -->
+  <rect x="183" y="143" width="14" height="11" rx="3" fill="#1a1e2c" stroke="#22d3ee" stroke-width="0.8" opacity="0.7"/>
+  <path d="M185,143 Q185,137 190,137 Q195,137 195,143" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.7"/>
+  <circle cx="190" cy="149" r="2" fill="#22d3ee" opacity="0.7"/>
+
+  <!-- Keypad face inside: 3 cols × 4 rows of 8px keys, starting at 166,155 -->
+  <rect x="165" y="155" width="50" height="60" rx="3" fill="url(#sk-lock-face)" opacity="0.8"/>
+  <!-- Key grid: 3 cols (x: 170,181,192), 4 rows (y: 160,171,182,193) -->
+  <rect x="169" y="159" width="9" height="8" rx="2" fill="#1a1d2a"/>
+  <rect x="181" y="159" width="9" height="8" rx="2" fill="#1a1d2a"/>
+  <rect x="193" y="159" width="9" height="8" rx="2" fill="#1a1d2a"/>
+  <rect x="169" y="170" width="9" height="8" rx="2" fill="#1a1d2a"/>
+  <rect x="181" y="170" width="9" height="8" rx="2" fill="#1a1d2a"/>
+  <rect x="193" y="170" width="9" height="8" rx="2" fill="#1a1d2a"/>
+  <rect x="169" y="181" width="9" height="8" rx="2" fill="#1a1d2a"/>
+  <rect x="181" y="181" width="9" height="8" rx="2" fill="#1a1d2a"/>
+  <rect x="193" y="181" width="9" height="8" rx="2" fill="#1a1d2a"/>
+  <rect x="169" y="192" width="9" height="8" rx="2" fill="#22d3ee" opacity="0.3"/>
+  <rect x="181" y="192" width="9" height="8" rx="2" fill="#1a1d2a"/>
+  <rect x="193" y="192" width="9" height="8" rx="2" fill="#1a1d2a"/>
+
+  <!-- Fingerprint sensor: circle 20px at bottom of lock body, 190,220 -->
+  <circle cx="190" cy="218" r="12" fill="url(#sk-fp)" stroke="#2e3448" stroke-width="1"/>
+  <!-- Concentric rings inside -->
+  <circle cx="190" cy="218" r="9" fill="none" stroke="#3a4060" stroke-width="0.6" opacity="0.7"/>
+  <circle cx="190" cy="218" r="6" fill="none" stroke="#3a4060" stroke-width="0.6" opacity="0.6"/>
+  <circle cx="190" cy="218" r="3" fill="none" stroke="#3a4060" stroke-width="0.6" opacity="0.5"/>
+  <!-- Fingerprint arc lines -->
+  <path d="M185,213 Q190,210 195,213" fill="none" stroke="#22d3ee" stroke-width="0.4" opacity="0.4"/>
+  <path d="M184,216 Q190,212 196,216" fill="none" stroke="#22d3ee" stroke-width="0.4" opacity="0.4"/>
+  <path d="M184,219 Q190,215 196,219" fill="none" stroke="#22d3ee" stroke-width="0.4" opacity="0.35"/>
+
+  <!-- Status LED: amber, top-center of lock, 190,133 -->
+  <circle cx="190" cy="133" r="8" fill="url(#sk-amber-led)"/>
+  <circle cx="190" cy="133" r="3" fill="#f59e0b"/>
+
+  <!-- Lock floor reflection -->
+  <rect x="160" y="231" width="60" height="30" rx="3" fill="url(#sk-reflect)" opacity="0.5"/>
+
+  <!-- ══ DOOR/WINDOW SENSOR (top-center, ~265,100) ══ -->
+  <!-- Sensor glow -->
+  <ellipse cx="265" cy="100" rx="30" ry="50" fill="url(#sk-sensor-glow)"/>
+
+  <!-- Main sensor body: slim oblong 30×70 centered at 265,105 → top-left at 250,70 -->
+  <rect x="250" y="70" width="30" height="55" rx="8" ry="8" fill="url(#sk-sensor-body)"/>
+  <!-- Sensor body shading stripe -->
+  <rect x="252" y="72" width="26" height="50" rx="6" fill="#f8fafe" opacity="0.3"/>
+  <rect x="255" y="74" width="2" height="46" rx="1" fill="#c8ccda" opacity="0.5"/>
+
+  <!-- Magnet sensor half (top, smaller) -->
+  <rect x="255" y="55" width="20" height="18" rx="5" ry="5" fill="url(#sk-sensor-body)"/>
+  <rect x="257" y="57" width="16" height="14" rx="4" fill="#f8fafe" opacity="0.25"/>
+
+  <!-- Gap line between two halves (magnet gap visual) -->
+  <line x1="250" y1="70" x2="280" y2="70" stroke="#c0c4d4" stroke-width="1" opacity="0.6"/>
+
+  <!-- Single LED dot in the middle of body -->
+  <circle cx="265" cy="97" r="4" fill="#22d3ee" opacity="0.9"/>
+  <circle cx="265" cy="97" r="2" fill="#ffffff"/>
+
+  <!-- Sensor floor reflection -->
+  <rect x="250" y="126" width="30" height="20" rx="4" fill="url(#sk-reflect)" opacity="0.3"/>
+
+  <!-- ══ INDOOR DOME CAMERA (right-center, ~330,185) ══ -->
+  <!-- Drop shadow -->
+  <ellipse cx="330" cy="285" rx="34" ry="7" fill="url(#sk-shadow)"/>
+
+  <!-- Camera outer circle: 55px diameter = radius 27.5, centered at 330,185 -->
+  <circle cx="330" cy="185" r="32" fill="url(#sk-cam-body)" stroke="#2a2e40" stroke-width="1.5"/>
+  <!-- Dome top half: slightly lighter arc -->
+  <path d="M302,185 Q302,153 330,153 Q358,153 358,185 Z" fill="url(#sk-cam-dome)"/>
+  <!-- Dome highlight arc -->
+  <path d="M308,178 Q312,160 330,155" fill="none" stroke="#404866" stroke-width="1" opacity="0.5"/>
+
+  <!-- Lens: inner circle 24px diameter = radius 12, at 330,188 -->
+  <circle cx="330" cy="188" r="14" fill="#0a0d14" stroke="#1e2436" stroke-width="1.5"/>
+  <circle cx="330" cy="188" r="12" fill="url(#sk-lens)"/>
+  <!-- Cyan iris ring -->
+  <circle cx="330" cy="188" r="10" fill="none" stroke="#22d3ee" stroke-width="0.8" opacity="0.6"/>
+  <!-- Lens reflection -->
+  <circle cx="330" cy="188" r="12" fill="url(#sk-lens-reflect)"/>
+  <!-- Bright reflection dot -->
+  <circle cx="323" cy="181" r="2.5" fill="#ffffff" opacity="0.8"/>
+
+  <!-- IR LED ring: 6 tiny dots around lens at radius 20 -->
+  <circle cx="330" cy="168" r="2.5" fill="#ff3040" opacity="0.7"/>
+  <circle cx="347" cy="178" r="2.5" fill="#ff3040" opacity="0.7"/>
+  <circle cx="347" cy="198" r="2.5" fill="#ff3040" opacity="0.7"/>
+  <circle cx="330" cy="208" r="2.5" fill="#ff3040" opacity="0.6"/>
+  <circle cx="313" cy="198" r="2.5" fill="#ff3040" opacity="0.7"/>
+  <circle cx="313" cy="178" r="2.5" fill="#ff3040" opacity="0.7"/>
+  <!-- IR dot glows (faint red) -->
+  <circle cx="330" cy="168" r="5" fill="#ff3040" opacity="0.12"/>
+  <circle cx="347" cy="178" r="5" fill="#ff3040" opacity="0.12"/>
+  <circle cx="313" cy="178" r="5" fill="#ff3040" opacity="0.12"/>
+
+  <!-- Mount base below camera: small cylinder shape -->
+  <ellipse cx="330" cy="217" rx="18" ry="5" fill="#1a1d28"/>
+  <rect x="320" y="217" width="20" height="14" fill="#1a1d28"/>
+  <ellipse cx="330" cy="231" rx="18" ry="5" fill="#141618"/>
+  <!-- Mount screw -->
+  <circle cx="330" cy="224" r="3" fill="#0d0f14" stroke="#2a2e3c" stroke-width="0.5"/>
+
+  <!-- Camera floor reflection -->
+  <rect x="302" y="231" width="56" height="40" rx="14" fill="url(#sk-reflect)" opacity="0.4"/>
+
+  <!-- ══ CONNECTING GLOW LINES between devices ══ -->
+  <!-- Lock to Sensor: dashed cyan curve -->
+  <path d="M210,155 Q238,100 255,95" fill="none" stroke="#22d3ee" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.18" filter="url(#sk-line-glow)"/>
+  <!-- Sensor to Camera: dashed cyan curve -->
+  <path d="M280,95 Q305,95 310,165" fill="none" stroke="#22d3ee" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.18" filter="url(#sk-line-glow)"/>
+  <!-- Lock to Camera: dashed cyan arc -->
+  <path d="M220,200 Q265,235 298,200" fill="none" stroke="#22d3ee" stroke-width="0.8" stroke-dasharray="3,5" opacity="0.12" filter="url(#sk-line-glow)"/>
+
+  <!-- Product label at bottom -->
+  <text x="240" y="320" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#94a3b8" letter-spacing="2" opacity="0.5">ZAKEY SECURE KIT</text>
 </svg>

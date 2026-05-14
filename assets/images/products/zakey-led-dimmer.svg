@@ -1,16 +1,144 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
   <defs>
-    <linearGradient id="bg-LED DIMMER" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
-    </linearGradient>
-    <radialGradient id="gl-LED DIMMER" cx="240" cy="185" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <radialGradient id="bgG" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
     </radialGradient>
+    <pattern id="gridPat" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20,0 L0,0 0,20" fill="none" stroke="#6080c0" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+    <!-- White plastic body -->
+    <linearGradient id="bodyG" x1="15%" y1="10%" x2="85%" y2="90%">
+      <stop offset="0%" stop-color="#f2efea"/>
+      <stop offset="100%" stop-color="#dedad4"/>
+    </linearGradient>
+    <!-- Top face (light) -->
+    <linearGradient id="topG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f5f0"/>
+      <stop offset="100%" stop-color="#e8e4de"/>
+    </linearGradient>
+    <!-- Right side (slightly darker) -->
+    <linearGradient id="rightG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c8c4be"/>
+      <stop offset="100%" stop-color="#b8b4ae"/>
+    </linearGradient>
+    <!-- Terminal post gradient -->
+    <radialGradient id="termG" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#e0ddd8"/>
+      <stop offset="100%" stop-color="#b8b5b0"/>
+    </radialGradient>
+    <!-- Warm white glow -->
+    <radialGradient id="warmGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff0d0" stop-opacity="0.15"/>
+      <stop offset="60%" stop-color="#00e5ff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Drop shadow -->
+    <radialGradient id="shadowG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softG" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-LED DIMMER)"/>
-  <ellipse cx="240" cy="185" rx="180" ry="140" fill="url(#gl-LED DIMMER)"/>
-  <rect x="170" y="90" width="140" height="180" rx="10" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><rect x="190" y="115" width="45" height="65" rx="5" fill="#22d3ee" fill-opacity="0.15" stroke="#22d3ee" stroke-width="0.75" stroke-opacity="0.4"/><rect x="245" y="115" width="45" height="65" rx="5" fill="#22d3ee" fill-opacity="0.08" stroke="#22d3ee" stroke-width="0.75" stroke-opacity="0.3"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">LED DIMMER</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bgG)"/>
+  <rect width="480" height="360" fill="url(#gridPat)"/>
+
+  <!-- Warm white glow behind device -->
+  <ellipse cx="240" cy="195" rx="130" ry="90" fill="url(#warmGlow)"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="237" cy="274" rx="90" ry="11" fill="url(#shadowG)" opacity="0.5"/>
+
+  <!-- === LED DIMMER MODULE — white plastic, angled 3/4 view === -->
+  <!-- Top face (angled) -->
+  <polygon points="160,162 295,162 318,140 183,140" fill="url(#topG)"/>
+  <!-- Top face vent lines (fine thermal vents) -->
+  <g stroke="#d0ccc6" stroke-width="0.8" opacity="0.5">
+    <line x1="200" y1="156" x2="278" y2="148"/>
+    <line x1="200" y1="160" x2="278" y2="152"/>
+    <line x1="200" y1="152" x2="278" y2="144"/>
+  </g>
+  <!-- Top face edge highlight -->
+  <polygon points="160,162 295,162 297,164 162,164" fill="white" opacity="0.45"/>
+  <line x1="160" y1="162" x2="183" y2="140" stroke="white" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Right side face -->
+  <polygon points="295,162 318,140 318,222 295,244" fill="url(#rightG)"/>
+  <!-- Right side shadow -->
+  <line x1="318" y1="140" x2="318" y2="222" stroke="#a0a09a" stroke-width="1" opacity="0.8"/>
+
+  <!-- Main front face (white, slightly angled in 3/4) -->
+  <rect x="160" y="162" width="135" height="82" rx="5" fill="url(#bodyG)"/>
+  <!-- Lit edges -->
+  <rect x="160" y="162" width="3" height="82" rx="1.5" fill="white" opacity="0.85"/>
+  <rect x="160" y="162" width="135" height="3" rx="1.5" fill="white" opacity="0.8"/>
+  <!-- Bottom edge shadow -->
+  <rect x="160" y="242" width="135" height="2.5" rx="1" fill="#b0aca6" opacity="0.5"/>
+
+  <!-- === INPUT TERMINALS (left side) — 2 round posts === -->
+  <!-- Left terminal 1 -->
+  <circle cx="148" cy="188" r="10" fill="url(#termG)" stroke="#a8a4a0" stroke-width="1.2"/>
+  <circle cx="148" cy="188" r="6" fill="#c8c5c0" stroke="#b0ada8" stroke-width="0.8"/>
+  <circle cx="148" cy="188" r="3" fill="#d5d2ce"/>
+  <!-- Terminal wire hole -->
+  <circle cx="148" cy="188" r="1.5" fill="#888480"/>
+  <text x="148" y="207" text-anchor="middle" font-family="Arial" font-size="6.5" fill="#8a9090">IN</text>
+
+  <!-- Left terminal 2 -->
+  <circle cx="148" cy="220" r="10" fill="url(#termG)" stroke="#a8a4a0" stroke-width="1.2"/>
+  <circle cx="148" cy="220" r="6" fill="#c8c5c0" stroke="#b0ada8" stroke-width="0.8"/>
+  <circle cx="148" cy="220" r="3" fill="#d5d2ce"/>
+  <circle cx="148" cy="220" r="1.5" fill="#888480"/>
+
+  <!-- === OUTPUT TERMINALS (right side) — 2 round posts === -->
+  <!-- Right terminal 1 -->
+  <circle cx="307" cy="188" r="10" fill="url(#termG)" stroke="#a8a4a0" stroke-width="1.2"/>
+  <circle cx="307" cy="188" r="6" fill="#c8c5c0" stroke="#b0ada8" stroke-width="0.8"/>
+  <circle cx="307" cy="188" r="3" fill="#d5d2ce"/>
+  <circle cx="307" cy="188" r="1.5" fill="#888480"/>
+  <text x="307" y="207" text-anchor="middle" font-family="Arial" font-size="6.5" fill="#8a9090">OUT</text>
+
+  <!-- Right terminal 2 -->
+  <circle cx="307" cy="220" r="10" fill="url(#termG)" stroke="#a8a4a0" stroke-width="1.2"/>
+  <circle cx="307" cy="220" r="6" fill="#c8c5c0" stroke="#b0ada8" stroke-width="0.8"/>
+  <circle cx="307" cy="220" r="3" fill="#d5d2ce"/>
+  <circle cx="307" cy="220" r="1.5" fill="#888480"/>
+
+  <!-- Front face contents -->
+  <!-- Label area: "0-10V / PWM" -->
+  <rect x="175" y="175" width="90" height="22" rx="3" fill="#e8e4de" opacity="0.6"/>
+  <text x="220" y="188" text-anchor="middle" font-family="'Courier New', monospace" font-size="8"
+        fill="#556060" letter-spacing="0.3">0-10V / PWM</text>
+
+  <!-- Zakey Z logo (small, dark) -->
+  <g transform="translate(192,207)">
+    <polygon points="0,0 14,0 14,3 4,13 14,13 14,16 0,16 0,13 10,3 0,3" fill="#8898a8" opacity="0.7" transform="scale(0.65)"/>
+  </g>
+
+  <!-- Green LED indicator -->
+  <circle cx="258" cy="215" r="4.5" fill="#00cc66" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="258" cy="215" r="2.5" fill="#00ff88"/>
+
+  <!-- LED label -->
+  <text x="264" y="225" text-anchor="start" font-family="Arial" font-size="7" fill="#6a8080">PWR</text>
+
+  <!-- Subtle model text -->
+  <text x="220" y="232" text-anchor="middle" font-family="Arial" font-size="7" fill="#909898" opacity="0.6">ZK-DIM-01</text>
+
+  <!-- Floor reflection -->
+  <rect x="160" y="244" width="135" height="30" rx="5" fill="url(#bodyG)" opacity="0.07"
+        transform="scale(1,-1) translate(0,-488)"/>
+
+  <!-- Product label -->
+  <text x="240" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="10"
+        fill="white" opacity="0.5" letter-spacing="2">LED DIMMER</text>
 </svg>

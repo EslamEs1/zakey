@@ -1,16 +1,131 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
   <defs>
-    <linearGradient id="bg-DOOR/WINDOW SENSOR" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
-    </linearGradient>
-    <radialGradient id="gl-DOOR/WINDOW SENSOR" cx="240" cy="185" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <radialGradient id="dw-bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
     </radialGradient>
+    <pattern id="dw-hex" x="0" y="0" width="20" height="17.3" patternUnits="userSpaceOnUse">
+      <polygon points="10,1 19,5.5 19,11.8 10,16.3 1,11.8 1,5.5" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+    <!-- Main unit body -->
+    <linearGradient id="dw-main-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5f2ee"/>
+      <stop offset="60%" stop-color="#e8e4de"/>
+      <stop offset="100%" stop-color="#d4d0ca"/>
+    </linearGradient>
+    <!-- Main unit side -->
+    <linearGradient id="dw-main-side" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c8c4be"/>
+      <stop offset="100%" stop-color="#aaa8a2"/>
+    </linearGradient>
+    <!-- Magnet body -->
+    <linearGradient id="dw-mag-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0ede8"/>
+      <stop offset="60%" stop-color="#e0ddd8"/>
+      <stop offset="100%" stop-color="#ccc8c2"/>
+    </linearGradient>
+    <!-- Magnet side -->
+    <linearGradient id="dw-mag-side" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b8b4ae"/>
+      <stop offset="100%" stop-color="#a0a09a"/>
+    </linearGradient>
+    <!-- White glow -->
+    <radialGradient id="dw-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Shadow -->
+    <radialGradient id="dw-shadow" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Top face main -->
+    <linearGradient id="dw-top-main" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e8e4de"/>
+    </linearGradient>
+    <!-- Top face mag -->
+    <linearGradient id="dw-top-mag" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f5f0"/>
+      <stop offset="100%" stop-color="#dedad4"/>
+    </linearGradient>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-DOOR/WINDOW SENSOR)"/>
-  <ellipse cx="240" cy="185" rx="180" ry="140" fill="url(#gl-DOOR/WINDOW SENSOR)"/>
-  <ellipse cx="240" cy="190" rx="75" ry="90" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><circle cx="240" cy="190" r="28" fill="#05070d" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.4"/><circle cx="240" cy="190" r="12" fill="#22d3ee" fill-opacity="0.20"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">DOOR/WINDOW SENSOR</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#dw-bg)"/>
+  <rect width="480" height="360" fill="url(#dw-hex)"/>
+
+  <!-- White glow behind devices -->
+  <ellipse cx="240" cy="190" rx="150" ry="100" fill="url(#dw-glow)"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="240" cy="308" rx="115" ry="12" fill="url(#dw-shadow)"/>
+
+  <!-- === MAIN UNIT (30x60px face, slight 3D) === -->
+  <!-- Right side depth -->
+  <polygon points="190,148 200,142 200,242 190,248" fill="url(#dw-main-side)"/>
+  <!-- Top face -->
+  <polygon points="160,148 190,148 200,142 170,142" fill="url(#dw-top-main)"/>
+  <!-- Front face -->
+  <rect x="160" y="148" width="30" height="100" rx="6" fill="url(#dw-main-grad)"/>
+  <!-- Front face subtle inner shadow edges -->
+  <rect x="160" y="148" width="30" height="100" rx="6" fill="none" stroke="#ccc8c2" stroke-width="1.2"/>
+  <!-- Top face bevel highlight -->
+  <rect x="161" y="149" width="27" height="3" rx="1.5" fill="#ffffff" opacity="0.6"/>
+  <!-- Left face highlight strip -->
+  <rect x="160" y="149" width="3" height="99" rx="1.5" fill="#ffffff" opacity="0.4"/>
+  <!-- Front face sheen -->
+  <ellipse cx="170" cy="168" rx="10" ry="7" fill="#ffffff" opacity="0.15"/>
+
+  <!-- Green LED dot on main unit -->
+  <circle cx="175" cy="165" r="3.5" fill="#22ff88" opacity="0.92"/>
+  <circle cx="175" cy="165" r="6" fill="#22ff88" opacity="0.22"/>
+  <circle cx="175" cy="164.5" r="1.5" fill="#aaffcc" opacity="0.7"/>
+
+  <!-- Adhesive tape graphic at back edge of main unit -->
+  <rect x="157" y="172" width="5" height="50" rx="2" fill="#e0ddd8" opacity="0.4"/>
+  <rect x="157" y="172" width="5" height="50" rx="2" fill="none" stroke="#ccc8c2" stroke-width="0.8" opacity="0.5"/>
+  <!-- Tape texture lines -->
+  <line x1="158" y1="180" x2="161" y2="180" stroke="#ccc8c2" stroke-width="0.6" opacity="0.4"/>
+  <line x1="158" y1="188" x2="161" y2="188" stroke="#ccc8c2" stroke-width="0.6" opacity="0.4"/>
+  <line x1="158" y1="196" x2="161" y2="196" stroke="#ccc8c2" stroke-width="0.6" opacity="0.4"/>
+  <line x1="158" y1="204" x2="161" y2="204" stroke="#ccc8c2" stroke-width="0.6" opacity="0.4"/>
+
+  <!-- GAP between pieces (8px) -->
+  <!-- gap from x=190 to x=198 -->
+
+  <!-- === MAGNET PIECE (20x80px face, slight 3D) === -->
+  <!-- Right side depth -->
+  <polygon points="278,155 288,149 288,235 278,241" fill="url(#dw-mag-side)"/>
+  <!-- Top face -->
+  <polygon points="198,155 278,155 288,149 208,149" fill="url(#dw-top-mag)"/>
+  <!-- Front face -->
+  <rect x="198" y="155" width="80" height="80" rx="6" fill="url(#dw-mag-grad)"/>
+  <rect x="198" y="155" width="80" height="80" rx="6" fill="none" stroke="#c8c4be" stroke-width="1"/>
+  <!-- Top highlight -->
+  <rect x="199" y="156" width="77" height="3" rx="1.5" fill="#ffffff" opacity="0.5"/>
+  <!-- Left highlight -->
+  <rect x="198" y="156" width="3" height="78" rx="1.5" fill="#ffffff" opacity="0.35"/>
+  <!-- Magnet sheen -->
+  <ellipse cx="228" cy="170" rx="22" ry="8" fill="#ffffff" opacity="0.12"/>
+  <!-- Ribbed texture on magnet sides — subtle lines on top face -->
+  <line x1="218" y1="149" x2="218" y2="155" stroke="#c0bcb6" stroke-width="1" opacity="0.5"/>
+  <line x1="228" y1="149" x2="228" y2="155" stroke="#c0bcb6" stroke-width="1" opacity="0.5"/>
+  <line x1="238" y1="149" x2="238" y2="155" stroke="#c0bcb6" stroke-width="1" opacity="0.5"/>
+  <line x1="248" y1="149" x2="248" y2="155" stroke="#c0bcb6" stroke-width="1" opacity="0.5"/>
+  <line x1="258" y1="149" x2="258" y2="155" stroke="#c0bcb6" stroke-width="1" opacity="0.5"/>
+  <line x1="268" y1="149" x2="268" y2="155" stroke="#c0bcb6" stroke-width="1" opacity="0.5"/>
+  <!-- Ribbed lines on front face (sides) -->
+  <line x1="198" y1="172" x2="278" y2="172" stroke="#dedad4" stroke-width="0.8" opacity="0.5"/>
+  <line x1="198" y1="180" x2="278" y2="180" stroke="#dedad4" stroke-width="0.8" opacity="0.4"/>
+  <line x1="198" y1="188" x2="278" y2="188" stroke="#dedad4" stroke-width="0.8" opacity="0.35"/>
+  <line x1="198" y1="196" x2="278" y2="196" stroke="#dedad4" stroke-width="0.8" opacity="0.3"/>
+  <line x1="198" y1="204" x2="278" y2="204" stroke="#dedad4" stroke-width="0.8" opacity="0.3"/>
+  <line x1="198" y1="212" x2="278" y2="212" stroke="#dedad4" stroke-width="0.8" opacity="0.25"/>
+  <line x1="198" y1="220" x2="278" y2="220" stroke="#dedad4" stroke-width="0.8" opacity="0.2"/>
+  <line x1="198" y1="228" x2="278" y2="228" stroke="#dedad4" stroke-width="0.8" opacity="0.2"/>
+
+  <!-- Product label -->
+  <text x="240" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" opacity="0.40" letter-spacing="2.5">DOOR / WINDOW SENSOR</text>
 </svg>

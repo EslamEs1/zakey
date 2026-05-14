@@ -1,16 +1,86 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <title>Zakey Smart Switch Series — Close-up detail view</title>
   <defs>
-    <linearGradient id="bg-SWITCH — DETAIL" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0d0f1c"/>
+      <stop offset="100%" stop-color="#060810"/>
     </linearGradient>
-    <radialGradient id="gl-SWITCH — DETAIL" cx="200" cy="165" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
+    <radialGradient id="glow" cx="240" cy="180" r="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="btnFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0f2f8"/>
+      <stop offset="100%" stop-color="#d8dce8"/>
+    </linearGradient>
+    <radialGradient id="touchGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ledGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.50"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-SWITCH — DETAIL)"/>
-  <ellipse cx="200" cy="165" rx="180" ry="140" fill="url(#gl-SWITCH — DETAIL)"/>
-  <rect x="170" y="90" width="140" height="180" rx="10" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><rect x="190" y="115" width="45" height="65" rx="5" fill="#22d3ee" fill-opacity="0.15" stroke="#22d3ee" stroke-width="0.75" stroke-opacity="0.4"/><rect x="245" y="115" width="45" height="65" rx="5" fill="#22d3ee" fill-opacity="0.08" stroke="#22d3ee" stroke-width="0.75" stroke-opacity="0.3"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">SWITCH — DETAIL</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bg)"/>
+  <ellipse cx="240" cy="180" rx="200" ry="160" fill="url(#glow)"/>
+
+  <!-- Two large button zones filling frame (simulate zoomed-in view) -->
+  <!-- Button 1 top: y=60 to 175 -->
+  <rect x="100" y="60" width="280" height="115" rx="4" fill="url(#btnFace)" stroke="#c0c4d0" stroke-width="0.8"/>
+  <!-- Button 1 highlight sheen -->
+  <rect x="100" y="60" width="280" height="42" rx="4" fill="#ffffff" fill-opacity="0.28"/>
+
+  <!-- Button 1: touch point glow (finger impression) -->
+  <ellipse cx="200" cy="117" rx="45" ry="32" fill="url(#touchGlow)"/>
+
+  <!-- Button 1 circle icon, enlarged -->
+  <circle cx="180" cy="117" r="14" fill="none" stroke="#9499aa" stroke-width="1.2"/>
+  <circle cx="180" cy="117" r="6" fill="none" stroke="#9499aa" stroke-width="0.8"/>
+  <circle cx="180" cy="117" r="2" fill="#a0a4b0"/>
+  <!-- Tick mark inside icon -->
+  <line x1="175" y1="117" x2="178" y2="121" stroke="#9499aa" stroke-width="1" stroke-linecap="round"/>
+  <line x1="178" y1="121" x2="185" y2="113" stroke="#9499aa" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Button 1 backlit strip (active, cyan) -->
+  <rect x="348" y="74" width="5" height="72" rx="2.5" fill="#000000" fill-opacity="0.20"/>
+  <rect x="348" y="74" width="5" height="72" rx="2.5" fill="#22d3ee" fill-opacity="0.42"/>
+  <rect x="349" y="75" width="3" height="68" rx="1.5" fill="#22d3ee" fill-opacity="0.30"/>
+
+  <!-- Button 1 LED indicator -->
+  <circle cx="365" cy="117" r="5" fill="#22d3ee"/>
+  <ellipse cx="365" cy="117" rx="12" ry="12" fill="url(#ledGlow)"/>
+  <!-- LED specular -->
+  <circle cx="363" cy="115" r="1.5" fill="#ffffff" fill-opacity="0.70"/>
+
+  <!-- Button separator line -->
+  <line x1="100" y1="177" x2="380" y2="177" stroke="#b8bcc8" stroke-width="1"/>
+  <!-- Subtle inner glow on separator -->
+  <line x1="100" y1="178" x2="380" y2="178" stroke="#ffffff" stroke-width="0.4" stroke-opacity="0.30"/>
+
+  <!-- Button 2 bottom: y=177 to 295 -->
+  <rect x="100" y="177" width="280" height="118" rx="4" fill="url(#btnFace)" stroke="#c0c4d0" stroke-width="0.8"/>
+  <rect x="100" y="177" width="280" height="42" rx="4" fill="#ffffff" fill-opacity="0.20"/>
+
+  <!-- Button 2 icon (lamp/sun) -->
+  <circle cx="180" cy="236" r="10" fill="none" stroke="#9499aa" stroke-width="1.2"/>
+  <circle cx="180" cy="236" r="4" fill="#b0b4c0"/>
+  <!-- Rays -->
+  <line x1="180" y1="220" x2="180" y2="217" stroke="#9499aa" stroke-width="1" stroke-linecap="round"/>
+  <line x1="180" y1="252" x2="180" y2="255" stroke="#9499aa" stroke-width="1" stroke-linecap="round"/>
+  <line x1="166" y1="236" x2="163" y2="236" stroke="#9499aa" stroke-width="1" stroke-linecap="round"/>
+  <line x1="194" y1="236" x2="197" y2="236" stroke="#9499aa" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Button 2 backlit strip (amber, on state) -->
+  <rect x="348" y="192" width="5" height="72" rx="2.5" fill="#000000" fill-opacity="0.20"/>
+  <rect x="348" y="192" width="5" height="72" rx="2.5" fill="#f59e0b" fill-opacity="0.40"/>
+
+  <!-- Button 2 LED (amber) -->
+  <circle cx="365" cy="236" r="5" fill="#f59e0b"/>
+  <ellipse cx="365" cy="236" rx="10" ry="10" fill="#f59e0b" fill-opacity="0.22"/>
+  <circle cx="363" cy="234" r="1.5" fill="#ffffff" fill-opacity="0.60"/>
+
+  <text x="240" y="332" font-family="system-ui,sans-serif" font-size="10" fill="#8b92a9" text-anchor="middle" letter-spacing="0.05em">Smart Switch — Detail</text>
 </svg>

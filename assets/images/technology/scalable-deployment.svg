@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Zakey Scalable Deployment">
+  <defs>
+    <linearGradient id="sd-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#060c1c"/>
+      <stop offset="100%" stop-color="#0a1828"/>
+    </linearGradient>
+    <pattern id="sd-grid" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32,0 L0,0 0,32" fill="none" stroke="rgba(34,211,238,0.04)" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#sd-bg)"/>
+  <rect width="800" height="600" fill="url(#sd-grid)"/>
+  <rect x="1" y="1" width="798" height="598" fill="none" stroke="rgba(34,211,238,0.08)" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="400" y="44" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="rgba(34,211,238,0.5)" letter-spacing="3">DEPLOYMENT</text>
+  <text x="400" y="66" text-anchor="middle" font-family="system-ui, sans-serif" font-size="19" font-weight="700" fill="rgba(255,255,255,0.88)">Scalable Deployment System</text>
+
+  <!-- Section label: Room Templates -->
+  <text x="400" y="96" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.45)" letter-spacing="2">ROOM TEMPLATES</text>
+
+  <!-- Template card 1: Bedroom -->
+  <rect x="55" y="106" width="195" height="140" rx="8" fill="#0a1828" stroke="rgba(34,211,238,0.3)" stroke-width="1.2"/>
+  <rect x="61" y="112" width="183" height="128" rx="6" fill="#071220" stroke="rgba(34,211,238,0.08)" stroke-width="0.8"/>
+  <text x="152" y="132" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,0.8)">Bedroom</text>
+  <!-- bed icon -->
+  <rect x="106" y="148" width="92" height="52" rx="4" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <rect x="106" y="148" width="92" height="20" rx="4" fill="rgba(34,211,238,0.06)"/>
+  <rect x="110" y="172" width="20" height="28" rx="2" fill="rgba(255,255,255,0.08)"/>
+  <rect x="178" y="172" width="20" height="28" rx="2" fill="rgba(255,255,255,0.08)"/>
+  <!-- device dots -->
+  <circle cx="82" cy="218" r="4" fill="#22d3ee" opacity="0.7"/>
+  <circle cx="96" cy="218" r="4" fill="#22d3ee" opacity="0.5"/>
+  <circle cx="110" cy="218" r="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="82" y="234" font-family="system-ui, sans-serif" font-size="7" fill="rgba(255,255,255,0.35)">3 devices</text>
+
+  <!-- Template card 2: Living Room -->
+  <rect x="302" y="106" width="195" height="140" rx="8" fill="#0a1828" stroke="#22d3ee" stroke-width="1.5"/>
+  <rect x="308" y="112" width="183" height="128" rx="6" fill="#091828" stroke="rgba(34,211,238,0.15)" stroke-width="0.8"/>
+  <text x="400" y="132" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,0.9)">Living Room</text>
+  <!-- sofa icon simplified -->
+  <rect x="336" y="150" width="128" height="50" rx="4" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <rect x="336" y="150" width="20" height="50" rx="4" fill="rgba(255,255,255,0.06)"/>
+  <rect x="444" y="150" width="20" height="50" rx="4" fill="rgba(255,255,255,0.06)"/>
+  <rect x="336" y="178" width="128" height="22" rx="3" fill="rgba(34,211,238,0.05)"/>
+  <!-- device dots -->
+  <circle cx="330" cy="218" r="4" fill="#22d3ee" opacity="0.8"/>
+  <circle cx="344" cy="218" r="4" fill="#22d3ee" opacity="0.7"/>
+  <circle cx="358" cy="218" r="4" fill="#22d3ee" opacity="0.5"/>
+  <circle cx="372" cy="218" r="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="330" y="234" font-family="system-ui, sans-serif" font-size="7" fill="rgba(255,255,255,0.4)">5 devices</text>
+
+  <!-- Template card 3: Meeting Room -->
+  <rect x="549" y="106" width="195" height="140" rx="8" fill="#0a1828" stroke="rgba(34,211,238,0.3)" stroke-width="1.2"/>
+  <rect x="555" y="112" width="183" height="128" rx="6" fill="#071220" stroke="rgba(34,211,238,0.08)" stroke-width="0.8"/>
+  <text x="647" y="132" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,0.8)">Meeting Room</text>
+  <!-- table icon -->
+  <rect x="590" y="155" width="112" height="42" rx="3" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <!-- chairs -->
+  <rect x="598" y="148" width="16" height="10" rx="2" fill="rgba(255,255,255,0.08)"/>
+  <rect x="622" y="148" width="16" height="10" rx="2" fill="rgba(255,255,255,0.08)"/>
+  <rect x="646" y="148" width="16" height="10" rx="2" fill="rgba(255,255,255,0.08)"/>
+  <rect x="670" y="148" width="16" height="10" rx="2" fill="rgba(255,255,255,0.08)"/>
+  <!-- device dots -->
+  <circle cx="576" cy="218" r="4" fill="#22d3ee" opacity="0.7"/>
+  <circle cx="590" cy="218" r="4" fill="#22d3ee" opacity="0.5"/>
+  <circle cx="604" cy="218" r="4" fill="#22d3ee" opacity="0.4"/>
+  <text x="576" y="234" font-family="system-ui, sans-serif" font-size="7" fill="rgba(255,255,255,0.35)">4 devices</text>
+
+  <!-- Deploy chain arrows: middle section -->
+  <text x="400" y="288" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.4)" letter-spacing="2">WORKFLOW</text>
+
+  <g font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,0.8)" text-anchor="middle">
+    <!-- Deploy box -->
+    <rect x="115" y="300" width="120" height="38" rx="6" fill="#0c2040" stroke="#22d3ee" stroke-width="1.2"/>
+    <text x="175" y="323">Deploy</text>
+    <!-- arrow -->
+    <line x1="235" y1="319" x2="295" y2="319" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/>
+    <polygon points="293,315 303,319 293,323" fill="#22d3ee" opacity="0.6"/>
+    <!-- Repeat box -->
+    <rect x="305" y="300" width="120" height="38" rx="6" fill="#0c1e38" stroke="rgba(34,211,238,0.5)" stroke-width="1"/>
+    <text x="365" y="323">Repeat</text>
+    <!-- arrow -->
+    <line x1="425" y1="319" x2="485" y2="319" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/>
+    <polygon points="483,315 493,319 483,323" fill="#22d3ee" opacity="0.6"/>
+    <!-- Monitor box -->
+    <rect x="495" y="300" width="120" height="38" rx="6" fill="#0c1e38" stroke="rgba(34,211,238,0.5)" stroke-width="1"/>
+    <text x="555" y="323">Monitor</text>
+  </g>
+
+  <!-- Central Monitoring label + building schematic -->
+  <text x="400" y="374" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.45)" letter-spacing="2">CENTRAL MONITORING</text>
+
+  <!-- Building schematic: side view 4 floors -->
+  <rect x="270" y="390" width="260" height="160" rx="4" fill="#071420" stroke="rgba(34,211,238,0.2)" stroke-width="1"/>
+  <!-- Floor dividers -->
+  <line x1="270" y1="430" x2="530" y2="430" stroke="rgba(34,211,238,0.1)" stroke-width="0.8"/>
+  <line x1="270" y1="470" x2="530" y2="470" stroke="rgba(34,211,238,0.1)" stroke-width="0.8"/>
+  <line x1="270" y1="510" x2="530" y2="510" stroke="rgba(34,211,238,0.1)" stroke-width="0.8"/>
+  <!-- Floor labels -->
+  <g font-family="system-ui, sans-serif" font-size="8" fill="rgba(255,255,255,0.3)">
+    <text x="282" y="414">Floor 4</text>
+    <text x="282" y="454">Floor 3</text>
+    <text x="282" y="494">Floor 2</text>
+    <text x="282" y="534">Floor 1</text>
+  </g>
+  <!-- Room indicators per floor -->
+  <!-- Floor 4: 3 active out of 5 -->
+  <g>
+    <circle cx="340" cy="410" r="5" fill="#22d3ee" opacity="0.9"/>
+    <circle cx="358" cy="410" r="5" fill="#22d3ee" opacity="0.7"/>
+    <circle cx="376" cy="410" r="5" fill="rgba(255,255,255,0.15)"/>
+    <circle cx="394" cy="410" r="5" fill="#22d3ee" opacity="0.5"/>
+    <circle cx="412" cy="410" r="5" fill="rgba(255,255,255,0.15)"/>
+    <text x="450" y="414" font-family="system-ui, sans-serif" font-size="7.5" fill="rgba(34,211,238,0.6)">3/5 active</text>
+  </g>
+  <!-- Floor 3: 4 active -->
+  <g>
+    <circle cx="340" cy="450" r="5" fill="#22d3ee" opacity="0.9"/>
+    <circle cx="358" cy="450" r="5" fill="#22d3ee" opacity="0.85"/>
+    <circle cx="376" cy="450" r="5" fill="#22d3ee" opacity="0.7"/>
+    <circle cx="394" cy="450" r="5" fill="#22d3ee" opacity="0.5"/>
+    <circle cx="412" cy="450" r="5" fill="rgba(255,255,255,0.15)"/>
+    <text x="450" y="454" font-family="system-ui, sans-serif" font-size="7.5" fill="rgba(34,211,238,0.6)">4/5 active</text>
+  </g>
+  <!-- Floor 2: 5 active -->
+  <g>
+    <circle cx="340" cy="490" r="5" fill="#22d3ee" opacity="0.9"/>
+    <circle cx="358" cy="490" r="5" fill="#22d3ee" opacity="0.9"/>
+    <circle cx="376" cy="490" r="5" fill="#22d3ee" opacity="0.8"/>
+    <circle cx="394" cy="490" r="5" fill="#22d3ee" opacity="0.7"/>
+    <circle cx="412" cy="490" r="5" fill="#22d3ee" opacity="0.6"/>
+    <text x="450" y="494" font-family="system-ui, sans-serif" font-size="7.5" fill="rgba(34,211,238,0.6)">5/5 active</text>
+  </g>
+  <!-- Floor 1: 2 active -->
+  <g>
+    <circle cx="340" cy="530" r="5" fill="#22d3ee" opacity="0.6"/>
+    <circle cx="358" cy="530" r="5" fill="rgba(255,255,255,0.15)"/>
+    <circle cx="376" cy="530" r="5" fill="rgba(255,255,255,0.15)"/>
+    <circle cx="394" cy="530" r="5" fill="#22d3ee" opacity="0.4"/>
+    <circle cx="412" cy="530" r="5" fill="rgba(255,255,255,0.15)"/>
+    <text x="450" y="534" font-family="system-ui, sans-serif" font-size="7.5" fill="rgba(34,211,238,0.4)">2/5 active</text>
+  </g>
+</svg>

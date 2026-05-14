@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Zakey Multi-Protocol Compatibility">
+  <defs>
+    <radialGradient id="mp-bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0a1830"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </radialGradient>
+    <radialGradient id="mp-center-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="mp-glow">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#mp-bg)"/>
+  <rect x="1" y="1" width="798" height="598" fill="none" stroke="rgba(34,211,238,0.08)" stroke-width="1"/>
+
+  <!-- Subtle concentric rings in background -->
+  <circle cx="400" cy="300" r="200" fill="none" stroke="rgba(34,211,238,0.04)" stroke-width="1"/>
+  <circle cx="400" cy="300" r="160" fill="none" stroke="rgba(34,211,238,0.05)" stroke-width="1"/>
+  <circle cx="400" cy="300" r="120" fill="none" stroke="rgba(34,211,238,0.06)" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="400" y="44" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="rgba(34,211,238,0.5)" letter-spacing="3">PROTOCOL COMPATIBILITY</text>
+  <text x="400" y="66" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="rgba(255,255,255,0.88)">Multi-Protocol Hub</text>
+
+  <!-- Glow halo -->
+  <circle cx="400" cy="300" r="90" fill="url(#mp-center-glow)"/>
+
+  <!-- Center hub -->
+  <circle cx="400" cy="300" r="52" fill="#091628" stroke="#22d3ee" stroke-width="1.8" filter="url(#mp-glow)"/>
+  <circle cx="400" cy="300" r="44" fill="#060e1a" stroke="rgba(34,211,238,0.2)" stroke-width="1"/>
+  <text x="400" y="294" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#22d3ee">ZAKEY</text>
+  <text x="400" y="311" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.5)">HUB</text>
+
+  <!-- 6 protocol nodes at 60-degree intervals -->
+  <!-- Protocol 1: Wi-Fi at top (270deg / -90deg) → (400, 120) -->
+  <path d="M400,248 Q400,200 400,148" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-opacity="0.25"/>
+  <circle cx="400" cy="140" r="26" fill="#0a1828" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.6"/>
+  <!-- wifi waves -->
+  <path d="M389,140 Q400,130 411,140" fill="none" stroke="#22d3ee" stroke-width="1.3"/>
+  <path d="M394,145 Q400,138 406,145" fill="none" stroke="#22d3ee" stroke-width="1.2"/>
+  <circle cx="400" cy="148" r="2" fill="#22d3ee"/>
+  <text x="400" y="176" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.7)">Wi-Fi</text>
+
+  <!-- Protocol 2: Zigbee at top-right (330deg) → approx (573, 210) -->
+  <path d="M444,272 Q510,240 548,218" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-opacity="0.25"/>
+  <circle cx="560" cy="210" r="26" fill="#0a1828" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.6"/>
+  <!-- zigbee hexagon-like -->
+  <polygon points="560,196 571,203 571,217 560,224 549,217 549,203" fill="none" stroke="#22d3ee" stroke-width="1.2" opacity="0.8"/>
+  <circle cx="560" cy="210" r="3.5" fill="#22d3ee" opacity="0.7"/>
+  <text x="560" y="246" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.7)">Zigbee 3.0</text>
+
+  <!-- Protocol 3: Bluetooth LE at bottom-right (30deg) → approx (573, 390) -->
+  <path d="M444,328 Q510,360 548,382" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-opacity="0.25"/>
+  <circle cx="560" cy="390" r="26" fill="#0a1828" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.6"/>
+  <!-- BLE zigzag -->
+  <path d="M553,380 L567,390 L553,400 M567,380 L553,390 L567,400" fill="none" stroke="#22d3ee" stroke-width="1.3" opacity="0.8"/>
+  <text x="560" y="426" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.7)">Bluetooth LE</text>
+
+  <!-- Protocol 4: Matter at bottom (90deg) → (400, 460) -->
+  <path d="M400,352 Q400,400 400,452" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-opacity="0.25"/>
+  <circle cx="400" cy="460" r="26" fill="#0a1828" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.6"/>
+  <!-- M shape -->
+  <polyline points="388,467 388,453 400,462 412,453 412,467" fill="none" stroke="#22d3ee" stroke-width="1.3" opacity="0.8"/>
+  <text x="400" y="496" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.7)">Matter-ready</text>
+
+  <!-- Protocol 5: IR at bottom-left (150deg) → approx (227, 390) -->
+  <path d="M356,328 Q290,360 252,382" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-opacity="0.25"/>
+  <circle cx="240" cy="390" r="26" fill="#0a1828" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.6"/>
+  <!-- IR waves -->
+  <path d="M232,383 Q240,390 232,397" fill="none" stroke="#22d3ee" stroke-width="1.2" opacity="0.8"/>
+  <path d="M228,379 Q240,390 228,401" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.6"/>
+  <line x1="248" y1="390" x2="256" y2="390" stroke="#22d3ee" stroke-width="1.3" opacity="0.8"/>
+  <text x="240" y="426" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.7)">IR Control</text>
+
+  <!-- Protocol 6: Wired at top-left (210deg) → approx (227, 210) -->
+  <path d="M356,272 Q290,240 252,218" fill="none" stroke="#22d3ee" stroke-width="1.8" stroke-opacity="0.3"/>
+  <circle cx="240" cy="210" r="26" fill="#0a1828" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.6"/>
+  <!-- Wired plug icon -->
+  <line x1="234" y1="204" x2="234" y2="216" stroke="#22d3ee" stroke-width="1.5" opacity="0.8"/>
+  <line x1="246" y1="204" x2="246" y2="216" stroke="#22d3ee" stroke-width="1.5" opacity="0.8"/>
+  <path d="M231,210 L231,216 Q231,220 240,220 Q249,220 249,216 L249,210z" fill="none" stroke="#22d3ee" stroke-width="1.2" opacity="0.8"/>
+  <text x="240" y="246" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(255,255,255,0.7)">Wired</text>
+
+  <text x="400" y="555" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="rgba(34,211,238,0.3)" letter-spacing="2">UNIVERSAL COMPATIBILITY · FUTURE-READY</text>
+</svg>

@@ -1,5 +1,6 @@
 import { initNavigation, initMobileDrawer } from './navigation.js';
 import { initQuoteForm, initNewsletterForm } from './forms.js';
+import { initTheme } from './theme.js';
 
 export function boot() {
   document.querySelectorAll('[data-copyright-year]').forEach(el => {
@@ -36,6 +37,7 @@ function initStickyHeader() {
 
 document.addEventListener('DOMContentLoaded', () => {
   boot();
+  initTheme();
   initNavigation();
   initMobileDrawer();
   initStickyHeader();
@@ -56,5 +58,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (document.getElementById('solutions-grid')) {
     import('./solutions.js').then(m => m.initFilter());
+  }
+
+  const revealEls = document.querySelectorAll('.reveal');
+  if (revealEls.length) {
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); } }),
+      { threshold: 0.12 }
+    );
+    revealEls.forEach(el => obs.observe(el));
+  }
+
+  if (document.querySelector('[data-faq]')) {
+    import('./faq.js').then(m => m.initFaq());
+  }
+  if (document.body.dataset.page === 'become-a-partner') {
+    import('./become-a-partner.js').then(m => m.initApplicationForm());
+  }
+  if (document.body.dataset.page === 'technology' && document.querySelector('.pillar-nav')) {
+    import('./scroll-spy.js').then(m => m.initScrollSpy());
   }
 });

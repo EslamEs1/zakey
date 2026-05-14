@@ -1,16 +1,126 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <title>Zakey Edge Switch — Ultra-Slim Capacitive Smart Switch, Razor-Thin Profile</title>
   <defs>
-    <linearGradient id="bg-EDGE SWITCH" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
-    </linearGradient>
-    <radialGradient id="gl-EDGE SWITCH" cx="250" cy="170" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
+    <radialGradient id="bgRadial" cx="50%" cy="50%" r="60%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
+    </radialGradient>
+    <pattern id="dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="0.7" fill="#ffffff" fill-opacity="0.04"/>
+    </pattern>
+    <radialGradient id="productGlow" cx="50%" cy="48%" r="30%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12"/>
+      <stop offset="60%" stop-color="#22d3ee" stop-opacity="0.04"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="frontFace" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1d28"/>
+      <stop offset="100%" stop-color="#0e1018"/>
+    </linearGradient>
+    <linearGradient id="sideFaceTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3a3d52"/>
+      <stop offset="100%" stop-color="#222538"/>
+    </linearGradient>
+    <linearGradient id="sideFaceRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#131520"/>
+      <stop offset="100%" stop-color="#0c0d16"/>
+    </linearGradient>
+    <radialGradient id="shadowGrad" cx="50%" cy="50%" r="50%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sideLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.05"/>
+    </linearGradient>
+    <radialGradient id="ledGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#22d3ee" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="touchGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.055"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="reflGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1d28" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#1a1d28" stop-opacity="0"/>
+    </linearGradient>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-EDGE SWITCH)"/>
-  <ellipse cx="250" cy="170" rx="180" ry="140" fill="url(#gl-EDGE SWITCH)"/>
-  <rect x="170" y="90" width="140" height="180" rx="10" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><rect x="190" y="115" width="45" height="65" rx="5" fill="#22d3ee" fill-opacity="0.15" stroke="#22d3ee" stroke-width="0.75" stroke-opacity="0.4"/><rect x="245" y="115" width="45" height="65" rx="5" fill="#22d3ee" fill-opacity="0.08" stroke="#22d3ee" stroke-width="0.75" stroke-opacity="0.3"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">EDGE SWITCH</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bgRadial)"/>
+  <rect width="480" height="360" fill="url(#dots)"/>
+
+  <!-- Product glow -->
+  <ellipse cx="245" cy="175" rx="90" ry="140" fill="url(#productGlow)"/>
+
+  <!-- Drop shadow — tight for thin device -->
+  <ellipse cx="252" cy="322" rx="48" ry="8" fill="url(#shadowGrad)"/>
+
+  <!-- Floor reflection -->
+  <rect x="213" y="316" width="70" height="22" fill="url(#reflGrad)" rx="2"/>
+
+  <!-- ─── 3/4 angle view showing razor-thin depth ─── -->
+  <!-- The device is 50×120px front face, with only 8px depth visible -->
+  <!-- Front face anchored at x=220, y=60 -->
+  <!-- Top depth face: parallelogram (8px deep, offset +16px right, -8px up) -->
+  <polygon points="220,60 270,60 286,52 236,52" fill="url(#sideFaceTop)"/>
+  <!-- Subtle lines on top face showing it's thin -->
+  <line x1="221" y1="59.5" x2="269" y2="59.5" stroke="#4a4d64" stroke-width="0.5" stroke-opacity="0.4"/>
+  <line x1="237" y1="52.5" x2="284" y2="52.5" stroke="#3a3d50" stroke-width="0.4" stroke-opacity="0.25"/>
+
+  <!-- Right side depth face: parallelogram (very dark) -->
+  <polygon points="270,60 270,180 286,172 286,52" fill="url(#sideFaceRight)"/>
+  <!-- Edge highlight on right-side face -->
+  <line x1="269.5" y1="61" x2="269.5" y2="179" stroke="#1e2030" stroke-width="0.5"/>
+
+  <!-- "EDGE" micro text along top side face -->
+  <g transform="translate(245,56) rotate(-10)">
+    <text font-family="'SF Mono', 'Fira Code', monospace" font-size="4.5" letter-spacing="2"
+          fill="#3a3e54" fill-opacity="0.75">EDGE</text>
+  </g>
+
+  <!-- Front face: main visible face — ultra-dark matte charcoal -->
+  <rect x="220" y="60" width="50" height="120" rx="4" fill="url(#frontFace)"/>
+  <!-- Side light / 3D lighting on face -->
+  <rect x="220" y="60" width="50" height="120" rx="4" fill="url(#sideLight)"/>
+  <!-- Left edge — brightest edge highlight (side-light effect) -->
+  <rect x="220" y="61" width="1.2" height="118" rx="0.6" fill="#3a3d52" fill-opacity="0.75"/>
+  <!-- Top edge highlight -->
+  <rect x="221" y="60" width="48" height="0.8" rx="0.4" fill="#3a3d52" fill-opacity="0.5"/>
+  <!-- Very subtle outer border -->
+  <rect x="220" y="60" width="50" height="120" rx="4" fill="none" stroke="#22263a" stroke-width="0.6"/>
+
+  <!-- Touch point: single subtle circle, center of face -->
+  <!-- 30px diameter, very faint -->
+  <circle cx="245" cy="125" r="15" fill="url(#touchGlow)"/>
+  <!-- Barely visible concentric rings -->
+  <circle cx="245" cy="125" r="14" fill="none" stroke="#252838" stroke-width="0.7" stroke-opacity="0.5"/>
+  <circle cx="245" cy="125" r="9" fill="none" stroke="#1e2030" stroke-width="0.4" stroke-opacity="0.35"/>
+
+  <!-- Status LED: ultra-tiny 2mm dot at top -->
+  <!-- Soft halo -->
+  <circle cx="245" cy="72" r="5" fill="url(#ledGlow)" fill-opacity="0.35"/>
+  <!-- LED dot -->
+  <circle cx="245" cy="72" r="1.5" fill="#22d3ee"/>
+  <!-- Micro halo ring -->
+  <circle cx="245" cy="72" r="3.5" fill="none" stroke="#22d3ee" stroke-width="0.4" stroke-opacity="0.3"/>
+
+  <!-- Bottom edge line: subtle separation from shadow -->
+  <line x1="222" y1="179" x2="268" y2="179" stroke="#1e2030" stroke-width="0.5" stroke-opacity="0.5"/>
+
+  <!-- ─── Depth callout arrows (showing it's only 8mm thick) ─── -->
+  <!-- Vertical bracket showing depth -->
+  <line x1="293" y1="52" x2="293" y2="60" stroke="#2a3050" stroke-width="0.8" stroke-opacity="0.7"/>
+  <line x1="291" y1="52" x2="295" y2="52" stroke="#2a3050" stroke-width="0.8" stroke-opacity="0.7"/>
+  <line x1="291" y1="60" x2="295" y2="60" stroke="#2a3050" stroke-width="0.8" stroke-opacity="0.7"/>
+  <text x="298" y="58" font-family="system-ui, sans-serif" font-size="6"
+        fill="#2a3050" fill-opacity="0.75">8mm</text>
+
+  <!-- ─── Branding label below ─── -->
+  <text x="245" y="340" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="7.5" letter-spacing="3"
+        fill="#1e2235" fill-opacity="0.85">ZAKEY  EDGE</text>
 </svg>

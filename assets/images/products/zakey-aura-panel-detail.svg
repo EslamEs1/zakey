@@ -1,16 +1,90 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <title>Zakey Aura Panel — Touch Interface Detail</title>
   <defs>
-    <linearGradient id="bg-AURA PANEL — DETAIL" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080b18"/>
+      <stop offset="100%" stop-color="#0a0d1a"/>
     </linearGradient>
-    <radialGradient id="gl-AURA PANEL — DETAIL" cx="200" cy="160" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
+    <radialGradient id="glowCenter" cx="240" cy="180" r="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.1"/>
+      <stop offset="60%" stop-color="#22d3ee" stop-opacity="0.04"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="zone1Glow" cx="175" cy="135" r="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="touchGlow" cx="325" cy="100" r="20" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lightIconGlow" cx="175" cy="133" r="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="frameEdge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e2235"/>
+      <stop offset="100%" stop-color="#151828"/>
+    </linearGradient>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-AURA PANEL — DETAIL)"/>
-  <ellipse cx="200" cy="160" rx="180" ry="140" fill="url(#gl-AURA PANEL — DETAIL)"/>
-  <rect x="160" y="80" width="160" height="200" rx="10" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><rect x="175" y="100" width="130" height="140" rx="6" fill="#05070d" stroke="#22d3ee" stroke-width="0.75" stroke-opacity="0.3"/><circle cx="240" cy="256" r="6" fill="none" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.5"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">AURA PANEL — DETAIL</text>
+
+  <!-- Dark glass background filling canvas -->
+  <rect width="480" height="360" fill="url(#bg)"/>
+
+  <!-- Ambient cyan glow across glass -->
+  <rect width="480" height="360" fill="url(#glowCenter)"/>
+
+  <!-- Partial outer frame — left edge (suggesting panel context) -->
+  <rect x="100" y="30" width="16" height="300" fill="url(#frameEdge)" rx="3"/>
+  <rect x="114" y="30" width="1" height="300" fill="#22d3ee" fill-opacity="0.08"/>
+
+  <!-- Glass face area (zoomed in, spanning most of canvas) -->
+  <rect x="116" y="30" width="330" height="300" fill="#080b18" rx="2"/>
+
+  <!-- Zone 1: Lights — active state with warm glow -->
+  <rect x="116" y="30" width="330" height="148" fill="url(#zone1Glow)"/>
+  <rect x="116" y="30" width="330" height="148" fill="#22d3ee" fill-opacity="0.08"/>
+
+  <!-- Zone separator line -->
+  <line x1="116" y1="178" x2="446" y2="178" stroke="#22d3ee" stroke-opacity="0.3" stroke-width="1.5"/>
+
+  <!-- Zone 1: Lights icon — large circle -->
+  <circle cx="175" cy="100" r="24" fill="none" stroke="#22d3ee" stroke-width="1.8" stroke-opacity="0.9"/>
+  <circle cx="175" cy="100" r="14" fill="none" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.5"/>
+  <circle cx="175" cy="100" r="6" fill="#22d3ee" fill-opacity="0.8"/>
+  <!-- Icon glow -->
+  <circle cx="175" cy="100" r="30" fill="url(#lightIconGlow)"/>
+  <!-- Light rays -->
+  <line x1="175" y1="70" x2="175" y2="64" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.5" stroke-linecap="round"/>
+  <line x1="197" y1="78" x2="201" y2="74" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.5" stroke-linecap="round"/>
+  <line x1="205" y1="100" x2="211" y2="100" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.5" stroke-linecap="round"/>
+  <line x1="153" y1="78" x2="149" y2="74" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.5" stroke-linecap="round"/>
+  <line x1="145" y1="100" x2="139" y2="100" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.5" stroke-linecap="round"/>
+
+  <!-- Zone 1: Labels -->
+  <text x="220" y="90" font-family="system-ui,sans-serif" font-size="18" font-weight="600" fill="#22d3ee" fill-opacity="0.95">Living Room Lights</text>
+  <text x="220" y="114" font-family="system-ui,sans-serif" font-size="11" fill="#8b92a9">ON · 75% brightness</text>
+  <!-- Active badge -->
+  <rect x="220" y="126" width="46" height="14" rx="7" fill="#22d3ee" fill-opacity="0.2"/>
+  <text x="243" y="136" font-family="system-ui,sans-serif" font-size="9" fill="#22d3ee" text-anchor="middle">Active</text>
+
+  <!-- Touch indicator (finger touch point) — top right corner of zone 1 -->
+  <circle cx="425" cy="100" r="16" fill="url(#touchGlow)"/>
+  <circle cx="425" cy="100" r="8" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-opacity="0.7"/>
+  <circle cx="425" cy="100" r="3" fill="#22d3ee" fill-opacity="0.8"/>
+
+  <!-- Zone 2: Scenes -->
+  <!-- Wave icon -->
+  <path d="M153 230 Q161 222 169 230 Q177 238 185 230 Q193 222 201 230" fill="none" stroke="#22d3ee" stroke-width="2" stroke-opacity="0.7" stroke-linecap="round"/>
+  <path d="M153 244 Q161 236 169 244 Q177 252 185 244 Q193 236 201 244" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-opacity="0.35" stroke-linecap="round"/>
+
+  <!-- Zone 2: Labels -->
+  <text x="220" y="222" font-family="system-ui,sans-serif" font-size="18" font-weight="600" fill="#ffffff" fill-opacity="0.75">Good Evening</text>
+  <text x="220" y="246" font-family="system-ui,sans-serif" font-size="11" fill="#8b92a9">Scene activated</text>
+  <!-- Active status -->
+  <rect x="220" y="258" width="46" height="14" rx="7" fill="#22d3ee" fill-opacity="0.15"/>
+  <text x="243" y="268" font-family="system-ui,sans-serif" font-size="9" fill="#22d3ee" fill-opacity="0.8" text-anchor="middle">Active</text>
+
+  <!-- Bottom partial frame edge -->
+  <rect x="116" y="328" width="330" height="2" fill="#22d3ee" fill-opacity="0.08"/>
 </svg>

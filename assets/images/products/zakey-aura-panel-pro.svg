@@ -1,16 +1,231 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <title>Zakey Aura Panel Pro — Premium Large Display Smart Home Controller</title>
   <defs>
-    <linearGradient id="bg-AURA PANEL PRO" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
-    </linearGradient>
-    <radialGradient id="gl-AURA PANEL PRO" cx="220" cy="160" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
+    <!-- Background gradients -->
+    <radialGradient id="bgRadial" cx="50%" cy="50%" r="60%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
+    </radialGradient>
+    <!-- Texture dot pattern -->
+    <pattern id="dots" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="6" r="0.8" fill="#ffffff" fill-opacity="0.04"/>
+    </pattern>
+    <!-- Product glow -->
+    <radialGradient id="productGlow" cx="50%" cy="48%" r="38%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.18"/>
+      <stop offset="55%" stop-color="#22d3ee" stop-opacity="0.07"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
+    <!-- Body gradient: gunmetal metallic -->
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2e3250"/>
+      <stop offset="40%" stop-color="#252840"/>
+      <stop offset="100%" stop-color="#171928"/>
+    </linearGradient>
+    <!-- Chamfer bevel gradients -->
+    <linearGradient id="bevelTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a4f6e"/>
+      <stop offset="100%" stop-color="#2e3250"/>
+    </linearGradient>
+    <linearGradient id="bevelLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a4f6e"/>
+      <stop offset="100%" stop-color="#2e3250"/>
+    </linearGradient>
+    <linearGradient id="bevelRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a1c2a"/>
+      <stop offset="100%" stop-color="#0f1018"/>
+    </linearGradient>
+    <linearGradient id="bevelBottom" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1c2a"/>
+      <stop offset="100%" stop-color="#0f1018"/>
+    </linearGradient>
+    <!-- Screen gradient -->
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#04060f"/>
+      <stop offset="100%" stop-color="#030408"/>
+    </linearGradient>
+    <!-- Zone highlight gradients -->
+    <linearGradient id="zone1Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.04"/>
+    </linearGradient>
+    <!-- Slider gradient -->
+    <linearGradient id="sliderFill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <!-- Drop shadow -->
+    <radialGradient id="shadowGrad" cx="50%" cy="50%" r="50%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Floor reflection -->
+    <linearGradient id="reflGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <!-- LED glow -->
+    <radialGradient id="ledGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#22d3ee" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Scene button highlight -->
+    <radialGradient id="sceneActive" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0891b2" stop-opacity="0.7"/>
+    </radialGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-AURA PANEL PRO)"/>
-  <ellipse cx="220" cy="160" rx="180" ry="140" fill="url(#gl-AURA PANEL PRO)"/>
-  <rect x="160" y="80" width="160" height="200" rx="10" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><rect x="175" y="100" width="130" height="140" rx="6" fill="#05070d" stroke="#22d3ee" stroke-width="0.75" stroke-opacity="0.3"/><circle cx="240" cy="256" r="6" fill="none" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.5"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">AURA PANEL PRO</text>
+
+  <!-- ── Background ── -->
+  <rect width="480" height="360" fill="url(#bgRadial)"/>
+  <rect width="480" height="360" fill="url(#dots)"/>
+
+  <!-- ── Ambient glow behind product ── -->
+  <ellipse cx="240" cy="175" rx="130" ry="170" fill="url(#productGlow)"/>
+
+  <!-- ── Drop shadow ── -->
+  <ellipse cx="240" cy="322" rx="95" ry="12" fill="url(#shadowGrad)"/>
+
+  <!-- ── Floor reflection ── -->
+  <rect x="160" y="310" width="160" height="35" fill="url(#reflGrad)" rx="2"/>
+
+  <!-- ── Device body: 160×240px centered ── -->
+  <!-- Body base -->
+  <rect x="160" y="55" width="160" height="240" rx="10" fill="url(#bodyGrad)"/>
+
+  <!-- Chamfer bevel — top -->
+  <rect x="160" y="55" width="160" height="3" rx="2" fill="url(#bevelTop)"/>
+  <!-- Chamfer bevel — left -->
+  <rect x="160" y="55" width="3" height="240" rx="1" fill="url(#bevelLeft)"/>
+  <!-- Chamfer bevel — right -->
+  <rect x="317" y="55" width="3" height="240" rx="1" fill="url(#bevelRight)"/>
+  <!-- Chamfer bevel — bottom -->
+  <rect x="160" y="292" width="160" height="3" rx="2" fill="url(#bevelBottom)"/>
+
+  <!-- Outer edge highlight (premium sheen) -->
+  <rect x="160" y="55" width="160" height="240" rx="10" fill="none" stroke="#4a5070" stroke-width="0.75" stroke-opacity="0.5"/>
+
+  <!-- ── Screen: 152×232px ── -->
+  <rect x="164" y="59" width="152" height="232" rx="7" fill="url(#screenGrad)"/>
+  <!-- Screen inner reflection sheen -->
+  <rect x="164" y="59" width="152" height="50" rx="7" fill="#ffffff" fill-opacity="0.025"/>
+
+  <!-- ═══ SCREEN CONTENT ═══ -->
+
+  <!-- Top bar: clock + weather -->
+  <rect x="164" y="59" width="152" height="28" rx="0" fill="#060913"/>
+  <!-- Clock: 21:04 -->
+  <text x="178" y="78" font-family="'SF Pro Display', 'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700" fill="#e8ecf5" letter-spacing="1">21:04</text>
+  <!-- Day -->
+  <text x="222" y="78" font-family="system-ui, sans-serif" font-size="8" fill="#8892aa" letter-spacing="0.5">WED</text>
+  <!-- Weather icon: cloud with sun (tiny) -->
+  <circle cx="276" cy="73" r="5" fill="none" stroke="#f59e0b" stroke-width="1.2"/>
+  <line x1="276" y1="65" x2="276" y2="63" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="280" y1="67" x2="281.4" y2="65.6" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="282" y1="71" x2="284" y2="71" stroke="#f59e0b" stroke-width="1"/>
+  <!-- tiny cloud -->
+  <ellipse cx="279" cy="77" rx="5" ry="3" fill="#7a8ab0" fill-opacity="0.7"/>
+  <ellipse cx="274" cy="78" rx="3" ry="2.5" fill="#7a8ab0" fill-opacity="0.7"/>
+  <!-- Outdoor temp -->
+  <text x="287" y="78" font-family="system-ui, sans-serif" font-size="8" fill="#94a3b8">28°C</text>
+  <!-- Scroll indicator: vertical bar right edge -->
+  <rect x="312" y="89" width="2" height="198" rx="1" fill="#1e2235"/>
+  <rect x="312" y="89" width="2" height="40" rx="1" fill="#22d3ee" fill-opacity="0.5"/>
+
+  <!-- Zone 1: Living Room (active, cyan bg) -->
+  <rect x="164" y="87" width="146" height="50" fill="url(#zone1Grad)"/>
+  <rect x="164" y="87" width="146" height="0.5" fill="#22d3ee" fill-opacity="0.2"/>
+  <!-- Zone 1 label -->
+  <text x="174" y="101" font-family="system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#22d3ee" letter-spacing="0.3">LIVING ROOM</text>
+  <!-- Brightness icon -->
+  <circle cx="174" cy="118" r="5" fill="none" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.6"/>
+  <line x1="174" y1="111" x2="174" y2="109.5" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.6"/>
+  <line x1="174" y1="125" x2="174" y2="126.5" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.6"/>
+  <line x1="167" y1="118" x2="165.5" y2="118" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.6"/>
+  <line x1="181" y1="118" x2="182.5" y2="118" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.6"/>
+  <!-- Brightness slider track -->
+  <rect x="183" y="116" width="72" height="4" rx="2" fill="#1a2035"/>
+  <rect x="183" y="116" width="52" height="4" rx="2" fill="url(#sliderFill)"/>
+  <!-- Slider handle -->
+  <circle cx="235" cy="118" r="5" fill="#22d3ee"/>
+  <circle cx="235" cy="118" r="3" fill="#ffffff"/>
+  <!-- Brightness value -->
+  <text x="260" y="121" font-family="system-ui, sans-serif" font-size="7.5" fill="#22d3ee">72%</text>
+  <rect x="164" y="136" width="146" height="0.5" fill="#1e2438"/>
+
+  <!-- Zone 2: Bedroom -->
+  <rect x="164" y="137" width="146" height="50" fill="#060913"/>
+  <text x="174" y="151" font-family="system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#94a3b8" letter-spacing="0.3">BEDROOM</text>
+  <!-- Moon icon -->
+  <path d="M174 165 Q169 162 169 157 Q174 157 177 161 Q180 165 177 169 Q172 169 169 165" fill="none" stroke="#8892b0" stroke-width="1.2"/>
+  <text x="186" y="169" font-family="system-ui, sans-serif" font-size="8" fill="#5a6480">Off — Scheduled 22:30</text>
+  <rect x="164" y="186" width="146" height="0.5" fill="#1e2438"/>
+
+  <!-- Zone 3: HVAC 22°C -->
+  <rect x="164" y="187" width="146" height="50" fill="#060913"/>
+  <text x="174" y="201" font-family="system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#94a3b8" letter-spacing="0.3">HVAC  22°C</text>
+  <!-- Snowflake icon -->
+  <line x1="174" y1="212" x2="174" y2="222" stroke="#7dd3fc" stroke-width="1.2"/>
+  <line x1="169" y1="217" x2="179" y2="217" stroke="#7dd3fc" stroke-width="1.2"/>
+  <line x1="170.5" y1="213.5" x2="177.5" y2="220.5" stroke="#7dd3fc" stroke-width="0.8"/>
+  <line x1="177.5" y1="213.5" x2="170.5" y2="220.5" stroke="#7dd3fc" stroke-width="0.8"/>
+  <text x="186" y="219" font-family="system-ui, sans-serif" font-size="8" fill="#7dd3fc">Cooling — Fan auto</text>
+  <rect x="164" y="236" width="146" height="0.5" fill="#1e2438"/>
+
+  <!-- Zone 4: Security Armed -->
+  <rect x="164" y="237" width="146" height="50" fill="#060913"/>
+  <text x="174" y="251" font-family="system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#94a3b8" letter-spacing="0.3">SECURITY</text>
+  <!-- Shield icon -->
+  <path d="M172 263 L174 261 L176 263 L176 269 Q174 271 172 269 Z" fill="none" stroke="#10b981" stroke-width="1.2"/>
+  <text x="183" y="269" font-family="system-ui, sans-serif" font-size="8" fill="#10b981">Armed — All zones secure</text>
+  <rect x="164" y="286" width="146" height="0.5" fill="#1e2438"/>
+
+  <!-- Bottom: 4 scene buttons -->
+  <rect x="164" y="270" width="146" height="20" fill="#04060c"/>
+  <!-- Scene button: Sun -->
+  <circle cx="186" cy="280" r="8" fill="#1a1e2d" stroke="#2a2e44" stroke-width="0.5"/>
+  <circle cx="186" cy="280" r="3.5" fill="#f59e0b" fill-opacity="0.7"/>
+  <line x1="186" y1="269" x2="186" y2="267" stroke="#f59e0b" stroke-width="0.8" stroke-opacity="0.5"/>
+  <line x1="186" y1="291" x2="186" y2="293" stroke="#f59e0b" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="183" y="292" font-family="system-ui, sans-serif" font-size="5" fill="#7a8090">SUN</text>
+  <!-- Scene button: Night -->
+  <circle cx="213" cy="280" r="8" fill="#1a1e2d" stroke="#2a2e44" stroke-width="0.5"/>
+  <path d="M212 276 Q209 278 209 281 Q212 283 215 281 Q212 281 212 276" fill="#8892b0" fill-opacity="0.7"/>
+  <text x="208" y="292" font-family="system-ui, sans-serif" font-size="5" fill="#7a8090">NIGHT</text>
+  <!-- Scene button: Party (active, cyan) -->
+  <circle cx="240" cy="280" r="8" fill="#0e3344" stroke="#22d3ee" stroke-width="1"/>
+  <circle cx="240" cy="280" r="5" fill="#22d3ee" fill-opacity="0.25"/>
+  <!-- sparkle -->
+  <line x1="240" y1="276" x2="240" y2="284" stroke="#22d3ee" stroke-width="0.8"/>
+  <line x1="236" y1="280" x2="244" y2="280" stroke="#22d3ee" stroke-width="0.8"/>
+  <line x1="237.2" y1="277.2" x2="242.8" y2="282.8" stroke="#22d3ee" stroke-width="0.8"/>
+  <line x1="242.8" y1="277.2" x2="237.2" y2="282.8" stroke="#22d3ee" stroke-width="0.8"/>
+  <text x="235" y="292" font-family="system-ui, sans-serif" font-size="5" fill="#22d3ee">PARTY</text>
+  <!-- Scene button: Away -->
+  <circle cx="267" cy="280" r="8" fill="#1a1e2d" stroke="#2a2e44" stroke-width="0.5"/>
+  <path d="M265 278 L267 275 L269 278 L269 284 L265 284 Z" fill="none" stroke="#94a3b8" stroke-width="0.9"/>
+  <text x="263" y="292" font-family="system-ui, sans-serif" font-size="5" fill="#7a8090">AWAY</text>
+
+  <!-- ── Status LED at top ── -->
+  <circle cx="240" cy="66" r="3.5" fill="url(#ledGlow)"/>
+  <circle cx="240" cy="66" r="2" fill="#22d3ee"/>
+  <!-- LED halo -->
+  <circle cx="240" cy="66" r="7" fill="none" stroke="#22d3ee" stroke-width="0.5" stroke-opacity="0.3"/>
+
+  <!-- ── USB-C port on right edge ── -->
+  <rect x="317.5" y="172" width="3" height="8" rx="2" fill="#0a0c14" stroke="#3a3e52" stroke-width="0.5"/>
+
+  <!-- ── Branding: subtle "Zakey" text ── -->
+  <text x="240" y="308" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" letter-spacing="2" fill="#3a4060" fill-opacity="0.8">ZAKEY</text>
+
+  <!-- ── Frame corner accent dots ── -->
+  <circle cx="168" cy="62" r="1.5" fill="#3a4060" fill-opacity="0.5"/>
+  <circle cx="312" cy="62" r="1.5" fill="#3a4060" fill-opacity="0.5"/>
+  <circle cx="168" cy="290" r="1.5" fill="#3a4060" fill-opacity="0.5"/>
+  <circle cx="312" cy="290" r="1.5" fill="#3a4060" fill-opacity="0.5"/>
 </svg>

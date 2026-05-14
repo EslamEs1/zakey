@@ -1,15 +1,218 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400">
   <defs>
-    <linearGradient id="bg-ZAKEY SMART PRODUCTS" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090c18"/>
+      <stop offset="50%" stop-color="#060810"/>
+      <stop offset="100%" stop-color="#04060c"/>
     </linearGradient>
-    <radialGradient id="gl-ZAKEY SMART PRODUCTS" cx="500" cy="400" r="450" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.16"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <pattern id="hexPat" x="0" y="0" width="40" height="46" patternUnits="userSpaceOnUse">
+      <polygon points="20,2 38,12 38,34 20,44 2,34 2,12" fill="none" stroke="#7090ff" stroke-width="0.5" opacity="0.04"/>
+    </pattern>
+    <radialGradient id="cyanGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="shadowG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="auraBd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2d44"/>
+      <stop offset="100%" stop-color="#15172a"/>
+    </linearGradient>
+    <linearGradient id="camBd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#23262e"/>
+      <stop offset="100%" stop-color="#13141a"/>
+    </linearGradient>
+    <radialGradient id="climBd" cx="35%" cy="25%" r="65%">
+      <stop offset="0%" stop-color="#f8f5f0"/>
+      <stop offset="100%" stop-color="#dedad5"/>
+    </radialGradient>
+    <linearGradient id="swBd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d2038"/>
+      <stop offset="100%" stop-color="#10121f"/>
+    </linearGradient>
+    <linearGradient id="lkBd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c2030"/>
+      <stop offset="100%" stop-color="#0e101c"/>
+    </linearGradient>
+    <linearGradient id="ledStripGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0"/>
+      <stop offset="10%" stop-color="#00e5ff" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#00e5ff" stop-opacity="1"/>
+      <stop offset="90%" stop-color="#00e5ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="gF" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+    </filter>
+    <filter id="softG" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="1200" height="900" fill="url(#bg-ZAKEY SMART PRODUCTS)"/>
-  <ellipse cx="500" cy="400" rx="500" ry="380" fill="url(#gl-ZAKEY SMART PRODUCTS)"/>
-  <text x="600" y="460" font-family="system-ui,sans-serif" font-size="28" font-weight="700" fill="#22d3ee" fill-opacity="0.55" text-anchor="middle" letter-spacing="0.08em">ZAKEY SMART PRODUCTS</text>
+
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#heroBg)"/>
+  <rect width="1200" height="400" fill="url(#hexPat)"/>
+
+  <!-- Title -->
+  <text x="600" y="46" text-anchor="middle" font-family="'Arial', sans-serif" font-size="13" font-weight="700"
+        letter-spacing="5" fill="white" opacity="0.88">THE ZAKEY ECOSYSTEM</text>
+  <line x1="430" y1="56" x2="770" y2="56" stroke="#00e5ff" stroke-width="0.6" opacity="0.35"/>
+
+  <!-- === PRODUCT 1: Aura Panel, centered at x=130 === -->
+  <ellipse cx="130" cy="315" rx="52" ry="9" fill="url(#shadowG)" opacity="0.45"/>
+  <ellipse cx="130" cy="205" rx="68" ry="88" fill="url(#cyanGlow)"/>
+  <!-- Body -->
+  <rect x="96" y="118" width="68" height="182" rx="7" fill="url(#auraBd)"/>
+  <!-- Light edge -->
+  <rect x="96" y="118" width="3" height="182" rx="2" fill="#4a4f72" opacity="0.8"/>
+  <rect x="96" y="118" width="68" height="3" rx="2" fill="#3a3e62" opacity="0.7"/>
+  <!-- Touch zone areas -->
+  <rect x="104" y="136" width="52" height="42" rx="4" fill="#1e2140" opacity="0.7"/>
+  <rect x="104" y="184" width="52" height="42" rx="4" fill="#1c1f3c" opacity="0.5"/>
+  <rect x="104" y="232" width="52" height="42" rx="4" fill="#191c38" opacity="0.35"/>
+  <!-- Zone LEDs -->
+  <circle cx="118" cy="157" r="3.5" fill="#00e5ff" opacity="0.95" filter="url(#softG)"/>
+  <circle cx="118" cy="205" r="3" fill="#00e5ff" opacity="0.5"/>
+  <circle cx="118" cy="253" r="3" fill="#00e5ff" opacity="0.2"/>
+  <!-- Zone text -->
+  <text x="141" y="160" text-anchor="middle" font-family="Arial" font-size="7" fill="white" opacity="0.65">SCENE 1</text>
+  <text x="141" y="208" text-anchor="middle" font-family="Arial" font-size="7" fill="white" opacity="0.4">SCENE 2</text>
+  <text x="141" y="256" text-anchor="middle" font-family="Arial" font-size="7" fill="white" opacity="0.25">SCENE 3</text>
+  <!-- Connector base -->
+  <rect x="118" y="300" width="24" height="7" rx="2" fill="#0d0f1e"/>
+  <text x="130" y="340" text-anchor="middle" font-family="Arial" font-size="9" fill="white" opacity="0.5" letter-spacing="2">AURA PANEL</text>
+
+  <!-- === PRODUCT 2: Smart Camera, centered at x=310 === -->
+  <ellipse cx="310" cy="315" rx="48" ry="8" fill="url(#shadowG)" opacity="0.45"/>
+  <ellipse cx="310" cy="205" rx="62" ry="78" fill="url(#cyanGlow)"/>
+  <!-- Camera body rect -->
+  <rect x="278" y="152" width="64" height="52" rx="9" fill="url(#camBd)"/>
+  <!-- Lens rings -->
+  <circle cx="310" cy="178" r="26" fill="#0c0d13"/>
+  <circle cx="310" cy="178" r="21" fill="#111318"/>
+  <circle cx="310" cy="178" r="15" fill="#090a10"/>
+  <circle cx="310" cy="178" r="9" fill="#04050a"/>
+  <circle cx="310" cy="178" r="4" fill="#010209"/>
+  <!-- Lens glass reflection -->
+  <ellipse cx="305" cy="173" rx="4" ry="3" fill="white" opacity="0.07"/>
+  <!-- IR LEDs -->
+  <circle cx="310" cy="150" r="3" fill="#ff2030" opacity="0.75" filter="url(#softG)"/>
+  <circle cx="295" cy="157" r="2.5" fill="#ff2030" opacity="0.5"/>
+  <circle cx="325" cy="157" r="2.5" fill="#ff2030" opacity="0.5"/>
+  <!-- Wifi/status LED -->
+  <circle cx="329" cy="148" r="2.5" fill="#00e5ff" opacity="0.9" filter="url(#softG)"/>
+  <!-- Mount arm -->
+  <rect x="302" y="204" width="16" height="22" rx="3" fill="#1a1c26"/>
+  <rect x="296" y="224" width="28" height="9" rx="3" fill="#171920"/>
+  <!-- Base -->
+  <ellipse cx="310" cy="236" rx="22" ry="5" fill="#121420"/>
+  <text x="310" y="340" text-anchor="middle" font-family="Arial" font-size="9" fill="white" opacity="0.5" letter-spacing="2">SMART CAMERA</text>
+
+  <!-- === PRODUCT 3: Climate Hub, centered at x=490 === -->
+  <ellipse cx="490" cy="315" rx="56" ry="10" fill="url(#shadowG)" opacity="0.45"/>
+  <ellipse cx="490" cy="205" rx="70" ry="88" fill="url(#cyanGlow)" opacity="0.85"/>
+  <!-- White body -->
+  <rect x="453" y="126" width="74" height="174" rx="11" fill="url(#climBd)"/>
+  <rect x="453" y="126" width="74" height="3" rx="2" fill="white" opacity="0.9"/>
+  <rect x="453" y="126" width="3" height="174" rx="2" fill="white" opacity="0.75"/>
+  <!-- Circular display -->
+  <circle cx="490" cy="213" r="32" fill="#192030"/>
+  <circle cx="490" cy="213" r="27" fill="none" stroke="#26304a" stroke-width="3"/>
+  <!-- Thermostat arc -->
+  <path d="M464,230 A27,27 0 1,1 516,230" fill="none" stroke="#00e5ff" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
+  <!-- Temperature -->
+  <text x="490" y="218" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="white">22</text>
+  <text x="504" y="208" text-anchor="middle" font-family="Arial" font-size="8" fill="#00e5ff">°C</text>
+  <!-- Tick marks (simplified) -->
+  <g stroke="#999" stroke-width="1" opacity="0.4">
+    <line x1="490" y1="180" x2="490" y2="186"/>
+    <line x1="506" y1="184" x2="503" y2="189"/>
+    <line x1="517" y1="198" x2="512" y2="201"/>
+    <line x1="474" y1="184" x2="477" y2="189"/>
+    <line x1="463" y1="198" x2="468" y2="201"/>
+  </g>
+  <!-- Buttons -->
+  <rect x="470" y="252" width="14" height="14" rx="3" fill="#e5e1db"/>
+  <text x="477" y="262" text-anchor="middle" font-family="Arial" font-size="11" fill="#444">+</text>
+  <rect x="496" y="252" width="14" height="14" rx="3" fill="#e5e1db"/>
+  <text x="503" y="262" text-anchor="middle" font-family="Arial" font-size="11" fill="#444">-</text>
+  <!-- Status dot -->
+  <circle cx="518" cy="136" r="4" fill="#00cc66" opacity="0.9" filter="url(#softG)"/>
+  <text x="490" y="148" text-anchor="middle" font-family="Arial" font-size="7" fill="#888" letter-spacing="1">CLIMATE</text>
+  <text x="490" y="340" text-anchor="middle" font-family="Arial" font-size="9" fill="white" opacity="0.5" letter-spacing="2">CLIMATE HUB</text>
+
+  <!-- === PRODUCT 4: Smart Switch, centered at x=670 === -->
+  <ellipse cx="670" cy="315" rx="46" ry="8" fill="url(#shadowG)" opacity="0.45"/>
+  <ellipse cx="670" cy="205" rx="58" ry="82" fill="url(#cyanGlow)"/>
+  <!-- Switch glass panel -->
+  <rect x="637" y="132" width="66" height="164" rx="9" fill="url(#swBd)"/>
+  <rect x="637" y="132" width="66" height="2.5" rx="2" fill="#383c62" opacity="0.8"/>
+  <rect x="637" y="132" width="2.5" height="164" rx="2" fill="#383c62" opacity="0.6"/>
+  <!-- Touch areas -->
+  <rect x="644" y="140" width="52" height="74" rx="5" fill="#141630" opacity="0.65"/>
+  <rect x="644" y="220" width="52" height="68" rx="5" fill="#131526" opacity="0.45"/>
+  <line x1="644" y1="214" x2="696" y2="214" stroke="#282c4e" stroke-width="1.5"/>
+  <!-- Top button: lit LED -->
+  <circle cx="670" cy="177" r="11" fill="#00e5ff" opacity="0.12"/>
+  <circle cx="670" cy="177" r="6" fill="#00e5ff" opacity="0.85" filter="url(#softG)"/>
+  <text x="670" y="180" text-anchor="middle" font-family="Arial" font-size="6" fill="#001515" font-weight="bold">ON</text>
+  <!-- Bottom button: power ring -->
+  <circle cx="670" cy="254" r="8" fill="none" stroke="#404870" stroke-width="2"/>
+  <line x1="670" y1="246" x2="670" y2="250" stroke="#404870" stroke-width="2.5"/>
+  <!-- Z logo -->
+  <text x="670" y="204" text-anchor="middle" font-family="Arial" font-size="10" fill="#00e5ff" opacity="0.55" letter-spacing="1">Z</text>
+  <text x="670" y="340" text-anchor="middle" font-family="Arial" font-size="9" fill="white" opacity="0.5" letter-spacing="2">SMART SWITCH</text>
+
+  <!-- === PRODUCT 5: Smart Door Lock, centered at x=850 === -->
+  <ellipse cx="850" cy="315" rx="52" ry="9" fill="url(#shadowG)" opacity="0.45"/>
+  <ellipse cx="850" cy="205" rx="68" ry="88" fill="url(#cyanGlow)"/>
+  <!-- Lock body -->
+  <rect x="818" y="122" width="64" height="178" rx="10" fill="url(#lkBd)"/>
+  <rect x="818" y="122" width="64" height="3" rx="2" fill="#2c3055" opacity="0.8"/>
+  <rect x="818" y="122" width="3" height="178" rx="2" fill="#2c3055" opacity="0.6"/>
+  <!-- Keypad area -->
+  <rect x="826" y="162" width="48" height="84" rx="6" fill="#10121e"/>
+  <!-- 3x3 keypad -->
+  <g fill="#1e2244" stroke="#2c3060" stroke-width="0.6">
+    <rect x="831" y="169" width="11" height="11" rx="2.5"/>
+    <rect x="845" y="169" width="11" height="11" rx="2.5"/>
+    <rect x="859" y="169" width="11" height="11" rx="2.5"/>
+    <rect x="831" y="184" width="11" height="11" rx="2.5"/>
+    <rect x="845" y="184" width="11" height="11" rx="2.5"/>
+    <rect x="859" y="184" width="11" height="11" rx="2.5"/>
+    <rect x="831" y="199" width="11" height="11" rx="2.5"/>
+    <rect x="845" y="199" width="11" height="11" rx="2.5"/>
+    <rect x="859" y="199" width="11" height="11" rx="2.5"/>
+  </g>
+  <g font-family="Arial" font-size="5.5" fill="white" opacity="0.65" text-anchor="middle">
+    <text x="836.5" y="178">1</text><text x="850.5" y="178">2</text><text x="864.5" y="178">3</text>
+    <text x="836.5" y="193">4</text><text x="850.5" y="193">5</text><text x="864.5" y="193">6</text>
+    <text x="836.5" y="208">7</text><text x="850.5" y="208">8</text><text x="864.5" y="208">9</text>
+  </g>
+  <!-- Lock icon top section -->
+  <rect x="839" y="134" width="22" height="17" rx="4" fill="#181b32"/>
+  <path d="M843,134 A7,7 0 0,1 857,134" fill="none" stroke="#2e3460" stroke-width="3"/>
+  <circle cx="850" cy="143" r="3.5" fill="#00e5ff" opacity="0.85" filter="url(#softG)"/>
+  <!-- Fingerprint area -->
+  <g transform="translate(850,260)" stroke="#00e5ff" stroke-width="1.2" fill="none" opacity="0.6">
+    <path d="M0,-9 A9,9 0 0,1 9,0"/>
+    <path d="M-2,-6 A6.5,6.5 0 0,1 6.5,2"/>
+    <path d="M-4,-2 A4.5,4.5 0 0,1 4.5,5"/>
+    <line x1="-9" y1="0" x2="-9" y2="5"/>
+    <line x1="9" y1="0" x2="9" y2="5"/>
+  </g>
+  <!-- Handle bar -->
+  <rect x="878" y="198" width="8" height="42" rx="4" fill="#1a1e32"/>
+  <text x="850" y="340" text-anchor="middle" font-family="Arial" font-size="9" fill="white" opacity="0.5" letter-spacing="2">SMART LOCK</text>
+
+  <!-- LED shelf strip under all products -->
+  <rect x="50" y="308" width="1100" height="2" rx="1" fill="url(#ledStripGrad)"/>
+  <rect x="50" y="306" width="1100" height="6" rx="3" fill="url(#ledStripGrad)" opacity="0.28"/>
+
+  <!-- Bottom strip -->
+  <rect x="0" y="370" width="1200" height="30" fill="url(#heroBg)" opacity="0.7"/>
+  <text x="600" y="390" text-anchor="middle" font-family="Arial" font-size="8" fill="white" opacity="0.22" letter-spacing="4">SMART HOME INTELLIGENCE</text>
 </svg>

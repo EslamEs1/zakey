@@ -1,16 +1,194 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <title>Zakey Scene Remote — 8-Button Handheld Wireless Smart Home Remote</title>
   <defs>
-    <linearGradient id="bg-SCENE REMOTE" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
-    </linearGradient>
-    <radialGradient id="gl-SCENE REMOTE" cx="240" cy="185" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
+    <radialGradient id="bgRadial" cx="50%" cy="50%" r="60%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
+    </radialGradient>
+    <pattern id="dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="0.7" fill="#ffffff" fill-opacity="0.04"/>
+    </pattern>
+    <!-- Product glow: cyan primary -->
+    <radialGradient id="productGlow" cx="50%" cy="45%" r="35%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.15"/>
+      <stop offset="55%" stop-color="#22d3ee" stop-opacity="0.05"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
+    <!-- Remote body: dark charcoal, slightly curved feel (lighter top) -->
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#272a3c"/>
+      <stop offset="50%" stop-color="#1e2130"/>
+      <stop offset="100%" stop-color="#131520"/>
+    </linearGradient>
+    <!-- Face curvature highlight (lighter top, darker bottom) -->
+    <linearGradient id="faceHL" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.04"/>
+    </linearGradient>
+    <!-- ON button gradient: bright cyan -->
+    <linearGradient id="onBtnGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <!-- OFF button gradient: dark with subtle border -->
+    <linearGradient id="offBtnGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2d40"/>
+      <stop offset="100%" stop-color="#1e2030"/>
+    </linearGradient>
+    <!-- Scene buttons -->
+    <linearGradient id="sceneBtnGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#252840"/>
+      <stop offset="100%" stop-color="#191b2a"/>
+    </linearGradient>
+    <!-- Plus button -->
+    <linearGradient id="plusBtnGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2e3248"/>
+      <stop offset="100%" stop-color="#1e2138"/>
+    </linearGradient>
+    <!-- Drop shadow -->
+    <radialGradient id="shadowGrad" cx="50%" cy="50%" r="50%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Floor reflection -->
+    <linearGradient id="reflGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#272a3c" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#272a3c" stop-opacity="0"/>
+    </linearGradient>
+    <!-- IR window -->
+    <linearGradient id="irGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c14"/>
+      <stop offset="100%" stop-color="#050608"/>
+    </linearGradient>
+    <!-- Battery cover line: side seam -->
+    <linearGradient id="sideFaceGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a1c2a"/>
+      <stop offset="100%" stop-color="#111320"/>
+    </linearGradient>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-SCENE REMOTE)"/>
-  <ellipse cx="240" cy="185" rx="180" ry="140" fill="url(#gl-SCENE REMOTE)"/>
-  <rect x="195" y="80" width="90" height="200" rx="20" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><circle cx="240" cy="130" r="20" fill="#22d3ee" fill-opacity="0.15"/><rect x="215" y="165" width="50" height="8" rx="4" fill="#22d3ee" fill-opacity="0.25"/><rect x="215" y="183" width="50" height="8" rx="4" fill="#22d3ee" fill-opacity="0.18"/><rect x="215" y="201" width="50" height="8" rx="4" fill="#22d3ee" fill-opacity="0.12"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">SCENE REMOTE</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bgRadial)"/>
+  <rect width="480" height="360" fill="url(#dots)"/>
+
+  <!-- Product glow -->
+  <ellipse cx="240" cy="185" rx="85" ry="130" fill="url(#productGlow)"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="240" cy="322" rx="52" ry="9" fill="url(#shadowGrad)"/>
+
+  <!-- Floor reflection -->
+  <rect x="210" y="315" width="60" height="28" fill="url(#reflGrad)" rx="2"/>
+
+  <!-- ─── Remote body: 60×150px, elliptical top, tapers toward bottom ─── -->
+  <!-- Body shape: rounded rect for simplicity, with wider top illusion -->
+  <!-- Using a clip path for the slightly tapering shape -->
+  <defs>
+    <clipPath id="remoteClip">
+      <path d="M210,55 Q210,40 240,40 Q270,40 270,55 L270,290 Q270,302 240,302 Q210,302 210,290 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Body fill -->
+  <path d="M210,55 Q210,40 240,40 Q270,40 270,55 L270,290 Q270,302 240,302 Q210,302 210,290 Z"
+        fill="url(#bodyGrad)"/>
+  <!-- Face curvature highlight -->
+  <path d="M210,55 Q210,40 240,40 Q270,40 270,55 L270,290 Q270,302 240,302 Q210,302 210,290 Z"
+        fill="url(#faceHL)"/>
+  <!-- Left edge highlight -->
+  <path d="M210,55 Q210,40 212,40 L212,302 Q210,302 210,290 Z" fill="#2e3248" fill-opacity="0.5"/>
+  <!-- Outer edge stroke -->
+  <path d="M210,55 Q210,40 240,40 Q270,40 270,55 L270,290 Q270,302 240,302 Q210,302 210,290 Z"
+        fill="none" stroke="#2e3250" stroke-width="0.8"/>
+
+  <!-- ─── IR emitter window at top (thin dark strip) ─── -->
+  <rect x="222" y="44" width="36" height="6" rx="3" fill="url(#irGrad)"/>
+  <!-- IR dots pattern -->
+  <circle cx="232" cy="47" r="1.5" fill="#1a1c2a" fill-opacity="0.8"/>
+  <circle cx="240" cy="47" r="1.5" fill="#1a1c2a" fill-opacity="0.8"/>
+  <circle cx="248" cy="47" r="1.5" fill="#1a1c2a" fill-opacity="0.8"/>
+
+  <!-- ─── Zakey logo ─── -->
+  <text x="240" y="68" text-anchor="middle"
+        font-family="'SF Pro Display', system-ui, sans-serif"
+        font-size="8" font-weight="700" letter-spacing="0.5"
+        fill="#3a4060" fill-opacity="0.7">ZAKEY</text>
+
+  <!-- ─── Row 1: ON / OFF — large main oval buttons ─── -->
+  <!-- ON button (cyan) -->
+  <rect x="214" y="76" width="22" height="14" rx="7" fill="url(#onBtnGrad)"/>
+  <text x="225" y="86" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="7" font-weight="700"
+        fill="#ffffff">ON</text>
+  <!-- ON button highlight -->
+  <rect x="214.5" y="76.5" width="21" height="6" rx="3" fill="#ffffff" fill-opacity="0.12"/>
+  <!-- OFF button -->
+  <rect x="244" y="76" width="22" height="14" rx="7" fill="url(#offBtnGrad)"/>
+  <rect x="244" y="76" width="22" height="14" rx="7" fill="none" stroke="#3a3e58" stroke-width="0.7"/>
+  <text x="255" y="86" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="7" font-weight="700"
+        fill="#6a7090">OFF</text>
+
+  <!-- ─── Row 2: Scene A, Scene B ─── -->
+  <rect x="214" y="100" width="22" height="12" rx="4" fill="url(#sceneBtnGrad)" stroke="#2e3250" stroke-width="0.5"/>
+  <text x="225" y="109" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="6.5" fill="#94a3b8">SCN A</text>
+  <rect x="244" y="100" width="22" height="12" rx="4" fill="url(#sceneBtnGrad)" stroke="#2e3250" stroke-width="0.5"/>
+  <text x="255" y="109" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="6.5" fill="#94a3b8">SCN B</text>
+
+  <!-- ─── Row 3: + and - brightness controls ─── -->
+  <rect x="214" y="122" width="22" height="12" rx="4" fill="url(#plusBtnGrad)" stroke="#3a3e58" stroke-width="0.5"/>
+  <text x="225" y="131" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="12" font-weight="300"
+        fill="#22d3ee">+</text>
+  <rect x="244" y="122" width="22" height="12" rx="4" fill="url(#plusBtnGrad)" stroke="#3a3e58" stroke-width="0.5"/>
+  <text x="255" y="131" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="12" font-weight="300"
+        fill="#22d3ee">−</text>
+
+  <!-- ─── Row 4: tiny mode buttons ─── -->
+  <!-- Moon -->
+  <rect x="214" y="144" width="11" height="10" rx="2.5" fill="url(#sceneBtnGrad)" stroke="#252840" stroke-width="0.4"/>
+  <!-- Moon icon -->
+  <path d="M218 147 Q216 149 216 151 Q218 153 220 152 Q218 152 218 150 Q218 147.5 220 146 Z"
+        fill="#818cf8" fill-opacity="0.7"/>
+  <!-- Sun -->
+  <rect x="228" y="144" width="11" height="10" rx="2.5" fill="url(#sceneBtnGrad)" stroke="#252840" stroke-width="0.4"/>
+  <circle cx="233.5" cy="149" r="2.5" fill="#f59e0b" fill-opacity="0.7"/>
+  <!-- Fan -->
+  <rect x="241" y="144" width="11" height="10" rx="2.5" fill="url(#sceneBtnGrad)" stroke="#252840" stroke-width="0.4"/>
+  <!-- Fan blades suggestion -->
+  <circle cx="246.5" cy="149" r="1.2" fill="none" stroke="#7dd3fc" stroke-width="0.6"/>
+  <ellipse cx="246.5" cy="146.5" rx="1.2" ry="1.8" fill="#7dd3fc" fill-opacity="0.5" transform="rotate(0 246.5 149)"/>
+  <ellipse cx="249" cy="150" rx="1.2" ry="1.8" fill="#7dd3fc" fill-opacity="0.5" transform="rotate(120 246.5 149)"/>
+  <ellipse cx="244" cy="150" rx="1.2" ry="1.8" fill="#7dd3fc" fill-opacity="0.5" transform="rotate(240 246.5 149)"/>
+  <!-- Music -->
+  <rect x="255" y="144" width="11" height="10" rx="2.5" fill="url(#sceneBtnGrad)" stroke="#252840" stroke-width="0.4"/>
+  <!-- Music note icon -->
+  <line x1="260" y1="147" x2="260" y2="152" stroke="#a78bfa" stroke-width="1" stroke-opacity="0.75"/>
+  <line x1="260" y1="147" x2="263" y2="146" stroke="#a78bfa" stroke-width="0.8" stroke-opacity="0.75"/>
+  <ellipse cx="259.5" cy="152" rx="1.2" ry="1" fill="#a78bfa" fill-opacity="0.7"/>
+
+  <!-- ─── Separator lines between button rows ─── -->
+  <line x1="218" y1="96" x2="262" y2="96" stroke="#1e2130" stroke-width="0.6" stroke-opacity="0.7"/>
+  <line x1="218" y1="118" x2="262" y2="118" stroke="#1e2130" stroke-width="0.6" stroke-opacity="0.7"/>
+  <line x1="218" y1="140" x2="262" y2="140" stroke="#1e2130" stroke-width="0.6" stroke-opacity="0.7"/>
+
+  <!-- ─── Battery cover seam (across the body) ─── -->
+  <line x1="215" y1="180" x2="265" y2="180" stroke="#1a1c2a" stroke-width="0.7" stroke-opacity="0.8"/>
+  <line x1="215" y1="180.5" x2="265" y2="180.5" stroke="#2a2e44" stroke-width="0.3" stroke-opacity="0.4"/>
+  <!-- Small screw marks on seam -->
+  <circle cx="220" cy="180.25" r="1.5" fill="#1a1c2a" stroke="#252840" stroke-width="0.4"/>
+  <line x1="219.2" y1="180.25" x2="220.8" y2="180.25" stroke="#2a2e3a" stroke-width="0.5"/>
+  <line x1="220" y1="179.45" x2="220" y2="181.05" stroke="#2a2e3a" stroke-width="0.5"/>
+  <circle cx="260" cy="180.25" r="1.5" fill="#1a1c2a" stroke="#252840" stroke-width="0.4"/>
+  <line x1="259.2" y1="180.25" x2="260.8" y2="180.25" stroke="#2a2e3a" stroke-width="0.5"/>
+  <line x1="260" y1="179.45" x2="260" y2="181.05" stroke="#2a2e3a" stroke-width="0.5"/>
+
+  <!-- ─── Branding label below ─── -->
+  <text x="240" y="340" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="7.5" letter-spacing="2"
+        fill="#1e2235" fill-opacity="0.85">ZAKEY SCENE REMOTE</text>
 </svg>

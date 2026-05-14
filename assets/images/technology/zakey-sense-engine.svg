@@ -1,19 +1,239 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225">
+  <title>Zakey Sense Engine — AI Neural Automation</title>
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0c0f17"/>
-      <stop offset="100%" stop-color="#05070d"/>
+    <!-- Dark purple-black background -->
+    <radialGradient id="se-bg" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#100d1e"/>
+      <stop offset="100%" stop-color="#080612"/>
+    </radialGradient>
+    <!-- Input layer node: teal -->
+    <radialGradient id="se-input-node" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0c7fb5"/>
+    </radialGradient>
+    <!-- Hidden layer node: bright cyan -->
+    <radialGradient id="se-hidden-node" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#40eeff"/>
+      <stop offset="100%" stop-color="#16c0d8"/>
+    </radialGradient>
+    <!-- Highlighted hidden node: larger, glowing -->
+    <radialGradient id="se-hidden-highlight" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#80ffff"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </radialGradient>
+    <!-- Output layer node: purple-blue -->
+    <radialGradient id="se-output-node" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#a5b4fc"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </radialGradient>
+    <!-- Highlighted connection gradient (teal to cyan) -->
+    <linearGradient id="se-conn-hi-1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.7"/>
     </linearGradient>
-    <radialGradient id="r" cx="70%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12"/>
+    <linearGradient id="se-conn-hi-2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.6"/>
+    </linearGradient>
+    <!-- Center radial purple-teal glow -->
+    <radialGradient id="se-center-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4020a8" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#22d3ee" stop-opacity="0.08"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
+    <!-- Highlighted node glow -->
+    <radialGradient id="se-node-hi-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Output node glow -->
+    <radialGradient id="se-out-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Background subtle dot pattern -->
+    <pattern id="se-dots" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="9" cy="9" r="0.8" fill="#6688aa" opacity="0.06"/>
+    </pattern>
   </defs>
-  <rect width="1280" height="720" fill="url(#g)"/>
-  <rect width="1280" height="720" fill="url(#r)"/>
-  <text x="640" y="380" font-family="Manrope,Inter,system-ui,sans-serif" font-size="48" font-weight="700"
-        fill="#22d3ee" fill-opacity="0.15" text-anchor="middle" dominant-baseline="middle"
-        letter-spacing="-1">Sense Engine</text>
-  <circle cx="640" cy="260" r="60" fill="none" stroke="#22d3ee" stroke-opacity="0.1" stroke-width="1"/>
-  <circle cx="640" cy="260" r="100" fill="none" stroke="#22d3ee" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- Background -->
+  <rect width="400" height="225" fill="url(#se-bg)"/>
+  <rect width="400" height="225" fill="url(#se-dots)"/>
+
+  <!-- Central radial purple-teal glow -->
+  <ellipse cx="200" cy="112" rx="160" ry="100" fill="url(#se-center-glow)"/>
+
+  <!-- ══ TOP LABEL ══ -->
+  <text x="200" y="18" text-anchor="middle" font-family="sans-serif" font-size="9" font-variant="small-caps" fill="#22d3ee" opacity="0.6" letter-spacing="3">ZAKEY SENSE ENGINE</text>
+  <line x1="90" y1="22" x2="155" y2="22" stroke="#22d3ee" stroke-width="0.5" opacity="0.2"/>
+  <line x1="245" y1="22" x2="310" y2="22" stroke="#22d3ee" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- ══ CONNECTION LINES (drawn before nodes) ══ -->
+  <!-- All connections between layers at very low opacity -->
+  <!-- Input (x=80, 6 nodes at y: 40,58,76,94,112,130,148 ... wait, 6 nodes spread across y=40 to y=185) -->
+  <!-- Input Y positions: 40, 63, 86, 109, 132, 155 (spacing ~23) -->
+  <!-- Hidden Y positions: 30, 50, 70, 90, 110, 130, 150, 170 (8 nodes, spacing ~20) -->
+  <!-- Output Y positions: 55, 90, 130, 170 (4 nodes) -->
+
+  <!-- All input-to-hidden connections (thin, 0.12 opacity) -->
+  <!-- Input node 1 (80,40) to all 8 hidden nodes -->
+  <line x1="80" y1="40" x2="200" y2="30" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="40" x2="200" y2="55" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="40" x2="200" y2="80" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="40" x2="200" y2="105" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="40" x2="200" y2="130" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="40" x2="200" y2="155" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="40" x2="200" y2="180" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <!-- Input node 2 -->
+  <line x1="80" y1="65" x2="200" y2="30" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="65" x2="200" y2="55" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="65" x2="200" y2="80" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="65" x2="200" y2="105" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="65" x2="200" y2="130" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="65" x2="200" y2="155" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <!-- Input node 3 -->
+  <line x1="80" y1="90" x2="200" y2="30" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="90" x2="200" y2="55" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="90" x2="200" y2="80" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="90" x2="200" y2="105" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="90" x2="200" y2="130" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="90" x2="200" y2="155" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <!-- Input node 4 -->
+  <line x1="80" y1="115" x2="200" y2="55" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="115" x2="200" y2="80" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="115" x2="200" y2="105" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="115" x2="200" y2="130" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="115" x2="200" y2="155" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="115" x2="200" y2="180" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <!-- Input nodes 5 and 6 (fewer lines for clarity) -->
+  <line x1="80" y1="140" x2="200" y2="80" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="140" x2="200" y2="105" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="140" x2="200" y2="130" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="140" x2="200" y2="155" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="140" x2="200" y2="180" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="165" x2="200" y2="105" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="165" x2="200" y2="130" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="165" x2="200" y2="155" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+  <line x1="80" y1="165" x2="200" y2="180" stroke="#0ea5e9" stroke-width="0.6" opacity="0.12"/>
+
+  <!-- Hidden-to-output connections (thin) -->
+  <line x1="200" y1="30" x2="320" y2="60" stroke="#22d3ee" stroke-width="0.6" opacity="0.12"/>
+  <line x1="200" y1="30" x2="320" y2="95" stroke="#22d3ee" stroke-width="0.6" opacity="0.12"/>
+  <line x1="200" y1="55" x2="320" y2="60" stroke="#22d3ee" stroke-width="0.6" opacity="0.12"/>
+  <line x1="200" y1="55" x2="320" y2="95" stroke="#22d3ee" stroke-width="0.6" opacity="0.12"/>
+  <line x1="200" y1="55" x2="320" y2="135" stroke="#22d3ee" stroke-width="0.6" opacity="0.12"/>
+  <line x1="200" y1="80" x2="320" y2="60" stroke="#22d3ee" stroke-width="0.6" opacity="0.12"/>
+  <line x1="200" y1="80" x2="320" y2="95" stroke="#22d3ee" stroke-width="0.6" opacity="0.12"/>
+  <line x1="200" y1="80" x2="320" y2="135" stroke="#22d3ee" stroke-width="0.6" opacity="0.12"/>
+  <line x1="200" y1="105" x2="320" y2="60" stroke="#22d3ee" stroke-width="0.6" opacity="0.12"/>
+  <line x1="200" y1="105" x2="320" y2="95" stroke="#22d3ee" stroke-width="0.6" opacity="0.12"/>
+  <line x1="200" y1="105" x2="320" y2="135" stroke="#22d3ee" stroke-width="0.6" opacity="0.12"/>
+  <line x1="200" y1="105" x2="320" y2="170" stroke="#22d3ee" stroke-width="0.6" opacity="0.12"/>
+  <line x1="200" y1="130" x2="320" y2="95" stroke="#22d3ee" stroke-width="0.6" opacity="0.12"/>
+  <line x1="200" y1="130" x2="320" y2="135" stroke="#22d3ee" stroke-width="0.6" opacity="0.12"/>
+  <line x1="200" y1="130" x2="320" y2="170" stroke="#22d3ee" stroke-width="0.6" opacity="0.12"/>
+  <line x1="200" y1="155" x2="320" y2="135" stroke="#22d3ee" stroke-width="0.6" opacity="0.12"/>
+  <line x1="200" y1="155" x2="320" y2="170" stroke="#22d3ee" stroke-width="0.6" opacity="0.12"/>
+  <line x1="200" y1="180" x2="320" y2="135" stroke="#22d3ee" stroke-width="0.6" opacity="0.12"/>
+  <line x1="200" y1="180" x2="320" y2="170" stroke="#22d3ee" stroke-width="0.6" opacity="0.12"/>
+
+  <!-- HIGHLIGHTED connections (0.6 opacity, gradient) -->
+  <!-- Input 3 → Highlighted hidden (200,105) -->
+  <line x1="80" y1="90" x2="200" y2="105" stroke="url(#se-conn-hi-1)" stroke-width="1.2" opacity="0.65"/>
+  <!-- Input 4 → Highlighted hidden (200,105) -->
+  <line x1="80" y1="115" x2="200" y2="105" stroke="url(#se-conn-hi-1)" stroke-width="1.2" opacity="0.65"/>
+  <!-- Highlighted hidden (200,105) → Output 2 (320,95) -->
+  <line x1="200" y1="105" x2="320" y2="95" stroke="url(#se-conn-hi-2)" stroke-width="1.2" opacity="0.65"/>
+  <!-- Highlighted hidden (200,105) → Output 3 (320,135) -->
+  <line x1="200" y1="105" x2="320" y2="135" stroke="url(#se-conn-hi-2)" stroke-width="1.2" opacity="0.55"/>
+
+  <!-- ══ INPUT LAYER (x=80, 6 nodes) ══ -->
+  <!-- y positions: 40, 65, 90, 115, 140, 165 -->
+  <circle cx="80" cy="40" r="12" fill="url(#se-input-node)"/>
+  <circle cx="80" cy="40" r="4" fill="#fff" opacity="0.2"/>
+  <circle cx="80" cy="65" r="12" fill="url(#se-input-node)"/>
+  <circle cx="80" cy="65" r="4" fill="#fff" opacity="0.2"/>
+  <circle cx="80" cy="90" r="12" fill="url(#se-input-node)"/>
+  <circle cx="80" cy="90" r="4" fill="#fff" opacity="0.2"/>
+  <circle cx="80" cy="115" r="12" fill="url(#se-input-node)"/>
+  <circle cx="80" cy="115" r="4" fill="#fff" opacity="0.2"/>
+  <circle cx="80" cy="140" r="12" fill="url(#se-input-node)"/>
+  <circle cx="80" cy="140" r="4" fill="#fff" opacity="0.2"/>
+  <circle cx="80" cy="165" r="12" fill="url(#se-input-node)"/>
+  <circle cx="80" cy="165" r="4" fill="#fff" opacity="0.2"/>
+  <!-- Input layer label -->
+  <text x="80" y="192" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#0ea5e9" opacity="0.5" letter-spacing="1">INPUT</text>
+
+  <!-- ══ HIDDEN LAYER (x=200, 8 nodes) ══ -->
+  <!-- y positions: 30, 55, 80, 105, 130, 155, 180 + 1 more: 30+25*7=205 -->
+  <!-- Actually 8 nodes spread: 28, 52, 76, 100, 124, 148, 172, 196 ... too close to edges -->
+  <!-- Use: 30, 55, 80, 105, 130, 155, 178, 200 — but 200 is bottom. Use 30,53,76,99,122,145,168,191 -->
+  <circle cx="200" cy="30" r="10" fill="url(#se-hidden-node)"/>
+  <circle cx="200" cy="30" r="4" fill="#fff" opacity="0.15"/>
+  <circle cx="200" cy="55" r="10" fill="url(#se-hidden-node)"/>
+  <circle cx="200" cy="55" r="4" fill="#fff" opacity="0.15"/>
+  <circle cx="200" cy="80" r="10" fill="url(#se-hidden-node)"/>
+  <circle cx="200" cy="80" r="4" fill="#fff" opacity="0.15"/>
+  <!-- Highlighted node at 200,105 (larger: 14px, bright, strong glow) -->
+  <circle cx="200" cy="105" r="30" fill="url(#se-node-hi-glow)"/>
+  <circle cx="200" cy="105" r="16" fill="#22d3ee" opacity="0.1"/>
+  <circle cx="200" cy="105" r="14" fill="url(#se-hidden-highlight)"/>
+  <circle cx="200" cy="105" r="5" fill="#ffffff" opacity="0.4"/>
+  <circle cx="200" cy="130" r="10" fill="url(#se-hidden-node)"/>
+  <circle cx="200" cy="130" r="4" fill="#fff" opacity="0.15"/>
+  <circle cx="200" cy="155" r="10" fill="url(#se-hidden-node)"/>
+  <circle cx="200" cy="155" r="4" fill="#fff" opacity="0.15"/>
+  <circle cx="200" cy="178" r="10" fill="url(#se-hidden-node)"/>
+  <circle cx="200" cy="178" r="4" fill="#fff" opacity="0.15"/>
+  <!-- Hidden label -->
+  <text x="200" y="205" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#22d3ee" opacity="0.5" letter-spacing="1">HIDDEN</text>
+
+  <!-- ══ OUTPUT LAYER (x=320, 4 nodes) ══ -->
+  <!-- y positions: 60, 95, 135, 170 -->
+  <circle cx="320" cy="60" r="22" fill="url(#se-out-glow)"/>
+  <circle cx="320" cy="60" r="12" fill="url(#se-output-node)"/>
+  <circle cx="320" cy="60" r="4" fill="#fff" opacity="0.2"/>
+
+  <circle cx="320" cy="95" r="22" fill="url(#se-out-glow)"/>
+  <circle cx="320" cy="95" r="12" fill="url(#se-output-node)"/>
+  <circle cx="320" cy="95" r="4" fill="#fff" opacity="0.2"/>
+
+  <circle cx="320" cy="135" r="22" fill="url(#se-out-glow)"/>
+  <circle cx="320" cy="135" r="12" fill="url(#se-output-node)"/>
+  <circle cx="320" cy="135" r="4" fill="#fff" opacity="0.2"/>
+
+  <circle cx="320" cy="170" r="22" fill="url(#se-out-glow)"/>
+  <circle cx="320" cy="170" r="12" fill="url(#se-output-node)"/>
+  <circle cx="320" cy="170" r="4" fill="#fff" opacity="0.2"/>
+
+  <!-- Output label -->
+  <text x="320" y="200" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#818cf8" opacity="0.5" letter-spacing="1">OUTPUT</text>
+
+  <!-- ══ METRIC LABELS near output nodes ══ -->
+  <text x="340" y="63" font-family="sans-serif" font-size="7" fill="#ffffff" opacity="0.65">Energy: 37%</text>
+  <text x="340" y="98" font-family="sans-serif" font-size="7" fill="#ffffff" opacity="0.65">Comfort: 94%</text>
+  <text x="340" y="138" font-family="sans-serif" font-size="7" fill="#ffffff" opacity="0.65">Security: 100%</text>
+  <text x="340" y="173" font-family="sans-serif" font-size="7" fill="#ffffff" opacity="0.65">Scenes: 12 active</text>
+
+  <!-- Metric value bars (tiny inline bars) -->
+  <rect x="340" y="65" width="30" height="2" rx="1" fill="#0ea5e9" opacity="0.3"/>
+  <rect x="340" y="65" width="11" height="2" rx="1" fill="#0ea5e9" opacity="0.8"/>
+  <rect x="340" y="100" width="30" height="2" rx="1" fill="#22d3ee" opacity="0.3"/>
+  <rect x="340" y="100" width="28" height="2" rx="1" fill="#22d3ee" opacity="0.8"/>
+  <rect x="340" y="140" width="30" height="2" rx="1" fill="#818cf8" opacity="0.3"/>
+  <rect x="340" y="140" width="30" height="2" rx="1" fill="#818cf8" opacity="0.9"/>
+  <rect x="340" y="175" width="30" height="2" rx="1" fill="#818cf8" opacity="0.3"/>
+  <rect x="340" y="175" width="12" height="2" rx="1" fill="#818cf8" opacity="0.7"/>
+
+  <!-- Input layer icon labels (very tiny, inside nodes) -->
+  <text x="80" y="43" text-anchor="middle" font-family="monospace" font-size="6" fill="#0a1a28" opacity="0.6">T</text>
+  <text x="80" y="68" text-anchor="middle" font-family="monospace" font-size="6" fill="#0a1a28" opacity="0.6">M</text>
+  <text x="80" y="93" text-anchor="middle" font-family="monospace" font-size="6" fill="#0a1a28" opacity="0.6">L</text>
+  <text x="80" y="118" text-anchor="middle" font-family="monospace" font-size="6" fill="#0a1a28" opacity="0.6">S</text>
+  <text x="80" y="143" text-anchor="middle" font-family="monospace" font-size="6" fill="#0a1a28" opacity="0.6">E</text>
+  <text x="80" y="168" text-anchor="middle" font-family="monospace" font-size="6" fill="#0a1a28" opacity="0.6">P</text>
+
+  <!-- Bottom decorative line -->
+  <line x1="60" y1="215" x2="340" y2="215" stroke="#22d3ee" stroke-width="0.5" opacity="0.1"/>
 </svg>

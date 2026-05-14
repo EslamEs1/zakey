@@ -1,16 +1,204 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <title>Zakey Silent Track — Motorized Curtain Track System</title>
   <defs>
-    <linearGradient id="bg-SILENT TRACK" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
+    <radialGradient id="bgRadial" cx="50%" cy="50%" r="60%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
+    </radialGradient>
+    <pattern id="dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="0.7" fill="#ffffff" fill-opacity="0.04"/>
+    </pattern>
+    <!-- Product glow: silver/neutral for aluminum track -->
+    <radialGradient id="productGlow" cx="50%" cy="42%" r="55%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.1"/>
+      <stop offset="40%" stop-color="#d0d4de" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#d0d4de" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Track rail: aluminum profile — silver -->
+    <linearGradient id="trackFrontGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d8dce8"/>
+      <stop offset="30%" stop-color="#c8ccd8"/>
+      <stop offset="70%" stop-color="#b8bcc8"/>
+      <stop offset="100%" stop-color="#a8acb8"/>
     </linearGradient>
-    <radialGradient id="gl-SILENT TRACK" cx="240" cy="185" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <!-- Track top face -->
+    <linearGradient id="trackTopGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8ecf4"/>
+      <stop offset="100%" stop-color="#c8ccd8"/>
+    </linearGradient>
+    <!-- Track inner groove shadow -->
+    <linearGradient id="grooveGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6a6e80"/>
+      <stop offset="50%" stop-color="#2a2e3e"/>
+      <stop offset="100%" stop-color="#4a4e60"/>
+    </linearGradient>
+    <!-- Motor housing -->
+    <linearGradient id="motorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2e3248"/>
+      <stop offset="100%" stop-color="#1a1c2c"/>
+    </linearGradient>
+    <!-- Carrier piece: dark plastic -->
+    <linearGradient id="carrierGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#252838"/>
+      <stop offset="100%" stop-color="#1a1c28"/>
+    </linearGradient>
+    <!-- End cap -->
+    <linearGradient id="endCapGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b8bcc8"/>
+      <stop offset="100%" stop-color="#9098a8"/>
+    </linearGradient>
+    <!-- Curtain: semi-transparent gray -->
+    <linearGradient id="curtainGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8090a8" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#8090a8" stop-opacity="0.06"/>
+    </linearGradient>
+    <!-- Drop shadow -->
+    <radialGradient id="shadowGrad" cx="50%" cy="50%" r="50%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <!-- LED: green -->
+    <radialGradient id="greenLed" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#22c55e" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Motor receiver bump gradient -->
+    <radialGradient id="receiverGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#3a3e58"/>
+      <stop offset="100%" stop-color="#1e2030"/>
     </radialGradient>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-SILENT TRACK)"/>
-  <ellipse cx="240" cy="185" rx="180" ry="140" fill="url(#gl-SILENT TRACK)"/>
-  <rect x="80" y="165" width="320" height="30" rx="6" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><rect x="200" y="140" width="80" height="55" rx="8" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.4"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">SILENT TRACK</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bgRadial)"/>
+  <rect width="480" height="360" fill="url(#dots)"/>
+
+  <!-- Product glow -->
+  <ellipse cx="240" cy="175" rx="200" ry="80" fill="url(#productGlow)"/>
+
+  <!-- Drop shadow — wide flat shadow for horizontal track -->
+  <ellipse cx="245" cy="220" rx="185" ry="10" fill="url(#shadowGrad)"/>
+
+  <!-- ────────────────────────────────────────── -->
+  <!-- TRACK RAIL: 300px wide × 25px tall         -->
+  <!-- Shown in 3/4 perspective, tilted slightly  -->
+  <!-- Top face + front face visible              -->
+  <!-- Track left: x=75, right: x=405            -->
+  <!-- Front face: y=155 to y=180                 -->
+  <!-- Top face: y=143 to y=155 (foreshortened)  -->
+  <!-- ────────────────────────────────────────── -->
+
+  <!-- Top face of track rail (angled parallelogram) -->
+  <polygon points="75,155 405,155 415,143 85,143" fill="url(#trackTopGrad)"/>
+  <!-- Top face fine lines suggesting aluminum extrusion channels -->
+  <line x1="86" y1="143.5" x2="413" y2="143.5" stroke="#ffffff" stroke-width="0.4" stroke-opacity="0.4"/>
+  <line x1="87" y1="145" x2="413.5" y2="145" stroke="#d0d4e0" stroke-width="0.3" stroke-opacity="0.3"/>
+  <line x1="88" y1="147" x2="414" y2="147" stroke="#d0d4e0" stroke-width="0.3" stroke-opacity="0.2"/>
+  <line x1="89" y1="149" x2="414.5" y2="149" stroke="#c8ccd8" stroke-width="0.3" stroke-opacity="0.2"/>
+  <line x1="89.5" y1="151" x2="415" y2="151" stroke="#c8ccd8" stroke-width="0.25" stroke-opacity="0.2"/>
+  <line x1="90" y1="153" x2="415" y2="153" stroke="#c0c4d0" stroke-width="0.25" stroke-opacity="0.15"/>
+
+  <!-- Front face of track rail -->
+  <rect x="75" y="155" width="330" height="25" fill="url(#trackFrontGrad)"/>
+  <!-- Top edge highlight on front face -->
+  <line x1="75" y1="155.5" x2="405" y2="155.5" stroke="#ffffff" stroke-width="0.8" stroke-opacity="0.4"/>
+  <!-- Bottom edge shadow on front face -->
+  <line x1="75" y1="179.5" x2="405" y2="179.5" stroke="#888ca0" stroke-width="0.5" stroke-opacity="0.5"/>
+  <!-- Front face outer border -->
+  <rect x="75" y="155" width="330" height="25" fill="none" stroke="#a0a4b4" stroke-width="0.5"/>
+
+  <!-- Track groove: running full length on front face (thin slot, center height) -->
+  <rect x="75" y="163" width="330" height="6" rx="0" fill="url(#grooveGrad)"/>
+  <!-- Groove inner shadow lines -->
+  <line x1="75" y1="163.5" x2="405" y2="163.5" stroke="#2a2e3e" stroke-width="0.5"/>
+  <line x1="75" y1="168.5" x2="405" y2="168.5" stroke="#5a5e70" stroke-width="0.4"/>
+
+  <!-- ────────────────────────────────────── -->
+  <!-- GLIDER CARRIERS (2 pieces in track)  -->
+  <!-- Each 10px wide × 20px tall           -->
+  <!-- ────────────────────────────────────── -->
+
+  <!-- Carrier 1 (left area) -->
+  <rect x="155" y="155" width="10" height="25" rx="2" fill="url(#carrierGrad)"/>
+  <rect x="155" y="155" width="10" height="25" rx="2" fill="none" stroke="#3a3e58" stroke-width="0.5"/>
+  <!-- Carrier hook at bottom -->
+  <rect x="157" y="178" width="6" height="4" rx="1" fill="#1a1c28" stroke="#2a2e40" stroke-width="0.4"/>
+  <!-- Carrier top profile (fits in groove) -->
+  <rect x="156" y="162" width="8" height="4" rx="1" fill="#1e2030"/>
+
+  <!-- Carrier 2 (center) -->
+  <rect x="240" y="155" width="10" height="25" rx="2" fill="url(#carrierGrad)"/>
+  <rect x="240" y="155" width="10" height="25" rx="2" fill="none" stroke="#3a3e58" stroke-width="0.5"/>
+  <rect x="242" y="178" width="6" height="4" rx="1" fill="#1a1c28" stroke="#2a2e40" stroke-width="0.4"/>
+  <rect x="241" y="162" width="8" height="4" rx="1" fill="#1e2030"/>
+
+  <!-- Carrier 3 (right area) -->
+  <rect x="330" y="155" width="10" height="25" rx="2" fill="url(#carrierGrad)"/>
+  <rect x="330" y="155" width="10" height="25" rx="2" fill="none" stroke="#3a3e58" stroke-width="0.5"/>
+  <rect x="332" y="178" width="6" height="4" rx="1" fill="#1a1c28" stroke="#2a2e40" stroke-width="0.4"/>
+  <rect x="331" y="162" width="8" height="4" rx="1" fill="#1e2030"/>
+
+  <!-- ────────────────────────────────────── -->
+  <!-- MOTOR UNIT at left end (40×25px box) -->
+  <!-- ────────────────────────────────────── -->
+
+  <!-- Motor housing back face (3/4 perspective, slight offset) -->
+  <rect x="77" y="137" width="43" height="30" rx="3" fill="#14162a" fill-opacity="0.7"/>
+  <!-- Motor housing front face -->
+  <rect x="75" y="135" width="43" height="30" rx="3" fill="url(#motorGrad)"/>
+  <!-- Motor top face (3/4) -->
+  <polygon points="75,135 118,135 120,133 77,133" fill="#3a3e58"/>
+  <!-- Motor right side face -->
+  <polygon points="118,135 120,133 120,163 118,165" fill="#1a1c2c"/>
+  <!-- Motor label text -->
+  <text x="84" y="154" font-family="'SF Mono', monospace" font-size="5.5" letter-spacing="0.5"
+        fill="#6a7090" fill-opacity="0.9">MOTOR</text>
+  <!-- Motor front edge highlight -->
+  <rect x="75" y="135" width="43" height="30" rx="3" fill="none" stroke="#3a3e58" stroke-width="0.6"/>
+  <!-- Motor face: connector/cable port -->
+  <circle cx="82" cy="142" r="3.5" fill="#0a0c16" stroke="#2a2e44" stroke-width="0.5"/>
+  <!-- Motor antenna/receiver bump -->
+  <ellipse cx="110" cy="142" rx="7" ry="5" fill="url(#receiverGrad)"/>
+  <rect x="108" y="137" width="5" height="10" rx="2.5" fill="url(#receiverGrad)"/>
+  <!-- Motor receiver outline -->
+  <rect x="108" y="137" width="5" height="10" rx="2.5" fill="none" stroke="#2e3248" stroke-width="0.5"/>
+
+  <!-- Status LED on motor: green dot -->
+  <circle cx="99" cy="142" r="4" fill="url(#greenLed)" fill-opacity="0.4"/>
+  <circle cx="99" cy="142" r="1.8" fill="#22c55e"/>
+
+  <!-- ────────────────────────────────────── -->
+  <!-- END CAPS: small square at both ends   -->
+  <!-- ────────────────────────────────────── -->
+
+  <!-- Left end cap (at motor) — already covered by motor housing -->
+  <!-- Right end cap -->
+  <rect x="402" y="155" width="8" height="25" rx="2" fill="url(#endCapGrad)"/>
+  <rect x="402" y="155" width="8" height="25" rx="2" fill="none" stroke="#9098a8" stroke-width="0.5"/>
+  <!-- End cap top (3/4) -->
+  <polygon points="402,155 410,155 416,148 408,148" fill="#c8ccd8"/>
+  <!-- End cap right side face -->
+  <polygon points="410,155 416,148 416,173 410,180" fill="#9098a8"/>
+
+  <!-- ────────────────────────────────────── -->
+  <!-- CURTAIN SUGGESTION below carriers     -->
+  <!-- Semi-transparent rect suggesting     -->
+  <!-- hanging fabric                        -->
+  <!-- ────────────────────────────────────── -->
+  <rect x="148" y="182" width="198" height="55" rx="2" fill="url(#curtainGrad)"/>
+  <!-- Very subtle fabric fold lines -->
+  <line x1="175" y1="182" x2="175" y2="237" stroke="#8090a8" stroke-width="0.4" stroke-opacity="0.08"/>
+  <line x1="210" y1="182" x2="210" y2="237" stroke="#8090a8" stroke-width="0.4" stroke-opacity="0.08"/>
+  <line x1="245" y1="182" x2="245" y2="237" stroke="#8090a8" stroke-width="0.4" stroke-opacity="0.08"/>
+  <line x1="280" y1="182" x2="280" y2="237" stroke="#8090a8" stroke-width="0.4" stroke-opacity="0.08"/>
+  <line x1="315" y1="182" x2="315" y2="237" stroke="#8090a8" stroke-width="0.4" stroke-opacity="0.08"/>
+
+  <!-- ─── Label ─── -->
+  <text x="240" y="310" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="9" letter-spacing="2"
+        fill="#3a4060" fill-opacity="0.8">ZAKEY SILENT TRACK</text>
+  <text x="240" y="326" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="6" letter-spacing="1"
+        fill="#2a3050" fill-opacity="0.55">Motorized · Whisper-Quiet · Smart Control</text>
 </svg>

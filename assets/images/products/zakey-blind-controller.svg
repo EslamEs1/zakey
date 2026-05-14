@@ -1,16 +1,140 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
   <defs>
-    <linearGradient id="bg-BLIND CONTROLLER" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
-    </linearGradient>
-    <radialGradient id="gl-BLIND CONTROLLER" cx="240" cy="185" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <radialGradient id="bgG" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
     </radialGradient>
+    <pattern id="gridPat" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20,0 L0,0 0,20" fill="none" stroke="#6080c0" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+    <!-- Body gradient (dark, wider) -->
+    <linearGradient id="bodyG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#232538"/>
+      <stop offset="100%" stop-color="#161828"/>
+    </linearGradient>
+    <!-- Top face -->
+    <linearGradient id="topG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2c42"/>
+      <stop offset="100%" stop-color="#1c1e32"/>
+    </linearGradient>
+    <!-- Right side -->
+    <linearGradient id="rightG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#121420"/>
+      <stop offset="100%" stop-color="#0d0f1c"/>
+    </linearGradient>
+    <!-- Position bar fill gradient (cyan) -->
+    <linearGradient id="posBarG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00a0c0" stop-opacity="0.7"/>
+    </linearGradient>
+    <!-- Cyan glow -->
+    <radialGradient id="cGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Drop shadow -->
+    <radialGradient id="shadowG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softG" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-BLIND CONTROLLER)"/>
-  <ellipse cx="240" cy="185" rx="180" ry="140" fill="url(#gl-BLIND CONTROLLER)"/>
-  <rect x="80" y="165" width="320" height="30" rx="6" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><rect x="200" y="140" width="80" height="55" rx="8" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.4"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">BLIND CONTROLLER</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bgG)"/>
+  <rect width="480" height="360" fill="url(#gridPat)"/>
+
+  <!-- Product glow -->
+  <ellipse cx="238" cy="195" rx="145" ry="95" fill="url(#cGlow)"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="230" cy="285" rx="100" ry="11" fill="url(#shadowG)" opacity="0.5"/>
+
+  <!-- === BLIND CONTROLLER — wider module === -->
+  <!-- Top face -->
+  <polygon points="138,148 298,148 318,128 158,128" fill="url(#topG)"/>
+  <polygon points="138,148 298,148 300,150 140,150" fill="#3c4060" opacity="0.4"/>
+  <line x1="138" y1="148" x2="158" y2="128" stroke="#3a3e62" stroke-width="1.5" opacity="0.7"/>
+  <line x1="138" y1="148" x2="298" y2="148" stroke="#3a3e62" stroke-width="1" opacity="0.5"/>
+
+  <!-- Right side face -->
+  <polygon points="298,148 318,128 318,228 298,248" fill="url(#rightG)"/>
+
+  <!-- Front face (wider: 160px wide, 100px tall) -->
+  <rect x="138" y="148" width="160" height="100" rx="5" fill="url(#bodyG)"/>
+  <!-- Lit edges -->
+  <rect x="138" y="148" width="3" height="100" rx="1.5" fill="#404568" opacity="0.88"/>
+  <rect x="138" y="148" width="160" height="3" rx="1.5" fill="#383c60" opacity="0.78"/>
+
+  <!-- ===== VENETIAN BLIND ICON (5 slats, one angled) ===== -->
+  <!-- Slat 1 (horizontal) -->
+  <rect x="150" y="163" width="80" height="5" rx="2" fill="#2e3252" opacity="0.9"/>
+  <!-- Slat 2 (horizontal) -->
+  <rect x="150" y="173" width="80" height="5" rx="2" fill="#2e3252" opacity="0.8"/>
+  <!-- Slat 3 (angled at 45deg - the "open" slat) -->
+  <rect x="149" y="181" width="82" height="5" rx="2" fill="#00e5ff" opacity="0.65" transform="rotate(-15,190,183)"/>
+  <!-- Slat 4 -->
+  <rect x="150" y="192" width="80" height="5" rx="2" fill="#2e3252" opacity="0.6"/>
+  <!-- Slat 5 -->
+  <rect x="150" y="202" width="80" height="5" rx="2" fill="#2e3252" opacity="0.4"/>
+  <!-- Slat rail -->
+  <line x1="180" y1="160" x2="180" y2="210" stroke="#202238" stroke-width="1.5"/>
+  <line x1="210" y1="160" x2="210" y2="210" stroke="#202238" stroke-width="1.5"/>
+
+  <!-- Direction LEDs with icons (right side of front face) -->
+  <!-- UP arrow + green LED -->
+  <circle cx="262" cy="164" r="4.5" fill="#00cc66" opacity="0.9" filter="url(#softG)"/>
+  <circle cx="262" cy="164" r="3" fill="#00ff88"/>
+  <!-- Up arrow indicator -->
+  <g transform="translate(272,159)" fill="#6a8060" stroke="none">
+    <polygon points="5,0 10,7 7,7 7,12 3,12 3,7 0,7"/>
+  </g>
+
+  <!-- STOP square indicator -->
+  <circle cx="262" cy="182" r="4.5" fill="#505060" opacity="0.6"/>
+  <rect x="259" y="179" width="6" height="6" rx="1" fill="#808090"/>
+
+  <!-- DOWN arrow + dim LED -->
+  <circle cx="262" cy="200" r="4.5" fill="#00e5ff" opacity="0.2"/>
+  <!-- Down arrow indicator -->
+  <g transform="translate(272,196)" fill="#506070" stroke="none">
+    <polygon points="5,12 10,5 7,5 7,0 3,0 3,5 0,5"/>
+  </g>
+
+  <!-- Output terminals on right side (2 terminals) -->
+  <rect x="286" y="160" width="14" height="20" rx="2" fill="#1e2238" stroke="#2e3252" stroke-width="1"/>
+  <circle cx="293" cy="167" r="3.5" fill="#181a2e" stroke="#303456" stroke-width="0.8"/>
+  <line x1="290" y1="167" x2="296" y2="167" stroke="#404868" stroke-width="1"/>
+  <rect x="287.5" y="176" width="11" height="2.5" rx="1" fill="#0c0e1c"/>
+
+  <rect x="286" y="186" width="14" height="20" rx="2" fill="#1e2238" stroke="#2e3252" stroke-width="1"/>
+  <circle cx="293" cy="193" r="3.5" fill="#181a2e" stroke="#303456" stroke-width="0.8"/>
+  <line x1="290" y1="193" x2="296" y2="193" stroke="#404868" stroke-width="1"/>
+  <rect x="287.5" y="202" width="11" height="2.5" rx="1" fill="#0c0e1c"/>
+
+  <!-- Position bar at bottom of front face (60% filled cyan) -->
+  <rect x="148" y="228" width="104" height="6" rx="3" fill="#0e1020"/>
+  <rect x="148" y="228" width="62" height="6" rx="3" fill="url(#posBarG)" filter="url(#softG)"/>
+  <!-- Bar end cap glow -->
+  <circle cx="210" cy="231" r="4" fill="#00e5ff" opacity="0.7" filter="url(#glow)"/>
+  <text x="260" y="233" text-anchor="start" font-family="Arial" font-size="7" fill="#6a7090">60%</text>
+
+  <!-- ZK-BLIND label -->
+  <text x="196" y="218" text-anchor="middle" font-family="'Courier New', monospace" font-size="7"
+        fill="#4a5070" letter-spacing="0.5">ZK-BLIND</text>
+
+  <!-- Floor reflection -->
+  <rect x="138" y="248" width="160" height="30" rx="5" fill="url(#bodyG)" opacity="0.07"
+        transform="scale(1,-1) translate(0,-496)"/>
+
+  <!-- Product label -->
+  <text x="240" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="10"
+        fill="white" opacity="0.5" letter-spacing="2">BLIND CONTROLLER</text>
 </svg>

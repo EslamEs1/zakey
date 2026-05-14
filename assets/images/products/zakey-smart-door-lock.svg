@@ -1,16 +1,162 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
   <defs>
-    <linearGradient id="bg-SMART DOOR LOCK" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
-    </linearGradient>
-    <radialGradient id="gl-SMART DOOR LOCK" cx="240" cy="190" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <radialGradient id="dl-bg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
     </radialGradient>
+    <pattern id="dl-hex" x="0" y="0" width="20" height="17.3" patternUnits="userSpaceOnUse">
+      <polygon points="10,1 19,5.5 19,11.8 10,16.3 1,11.8 1,5.5" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+    <!-- Body gradient -->
+    <linearGradient id="dl-body-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2e3250"/>
+      <stop offset="40%" stop-color="#1f2235"/>
+      <stop offset="100%" stop-color="#141624"/>
+    </linearGradient>
+    <!-- Body left edge highlight -->
+    <linearGradient id="dl-body-left" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#404668"/>
+      <stop offset="100%" stop-color="#1f2235"/>
+    </linearGradient>
+    <!-- Key gradient -->
+    <linearGradient id="dl-key-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2e3252"/>
+      <stop offset="100%" stop-color="#1a1c30"/>
+    </linearGradient>
+    <!-- Fingerprint sensor -->
+    <radialGradient id="dl-fp-grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#252840"/>
+      <stop offset="100%" stop-color="#141624"/>
+    </radialGradient>
+    <!-- Amber glow -->
+    <radialGradient id="dl-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffaa22" stop-opacity="0.18"/>
+      <stop offset="70%" stop-color="#ff7700" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ff7700" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Shadow -->
+    <radialGradient id="dl-shadow" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Side face gradient -->
+    <linearGradient id="dl-side-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#181a2a"/>
+      <stop offset="100%" stop-color="#0d0e18"/>
+    </linearGradient>
+    <!-- Top face -->
+    <linearGradient id="dl-top-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a3e60"/>
+      <stop offset="100%" stop-color="#272940"/>
+    </linearGradient>
+    <!-- LED bar glow -->
+    <linearGradient id="dl-led-bar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22ff88" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#44ffaa" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#22ff88" stop-opacity="0.6"/>
+    </linearGradient>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-SMART DOOR LOCK)"/>
-  <ellipse cx="240" cy="190" rx="180" ry="140" fill="url(#gl-SMART DOOR LOCK)"/>
-  <rect x="170" y="120" width="140" height="140" rx="10" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><path d="M205 120 Q205 85 240 85 Q275 85 275 120" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-opacity="0.5" stroke-linecap="round"/><circle cx="240" cy="185" r="18" fill="#22d3ee" fill-opacity="0.15" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.4"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">SMART DOOR LOCK</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#dl-bg)"/>
+  <rect width="480" height="360" fill="url(#dl-hex)"/>
+
+  <!-- Amber glow behind lock -->
+  <ellipse cx="240" cy="190" rx="120" ry="140" fill="url(#dl-glow)"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="255" cy="318" rx="60" ry="12" fill="url(#dl-shadow)"/>
+
+  <!-- Lock body — slight 3D perspective: front face + right side + top -->
+  <!-- Right side face (3D depth) -->
+  <polygon points="300,82 314,88 314,298 300,294" fill="url(#dl-side-grad)"/>
+  <!-- Top face -->
+  <polygon points="200,82 300,82 314,88 214,88" fill="url(#dl-top-grad)"/>
+  <!-- Main front face -->
+  <rect x="200" y="82" width="100" height="212" rx="8" fill="url(#dl-body-grad)"/>
+  <!-- Body left edge highlight strip -->
+  <rect x="200" y="82" width="6" height="212" rx="3" fill="url(#dl-body-left)" opacity="0.5"/>
+  <!-- Body top edge highlight -->
+  <rect x="202" y="83" width="96" height="4" rx="2" fill="#ffffff" opacity="0.07"/>
+  <!-- Body face subtle surface texture -->
+  <rect x="200" y="82" width="100" height="212" rx="8" fill="none" stroke="#2a2d48" stroke-width="1.5"/>
+
+  <!-- ZAKEY brand embossed at top -->
+  <text x="250" y="104" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#404468" letter-spacing="2.5">ZAKEY</text>
+
+  <!-- Status LED bar at top — glowing green (locked) -->
+  <rect x="218" y="110" width="64" height="5" rx="2.5" fill="url(#dl-led-bar)"/>
+  <rect x="218" y="110" width="64" height="5" rx="2.5" fill="#22ff88" opacity="0.20"/>
+  <!-- LED bar glow halo -->
+  <rect x="215" y="108" width="70" height="9" rx="4" fill="#22ff88" opacity="0.10"/>
+
+  <!-- Keypad area background -->
+  <rect x="212" y="120" width="76" height="112" rx="5" fill="#181a2c" opacity="0.7"/>
+  <rect x="212" y="120" width="76" height="112" rx="5" fill="none" stroke="#2a2e48" stroke-width="1"/>
+
+  <!-- Keypad keys — 3 columns x 4 rows -->
+  <!-- Row 1: 1 2 3 -->
+  <rect x="218" y="127" width="18" height="14" rx="3" fill="url(#dl-key-grad)"/>
+  <rect x="218" y="127" width="18" height="14" rx="3" fill="none" stroke="#383c58" stroke-width="0.8"/>
+  <rect x="241" y="127" width="18" height="14" rx="3" fill="url(#dl-key-grad)"/>
+  <rect x="241" y="127" width="18" height="14" rx="3" fill="none" stroke="#383c58" stroke-width="0.8"/>
+  <rect x="264" y="127" width="18" height="14" rx="3" fill="url(#dl-key-grad)"/>
+  <rect x="264" y="127" width="18" height="14" rx="3" fill="none" stroke="#383c58" stroke-width="0.8"/>
+  <!-- Row 2: 4 5 6 -->
+  <rect x="218" y="145" width="18" height="14" rx="3" fill="url(#dl-key-grad)"/>
+  <rect x="218" y="145" width="18" height="14" rx="3" fill="none" stroke="#383c58" stroke-width="0.8"/>
+  <rect x="241" y="145" width="18" height="14" rx="3" fill="url(#dl-key-grad)"/>
+  <rect x="241" y="145" width="18" height="14" rx="3" fill="none" stroke="#383c58" stroke-width="0.8"/>
+  <rect x="264" y="145" width="18" height="14" rx="3" fill="url(#dl-key-grad)"/>
+  <rect x="264" y="145" width="18" height="14" rx="3" fill="none" stroke="#383c58" stroke-width="0.8"/>
+  <!-- Row 3: 7 8 9 -->
+  <rect x="218" y="163" width="18" height="14" rx="3" fill="url(#dl-key-grad)"/>
+  <rect x="218" y="163" width="18" height="14" rx="3" fill="none" stroke="#383c58" stroke-width="0.8"/>
+  <rect x="241" y="163" width="18" height="14" rx="3" fill="url(#dl-key-grad)"/>
+  <rect x="241" y="163" width="18" height="14" rx="3" fill="none" stroke="#383c58" stroke-width="0.8"/>
+  <rect x="264" y="163" width="18" height="14" rx="3" fill="url(#dl-key-grad)"/>
+  <rect x="264" y="163" width="18" height="14" rx="3" fill="none" stroke="#383c58" stroke-width="0.8"/>
+  <!-- Row 4: * 0 # -->
+  <rect x="218" y="181" width="18" height="14" rx="3" fill="url(#dl-key-grad)"/>
+  <rect x="218" y="181" width="18" height="14" rx="3" fill="none" stroke="#383c58" stroke-width="0.8"/>
+  <rect x="241" y="181" width="18" height="14" rx="3" fill="url(#dl-key-grad)"/>
+  <rect x="241" y="181" width="18" height="14" rx="3" fill="none" stroke="#383c58" stroke-width="0.8"/>
+  <rect x="264" y="181" width="18" height="14" rx="3" fill="url(#dl-key-grad)"/>
+  <rect x="264" y="181" width="18" height="14" rx="3" fill="none" stroke="#383c58" stroke-width="0.8"/>
+  <!-- Key top highlights -->
+  <rect x="219" y="128" width="16" height="3" rx="1.5" fill="#ffffff" opacity="0.07"/>
+  <rect x="242" y="128" width="16" height="3" rx="1.5" fill="#ffffff" opacity="0.07"/>
+  <rect x="265" y="128" width="16" height="3" rx="1.5" fill="#ffffff" opacity="0.07"/>
+
+  <!-- Fingerprint sensor area -->
+  <circle cx="250" cy="222" r="24" fill="url(#dl-fp-grad)"/>
+  <circle cx="250" cy="222" r="24" fill="none" stroke="#2a2e48" stroke-width="1.2"/>
+  <!-- Glow ring around sensor -->
+  <circle cx="250" cy="222" r="26" fill="none" stroke="#ffaa44" stroke-width="1" opacity="0.35"/>
+  <circle cx="250" cy="222" r="30" fill="none" stroke="#ffaa44" stroke-width="0.8" opacity="0.12"/>
+  <!-- Fingerprint arc lines -->
+  <path d="M240,214 Q250,208 260,214" stroke="#404468" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M237,219 Q250,211 263,219" stroke="#404468" stroke-width="1" fill="none" opacity="0.4"/>
+  <path d="M236,225 Q250,215 264,225" stroke="#404468" stroke-width="1" fill="none" opacity="0.35"/>
+  <path d="M238,231 Q250,221 262,231" stroke="#404468" stroke-width="1" fill="none" opacity="0.3"/>
+  <!-- Sensor center -->
+  <circle cx="250" cy="222" r="6" fill="#1a1c30" opacity="0.6"/>
+
+  <!-- Handle/grip area on right -->
+  <ellipse cx="296" cy="200" rx="8" ry="28" fill="#1a1c30"/>
+  <ellipse cx="296" cy="200" rx="8" ry="28" fill="none" stroke="#383c58" stroke-width="1"/>
+  <ellipse cx="294" cy="194" rx="4" ry="12" fill="#ffffff" opacity="0.05"/>
+
+  <!-- Deadbolt indicator at left edge -->
+  <rect x="192" y="185" width="12" height="6" rx="3" fill="#e8a020" opacity="0.7"/>
+  <rect x="184" y="186" width="8" height="4" rx="2" fill="#c88010" opacity="0.7"/>
+
+  <!-- Keyhole icon near bottom -->
+  <circle cx="250" cy="268" r="8" fill="#141624"/>
+  <circle cx="250" cy="268" r="8" fill="none" stroke="#2a2e48" stroke-width="1"/>
+  <circle cx="250" cy="264" r="4" fill="none" stroke="#404468" stroke-width="1.5"/>
+  <polygon points="248,268 252,268 251,276 249,276" fill="#404468"/>
+
+  <!-- Product label -->
+  <text x="240" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" opacity="0.40" letter-spacing="2.5">SMART DOOR LOCK</text>
 </svg>

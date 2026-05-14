@@ -1,51 +1,279 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <title>Zakey Smart Villa — Luxury Grand Living Room</title>
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
+    <!-- Ceiling gradient: warm ivory -->
+    <linearGradient id="sv-ceiling" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f5f0e8"/>
+      <stop offset="100%" stop-color="#ede8df"/>
     </linearGradient>
-    <radialGradient id="glow" cx="55%" cy="40%" r="55%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.10"/>
+    <!-- Floor gradient: light oak planks -->
+    <linearGradient id="sv-floor" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d4b483"/>
+      <stop offset="100%" stop-color="#b8955e"/>
+    </linearGradient>
+    <!-- Left/right wall gradient: warm cream -->
+    <linearGradient id="sv-wall" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f0ebe0"/>
+      <stop offset="100%" stop-color="#e8e2d6"/>
+    </linearGradient>
+    <!-- Garden window view gradient -->
+    <linearGradient id="sv-garden" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#87ceeb"/>
+      <stop offset="40%" stop-color="#6bbd5a"/>
+      <stop offset="100%" stop-color="#3a8a2a"/>
+    </linearGradient>
+    <!-- Ceiling cove amber glow -->
+    <radialGradient id="sv-cove-glow" cx="50%" cy="100%" r="80%">
+      <stop offset="0%" stop-color="#f5a623" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#f5a623" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#f5a623" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Chandelier warm gold -->
+    <radialGradient id="sv-chandelier-glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#ffd700" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffd700" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Sofa cream gradient -->
+    <linearGradient id="sv-sofa" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8f3e8"/>
+      <stop offset="100%" stop-color="#e8e0d0"/>
+    </linearGradient>
+    <!-- Marble coffee table -->
+    <linearGradient id="sv-marble" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f8f8"/>
+      <stop offset="100%" stop-color="#e8e8e8"/>
+    </linearGradient>
+    <!-- Curtain gradient: translucent white fabric -->
+    <linearGradient id="sv-curtain" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#f8f8f8" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#f0f0f0" stop-opacity="0.9"/>
+    </linearGradient>
+    <!-- Cyan panel glow -->
+    <radialGradient id="sv-panel-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.3"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
+    <!-- Floor shadow under furniture -->
+    <radialGradient id="sv-furn-shadow" cx="50%" cy="10%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Abstract painting gradient -->
+    <linearGradient id="sv-painting" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2d4a6a"/>
+      <stop offset="40%" stop-color="#8b4a2a"/>
+      <stop offset="100%" stop-color="#4a6b2a"/>
+    </linearGradient>
+    <!-- Perspective vanishing gradient for floor -->
+    <linearGradient id="sv-floor-persp" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c4a46e" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#c4a46e" stop-opacity="0"/>
+    </linearGradient>
   </defs>
-  <!-- Background -->
-  <rect width="1200" height="900" fill="url(#bg)"/>
-  <rect width="1200" height="900" fill="url(#glow)"/>
-  <!-- Ground line -->
-  <rect x="0" y="650" width="1200" height="4" fill="#22d3ee" fill-opacity="0.06"/>
-  <!-- Villa silhouette — main body -->
-  <rect x="280" y="420" width="640" height="230" fill="#0c1a20" rx="4"/>
-  <!-- Villa roofline — main -->
-  <polygon points="240,420 600,200 960,420" fill="#091318"/>
-  <!-- Wing left -->
-  <rect x="160" y="500" width="160" height="150" fill="#0a1820"/>
-  <polygon points="140,500 240,390 340,500" fill="#080f15"/>
-  <!-- Wing right -->
-  <rect x="880" y="500" width="160" height="150" fill="#0a1820"/>
-  <polygon points="860,500 960,390 1060,500" fill="#080f15"/>
-  <!-- Windows — main facade -->
-  <rect x="340" y="490" width="80" height="70" fill="#22d3ee" fill-opacity="0.12" rx="2"/>
-  <rect x="460" y="490" width="80" height="70" fill="#22d3ee" fill-opacity="0.10" rx="2"/>
-  <rect x="660" y="490" width="80" height="70" fill="#22d3ee" fill-opacity="0.10" rx="2"/>
-  <rect x="780" y="490" width="80" height="70" fill="#22d3ee" fill-opacity="0.12" rx="2"/>
-  <!-- Central door -->
-  <rect x="535" y="540" width="130" height="110" fill="#22d3ee" fill-opacity="0.08" rx="3"/>
-  <!-- Aura panel cue -->
-  <rect x="415" y="580" width="36" height="36" fill="#22d3ee" fill-opacity="0.18" rx="6"/>
-  <circle cx="433" cy="598" r="8" fill="#22d3ee" fill-opacity="0.35"/>
-  <!-- Upper window -->
-  <rect x="530" y="290" width="140" height="90" fill="#22d3ee" fill-opacity="0.09" rx="2"/>
-  <!-- Ambient strip -->
-  <rect x="280" y="648" width="640" height="2" fill="#22d3ee" fill-opacity="0.20"/>
-  <!-- Foreground path -->
-  <path d="M0 800 Q300 760 600 780 Q900 800 1200 770 L1200 900 L0 900Z" fill="#05070d" fill-opacity="0.7"/>
-  <!-- Accent dots -->
-  <circle cx="200" cy="600" r="2" fill="#22d3ee" fill-opacity="0.3"/>
-  <circle cx="1000" cy="600" r="2" fill="#22d3ee" fill-opacity="0.3"/>
-  <!-- Wordmark -->
-  <text x="600" y="840" font-family="Manrope,Inter,system-ui,sans-serif" font-size="22" font-weight="700"
-        fill="#22d3ee" fill-opacity="0.45" text-anchor="middle" letter-spacing="8">ZAKEY</text>
-  <text x="600" y="866" font-family="Manrope,Inter,system-ui,sans-serif" font-size="13" font-weight="400"
-        fill="#9aa3b2" fill-opacity="0.40" text-anchor="middle" letter-spacing="3">SMART VILLA</text>
+
+  <!-- ══ CEILING ══ -->
+  <rect x="0" y="0" width="800" height="160" fill="url(#sv-ceiling)"/>
+
+  <!-- Coffered ceiling pattern: grid of recessed rectangles -->
+  <!-- Main coffers (large) -->
+  <rect x="50" y="15" width="180" height="120" rx="3" fill="none" stroke="#ddd8ce" stroke-width="1.5"/>
+  <rect x="60" y="22" width="160" height="106" rx="2" fill="none" stroke="#ccc8be" stroke-width="0.8"/>
+  <rect x="240" y="15" width="180" height="120" rx="3" fill="none" stroke="#ddd8ce" stroke-width="1.5"/>
+  <rect x="250" y="22" width="160" height="106" rx="2" fill="none" stroke="#ccc8be" stroke-width="0.8"/>
+  <rect x="430" y="15" width="180" height="120" rx="3" fill="none" stroke="#ddd8ce" stroke-width="1.5"/>
+  <rect x="440" y="22" width="160" height="106" rx="2" fill="none" stroke="#ccc8be" stroke-width="0.8"/>
+  <rect x="620" y="15" width="155" height="120" rx="3" fill="none" stroke="#ddd8ce" stroke-width="1.5"/>
+  <rect x="630" y="22" width="135" height="106" rx="2" fill="none" stroke="#ccc8be" stroke-width="0.8"/>
+  <!-- Coffer shadow fill -->
+  <rect x="51" y="16" width="178" height="118" rx="2" fill="#f0ebe0" opacity="0.3"/>
+  <rect x="241" y="16" width="178" height="118" rx="2" fill="#f0ebe0" opacity="0.3"/>
+  <rect x="431" y="16" width="178" height="118" rx="2" fill="#f0ebe0" opacity="0.3"/>
+
+  <!-- Ceiling cove LED glow (warm amber) -->
+  <rect x="0" y="145" width="800" height="20" fill="url(#sv-cove-glow)"/>
+  <!-- LED strip along ceiling edge -->
+  <rect x="0" y="155" width="800" height="4" fill="#f5a623" opacity="0.4"/>
+  <rect x="0" y="155" width="800" height="2" fill="#ffe0a0" opacity="0.6"/>
+
+  <!-- ══ CHANDELIER ══ (centered at 400, hanging from ceiling) -->
+  <!-- Glow halo -->
+  <ellipse cx="400" cy="120" rx="80" ry="60" fill="url(#sv-chandelier-glow)"/>
+  <!-- Main tier circles -->
+  <circle cx="400" cy="90" r="35" fill="none" stroke="#c8a840" stroke-width="1.5"/>
+  <circle cx="400" cy="110" r="50" fill="none" stroke="#c8a840" stroke-width="1.2"/>
+  <circle cx="400" cy="125" r="60" fill="none" stroke="#b89a30" stroke-width="1"/>
+  <!-- Chandelier center rod -->
+  <line x1="400" y1="0" x2="400" y2="75" stroke="#c8a840" stroke-width="2"/>
+  <!-- Pendant drops on tier 1 -->
+  <ellipse cx="365" cy="100" rx="2.5" ry="5" fill="#e8c840" opacity="0.7"/>
+  <ellipse cx="400" cy="97" rx="2.5" ry="5" fill="#f0d050" opacity="0.8"/>
+  <ellipse cx="435" cy="100" rx="2.5" ry="5" fill="#e8c840" opacity="0.7"/>
+  <ellipse cx="380" cy="102" rx="2" ry="4" fill="#e0c040" opacity="0.6"/>
+  <ellipse cx="420" cy="102" rx="2" ry="4" fill="#e0c040" opacity="0.6"/>
+  <!-- Pendant drops on tier 2 -->
+  <ellipse cx="350" cy="122" rx="2" ry="5" fill="#e8c840" opacity="0.7"/>
+  <ellipse cx="370" cy="118" rx="2" ry="4" fill="#e8c840" opacity="0.6"/>
+  <ellipse cx="390" cy="120" rx="2" ry="5" fill="#f0d050" opacity="0.75"/>
+  <ellipse cx="410" cy="120" rx="2" ry="5" fill="#f0d050" opacity="0.75"/>
+  <ellipse cx="430" cy="118" rx="2" ry="4" fill="#e8c840" opacity="0.6"/>
+  <ellipse cx="450" cy="122" rx="2" ry="5" fill="#e8c840" opacity="0.7"/>
+  <!-- Warm light glow from chandelier -->
+  <ellipse cx="400" cy="135" rx="50" ry="20" fill="#f5d070" opacity="0.12"/>
+
+  <!-- ══ BACK WALL with ARCHED WINDOWS ══ -->
+  <rect x="0" y="155" width="800" height="220" fill="url(#sv-wall)"/>
+
+  <!-- Pillar left -->
+  <rect x="0" y="155" width="60" height="230" fill="#e8e2d6"/>
+  <rect x="58" y="155" width="4" height="230" fill="#d8d0c4"/>
+  <!-- Pillar right -->
+  <rect x="740" y="155" width="60" height="230" fill="#e8e2d6"/>
+  <rect x="738" y="155" width="4" height="230" fill="#d8d0c4"/>
+
+  <!-- 3 large arched windows (floor to ceiling of room) -->
+  <!-- Window 1: left arch -->
+  <rect x="75" y="160" width="175" height="215" rx="0" fill="#e0d8cc"/>
+  <path d="M75,200 Q75,160 162,160 Q250,160 250,200 L250,375 L75,375 Z" fill="url(#sv-garden)"/>
+  <!-- Window arch frame -->
+  <path d="M75,200 Q75,155 162,155 Q250,155 250,200" fill="none" stroke="#cec8be" stroke-width="4"/>
+  <rect x="75" y="200" width="175" height="175" fill="none" stroke="#cec8be" stroke-width="3"/>
+  <!-- Garden tropical plant silhouettes in window 1 -->
+  <ellipse cx="110" cy="340" rx="28" ry="40" fill="#2d6b20" opacity="0.8"/>
+  <ellipse cx="140" cy="320" rx="22" ry="55" fill="#3a8a2a" opacity="0.9"/>
+  <ellipse cx="175" cy="350" rx="25" ry="35" fill="#2d6b20" opacity="0.8"/>
+  <ellipse cx="210" cy="330" rx="20" ry="45" fill="#3a8a2a" opacity="0.9"/>
+  <!-- Palm fronds in window 1 -->
+  <path d="M162,240 Q130,210 105,220" fill="none" stroke="#3a8a2a" stroke-width="6" opacity="0.7"/>
+  <path d="M162,240 Q140,200 160,190" fill="none" stroke="#3a8a2a" stroke-width="5" opacity="0.7"/>
+  <path d="M162,240 Q190,210 210,215" fill="none" stroke="#3a8a2a" stroke-width="6" opacity="0.7"/>
+
+  <!-- Window 2: center arch -->
+  <path d="M290,200 Q290,160 400,160 Q510,160 510,200 L510,375 L290,375 Z" fill="url(#sv-garden)"/>
+  <path d="M290,200 Q290,155 400,155 Q510,155 510,200" fill="none" stroke="#cec8be" stroke-width="4"/>
+  <rect x="290" y="200" width="220" height="175" fill="none" stroke="#cec8be" stroke-width="3"/>
+  <!-- Garden in center window -->
+  <ellipse cx="320" cy="345" rx="30" ry="38" fill="#2d6b20" opacity="0.8"/>
+  <ellipse cx="360" cy="320" rx="25" ry="55" fill="#3a8a2a" opacity="0.9"/>
+  <ellipse cx="400" cy="350" rx="28" ry="35" fill="#3a8a2a" opacity="0.85"/>
+  <ellipse cx="440" cy="320" rx="25" ry="55" fill="#2d6b20" opacity="0.9"/>
+  <ellipse cx="480" cy="345" rx="30" ry="38" fill="#3a8a2a" opacity="0.8"/>
+  <!-- Fountain hint in center garden -->
+  <ellipse cx="400" cy="355" rx="18" ry="6" fill="#87ceeb" opacity="0.4"/>
+
+  <!-- Window 3: right arch -->
+  <path d="M530,200 Q530,160 618,160 Q705,160 705,200 L705,375 L530,375 Z" fill="url(#sv-garden)"/>
+  <path d="M530,200 Q530,155 618,155 Q705,155 705,200" fill="none" stroke="#cec8be" stroke-width="4"/>
+  <rect x="530" y="200" width="175" height="175" fill="none" stroke="#cec8be" stroke-width="3"/>
+  <!-- Garden in right window -->
+  <ellipse cx="560" cy="340" rx="28" ry="40" fill="#2d6b20" opacity="0.8"/>
+  <ellipse cx="595" cy="320" rx="22" ry="55" fill="#3a8a2a" opacity="0.9"/>
+  <ellipse cx="635" cy="350" rx="25" ry="35" fill="#3a8a2a" opacity="0.85"/>
+  <ellipse cx="670" cy="330" rx="20" ry="45" fill="#2d6b20" opacity="0.9"/>
+
+  <!-- Motorized curtains (partially drawn, elegant white fabric) -->
+  <!-- Left curtain on window 1 -->
+  <rect x="75" y="155" width="50" height="225" fill="url(#sv-curtain)"/>
+  <!-- Vertical pleat lines -->
+  <line x1="85" y1="160" x2="85" y2="375" stroke="#e0e0e0" stroke-width="0.5" opacity="0.6"/>
+  <line x1="95" y1="160" x2="95" y2="375" stroke="#e0e0e0" stroke-width="0.5" opacity="0.6"/>
+  <line x1="105" y1="160" x2="105" y2="375" stroke="#e0e0e0" stroke-width="0.5" opacity="0.6"/>
+  <line x1="115" y1="160" x2="115" y2="375" stroke="#e0e0e0" stroke-width="0.5" opacity="0.6"/>
+  <!-- Right curtain on window 1 -->
+  <rect x="200" y="155" width="50" height="225" fill="url(#sv-curtain)"/>
+  <line x1="210" y1="160" x2="210" y2="375" stroke="#e0e0e0" stroke-width="0.5" opacity="0.6"/>
+  <line x1="220" y1="160" x2="220" y2="375" stroke="#e0e0e0" stroke-width="0.5" opacity="0.6"/>
+  <line x1="230" y1="160" x2="230" y2="375" stroke="#e0e0e0" stroke-width="0.5" opacity="0.6"/>
+  <line x1="240" y1="160" x2="240" y2="375" stroke="#e0e0e0" stroke-width="0.5" opacity="0.6"/>
+  <!-- Right curtain on window 3 -->
+  <rect x="660" y="155" width="45" height="225" fill="url(#sv-curtain)"/>
+  <line x1="670" y1="160" x2="670" y2="375" stroke="#e0e0e0" stroke-width="0.5" opacity="0.6"/>
+  <line x1="680" y1="160" x2="680" y2="375" stroke="#e0e0e0" stroke-width="0.5" opacity="0.6"/>
+  <line x1="690" y1="160" x2="690" y2="375" stroke="#e0e0e0" stroke-width="0.5" opacity="0.6"/>
+  <!-- Curtain rod -->
+  <rect x="75" y="152" width="640" height="5" rx="2.5" fill="#c8b888" opacity="0.8"/>
+
+  <!-- ══ FLOOR ══ -->
+  <rect x="0" y="375" width="800" height="125" fill="url(#sv-floor)"/>
+  <!-- Wide plank strips -->
+  <line x1="0" y1="397" x2="800" y2="397" stroke="#a87040" stroke-width="0.8" opacity="0.4"/>
+  <line x1="0" y1="419" x2="800" y2="419" stroke="#a87040" stroke-width="0.8" opacity="0.4"/>
+  <line x1="0" y1="441" x2="800" y2="441" stroke="#a87040" stroke-width="0.8" opacity="0.4"/>
+  <line x1="0" y1="463" x2="800" y2="463" stroke="#a87040" stroke-width="0.8" opacity="0.4"/>
+  <line x1="0" y1="485" x2="800" y2="485" stroke="#a87040" stroke-width="0.8" opacity="0.4"/>
+  <!-- Plank end joints (staggered) -->
+  <line x1="200" y1="375" x2="200" y2="397" stroke="#a87040" stroke-width="0.5" opacity="0.3"/>
+  <line x1="400" y1="397" x2="400" y2="419" stroke="#a87040" stroke-width="0.5" opacity="0.3"/>
+  <line x1="600" y1="375" x2="600" y2="397" stroke="#a87040" stroke-width="0.5" opacity="0.3"/>
+  <line x1="150" y1="419" x2="150" y2="441" stroke="#a87040" stroke-width="0.5" opacity="0.3"/>
+  <line x1="450" y1="419" x2="450" y2="441" stroke="#a87040" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Floor warm reflection from chandelier -->
+  <ellipse cx="400" cy="390" rx="120" ry="25" fill="#f5d070" opacity="0.06"/>
+
+  <!-- ══ FURNITURE ══ -->
+  <!-- L-shaped sofa: main piece + chaise -->
+  <!-- Main sofa body: 320×70 at (150,340) -->
+  <rect x="150" y="345" width="340" height="65" rx="5" fill="url(#sv-sofa)"/>
+  <rect x="150" y="345" width="340" height="12" rx="5" fill="#f8f4ec"/>
+  <!-- Sofa back cushions -->
+  <rect x="155" y="295" width="330" height="55" rx="5" fill="url(#sv-sofa)"/>
+  <rect x="155" y="295" width="330" height="8" rx="4" fill="#f8f4ec"/>
+  <!-- Individual back cushions dividers -->
+  <line x1="265" y1="297" x2="265" y2="348" stroke="#ddd8cc" stroke-width="1.5"/>
+  <line x1="375" y1="297" x2="375" y2="348" stroke="#ddd8cc" stroke-width="1.5"/>
+  <!-- Sofa arm left -->
+  <rect x="145" y="295" width="15" height="115" rx="5" fill="#f0ebe0"/>
+  <!-- Sofa arm right -->
+  <rect x="480" y="295" width="15" height="115" rx="5" fill="#f0ebe0"/>
+  <!-- Chaise extension (right side) -->
+  <rect x="490" y="345" width="150" height="65" rx="5" fill="url(#sv-sofa)"/>
+  <rect x="490" y="345" width="150" height="12" rx="5" fill="#f8f4ec"/>
+  <!-- Sofa cushion decorative pillows -->
+  <rect x="180" y="310" width="40" height="38" rx="8" fill="#d4c8b0"/>
+  <rect x="370" y="310" width="40" height="38" rx="8" fill="#c8d4b0"/>
+  <!-- Sofa shadow -->
+  <ellipse cx="370" cy="413" rx="200" ry="10" fill="url(#sv-furn-shadow)"/>
+
+  <!-- Marble coffee table: white with gray veins -->
+  <rect x="235" y="380" width="160" height="70" rx="8" fill="url(#sv-marble)"/>
+  <!-- Marble vein lines -->
+  <path d="M240,390 Q280,385 310,395 Q340,400 390,388" fill="none" stroke="#c8c8c8" stroke-width="0.8" opacity="0.5"/>
+  <path d="M245,410 Q290,405 320,415 Q355,420 385,408" fill="none" stroke="#c8c8c8" stroke-width="0.6" opacity="0.4"/>
+  <path d="M260,400 Q270,395 295,402" fill="none" stroke="#d0d0d0" stroke-width="0.5" opacity="0.4"/>
+  <!-- Table legs -->
+  <rect x="242" y="446" width="12" height="15" rx="2" fill="#d8d0c0"/>
+  <rect x="377" y="446" width="12" height="15" rx="2" fill="#d8d0c0"/>
+  <!-- Decorative item on table: vase hint -->
+  <ellipse cx="310" cy="383" rx="12" ry="4" fill="#e8e0d0"/>
+  <rect x="305" y="360" width="10" height="24" rx="3" fill="#c8a870"/>
+  <ellipse cx="310" cy="360" rx="14" ry="5" fill="#c8a870"/>
+
+  <!-- ══ ABSTRACT PAINTING ON LEFT PILLAR AREA ══ -->
+  <rect x="5" y="180" width="50" height="130" rx="3" fill="url(#sv-painting)"/>
+  <!-- Painting frame -->
+  <rect x="4" y="179" width="52" height="132" rx="4" fill="none" stroke="#c8b888" stroke-width="2"/>
+  <!-- Abstract shapes in painting -->
+  <circle cx="20" cy="220" r="12" fill="#d4824a" opacity="0.6"/>
+  <rect x="30" y="195" width="18" height="40" rx="2" fill="#4a6b8a" opacity="0.5"/>
+  <circle cx="40" cy="270" r="8" fill="#8aba4a" opacity="0.6"/>
+
+  <!-- ══ ZAKEY CONTROL PANEL on left pillar ══ -->
+  <!-- Panel glow -->
+  <ellipse cx="30" cy="260" rx="25" ry="35" fill="url(#sv-panel-glow)"/>
+  <!-- Panel body (slim, elegant) -->
+  <rect x="20" y="235" width="20" height="60" rx="4" fill="#1a1e2c"/>
+  <rect x="21" y="238" width="18" height="54" rx="3" fill="#0d1018"/>
+  <!-- Panel screen content -->
+  <rect x="22" y="240" width="16" height="30" rx="2" fill="#0a0e16"/>
+  <!-- Tiny room icons on panel screen -->
+  <text x="30" y="252" text-anchor="middle" font-family="monospace" font-size="4" fill="#22d3ee">21:04</text>
+  <text x="30" y="262" text-anchor="middle" font-family="monospace" font-size="3" fill="#64748b">24°C</text>
+  <!-- Cyan status ring around panel -->
+  <rect x="19" y="234" width="22" height="62" rx="5" fill="none" stroke="#22d3ee" stroke-width="0.8" opacity="0.6"/>
+  <!-- Cyan LED on panel -->
+  <circle cx="30" cy="289" r="3" fill="#22d3ee" opacity="0.9"/>
+  <circle cx="30" cy="289" r="6" fill="#22d3ee" opacity="0.15"/>
+  <!-- Zakey label on panel -->
+  <text x="30" y="300" text-anchor="middle" font-family="sans-serif" font-size="4" fill="#22d3ee" opacity="0.5" letter-spacing="0.5">Z</text>
 </svg>

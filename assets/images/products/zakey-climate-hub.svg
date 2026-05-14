@@ -1,19 +1,130 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080c14"/>
-      <stop offset="100%" stop-color="#05070d"/>
-    </linearGradient>
-    <radialGradient id="r" cx="70%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <radialGradient id="bgG" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
     </radialGradient>
+    <pattern id="hexPat" x="0" y="0" width="30" height="34" patternUnits="userSpaceOnUse">
+      <polygon points="15,1 28,9 28,25 15,33 2,25 2,9" fill="none" stroke="#6080d0" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+    <!-- Pearl white body gradient -->
+    <radialGradient id="bodyG" cx="35%" cy="28%" r="70%">
+      <stop offset="0%" stop-color="#f8f5f0"/>
+      <stop offset="60%" stop-color="#edeae5"/>
+      <stop offset="100%" stop-color="#d8d4cf"/>
+    </radialGradient>
+    <!-- Right side darker -->
+    <linearGradient id="sideG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c8c4bd"/>
+      <stop offset="100%" stop-color="#b5b1a8"/>
+    </linearGradient>
+    <!-- Warm teal glow -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00d4cc" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#00d4cc" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Display screen -->
+    <radialGradient id="screenG" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1e2a42"/>
+      <stop offset="100%" stop-color="#111820"/>
+    </radialGradient>
+    <!-- Drop shadow -->
+    <radialGradient id="shadowG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="ledGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+    </filter>
   </defs>
-  <rect width="1280" height="720" fill="url(#g)"/>
-  <rect width="1280" height="720" fill="url(#r)"/>
-  <text x="640" y="380" font-family="Manrope,Inter,system-ui,sans-serif" font-size="48" font-weight="700"
-        fill="#22d3ee" fill-opacity="0.15" text-anchor="middle" dominant-baseline="middle"
-        letter-spacing="-1">Climate Hub</text>
-  <circle cx="640" cy="260" r="60" fill="none" stroke="#22d3ee" stroke-opacity="0.1" stroke-width="1"/>
-  <circle cx="640" cy="260" r="100" fill="none" stroke="#22d3ee" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bgG)"/>
+  <rect width="480" height="360" fill="url(#hexPat)"/>
+
+  <!-- Product glow (warm teal) -->
+  <ellipse cx="240" cy="178" rx="125" ry="115" fill="url(#bgGlow)"/>
+
+  <!-- Drop shadow -->
+  <ellipse cx="240" cy="295" rx="78" ry="11" fill="url(#shadowG)" opacity="0.5"/>
+
+  <!-- === 3D CLIMATE HUB BODY === -->
+  <!-- Right side face -->
+  <rect x="295" y="112" width="20" height="170" rx="4" fill="url(#sideG)"/>
+  <!-- Top face -->
+  <polygon points="178,100 295,100 315,112 198,112" fill="#ede9e2"/>
+  <polygon points="178,100 295,100 297,103 180,103" fill="white" opacity="0.55"/>
+
+  <!-- Front face (main square body) -->
+  <rect x="178" y="112" width="117" height="170" rx="10" fill="url(#bodyG)"/>
+  <!-- Left+top edge highlight -->
+  <rect x="178" y="112" width="3" height="170" rx="2" fill="white" opacity="0.85"/>
+  <rect x="178" y="112" width="117" height="3" rx="2" fill="white" opacity="0.8"/>
+
+  <!-- Circular thermostat display -->
+  <circle cx="237" cy="198" r="52" fill="url(#screenG)"/>
+  <!-- Outer ring decoration -->
+  <circle cx="237" cy="198" r="50" fill="none" stroke="#2a3850" stroke-width="1.5" opacity="0.6"/>
+  <!-- Tick marks (12 like clock) -->
+  <g stroke="#c0bdb8" stroke-width="1.2" opacity="0.5">
+    <!-- 12 ticks at 30deg intervals -->
+    <line x1="237" y1="146" x2="237" y2="153"/>
+    <line x1="263" y1="149" x2="260" y2="156"/>
+    <line x1="282" y1="168" x2="276" y2="171"/>
+    <line x1="289" y1="198" x2="282" y2="198"/>
+    <line x1="282" y1="228" x2="276" y2="225"/>
+    <line x1="263" y1="247" x2="260" y2="240"/>
+    <line x1="237" y1="250" x2="237" y2="243"/>
+    <line x1="211" y1="247" x2="214" y2="240"/>
+    <line x1="192" y1="228" x2="198" y2="225"/>
+    <line x1="185" y1="198" x2="192" y2="198"/>
+    <line x1="192" y1="168" x2="198" y2="171"/>
+    <line x1="211" y1="149" x2="214" y2="156"/>
+  </g>
+  <!-- Thermostat arc (75% of 360 = 270deg): start at bottom-left, go clockwise 270deg -->
+  <!-- Arc from 135deg to 405deg (135+270) = cyan progress -->
+  <circle cx="237" cy="198" r="44" fill="none" stroke="#1e2a3a" stroke-width="5" opacity="0.5"
+          stroke-dasharray="276.46 276.46" stroke-dashoffset="0"/>
+  <circle cx="237" cy="198" r="44" fill="none" stroke="#00e5ff" stroke-width="5" stroke-linecap="round"
+          stroke-dasharray="207" stroke-dashoffset="-35" opacity="0.9"
+          transform="rotate(135,237,198)"/>
+
+  <!-- Temperature reading -->
+  <text x="237" y="203" text-anchor="middle" font-family="Arial, sans-serif" font-size="28"
+        font-weight="bold" fill="white">22</text>
+  <text x="260" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="12"
+        fill="#00e5ff">°C</text>
+
+  <!-- "SET" label below temp -->
+  <text x="237" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="7"
+        fill="#8090b0" letter-spacing="2">TARGET</text>
+
+  <!-- Status indicator top-right corner of body -->
+  <circle cx="282" cy="122" r="5" fill="#00cc66" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="282" cy="122" r="3" fill="#00ff88" opacity="0.9"/>
+
+  <!-- Plus button -->
+  <rect x="195" y="268" width="22" height="22" rx="5" fill="#e0dcd7" stroke="#c8c4bf" stroke-width="1"/>
+  <line x1="206" y1="273" x2="206" y2="285" stroke="#555" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="200" y1="279" x2="212" y2="279" stroke="#555" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Minus button -->
+  <rect x="222" y="268" width="22" height="22" rx="5" fill="#e0dcd7" stroke="#c8c4bf" stroke-width="1"/>
+  <line x1="228" y1="279" x2="240" y2="279" stroke="#555" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Mode icon top of display area -->
+  <text x="237" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="8"
+        fill="#8090a0" letter-spacing="2">COOL</text>
+
+  <!-- Floor reflection -->
+  <rect x="178" y="282" width="117" height="40" rx="10" fill="url(#bodyG)" opacity="0.08"
+        transform="scale(1,-1) translate(0,-564)"/>
+
+  <!-- Product label -->
+  <text x="240" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="10"
+        fill="white" opacity="0.5" letter-spacing="2">CLIMATE HUB</text>
 </svg>

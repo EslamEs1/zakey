@@ -1,16 +1,114 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
   <defs>
-    <linearGradient id="bg-MINI HUB" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
-    </linearGradient>
-    <radialGradient id="gl-MINI HUB" cx="240" cy="190" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <!-- Background: deep midnight blue (lighter than usual for white device) -->
+    <radialGradient id="bgG" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0e1628"/>
+      <stop offset="100%" stop-color="#04060d"/>
     </radialGradient>
+    <pattern id="gridPat" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20,0 L0,0 0,20" fill="none" stroke="#6080c0" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+    <!-- White body gradient -->
+    <linearGradient id="bodyG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5f2ee"/>
+      <stop offset="100%" stop-color="#e0dcd5"/>
+    </linearGradient>
+    <!-- White body side (right, in shadow) -->
+    <linearGradient id="sideG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c8c4bd"/>
+      <stop offset="100%" stop-color="#b8b4ac"/>
+    </linearGradient>
+    <!-- Prong silver gradient -->
+    <linearGradient id="prongG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d8dde6"/>
+      <stop offset="100%" stop-color="#a8adb8"/>
+    </linearGradient>
+    <!-- Warm white glow behind device -->
+    <radialGradient id="warmGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe8c0" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#00e5ff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Cyan LED glow -->
+    <radialGradient id="cyanLed" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Drop shadow -->
+    <radialGradient id="shadowG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softG" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-MINI HUB)"/>
-  <ellipse cx="240" cy="190" rx="180" ry="140" fill="url(#gl-MINI HUB)"/>
-  <rect x="150" y="120" width="180" height="120" rx="14" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><circle cx="200" cy="180" r="10" fill="#22d3ee" fill-opacity="0.25"/><circle cx="240" cy="180" r="10" fill="#22d3ee" fill-opacity="0.15"/><circle cx="280" cy="180" r="10" fill="#22d3ee" fill-opacity="0.1"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">MINI HUB</text>
+
+  <!-- Background -->
+  <rect width="480" height="360" fill="url(#bgG)"/>
+  <rect width="480" height="360" fill="url(#gridPat)"/>
+
+  <!-- Warm glow behind white device -->
+  <ellipse cx="240" cy="175" rx="110" ry="120" fill="url(#warmGlow)"/>
+
+  <!-- Drop shadow on floor -->
+  <ellipse cx="240" cy="300" rx="55" ry="9" fill="url(#shadowG)" opacity="0.5"/>
+
+  <!-- === 3D MINI HUB BODY === -->
+  <!-- Right side face (slightly darker) -->
+  <rect x="272" y="118" width="18" height="155" rx="4" fill="url(#sideG)"/>
+  <!-- Top face -->
+  <polygon points="222,108 272,108 290,118 240,118" fill="#e8e4de"/>
+  <!-- Top face highlight -->
+  <polygon points="222,108 272,108 275,111 225,111" fill="white" opacity="0.5"/>
+
+  <!-- Front face (main body) -->
+  <rect x="222" y="118" width="50" height="155" rx="6" fill="url(#bodyG)"/>
+  <!-- Left+top edge highlight (lit edge) -->
+  <rect x="222" y="118" width="2.5" height="155" rx="1" fill="white" opacity="0.9"/>
+  <rect x="222" y="118" width="50" height="2.5" rx="1" fill="white" opacity="0.85"/>
+
+  <!-- LED status ring on front face (center-top area) -->
+  <circle cx="247" cy="158" r="16" fill="none" stroke="#d0cdc8" stroke-width="1.5" opacity="0.5"/>
+  <!-- Cyan LED ring glow -->
+  <circle cx="247" cy="158" r="13" fill="url(#cyanLed)" opacity="0.15"/>
+  <circle cx="247" cy="158" r="9" fill="#00e5ff" opacity="0.25" filter="url(#softG)"/>
+  <circle cx="247" cy="158" r="5" fill="#00e5ff" opacity="0.9" filter="url(#glow)"/>
+
+  <!-- Zakey Z text on front face -->
+  <text x="247" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold"
+        fill="#444" opacity="0.75" letter-spacing="0">Z</text>
+  <text x="247" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="6"
+        fill="#888" opacity="0.7" letter-spacing="1">ZAKEY</text>
+
+  <!-- Subtle embossed line decorations -->
+  <line x1="232" y1="226" x2="262" y2="226" stroke="#ccc8c2" stroke-width="0.8" opacity="0.6"/>
+  <line x1="232" y1="232" x2="262" y2="232" stroke="#ccc8c2" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Right shadow edge -->
+  <rect x="270" y="118" width="2" height="155" rx="1" fill="#b0aca4" opacity="0.5"/>
+
+  <!-- Prongs at bottom (plug) -->
+  <!-- Prong left -->
+  <rect x="230" y="272" width="8" height="18" rx="1.5" fill="url(#prongG)"/>
+  <rect x="230" y="272" width="8" height="3" rx="1" fill="white" opacity="0.4"/>
+  <!-- Prong right -->
+  <rect x="252" y="272" width="8" height="18" rx="1.5" fill="url(#prongG)"/>
+  <rect x="252" y="272" width="8" height="3" rx="1" fill="white" opacity="0.4"/>
+
+  <!-- Shadow beneath prongs -->
+  <ellipse cx="247" cy="293" rx="30" ry="5" fill="#000" opacity="0.2"/>
+
+  <!-- Floor reflection (very faint white) -->
+  <rect x="222" y="273" width="50" height="30" rx="6" fill="url(#bodyG)" opacity="0.07"
+        transform="scale(1,-1) translate(0,-546)"/>
+
+  <!-- Product label -->
+  <text x="240" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="10"
+        fill="white" opacity="0.5" letter-spacing="2">MINI HUB</text>
 </svg>

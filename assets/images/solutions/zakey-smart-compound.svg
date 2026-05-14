@@ -1,86 +1,342 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <title>Zakey Smart Compound — Aerial View at Dusk</title>
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
+    <linearGradient id="cmp-sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a0538"/>
+      <stop offset="30%" stop-color="#7c4dff"/>
+      <stop offset="60%" stop-color="#f06292"/>
+      <stop offset="85%" stop-color="#ff7043"/>
+      <stop offset="100%" stop-color="#ffab40"/>
     </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="45%" r="60%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.07"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <linearGradient id="cmp-ground" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a3a1a"/>
+      <stop offset="100%" stop-color="#0f2a0f"/>
+    </linearGradient>
+    <linearGradient id="cmp-pool" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.75"/>
+    </linearGradient>
+    <linearGradient id="cmp-path" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d8d4ce"/>
+      <stop offset="100%" stop-color="#c8c4be"/>
+    </linearGradient>
+    <radialGradient id="cmp-lampglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe080" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffe080" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="cmp-vglow" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffd070" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ffd070" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cmp-cyanglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="cmp-blur">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <filter id="cmp-soft">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+    <filter id="cmp-glow">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="1200" height="900" fill="url(#bg)"/>
-  <rect width="1200" height="900" fill="url(#glow)"/>
-  <!-- Compound gate / perimeter wall -->
-  <rect x="120" y="640" width="960" height="30" fill="#0c1a20" rx="2"/>
-  <!-- Gate towers -->
-  <rect x="530" y="560" width="60" height="80" fill="#0c1a20" rx="2"/>
-  <rect x="610" y="560" width="60" height="80" fill="#0c1a20" rx="2"/>
-  <!-- Gate bar -->
-  <rect x="530" y="595" width="140" height="6" fill="#22d3ee" fill-opacity="0.25" rx="3"/>
-  <!-- Building A — large villa left -->
-  <rect x="160" y="360" width="240" height="280" fill="#0c1a20" rx="4"/>
-  <polygon points="140,360 280,220 420,360" fill="#091318"/>
-  <rect x="190" y="420" width="55" height="45" fill="#22d3ee" fill-opacity="0.12" rx="2"/>
-  <rect x="265" y="420" width="55" height="45" fill="#22d3ee" fill-opacity="0.09" rx="2"/>
-  <rect x="340" y="420" width="45" height="45" fill="#22d3ee" fill-opacity="0.11" rx="2"/>
-  <rect x="190" y="490" width="55" height="45" fill="#22d3ee" fill-opacity="0.09" rx="2"/>
-  <rect x="265" y="490" width="55" height="45" fill="#22d3ee" fill-opacity="0.14" rx="2"/>
-  <rect x="340" y="490" width="45" height="45" fill="#22d3ee" fill-opacity="0.07" rx="2"/>
-  <rect x="240" y="560" width="80" height="80" fill="#091318" rx="2"/>
 
-  <!-- Building B — tower centre-left -->
-  <rect x="440" y="280" width="140" height="360" fill="#0d1520" rx="3"/>
-  <rect x="455" y="300" width="40" height="35" fill="#22d3ee" fill-opacity="0.13" rx="1"/>
-  <rect x="510" y="300" width="40" height="35" fill="#22d3ee" fill-opacity="0.08" rx="1"/>
-  <rect x="455" y="355" width="40" height="35" fill="#22d3ee" fill-opacity="0.10" rx="1"/>
-  <rect x="510" y="355" width="40" height="35" fill="#22d3ee" fill-opacity="0.15" rx="1"/>
-  <rect x="455" y="410" width="40" height="35" fill="#22d3ee" fill-opacity="0.08" rx="1"/>
-  <rect x="510" y="410" width="40" height="35" fill="#22d3ee" fill-opacity="0.12" rx="1"/>
-  <rect x="455" y="465" width="40" height="35" fill="#22d3ee" fill-opacity="0.11" rx="1"/>
-  <rect x="510" y="465" width="40" height="35" fill="#22d3ee" fill-opacity="0.09" rx="1"/>
-  <rect x="455" y="520" width="40" height="35" fill="#22d3ee" fill-opacity="0.14" rx="1"/>
-  <rect x="510" y="520" width="40" height="35" fill="#22d3ee" fill-opacity="0.07" rx="1"/>
-  <rect x="475" y="590" width="60" height="50" fill="#091318" rx="1"/>
+  <!-- SKY: dusk gradient purple → pink → orange -->
+  <rect x="0" y="0" width="800" height="500" fill="url(#cmp-sky)"/>
 
-  <!-- Building C — tower centre-right -->
-  <rect x="620" y="310" width="140" height="330" fill="#0d1520" rx="3"/>
-  <rect x="635" y="330" width="40" height="35" fill="#22d3ee" fill-opacity="0.09" rx="1"/>
-  <rect x="690" y="330" width="40" height="35" fill="#22d3ee" fill-opacity="0.14" rx="1"/>
-  <rect x="635" y="385" width="40" height="35" fill="#22d3ee" fill-opacity="0.15" rx="1"/>
-  <rect x="690" y="385" width="40" height="35" fill="#22d3ee" fill-opacity="0.08" rx="1"/>
-  <rect x="635" y="440" width="40" height="35" fill="#22d3ee" fill-opacity="0.10" rx="1"/>
-  <rect x="690" y="440" width="40" height="35" fill="#22d3ee" fill-opacity="0.13" rx="1"/>
-  <rect x="635" y="495" width="40" height="35" fill="#22d3ee" fill-opacity="0.12" rx="1"/>
-  <rect x="690" y="495" width="40" height="35" fill="#22d3ee" fill-opacity="0.07" rx="1"/>
-  <rect x="645" y="560" width="60" height="40" fill="#091318" rx="1"/>
+  <!-- Horizon atmospheric haze -->
+  <rect x="0" y="150" width="800" height="80" fill="#ff9860" opacity="0.08" filter="url(#cmp-blur)"/>
+  <rect x="0" y="185" width="800" height="60" fill="#f06292" opacity="0.06" filter="url(#cmp-blur)"/>
 
-  <!-- Building D — villa right -->
-  <rect x="800" y="380" width="240" height="260" fill="#0c1a20" rx="4"/>
-  <polygon points="780,380 920,250 1060,380" fill="#091318"/>
-  <rect x="830" y="430" width="55" height="45" fill="#22d3ee" fill-opacity="0.11" rx="2"/>
-  <rect x="905" y="430" width="55" height="45" fill="#22d3ee" fill-opacity="0.08" rx="2"/>
-  <rect x="980" y="430" width="45" height="45" fill="#22d3ee" fill-opacity="0.14" rx="2"/>
-  <rect x="830" y="500" width="55" height="45" fill="#22d3ee" fill-opacity="0.09" rx="2"/>
-  <rect x="905" y="500" width="55" height="45" fill="#22d3ee" fill-opacity="0.13" rx="2"/>
-  <rect x="980" y="500" width="45" height="45" fill="#22d3ee" fill-opacity="0.07" rx="2"/>
-  <rect x="875" y="558" width="80" height="82" fill="#091318" rx="2"/>
+  <!-- Stars in upper sky -->
+  <circle cx="80" cy="25" r="1.2" fill="#ffffff" opacity="0.8"/>
+  <circle cx="150" cy="15" r="1.5" fill="#ffffff" opacity="0.85"/>
+  <circle cx="230" cy="32" r="1" fill="#ffffff" opacity="0.7"/>
+  <circle cx="310" cy="18" r="1.3" fill="#ffffff" opacity="0.8"/>
+  <circle cx="380" cy="28" r="1" fill="#ffffff" opacity="0.7"/>
+  <circle cx="450" cy="12" r="1.5" fill="#ffffff" opacity="0.85"/>
+  <circle cx="520" cy="35" r="1.2" fill="#ffffff" opacity="0.75"/>
+  <circle cx="600" cy="20" r="1" fill="#ffffff" opacity="0.7"/>
+  <circle cx="670" cy="30" r="1.4" fill="#ffffff" opacity="0.82"/>
+  <circle cx="740" cy="14" r="1.2" fill="#ffffff" opacity="0.78"/>
+  <circle cx="760" cy="40" r="1" fill="#ffffff" opacity="0.68"/>
+  <circle cx="50" cy="55" r="1" fill="#ffffff" opacity="0.65"/>
+  <circle cx="180" cy="50" r="1.2" fill="#ffffff" opacity="0.7"/>
+  <circle cx="420" cy="48" r="1" fill="#ffffff" opacity="0.65"/>
+  <circle cx="690" cy="55" r="1.1" fill="#ffffff" opacity="0.7"/>
 
-  <!-- Mesh bridge node — centre hub icon -->
-  <circle cx="600" cy="510" r="20" fill="none" stroke="#22d3ee" stroke-opacity="0.30" stroke-width="1.5"/>
-  <circle cx="600" cy="510" r="6" fill="#22d3ee" fill-opacity="0.35"/>
-  <!-- Connection lines to buildings -->
-  <line x1="580" y1="510" x2="400" y2="480" stroke="#22d3ee" stroke-opacity="0.10" stroke-width="1" stroke-dasharray="4,4"/>
-  <line x1="620" y1="510" x2="800" y2="480" stroke="#22d3ee" stroke-opacity="0.10" stroke-width="1" stroke-dasharray="4,4"/>
-  <line x1="600" y1="490" x2="510" y2="420" stroke="#22d3ee" stroke-opacity="0.10" stroke-width="1" stroke-dasharray="4,4"/>
-  <line x1="600" y1="490" x2="690" y2="420" stroke="#22d3ee" stroke-opacity="0.10" stroke-width="1" stroke-dasharray="4,4"/>
+  <!-- COMPOUND GROUND (elevated slightly angled view) -->
+  <!-- Ground base from y=210 down to y=500 with slight perspective -->
+  <polygon points="0,210 800,210 800,500 0,500" fill="#1a3a1a"/>
+  <!-- Ground texture variation -->
+  <rect x="0" y="210" width="800" height="290" fill="#1a3618" opacity="0.5"/>
 
-  <!-- Ground -->
-  <rect x="0" y="668" width="1200" height="2" fill="#22d3ee" fill-opacity="0.05"/>
-  <path d="M0 800 Q400 770 700 785 Q950 800 1200 770 L1200 900 L0 900Z" fill="#05070d" fill-opacity="0.75"/>
-  <!-- Wordmark -->
-  <text x="600" y="840" font-family="Manrope,Inter,system-ui,sans-serif" font-size="22" font-weight="700"
-        fill="#22d3ee" fill-opacity="0.45" text-anchor="middle" letter-spacing="8">ZAKEY</text>
-  <text x="600" y="866" font-family="Manrope,Inter,system-ui,sans-serif" font-size="13" font-weight="400"
-        fill="#9aa3b2" fill-opacity="0.40" text-anchor="middle" letter-spacing="3">SMART COMPOUND</text>
+  <!-- Perimeter fence line -->
+  <rect x="18" y="215" width="764" height="4" rx="1" fill="#8a8a7a" opacity="0.7"/>
+  <rect x="18" y="215" width="4" height="272" fill="#8a8a7a" opacity="0.7"/>
+  <rect x="778" y="215" width="4" height="272" fill="#8a8a7a" opacity="0.7"/>
+  <rect x="18" y="483" width="764" height="4" rx="1" fill="#8a8a7a" opacity="0.6"/>
+  <!-- Perimeter sensor dots along fence -->
+  <circle cx="80" cy="215" r="3" fill="#00e5ff" opacity="0.9"/>
+  <circle cx="160" cy="215" r="3" fill="#00e5ff" opacity="0.85"/>
+  <circle cx="240" cy="215" r="3" fill="#00e5ff" opacity="0.9"/>
+  <circle cx="320" cy="215" r="3" fill="#00e5ff" opacity="0.85"/>
+  <circle cx="400" cy="215" r="3" fill="#00e5ff" opacity="0.9"/>
+  <circle cx="480" cy="215" r="3" fill="#00e5ff" opacity="0.85"/>
+  <circle cx="560" cy="215" r="3" fill="#00e5ff" opacity="0.9"/>
+  <circle cx="640" cy="215" r="3" fill="#00e5ff" opacity="0.85"/>
+  <circle cx="720" cy="215" r="3" fill="#00e5ff" opacity="0.9"/>
+  <!-- Sensor glow -->
+  <circle cx="400" cy="215" r="8" fill="#00e5ff" opacity="0.2" filter="url(#cmp-soft)"/>
+
+  <!-- MAIN PATHS (light gray) -->
+  <!-- Central horizontal path -->
+  <rect x="18" y="330" width="764" height="20" fill="url(#cmp-path)" opacity="0.85"/>
+  <!-- Central vertical path -->
+  <rect x="388" y="218" width="24" height="270" fill="url(#cmp-path)" opacity="0.85"/>
+  <!-- Cross paths -->
+  <rect x="18" y="440" width="764" height="16" fill="url(cmp-path)" opacity="0.7"/>
+  <rect x="150" y="218" width="18" height="270" fill="url(#cmp-path)" opacity="0.7"/>
+  <rect x="632" y="218" width="18" height="270" fill="url(#cmp-path)" opacity="0.7"/>
+
+  <!-- GRASS AREAS -->
+  <!-- Upper left quadrant grass -->
+  <rect x="22" y="220" width="125" height="107" rx="4" fill="#1a4a1a" opacity="0.9"/>
+  <!-- Upper right quadrant grass -->
+  <rect x="415" y="220" width="125" height="107" rx="4" fill="#1a4a1a" opacity="0.9"/>
+  <!-- Lower left grass -->
+  <rect x="22" y="353" width="125" height="85" rx="4" fill="#1a4a1a" opacity="0.85"/>
+  <!-- Lower right grass -->
+  <rect x="415" y="353" width="125" height="85" rx="4" fill="#1a4a1a" opacity="0.85"/>
+  <!-- Between upper buildings center grass strips -->
+  <rect x="172" y="220" width="213" height="107" rx="3" fill="#1a4a1a" opacity="0.85"/>
+  <rect x="545" y="220" width="83" height="107" rx="3" fill="#1a4a1a" opacity="0.85"/>
+  <!-- Lower center grass (around pool area) -->
+  <rect x="172" y="353" width="213" height="85" rx="3" fill="#1a4a1a" opacity="0.82"/>
+  <rect x="545" y="353" width="83" height="85" rx="3" fill="#1a4a1a" opacity="0.82"/>
+
+  <!-- TREES (circular canopy shapes) -->
+  <!-- Upper left quadrant trees -->
+  <ellipse cx="60" cy="255" rx="22" ry="18" fill="#0f3010" opacity="0.95"/>
+  <ellipse cx="55" cy="252" rx="18" ry="15" fill="#183818" opacity="0.9"/>
+  <!-- Shadow -->
+  <ellipse cx="65" cy="268" rx="16" ry="6" fill="#0a2008" opacity="0.5"/>
+  <ellipse cx="110" cy="248" rx="20" ry="16" fill="#0f3010" opacity="0.92"/>
+  <ellipse cx="105" cy="245" rx="16" ry="13" fill="#183818" opacity="0.88"/>
+  <ellipse cx="115" cy="260" rx="14" ry="5" fill="#0a2008" opacity="0.45"/>
+  <ellipse cx="60" cy="296" rx="18" ry="15" fill="#0f3010" opacity="0.9"/>
+  <ellipse cx="112" cy="292" rx="16" ry="13" fill="#0f3010" opacity="0.88"/>
+
+  <!-- Upper right quadrant trees -->
+  <ellipse cx="450" cy="255" rx="22" ry="18" fill="#0f3010" opacity="0.95"/>
+  <ellipse cx="445" cy="252" rx="18" ry="15" fill="#183818" opacity="0.9"/>
+  <ellipse cx="455" cy="268" rx="16" ry="6" fill="#0a2008" opacity="0.5"/>
+  <ellipse cx="510" cy="248" rx="20" ry="16" fill="#0f3010" opacity="0.92"/>
+  <ellipse cx="505" cy="245" rx="16" ry="13" fill="#183818" opacity="0.88"/>
+  <ellipse cx="515" cy="260" rx="14" ry="5" fill="#0a2008" opacity="0.45"/>
+  <ellipse cx="460" cy="296" rx="18" ry="15" fill="#0f3010" opacity="0.9"/>
+  <ellipse cx="510" cy="294" rx="16" ry="13" fill="#0f3010" opacity="0.88"/>
+
+  <!-- Trees between buildings (center top grass) -->
+  <ellipse cx="220" cy="260" rx="18" ry="14" fill="#0f3010" opacity="0.9"/>
+  <ellipse cx="258" cy="252" rx="16" ry="13" fill="#143614" opacity="0.88"/>
+  <ellipse cx="300" cy="265" rx="20" ry="15" fill="#0f3010" opacity="0.9"/>
+  <ellipse cx="345" cy="255" rx="17" ry="13" fill="#143614" opacity="0.88"/>
+
+  <!-- Trees lower quadrant -->
+  <ellipse cx="60" cy="388" rx="18" ry="14" fill="#0f3010" opacity="0.88"/>
+  <ellipse cx="110" cy="382" rx="16" ry="12" fill="#143614" opacity="0.85"/>
+  <ellipse cx="450" cy="388" rx="18" ry="14" fill="#0f3010" opacity="0.88"/>
+  <ellipse cx="510" cy="382" rx="16" ry="12" fill="#143614" opacity="0.85"/>
+  <ellipse cx="220" cy="378" rx="16" ry="12" fill="#0f3010" opacity="0.85"/>
+  <ellipse cx="335" cy="380" rx="15" ry="11" fill="#143614" opacity="0.82"/>
+
+  <!-- Far right trees -->
+  <ellipse cx="590" cy="260" rx="18" ry="14" fill="#0f3010" opacity="0.9"/>
+  <ellipse cx="615" cy="255" rx="16" ry="13" fill="#143614" opacity="0.88"/>
+  <ellipse cx="590" cy="380" rx="16" ry="12" fill="#0f3010" opacity="0.85"/>
+
+  <!-- VILLA BUILDINGS (flat-roof modern, elevated view) -->
+
+  <!-- BUILDING 1: Top-left villa -->
+  <rect x="22" y="220" width="125" height="107" fill="none"/>
+  <!-- Villa roof top (seen from above-angle) -->
+  <rect x="30" y="232" width="110" height="75" rx="3" fill="#e8e4dc"/>
+  <!-- Villa facade edge (subtle 3D effect) -->
+  <rect x="30" y="305" width="110" height="8" rx="1" fill="#d0ccc4"/>
+  <!-- Building top detail: HVAC unit -->
+  <rect x="50" y="245" width="30" height="18" rx="1" fill="#d8d4cc"/>
+  <rect x="85" y="248" width="22" height="14" rx="1" fill="#ccc8c0"/>
+  <!-- Window glow (warm amber from inside) -->
+  <rect x="35" y="252" width="22" height="30" rx="1" fill="#ffd080" opacity="0.6"/>
+  <rect x="35" y="252" width="22" height="30" rx="1" fill="none" stroke="#c8a040" stroke-width="0.8"/>
+  <rect x="118" y="250" width="18" height="28" rx="1" fill="#ffd080" opacity="0.55"/>
+  <ellipse cx="46" cy="267" rx="15" ry="20" fill="#ffd080" opacity="0.15" filter="url(#cmp-soft)"/>
+  <!-- Villa label hint -->
+  <text x="85" y="278" font-family="sans-serif" font-size="7" fill="#a0a098" text-anchor="middle" opacity="0.7">VILLA A</text>
+
+  <!-- BUILDING 2: Top-right villa -->
+  <rect x="415" y="232" width="110" height="75" rx="3" fill="#ece8e0"/>
+  <rect x="415" y="305" width="110" height="8" rx="1" fill="#d0ccc4"/>
+  <!-- HVAC unit -->
+  <rect x="432" y="245" width="28" height="17" rx="1" fill="#d5d1c8"/>
+  <rect x="465" y="248" width="22" height="13" rx="1" fill="#cac6be"/>
+  <!-- Window glows -->
+  <rect x="420" y="252" width="20" height="28" rx="1" fill="#ffd080" opacity="0.58"/>
+  <rect x="499" y="250" width="20" height="26" rx="1" fill="#ffd080" opacity="0.55"/>
+  <ellipse cx="430" cy="266" rx="14" ry="18" fill="#ffd080" opacity="0.14" filter="url(#cmp-soft)"/>
+  <text x="470" y="278" font-family="sans-serif" font-size="7" fill="#a0a098" text-anchor="middle" opacity="0.7">VILLA B</text>
+
+  <!-- BUILDING 3: Lower-left townhouse block -->
+  <rect x="22" y="353" width="125" height="84" rx="3" fill="#eae6de"/>
+  <rect x="22" y="433" width="125" height="8" rx="1" fill="#cac6be"/>
+  <!-- HVAC/roof -->
+  <rect x="42" y="363" width="35" height="20" rx="1" fill="#d5d1c8"/>
+  <rect x="82" y="366" width="28" height="15" rx="1" fill="#cac6be"/>
+  <!-- Window glows warm -->
+  <rect x="28" y="372" width="18" height="25" rx="1" fill="#ffd080" opacity="0.6"/>
+  <rect x="112" y="370" width="18" height="24" rx="1" fill="#ffd080" opacity="0.55"/>
+  <ellipse cx="37" cy="384" rx="12" ry="16" fill="#ffd080" opacity="0.14" filter="url(#cmp-soft)"/>
+  <text x="84" y="400" font-family="sans-serif" font-size="6.5" fill="#a0a098" text-anchor="middle" opacity="0.65">BLOCK C</text>
+
+  <!-- BUILDING 4: Lower-right townhouse block -->
+  <rect x="415" y="353" width="125" height="84" rx="3" fill="#eae6de"/>
+  <rect x="415" y="433" width="125" height="8" rx="1" fill="#cac6be"/>
+  <rect x="432" y="363" width="32" height="20" rx="1" fill="#d5d1c8"/>
+  <rect x="470" y="366" width="25" height="15" rx="1" fill="#cac6be"/>
+  <rect x="420" y="372" width="18" height="25" rx="1" fill="#ffd080" opacity="0.6"/>
+  <rect x="512" y="370" width="18" height="24" rx="1" fill="#ffd080" opacity="0.55"/>
+  <ellipse cx="429" cy="384" rx="12" ry="16" fill="#ffd080" opacity="0.14" filter="url(#cmp-soft)"/>
+  <text x="478" y="400" font-family="sans-serif" font-size="6.5" fill="#a0a098" text-anchor="middle" opacity="0.65">BLOCK D</text>
+
+  <!-- BUILDING 5: Right cluster of townhouses -->
+  <rect x="640" y="232" width="130" height="85" rx="3" fill="#ece8e0"/>
+  <rect x="640" y="315" width="130" height="8" rx="1" fill="#d0ccc4"/>
+  <rect x="658" y="242" width="30" height="18" rx="1" fill="#d5d1c8"/>
+  <rect x="694" y="245" width="24" height="14" rx="1" fill="#cac6be"/>
+  <rect x="646" y="252" width="18" height="26" rx="1" fill="#ffd080" opacity="0.58"/>
+  <rect x="737" y="250" width="18" height="24" rx="1" fill="#ffd080" opacity="0.55"/>
+  <text x="705" y="276" font-family="sans-serif" font-size="7" fill="#a0a098" text-anchor="middle" opacity="0.65">VILLA E</text>
+
+  <!-- BUILDING 6: Far right lower -->
+  <rect x="640" y="353" width="130" height="84" rx="3" fill="#e8e4dc"/>
+  <rect x="640" y="433" width="130" height="8" rx="1" fill="#cac6be"/>
+  <rect x="656" y="362" width="30" height="19" rx="1" fill="#d5d1c8"/>
+  <rect x="692" y="365" width="24" height="14" rx="1" fill="#cac6be"/>
+  <rect x="646" y="372" width="16" height="24" rx="1" fill="#ffd080" opacity="0.58"/>
+  <rect x="738" y="370" width="16" height="22" rx="1" fill="#ffd080" opacity="0.55"/>
+  <text x="705" y="398" font-family="sans-serif" font-size="6.5" fill="#a0a098" text-anchor="middle" opacity="0.62">BLOCK F</text>
+
+  <!-- CENTRAL AMENITY AREA (pool area) -->
+  <!-- Pool surround deck -->
+  <rect x="190" y="360" width="200" height="105" rx="5" fill="#c8c4be" opacity="0.85"/>
+  <!-- Pool water -->
+  <rect x="200" y="368" width="178" height="75" rx="4" fill="url(#cmp-pool)"/>
+  <!-- Pool shimmer lines -->
+  <line x1="205" y1="380" x2="372" y2="380" stroke="#a0e0f8" stroke-width="1" opacity="0.5"/>
+  <line x1="205" y1="390" x2="372" y2="390" stroke="#a0e0f8" stroke-width="0.8" opacity="0.4"/>
+  <line x1="205" y1="400" x2="372" y2="400" stroke="#a0e0f8" stroke-width="0.8" opacity="0.4"/>
+  <line x1="205" y1="410" x2="372" y2="410" stroke="#a0e0f8" stroke-width="0.8" opacity="0.35"/>
+  <line x1="205" y1="420" x2="372" y2="420" stroke="#a0e0f8" stroke-width="0.8" opacity="0.35"/>
+  <line x1="205" y1="430" x2="372" y2="430" stroke="#a0e0f8" stroke-width="0.8" opacity="0.3"/>
+  <!-- Shimmer glitter reflections -->
+  <ellipse cx="250" cy="388" rx="15" ry="4" fill="#70d8f8" opacity="0.3"/>
+  <ellipse cx="330" cy="405" rx="12" ry="3" fill="#70d8f8" opacity="0.28"/>
+  <ellipse cx="285" cy="422" rx="18" ry="4" fill="#70d8f8" opacity="0.25"/>
+  <!-- Pool glow on ground -->
+  <ellipse cx="289" cy="410" rx="100" ry="45" fill="#38bdf8" opacity="0.08" filter="url(#cmp-blur)"/>
+  <!-- Pool loungers (tiny rectangles) -->
+  <rect x="196" y="358" width="28" height="8" rx="2" fill="#d8d4cc"/>
+  <rect x="228" y="358" width="28" height="8" rx="2" fill="#d8d4cc"/>
+  <rect x="196" y="447" width="28" height="8" rx="2" fill="#d8d4cc"/>
+  <rect x="228" y="447" width="28" height="8" rx="2" fill="#d8d4cc"/>
+  <rect x="348" y="358" width="28" height="8" rx="2" fill="#d8d4cc"/>
+  <rect x="348" y="447" width="28" height="8" rx="2" fill="#d8d4cc"/>
+
+  <!-- ZAKEY HUB building (small gateway cabin) -->
+  <rect x="375" y="458" width="50" height="30" rx="2" fill="#1a2040"/>
+  <rect x="378" y="460" width="44" height="26" rx="1" fill="#20283a" stroke="#00e5ff" stroke-width="0.8"/>
+  <!-- Hub windows/lights -->
+  <rect x="381" y="464" width="12" height="8" rx="1" fill="#00e5ff" opacity="0.6"/>
+  <rect x="407" y="464" width="10" height="8" rx="1" fill="#ffd080" opacity="0.65"/>
+  <!-- Hub label -->
+  <text x="400" y="497" font-family="sans-serif" font-size="6" fill="#00e5ff" text-anchor="middle" font-weight="bold" opacity="0.9">ZAKEY HUB</text>
+  <!-- Hub glow -->
+  <ellipse cx="400" cy="473" rx="35" ry="18" fill="#00e5ff" opacity="0.08" filter="url(#cmp-soft)"/>
+
+  <!-- COMPOUND ENTRANCE GATE (top center of ground) -->
+  <rect x="386" y="215" width="28" height="15" rx="1" fill="#2a2a3a"/>
+  <!-- Gate posts -->
+  <rect x="384" y="213" width="6" height="18" rx="1" fill="#3a3a4a"/>
+  <rect x="410" y="213" width="6" height="18" rx="1" fill="#3a3a4a"/>
+  <!-- Gate camera -->
+  <rect x="392" y="211" width="16" height="8" rx="1" fill="#1a1a2a"/>
+  <circle cx="400" cy="215" r="3" fill="#111"/>
+  <circle cx="400" cy="214" r="1.5" fill="#00e5ff" opacity="0.8"/>
+  <ellipse cx="400" cy="218" rx="10" ry="6" fill="#00e5ff" opacity="0.08" filter="url(#cmp-soft)"/>
+
+  <!-- LAMP POSTS along paths -->
+  <!-- Vertical path lamps -->
+  <line x1="400" y1="240" x2="400" y2="272" stroke="#a0a090" stroke-width="1.5"/>
+  <circle cx="400" cy="240" r="4" fill="#ffe080" opacity="0.85"/>
+  <ellipse cx="400" cy="244" rx="10" ry="8" fill="#ffe080" opacity="0.25" filter="url(#cmp-soft)"/>
+
+  <line x1="400" y1="290" x2="400" y2="322" stroke="#a0a090" stroke-width="1.5"/>
+  <circle cx="400" cy="290" r="4" fill="#ffe080" opacity="0.85"/>
+  <ellipse cx="400" cy="294" rx="10" ry="8" fill="#ffe080" opacity="0.25" filter="url(#cmp-soft)"/>
+
+  <line x1="400" y1="355" x2="400" y2="385" stroke="#a0a090" stroke-width="1.5"/>
+  <circle cx="400" cy="355" r="4" fill="#ffe080" opacity="0.85"/>
+  <ellipse cx="400" cy="359" rx="10" ry="8" fill="#ffe080" opacity="0.22" filter="url(#cmp-soft)"/>
+
+  <line x1="400" y1="400" x2="400" y2="432" stroke="#a0a090" stroke-width="1.5"/>
+  <circle cx="400" cy="400" r="4" fill="#ffe080" opacity="0.85"/>
+
+  <!-- Horizontal path lamps -->
+  <line x1="195" y1="330" x2="195" y2="352" stroke="#a0a090" stroke-width="1.5"/>
+  <circle cx="195" cy="330" r="4" fill="#ffe080" opacity="0.82"/>
+  <ellipse cx="195" cy="335" rx="9" ry="7" fill="#ffe080" opacity="0.22" filter="url(#cmp-soft)"/>
+
+  <line x1="605" y1="330" x2="605" y2="352" stroke="#a0a090" stroke-width="1.5"/>
+  <circle cx="605" cy="330" r="4" fill="#ffe080" opacity="0.82"/>
+
+  <line x1="300" y1="330" x2="300" y2="352" stroke="#a0a090" stroke-width="1.5"/>
+  <circle cx="300" cy="330" r="3.5" fill="#ffe080" opacity="0.80"/>
+
+  <line x1="500" y1="330" x2="500" y2="352" stroke="#a0a090" stroke-width="1.5"/>
+  <circle cx="500" cy="330" r="3.5" fill="#ffe080" opacity="0.80"/>
+
+  <!-- Building warm glow pooling on ground around villas -->
+  <ellipse cx="85" cy="315" rx="60" ry="22" fill="#ffd070" opacity="0.08" filter="url(#cmp-blur)"/>
+  <ellipse cx="470" cy="315" rx="58" ry="22" fill="#ffd070" opacity="0.08" filter="url(#cmp-blur)"/>
+  <ellipse cx="85" cy="438" rx="55" ry="18" fill="#ffd070" opacity="0.07" filter="url(#cmp-blur)"/>
+  <ellipse cx="470" cy="438" rx="55" ry="18" fill="#ffd070" opacity="0.07" filter="url(#cmp-blur)"/>
+  <ellipse cx="705" cy="323" rx="65" ry="22" fill="#ffd070" opacity="0.08" filter="url(#cmp-blur)"/>
+  <ellipse cx="705" cy="438" rx="65" ry="18" fill="#ffd070" opacity="0.07" filter="url(#cmp-blur)"/>
+
+  <!-- City skyline visible beyond compound fence at horizon -->
+  <rect x="0" y="188" width="800" height="28" fill="#1a0538" opacity="0.5"/>
+  <!-- Distant buildings silhouettes at horizon -->
+  <rect x="30" y="178" width="40" height="36" fill="#2a1545" opacity="0.6"/>
+  <rect x="80" y="170" width="25" height="44" fill="#251240" opacity="0.55"/>
+  <rect x="140" y="182" width="50" height="32" fill="#2a1545" opacity="0.58"/>
+  <rect x="210" y="172" width="30" height="42" fill="#251240" opacity="0.52"/>
+  <rect x="290" y="180" width="45" height="34" fill="#2a1545" opacity="0.55"/>
+  <rect x="400" y="175" width="55" height="40" fill="#251240" opacity="0.5"/>
+  <rect x="480" y="183" width="35" height="32" fill="#2a1545" opacity="0.52"/>
+  <rect x="545" y="170" width="42" height="45" fill="#251240" opacity="0.55"/>
+  <rect x="620" y="178" width="48" height="37" fill="#2a1545" opacity="0.55"/>
+  <rect x="700" y="172" width="35" height="43" fill="#251240" opacity="0.52"/>
+  <rect x="750" y="180" width="45" height="35" fill="#2a1545" opacity="0.55"/>
+  <!-- Building lights at horizon -->
+  <rect x="87" y="175" width="4" height="4" fill="#ffe080" opacity="0.55"/>
+  <rect x="98" y="180" width="3" height="3" fill="#ffe080" opacity="0.5"/>
+  <rect x="220" y="178" width="3" height="4" fill="#ffe080" opacity="0.5"/>
+  <rect x="420" y="180" width="4" height="3" fill="#ffe080" opacity="0.52"/>
+  <rect x="560" y="176" width="3" height="4" fill="#ffe080" opacity="0.5"/>
+  <rect x="715" y="178" width="4" height="3" fill="#ffe080" opacity="0.5"/>
+
 </svg>

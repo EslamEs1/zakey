@@ -1,15 +1,155 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <title>Zakey Smart Bedroom — Switch at Night</title>
   <defs>
-    <linearGradient id="bg-ZAKEY SWITCHES — BEDROOM" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
+    <linearGradient id="bBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#080b12"/>
+      <stop offset="100%" stop-color="#040609"/>
     </linearGradient>
-    <radialGradient id="gl-ZAKEY SWITCHES — BEDROOM" cx="500" cy="420" r="450" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.16"/>
+    <linearGradient id="bHeadboard" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141828"/>
+      <stop offset="100%" stop-color="#0f1220"/>
+    </linearGradient>
+    <linearGradient id="bBedding" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1c2c"/>
+      <stop offset="100%" stop-color="#141628"/>
+    </linearGradient>
+    <radialGradient id="bLampGlow" cx="1180" cy="340" r="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bSwitchGlow" cx="1120" cy="320" r="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.3"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="bAmbient" cx="640" cy="360" r="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bPillowGlow" cx="640" cy="380" r="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <rect width="1200" height="900" fill="url(#bg-ZAKEY SWITCHES — BEDROOM)"/>
-  <ellipse cx="500" cy="420" rx="500" ry="380" fill="url(#gl-ZAKEY SWITCHES — BEDROOM)"/>
-  <text x="600" y="460" font-family="system-ui,sans-serif" font-size="28" font-weight="700" fill="#22d3ee" fill-opacity="0.55" text-anchor="middle" letter-spacing="0.08em">ZAKEY SWITCHES — BEDROOM</text>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bBg)"/>
+
+  <!-- Purple-blue ambient tint -->
+  <ellipse cx="640" cy="360" rx="700" ry="500" fill="url(#bAmbient)"/>
+
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="1280" height="60" fill="#060810"/>
+  <!-- Thin ceiling LED accent -->
+  <rect x="0" y="58" width="1280" height="2" fill="#6366f1" fill-opacity="0.25"/>
+
+  <!-- Back wall -->
+  <rect x="0" y="60" width="1280" height="440" fill="#080b12"/>
+
+  <!-- Curtains left side (dark flowing shapes) -->
+  <rect x="0" y="60" width="200" height="500" fill="#080b14"/>
+  <!-- Curtain vertical folds -->
+  <rect x="20" y="60" width="16" height="500" fill="#0a0e18"/>
+  <rect x="52" y="60" width="10" height="500" fill="#070a12"/>
+  <rect x="80" y="60" width="16" height="500" fill="#0a0e18"/>
+  <rect x="112" y="60" width="10" height="500" fill="#070a12"/>
+  <rect x="140" y="60" width="16" height="500" fill="#0a0e18"/>
+  <rect x="170" y="60" width="12" height="500" fill="#070a12"/>
+  <!-- Curtain rail top -->
+  <rect x="0" y="58" width="220" height="6" fill="#141828"/>
+
+  <!-- Bedside table left -->
+  <rect x="220" y="470" width="80" height="60" rx="3" fill="#111428"/>
+  <rect x="228" y="476" width="64" height="48" rx="2" fill="#0e1120"/>
+  <!-- Drawer line -->
+  <line x1="228" y1="500" x2="292" y2="500" stroke="#1e2130" stroke-width="1"/>
+
+  <!-- Headboard -->
+  <rect x="200" y="280" width="880" height="200" rx="6" fill="url(#bHeadboard)"/>
+  <!-- Headboard panel detail: fabric tufting suggestion -->
+  <rect x="216" y="296" width="200" height="168" rx="4" fill="#161a28"/>
+  <rect x="432" y="296" width="216" height="168" rx="4" fill="#161a28"/>
+  <rect x="664" y="296" width="216" height="168" rx="4" fill="#161a28"/>
+  <rect x="896" y="296" width="168" height="168" rx="4" fill="#161a28"/>
+  <!-- Tuft dots -->
+  <circle cx="316" cy="380" r="4" fill="#1e2236"/>
+  <circle cx="540" cy="380" r="4" fill="#1e2236"/>
+  <circle cx="772" cy="380" r="4" fill="#1e2236"/>
+  <circle cx="980" cy="380" r="4" fill="#1e2236"/>
+
+  <!-- Bed frame/base -->
+  <rect x="200" y="480" width="880" height="24" rx="3" fill="#0f1220"/>
+
+  <!-- Mattress base -->
+  <rect x="210" y="460" width="860" height="44" rx="3" fill="#12152a"/>
+
+  <!-- Bedding/duvet -->
+  <rect x="210" y="390" width="860" height="114" rx="5" fill="url(#bBedding)"/>
+  <!-- Duvet subtle folds -->
+  <line x1="210" y1="420" x2="1070" y2="420" stroke="#1e2138" stroke-width="1" stroke-opacity="0.5"/>
+  <line x1="210" y1="450" x2="1070" y2="450" stroke="#1e2138" stroke-width="1" stroke-opacity="0.4"/>
+  <!-- Pillow warmth glow -->
+  <ellipse cx="640" cy="410" rx="320" ry="60" fill="url(#bPillowGlow)"/>
+
+  <!-- Pillows -->
+  <rect x="230" y="390" width="220" height="80" rx="8" fill="#1c1e2e"/>
+  <rect x="236" y="396" width="208" height="68" rx="6" fill="#1f2234"/>
+  <!-- Pillow crease -->
+  <line x1="236" y1="430" x2="444" y2="430" stroke="#262a3e" stroke-width="1"/>
+
+  <rect x="820" y="390" width="220" height="80" rx="8" fill="#1c1e2e"/>
+  <rect x="826" y="396" width="208" height="68" rx="6" fill="#1f2234"/>
+  <line x1="826" y1="430" x2="1034" y2="430" stroke="#262a3e" stroke-width="1"/>
+
+  <!-- Bed legs -->
+  <rect x="212" y="504" width="14" height="24" rx="2" fill="#0d1018"/>
+  <rect x="1054" y="504" width="14" height="24" rx="2" fill="#0d1018"/>
+
+  <!-- Floor -->
+  <rect x="0" y="530" width="1280" height="190" fill="#07090e"/>
+  <!-- Floor planks -->
+  <rect x="0" y="530" width="1280" height="14" fill="#090c14"/>
+  <rect x="0" y="544" width="1280" height="14" fill="#070911"/>
+  <rect x="0" y="558" width="1280" height="14" fill="#090c14"/>
+  <rect x="0" y="572" width="1280" height="14" fill="#070911"/>
+  <rect x="0" y="586" width="1280" height="14" fill="#090c14"/>
+  <rect x="0" y="600" width="1280" height="14" fill="#070911"/>
+  <rect x="0" y="614" width="1280" height="106" fill="#07090e"/>
+
+  <!-- Bedside lamp right (warm glow) -->
+  <ellipse cx="1180" cy="360" rx="200" ry="220" fill="url(#bLampGlow)"/>
+  <!-- Lamp shade -->
+  <polygon points="1154,300 1206,300 1196,340 1164,340" fill="#1c1d24"/>
+  <!-- Lamp body -->
+  <rect x="1177" y="340" width="6" height="128" fill="#1e2130"/>
+  <!-- Lamp base -->
+  <ellipse cx="1180" cy="468" rx="18" ry="5" fill="#1e2130"/>
+  <!-- Lamp table -->
+  <rect x="1130" y="465" width="100" height="12" rx="2" fill="#111428"/>
+  <!-- Lamp inner glow (warm light) -->
+  <ellipse cx="1180" cy="320" rx="24" ry="18" fill="#f59e0b" fill-opacity="0.5"/>
+
+  <!-- Smart switch right wall -->
+  <!-- Switch glow on wall -->
+  <ellipse cx="1120" cy="320" rx="130" ry="120" fill="url(#bSwitchGlow)"/>
+  <!-- Switch wall plate -->
+  <rect x="1082" y="278" width="76" height="84" rx="5" fill="#1e2132"/>
+  <rect x="1086" y="282" width="68" height="76" rx="4" fill="#141828"/>
+  <!-- Three touch point buttons -->
+  <rect x="1090" y="290" width="60" height="18" rx="3" fill="#1a1d2e"/>
+  <rect x="1090" y="312" width="60" height="18" rx="3" fill="#1a1d2e"/>
+  <rect x="1090" y="334" width="60" height="18" rx="3" fill="#1a1d2e"/>
+  <!-- Touch point glow dots -->
+  <!-- Top button: ON (brightest) -->
+  <circle cx="1142" cy="299" r="4" fill="#22d3ee" fill-opacity="0.9"/>
+  <rect x="1090" y="290" width="60" height="18" rx="3" fill="#22d3ee" fill-opacity="0.07"/>
+  <!-- Middle button: dim -->
+  <circle cx="1142" cy="321" r="4" fill="#22d3ee" fill-opacity="0.4"/>
+  <!-- Bottom button: off -->
+  <circle cx="1142" cy="343" r="4" fill="#22d3ee" fill-opacity="0.2"/>
+  <!-- Touch glow lines -->
+  <line x1="1097" y1="299" x2="1130" y2="299" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="1097" y1="321" x2="1130" y2="321" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.15"/>
+  <line x1="1097" y1="343" x2="1130" y2="343" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.1"/>
+  <!-- Status LED on switch plate -->
+  <circle cx="1120" cy="352" r="3" fill="#22d3ee" fill-opacity="0.7"/>
 </svg>

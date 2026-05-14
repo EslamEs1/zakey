@@ -1,68 +1,364 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <title>Zakey Smart Hotel — Luxury Suite Bedroom</title>
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#07050d"/>
-      <stop offset="100%" stop-color="#0f0c17"/>
+    <linearGradient id="h-wall" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a2f2f"/>
+      <stop offset="100%" stop-color="#152828"/>
     </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="40%" r="55%">
-      <stop offset="0%" stop-color="#c9a45c" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#c9a45c" stop-opacity="0"/>
+    <linearGradient id="h-floor" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7A5030"/>
+      <stop offset="50%" stop-color="#8B5E3C"/>
+      <stop offset="100%" stop-color="#7A5030"/>
+    </linearGradient>
+    <linearGradient id="h-bed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fafaf8"/>
+      <stop offset="100%" stop-color="#ede8e0"/>
+    </linearGradient>
+    <linearGradient id="h-head" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a1a0e"/>
+      <stop offset="100%" stop-color="#1a0e04"/>
+    </linearGradient>
+    <linearGradient id="h-curtain" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#151515"/>
+      <stop offset="40%" stop-color="#242424"/>
+      <stop offset="70%" stop-color="#1c1c1c"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+    <linearGradient id="h-art" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b86030"/>
+      <stop offset="40%" stop-color="#e8a848"/>
+      <stop offset="75%" stop-color="#f0d8b0"/>
+      <stop offset="100%" stop-color="#c87838"/>
+    </linearGradient>
+    <radialGradient id="h-lampL" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd080" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#ffd080" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="h-lampR" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd080" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#ffd080" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="h-blur">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <filter id="h-soft">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
   </defs>
-  <rect width="1200" height="900" fill="url(#bg)"/>
-  <rect width="1200" height="900" fill="url(#glow)"/>
-  <!-- Hotel tower — wide and imposing -->
-  <rect x="250" y="200" width="700" height="460" fill="#0f0a1a" rx="4"/>
-  <!-- Canopy / entrance awning -->
-  <polygon points="420,660 780,660 820,700 380,700" fill="#1a1425"/>
-  <!-- Window grid — hotel pattern -->
-  <rect x="290" y="240" width="70" height="55" fill="#c9a45c" fill-opacity="0.09" rx="2"/>
-  <rect x="380" y="240" width="70" height="55" fill="#c9a45c" fill-opacity="0.13" rx="2"/>
-  <rect x="470" y="240" width="70" height="55" fill="#c9a45c" fill-opacity="0.08" rx="2"/>
-  <rect x="560" y="240" width="70" height="55" fill="#c9a45c" fill-opacity="0.14" rx="2"/>
-  <rect x="650" y="240" width="70" height="55" fill="#c9a45c" fill-opacity="0.09" rx="2"/>
-  <rect x="740" y="240" width="70" height="55" fill="#c9a45c" fill-opacity="0.11" rx="2"/>
-  <rect x="830" y="240" width="70" height="55" fill="#c9a45c" fill-opacity="0.07" rx="2"/>
 
-  <rect x="290" y="320" width="70" height="55" fill="#c9a45c" fill-opacity="0.12" rx="2"/>
-  <rect x="380" y="320" width="70" height="55" fill="#c9a45c" fill-opacity="0.07" rx="2"/>
-  <rect x="470" y="320" width="70" height="55" fill="#c9a45c" fill-opacity="0.15" rx="2"/>
-  <rect x="560" y="320" width="70" height="55" fill="#c9a45c" fill-opacity="0.09" rx="2"/>
-  <rect x="650" y="320" width="70" height="55" fill="#c9a45c" fill-opacity="0.12" rx="2"/>
-  <rect x="740" y="320" width="70" height="55" fill="#c9a45c" fill-opacity="0.08" rx="2"/>
-  <rect x="830" y="320" width="70" height="55" fill="#c9a45c" fill-opacity="0.13" rx="2"/>
+  <!-- BACKGROUND: dark teal wall -->
+  <rect x="0" y="0" width="800" height="500" fill="url(#h-wall)"/>
 
-  <rect x="290" y="400" width="70" height="55" fill="#c9a45c" fill-opacity="0.08" rx="2"/>
-  <rect x="380" y="400" width="70" height="55" fill="#c9a45c" fill-opacity="0.14" rx="2"/>
-  <rect x="470" y="400" width="70" height="55" fill="#c9a45c" fill-opacity="0.09" rx="2"/>
-  <rect x="560" y="400" width="70" height="55" fill="#c9a45c" fill-opacity="0.11" rx="2"/>
-  <rect x="650" y="400" width="70" height="55" fill="#c9a45c" fill-opacity="0.15" rx="2"/>
-  <rect x="740" y="400" width="70" height="55" fill="#c9a45c" fill-opacity="0.09" rx="2"/>
-  <rect x="830" y="400" width="70" height="55" fill="#c9a45c" fill-opacity="0.10" rx="2"/>
+  <!-- Subtle geometric diamond pattern on wall -->
+  <g opacity="0.065" stroke="#4a8888" stroke-width="0.7" fill="none">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="140" x2="800" y2="140"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="220" x2="800" y2="220"/>
+    <line x1="0" y1="260" x2="800" y2="260"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="340" x2="800" y2="340"/>
+    <line x1="0" y1="380" x2="800" y2="380"/>
+    <line x1="80" y1="68" x2="80" y2="390"/>
+    <line x1="160" y1="68" x2="160" y2="390"/>
+    <line x1="240" y1="68" x2="240" y2="390"/>
+    <line x1="320" y1="68" x2="320" y2="390"/>
+    <line x1="400" y1="68" x2="400" y2="390"/>
+    <line x1="480" y1="68" x2="480" y2="390"/>
+    <line x1="560" y1="68" x2="560" y2="390"/>
+    <line x1="640" y1="68" x2="640" y2="390"/>
+    <line x1="720" y1="68" x2="720" y2="390"/>
+    <!-- Diagonal diamond lines -->
+    <line x1="0" y1="68" x2="720" y2="390"/>
+    <line x1="80" y1="68" x2="800" y2="350"/>
+    <line x1="0" y1="130" x2="640" y2="390"/>
+    <line x1="0" y1="200" x2="560" y2="390"/>
+    <line x1="160" y1="68" x2="800" y2="280"/>
+    <line x1="320" y1="68" x2="800" y2="198"/>
+    <line x1="0" y1="280" x2="440" y2="390"/>
+    <line x1="0" y1="350" x2="320" y2="390"/>
+    <line x1="480" y1="68" x2="800" y2="115"/>
+  </g>
 
-  <rect x="290" y="480" width="70" height="55" fill="#c9a45c" fill-opacity="0.11" rx="2"/>
-  <rect x="380" y="480" width="70" height="55" fill="#c9a45c" fill-opacity="0.08" rx="2"/>
-  <rect x="470" y="480" width="70" height="55" fill="#c9a45c" fill-opacity="0.13" rx="2"/>
-  <rect x="560" y="480" width="70" height="55" fill="#c9a45c" fill-opacity="0.07" rx="2"/>
-  <rect x="650" y="480" width="70" height="55" fill="#c9a45c" fill-opacity="0.16" rx="2"/>
-  <rect x="740" y="480" width="70" height="55" fill="#c9a45c" fill-opacity="0.10" rx="2"/>
-  <rect x="830" y="480" width="70" height="55" fill="#c9a45c" fill-opacity="0.08" rx="2"/>
+  <!-- CEILING dark teal with trim -->
+  <rect x="0" y="0" width="800" height="70" fill="#0f2020"/>
+  <rect x="0" y="64" width="800" height="8" fill="#0a1818"/>
+  <!-- Ceiling warm ambient glow from lamps -->
+  <ellipse cx="175" cy="72" rx="110" ry="55" fill="#ffd080" opacity="0.07" filter="url(#h-blur)"/>
+  <ellipse cx="625" cy="72" rx="110" ry="55" fill="#ffd080" opacity="0.07" filter="url(#h-blur)"/>
+  <!-- Small recessed downlights -->
+  <circle cx="175" cy="18" r="6" fill="#ffe0a0" opacity="0.7"/>
+  <circle cx="400" cy="18" r="6" fill="#ffe0a0" opacity="0.6"/>
+  <circle cx="625" cy="18" r="6" fill="#ffe0a0" opacity="0.7"/>
+  <ellipse cx="175" cy="25" rx="25" ry="18" fill="#ffe0a0" opacity="0.2" filter="url(#h-blur)"/>
+  <ellipse cx="625" cy="25" rx="25" ry="18" fill="#ffe0a0" opacity="0.2" filter="url(#h-blur)"/>
 
-  <!-- Lobby entrance -->
-  <rect x="490" y="590" width="220" height="70" fill="#c9a45c" fill-opacity="0.06" rx="2"/>
-  <rect x="540" y="590" width="60" height="70" fill="#c9a45c" fill-opacity="0.12" rx="1"/>
-  <rect x="600" y="590" width="60" height="70" fill="#c9a45c" fill-opacity="0.09" rx="1"/>
-  <!-- Room panel cue -->
-  <rect x="850" y="330" width="30" height="50" fill="#c9a45c" fill-opacity="0.20" rx="4"/>
-  <circle cx="865" cy="348" r="7" fill="#c9a45c" fill-opacity="0.40"/>
-  <!-- Ambient strip -->
-  <rect x="250" y="658" width="700" height="2" fill="#c9a45c" fill-opacity="0.20"/>
-  <!-- Ground -->
-  <rect x="0" y="700" width="1200" height="3" fill="#c9a45c" fill-opacity="0.05"/>
-  <path d="M0 800 Q400 770 700 785 Q950 800 1200 775 L1200 900 L0 900Z" fill="#07050d" fill-opacity="0.75"/>
-  <!-- Wordmark -->
-  <text x="600" y="840" font-family="Manrope,Inter,system-ui,sans-serif" font-size="22" font-weight="700"
-        fill="#c9a45c" fill-opacity="0.45" text-anchor="middle" letter-spacing="8">ZAKEY</text>
-  <text x="600" y="866" font-family="Manrope,Inter,system-ui,sans-serif" font-size="13" font-weight="400"
-        fill="#9aa3b2" fill-opacity="0.40" text-anchor="middle" letter-spacing="3">SMART HOTEL</text>
+  <!-- FLOOR: dark oak herringbone parquet -->
+  <rect x="0" y="390" width="800" height="110" fill="#7a5030"/>
+  <!-- Herringbone diagonal plank lines -->
+  <g stroke="#6a4025" stroke-width="0.8" opacity="0.45">
+    <line x1="0" y1="405" x2="30" y2="390"/>
+    <line x1="0" y1="420" x2="60" y2="390"/>
+    <line x1="0" y1="435" x2="90" y2="390"/>
+    <line x1="0" y1="450" x2="120" y2="390"/>
+    <line x1="0" y1="465" x2="150" y2="390"/>
+    <line x1="0" y1="480" x2="180" y2="390"/>
+    <line x1="0" y1="495" x2="210" y2="390"/>
+    <line x1="30" y1="500" x2="240" y2="390"/>
+    <line x1="60" y1="500" x2="270" y2="390"/>
+    <line x1="90" y1="500" x2="300" y2="390"/>
+    <line x1="120" y1="500" x2="330" y2="390"/>
+    <line x1="150" y1="500" x2="360" y2="390"/>
+    <line x1="180" y1="500" x2="390" y2="390"/>
+    <line x1="210" y1="500" x2="420" y2="390"/>
+    <line x1="240" y1="500" x2="450" y2="390"/>
+    <line x1="270" y1="500" x2="480" y2="390"/>
+    <line x1="300" y1="500" x2="510" y2="390"/>
+    <line x1="330" y1="500" x2="540" y2="390"/>
+    <line x1="360" y1="500" x2="570" y2="390"/>
+    <line x1="390" y1="500" x2="600" y2="390"/>
+    <line x1="420" y1="500" x2="630" y2="390"/>
+    <line x1="450" y1="500" x2="660" y2="390"/>
+    <line x1="480" y1="500" x2="690" y2="390"/>
+    <line x1="510" y1="500" x2="720" y2="390"/>
+    <line x1="540" y1="500" x2="750" y2="390"/>
+    <line x1="570" y1="500" x2="780" y2="390"/>
+    <line x1="600" y1="500" x2="800" y2="400"/>
+    <line x1="630" y1="500" x2="800" y2="430"/>
+    <line x1="660" y1="500" x2="800" y2="460"/>
+    <line x1="690" y1="500" x2="800" y2="490"/>
+    <!-- Opposite angle planks -->
+    <line x1="0" y1="440" x2="50" y2="500"/>
+    <line x1="0" y1="415" x2="80" y2="500"/>
+    <line x1="30" y1="390" x2="140" y2="500"/>
+    <line x1="60" y1="390" x2="170" y2="500"/>
+    <line x1="90" y1="390" x2="200" y2="500"/>
+    <line x1="120" y1="390" x2="230" y2="500"/>
+    <line x1="150" y1="390" x2="260" y2="500"/>
+    <line x1="180" y1="390" x2="290" y2="500"/>
+    <line x1="210" y1="390" x2="320" y2="500"/>
+    <line x1="240" y1="390" x2="350" y2="500"/>
+    <line x1="270" y1="390" x2="380" y2="500"/>
+    <line x1="300" y1="390" x2="410" y2="500"/>
+    <line x1="330" y1="390" x2="440" y2="500"/>
+    <line x1="360" y1="390" x2="470" y2="500"/>
+    <line x1="390" y1="390" x2="500" y2="500"/>
+    <line x1="420" y1="390" x2="530" y2="500"/>
+    <line x1="450" y1="390" x2="560" y2="500"/>
+    <line x1="480" y1="390" x2="590" y2="500"/>
+    <line x1="510" y1="390" x2="620" y2="500"/>
+    <line x1="540" y1="390" x2="650" y2="500"/>
+    <line x1="570" y1="390" x2="680" y2="500"/>
+    <line x1="600" y1="390" x2="710" y2="500"/>
+    <line x1="630" y1="390" x2="740" y2="500"/>
+    <line x1="660" y1="390" x2="770" y2="500"/>
+    <line x1="690" y1="390" x2="800" y2="500"/>
+    <line x1="720" y1="390" x2="800" y2="470"/>
+    <line x1="750" y1="390" x2="800" y2="440"/>
+    <line x1="780" y1="390" x2="800" y2="410"/>
+  </g>
+  <!-- Shadow under bed on floor -->
+  <ellipse cx="400" cy="393" rx="245" ry="22" fill="#3a1f0a" opacity="0.7" filter="url(#h-soft)"/>
+
+  <!-- LEFT WALL accent panel with abstract artwork -->
+  <rect x="0" y="72" width="165" height="318" fill="#122222"/>
+  <!-- Artwork frame gold border -->
+  <rect x="12" y="95" width="140" height="180" fill="#0a1818" stroke="#b8960a" stroke-width="2.5"/>
+  <!-- Artwork canvas -->
+  <rect x="16" y="99" width="132" height="172" fill="#1a1008"/>
+  <!-- Abstract brush strokes: terracotta, gold, cream -->
+  <ellipse cx="55" cy="152" rx="35" ry="55" fill="#c07038" opacity="0.72"/>
+  <ellipse cx="75" cy="140" rx="22" ry="42" fill="#e09050" opacity="0.62"/>
+  <ellipse cx="108" cy="178" rx="28" ry="46" fill="#c86828" opacity="0.68"/>
+  <!-- Gold accent shapes -->
+  <ellipse cx="72" cy="132" rx="14" ry="20" fill="#c8a828" opacity="0.58"/>
+  <ellipse cx="98" cy="203" rx="18" ry="12" fill="#d4b030" opacity="0.52"/>
+  <!-- Cream highlights -->
+  <ellipse cx="88" cy="162" rx="11" ry="17" fill="#f0e0c8" opacity="0.42"/>
+  <ellipse cx="48" cy="188" rx="8" ry="14" fill="#ece0ca" opacity="0.36"/>
+  <!-- Dark overlay vignette -->
+  <rect x="16" y="99" width="132" height="172" fill="none" stroke="#0a1818" stroke-width="4" opacity="0.3"/>
+
+  <!-- Floating shelf above artwork area -->
+  <rect x="6" y="290" width="158" height="9" rx="1" fill="#2a1a0e"/>
+  <!-- Shelf items -->
+  <rect x="14" y="271" width="10" height="20" fill="#8a2818"/>
+  <rect x="26" y="274" width="8" height="17" fill="#1a3a58"/>
+  <rect x="36" y="276" width="11" height="15" fill="#5a2810"/>
+  <!-- Plant on shelf -->
+  <ellipse cx="80" cy="278" rx="13" ry="10" fill="#265a26" opacity="0.82"/>
+  <ellipse cx="84" cy="274" rx="9" ry="7" fill="#306a30" opacity="0.9"/>
+  <rect x="76" y="287" width="8" height="5" rx="1" fill="#4a2e10"/>
+  <!-- Brass decorative object -->
+  <ellipse cx="125" cy="289" rx="11" ry="6" fill="#b8960a" opacity="0.6"/>
+  <rect x="119" y="283" width="12" height="7" rx="2" fill="#a08008" opacity="0.7"/>
+
+  <!-- BED: king sized, centered -->
+  <!-- HEADBOARD: dark walnut frame + padded linen panel -->
+  <rect x="153" y="90" width="494" height="195" rx="5" fill="url(#h-head)"/>
+  <!-- Padded inner panel dark linen -->
+  <rect x="165" y="104" width="470" height="176" rx="4" fill="#181320"/>
+  <!-- Tufted pattern horizontal seams -->
+  <line x1="165" y1="128" x2="635" y2="128" stroke="#242030" stroke-width="0.9" opacity="0.65"/>
+  <line x1="165" y1="153" x2="635" y2="153" stroke="#242030" stroke-width="0.8" opacity="0.55"/>
+  <line x1="165" y1="178" x2="635" y2="178" stroke="#242030" stroke-width="0.8" opacity="0.52"/>
+  <line x1="165" y1="203" x2="635" y2="203" stroke="#242030" stroke-width="0.8" opacity="0.48"/>
+  <line x1="165" y1="228" x2="635" y2="228" stroke="#242030" stroke-width="0.8" opacity="0.45"/>
+  <line x1="165" y1="253" x2="635" y2="253" stroke="#242030" stroke-width="0.8" opacity="0.42"/>
+  <!-- Tufted vertical seams -->
+  <line x1="243" y1="104" x2="243" y2="280" stroke="#242030" stroke-width="0.8" opacity="0.55"/>
+  <line x1="321" y1="104" x2="321" y2="280" stroke="#242030" stroke-width="0.8" opacity="0.55"/>
+  <line x1="399" y1="104" x2="399" y2="280" stroke="#242030" stroke-width="0.8" opacity="0.55"/>
+  <line x1="477" y1="104" x2="477" y2="280" stroke="#242030" stroke-width="0.8" opacity="0.55"/>
+  <line x1="555" y1="104" x2="555" y2="280" stroke="#242030" stroke-width="0.8" opacity="0.52"/>
+  <!-- Tuft buttons at intersections -->
+  <circle cx="243" cy="128" r="2.5" fill="#282040" opacity="0.65"/>
+  <circle cx="321" cy="128" r="2.5" fill="#282040" opacity="0.65"/>
+  <circle cx="399" cy="128" r="2.5" fill="#282040" opacity="0.65"/>
+  <circle cx="477" cy="128" r="2.5" fill="#282040" opacity="0.65"/>
+  <circle cx="555" cy="128" r="2.5" fill="#282040" opacity="0.65"/>
+  <circle cx="243" cy="153" r="2.5" fill="#282040" opacity="0.58"/>
+  <circle cx="321" cy="153" r="2.5" fill="#282040" opacity="0.58"/>
+  <circle cx="399" cy="153" r="2.5" fill="#282040" opacity="0.58"/>
+  <circle cx="477" cy="153" r="2.5" fill="#282040" opacity="0.58"/>
+  <circle cx="555" cy="153" r="2.5" fill="#282040" opacity="0.58"/>
+  <circle cx="243" cy="178" r="2.5" fill="#282040" opacity="0.52"/>
+  <circle cx="399" cy="178" r="2.5" fill="#282040" opacity="0.52"/>
+  <circle cx="555" cy="178" r="2.5" fill="#282040" opacity="0.52"/>
+
+  <!-- Bed frame/base dark walnut -->
+  <rect x="153" y="285" width="494" height="115" rx="4" fill="#1e1108"/>
+  <!-- Mattress sitting atop -->
+  <rect x="160" y="290" width="480" height="105" rx="3" fill="#2a1a08"/>
+
+  <!-- BED LINENS: crisp white duvet -->
+  <rect x="161" y="256" width="478" height="135" rx="3" fill="url(#h-bed)"/>
+  <!-- Gold accent stripe on duvet -->
+  <rect x="161" y="295" width="478" height="11" fill="#c8a028" opacity="0.48"/>
+  <rect x="161" y="297" width="478" height="7" fill="#d4b038" opacity="0.4"/>
+  <!-- Duvet fold shadow lines -->
+  <line x1="161" y1="318" x2="639" y2="318" stroke="#d5d0c5" stroke-width="1.2" opacity="0.55"/>
+  <line x1="161" y1="338" x2="639" y2="338" stroke="#d5d0c5" stroke-width="0.8" opacity="0.35"/>
+  <!-- Duvet wrinkles -->
+  <ellipse cx="280" cy="368" rx="55" ry="8" fill="#cec8bc" opacity="0.28"/>
+  <ellipse cx="520" cy="362" rx="65" ry="9" fill="#cec8bc" opacity="0.24"/>
+  <!-- Top fold turned down -->
+  <rect x="161" y="256" width="478" height="24" rx="2" fill="#f5f5f2"/>
+  <rect x="161" y="256" width="478" height="9" fill="#e8e4de" opacity="0.5"/>
+
+  <!-- PILLOWS: 4 white -->
+  <!-- Left pair -->
+  <rect x="172" y="214" width="118" height="62" rx="8" fill="#f8f8f5"/>
+  <rect x="175" y="217" width="112" height="57" rx="7" fill="#fafaf8" stroke="#e6e2de" stroke-width="0.8"/>
+  <line x1="231" y1="217" x2="231" y2="273" stroke="#dedad4" stroke-width="1.2" opacity="0.5"/>
+  <!-- Left pillow 2 (behind) -->
+  <rect x="175" y="208" width="113" height="52" rx="7" fill="#f0ede8"/>
+  <rect x="178" y="210" width="107" height="47" rx="6" fill="#f5f2ee" stroke="#dedad4" stroke-width="0.7"/>
+
+  <!-- Right pair -->
+  <rect x="510" y="214" width="118" height="62" rx="8" fill="#f8f8f5"/>
+  <rect x="513" y="217" width="112" height="57" rx="7" fill="#fafaf8" stroke="#e6e2de" stroke-width="0.8"/>
+  <line x1="569" y1="217" x2="569" y2="273" stroke="#dedad4" stroke-width="1.2" opacity="0.5"/>
+  <rect x="512" y="208" width="113" height="52" rx="7" fill="#f0ede8"/>
+  <rect x="515" y="210" width="107" height="47" rx="6" fill="#f5f2ee" stroke="#dedad4" stroke-width="0.7"/>
+
+  <!-- LEFT BEDSIDE TABLE: brass legs, marble top -->
+  <rect x="52" y="300" width="97" height="95" rx="2" fill="#1c1005"/>
+  <!-- Brass legs -->
+  <rect x="59" y="362" width="7" height="38" fill="#b8860a"/>
+  <rect x="74" y="362" width="7" height="38" fill="#c09010"/>
+  <rect x="127" y="362" width="7" height="38" fill="#b8860a"/>
+  <rect x="142" y="362" width="7" height="38" fill="#c09010"/>
+  <!-- Marble top -->
+  <rect x="44" y="292" width="112" height="15" rx="2" fill="#e5e3df"/>
+  <!-- Veining -->
+  <line x1="56" y1="296" x2="118" y2="302" stroke="#cac6c0" stroke-width="0.7" opacity="0.55"/>
+  <line x1="66" y1="293" x2="148" y2="304" stroke="#cac6c0" stroke-width="0.5" opacity="0.38"/>
+  <!-- Table lamp left -->
+  <ellipse cx="100" cy="294" rx="15" ry="6" fill="#dedad8"/>
+  <rect x="92" y="242" width="16" height="54" rx="3" fill="#e5e2e0"/>
+  <polygon points="76,220 124,220 114,244 90,244" fill="#f5f2ee" stroke="#dedad4" stroke-width="0.8"/>
+  <!-- Warm amber glow left lamp -->
+  <ellipse cx="100" cy="232" rx="52" ry="32" fill="#ffd080" opacity="0.24" filter="url(#h-blur)"/>
+  <ellipse cx="100" cy="268" rx="38" ry="28" fill="#ffd080" opacity="0.16" filter="url(#h-blur)"/>
+  <!-- Scene remote on left table -->
+  <rect x="60" y="284" width="24" height="8" rx="2" fill="#2a1808" stroke="#b8960a" stroke-width="0.8"/>
+  <circle cx="65" cy="288" r="1.5" fill="#ffd080" opacity="0.75"/>
+  <circle cx="72" cy="288" r="1.5" fill="#c09010" opacity="0.75"/>
+  <circle cx="79" cy="288" r="1.5" fill="#ffd080" opacity="0.65"/>
+
+  <!-- RIGHT BEDSIDE TABLE -->
+  <rect x="651" y="300" width="97" height="95" rx="2" fill="#1c1005"/>
+  <!-- Brass legs -->
+  <rect x="658" y="362" width="7" height="38" fill="#b8860a"/>
+  <rect x="673" y="362" width="7" height="38" fill="#c09010"/>
+  <rect x="726" y="362" width="7" height="38" fill="#b8860a"/>
+  <rect x="741" y="362" width="7" height="38" fill="#c09010"/>
+  <!-- Marble top -->
+  <rect x="644" y="292" width="112" height="15" rx="2" fill="#e5e3df"/>
+  <line x1="656" y1="296" x2="718" y2="302" stroke="#cac6c0" stroke-width="0.7" opacity="0.55"/>
+  <!-- Table lamp right -->
+  <ellipse cx="700" cy="294" rx="15" ry="6" fill="#dedad8"/>
+  <rect x="692" y="242" width="16" height="54" rx="3" fill="#e5e2e0"/>
+  <polygon points="676,220 724,220 714,244 690,244" fill="#f5f2ee" stroke="#dedad4" stroke-width="0.8"/>
+  <!-- Warm amber glow right lamp -->
+  <ellipse cx="700" cy="232" rx="52" ry="32" fill="#ffd080" opacity="0.24" filter="url(#h-blur)"/>
+  <ellipse cx="700" cy="268" rx="38" ry="28" fill="#ffd080" opacity="0.16" filter="url(#h-blur)"/>
+
+  <!-- ZAKEY SMART PANEL: wall-mounted right side -->
+  <rect x="742" y="140" width="44" height="108" rx="5" fill="#1a1205"/>
+  <rect x="745" y="143" width="38" height="102" rx="4" fill="#100d06" stroke="#b8960a" stroke-width="0.9"/>
+  <!-- Panel screen -->
+  <rect x="748" y="150" width="32" height="58" rx="2" fill="#030810"/>
+  <!-- "Good evening" text simulated -->
+  <text x="764" y="167" font-family="sans-serif" font-size="4.5" fill="#ffd080" text-anchor="middle" opacity="0.92">Good</text>
+  <text x="764" y="175" font-family="sans-serif" font-size="4.5" fill="#ffd080" text-anchor="middle" opacity="0.92">evening</text>
+  <!-- Separator -->
+  <line x1="750" y1="181" x2="778" y2="181" stroke="#b8960a" stroke-width="0.7" opacity="0.65"/>
+  <!-- Icon row -->
+  <circle cx="755" cy="190" r="3.5" fill="none" stroke="#ffd080" stroke-width="0.9" opacity="0.7"/>
+  <circle cx="764" cy="190" r="3.5" fill="none" stroke="#ffd080" stroke-width="0.9" opacity="0.7"/>
+  <circle cx="773" cy="190" r="3.5" fill="none" stroke="#ffd080" stroke-width="0.9" opacity="0.65"/>
+  <!-- Scene buttons -->
+  <circle cx="755" cy="204" r="3" fill="#b8960a" opacity="0.55"/>
+  <circle cx="764" cy="204" r="3" fill="#083845" opacity="0.75"/>
+  <circle cx="773" cy="204" r="3" fill="#183518" opacity="0.65"/>
+  <!-- Ambient glow -->
+  <ellipse cx="764" cy="200" rx="32" ry="58" fill="#ffd080" opacity="0.04" filter="url(#h-blur)"/>
+  <!-- Scene remote right table -->
+  <rect x="660" y="284" width="24" height="8" rx="2" fill="#2a1808" stroke="#b8960a" stroke-width="0.8"/>
+  <circle cx="665" cy="288" r="1.5" fill="#ffd080" opacity="0.75"/>
+  <circle cx="672" cy="288" r="1.5" fill="#c09010" opacity="0.75"/>
+  <circle cx="679" cy="288" r="1.5" fill="#ffd080" opacity="0.65"/>
+
+  <!-- CURTAINS: right partial area shown as left edge panel -->
+  <rect x="165" y="72" width="0" height="0"/>
+  <!-- Blackout curtain panel on right wall edge -->
+  <rect x="728" y="72" width="72" height="318" fill="url(#h-curtain)"/>
+  <!-- Curtain pleat folds -->
+  <line x1="736" y1="72" x2="734" y2="390" stroke="#1e1e1e" stroke-width="2" opacity="0.7"/>
+  <line x1="748" y1="72" x2="746" y2="390" stroke="#282828" stroke-width="1.5" opacity="0.6"/>
+  <line x1="760" y1="72" x2="758" y2="390" stroke="#1e1e1e" stroke-width="2" opacity="0.6"/>
+  <line x1="772" y1="72" x2="770" y2="390" stroke="#222" stroke-width="1.5" opacity="0.55"/>
+  <line x1="784" y1="72" x2="782" y2="390" stroke="#1e1e1e" stroke-width="1.5" opacity="0.55"/>
+  <line x1="796" y1="72" x2="796" y2="390" stroke="#222" stroke-width="1" opacity="0.5"/>
+  <!-- Curtain hem bottom weight -->
+  <rect x="728" y="386" width="72" height="7" fill="#111" opacity="0.8"/>
+  <!-- Curtain rod -->
+  <rect x="0" y="68" width="800" height="6" fill="#0a1a1a" opacity="0.85"/>
+  <!-- Rod rings -->
+  <circle cx="732" cy="71" r="4.5" fill="#9a7808" opacity="0.65"/>
+  <circle cx="744" cy="71" r="4.5" fill="#9a7808" opacity="0.65"/>
+  <circle cx="756" cy="71" r="4.5" fill="#9a7808" opacity="0.65"/>
+  <circle cx="768" cy="71" r="4.5" fill="#9a7808" opacity="0.65"/>
+  <circle cx="780" cy="71" r="4.5" fill="#9a7808" opacity="0.65"/>
+  <circle cx="792" cy="71" r="4.5" fill="#9a7808" opacity="0.6"/>
+
+  <!-- Bed legs at base -->
+  <rect x="163" y="393" width="15" height="14" rx="2" fill="#1e1108"/>
+  <rect x="622" y="393" width="15" height="14" rx="2" fill="#1e1108"/>
+
+  <!-- Skirting board -->
+  <rect x="0" y="385" width="800" height="9" fill="#0a1818" opacity="0.8"/>
+
 </svg>

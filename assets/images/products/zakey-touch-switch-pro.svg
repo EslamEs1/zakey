@@ -1,16 +1,160 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <title>Zakey Touch Switch Pro — Premium Brushed Aluminum Single-Gang Smart Switch</title>
   <defs>
-    <linearGradient id="bg-TOUCH SWITCH PRO" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
-    </linearGradient>
-    <radialGradient id="gl-TOUCH SWITCH PRO" cx="230" cy="175" r="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.14"/>
+    <!-- Background -->
+    <radialGradient id="bgRadial" cx="50%" cy="50%" r="60%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0c1220"/>
+      <stop offset="100%" stop-color="#04060d"/>
+    </radialGradient>
+    <!-- Dot texture -->
+    <pattern id="dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="0.7" fill="#ffffff" fill-opacity="0.04"/>
+    </pattern>
+    <!-- Product glow: warm-ish cyan for premium aluminum -->
+    <radialGradient id="productGlow" cx="50%" cy="48%" r="35%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#22d3ee" stop-opacity="0.06"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
+    <!-- Brushed aluminum body gradient: left-center-right -->
+    <linearGradient id="bodyAlum" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3a3d4d"/>
+      <stop offset="35%" stop-color="#4e5268"/>
+      <stop offset="60%" stop-color="#4a4e65"/>
+      <stop offset="100%" stop-color="#2e3144"/>
+    </linearGradient>
+    <!-- Brush lines pattern (extremely fine horizontal) -->
+    <pattern id="brushLines" x="0" y="0" width="1" height="3" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="200" y2="0" stroke="#ffffff" stroke-width="0.4" stroke-opacity="0.06"/>
+      <line x1="0" y1="1.5" x2="200" y2="1.5" stroke="#000000" stroke-width="0.4" stroke-opacity="0.06"/>
+    </pattern>
+    <!-- Chamfer bevel gradients -->
+    <linearGradient id="bevelTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6a7090"/>
+      <stop offset="100%" stop-color="#4a4e65"/>
+    </linearGradient>
+    <linearGradient id="bevelLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6a7090"/>
+      <stop offset="100%" stop-color="#4a4e65"/>
+    </linearGradient>
+    <linearGradient id="bevelRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#222438"/>
+      <stop offset="100%" stop-color="#1a1c2c"/>
+    </linearGradient>
+    <linearGradient id="bevelBottom" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#222438"/>
+      <stop offset="100%" stop-color="#1a1c2c"/>
+    </linearGradient>
+    <!-- Capacitive ring: very subtle emboss -->
+    <radialGradient id="capRing" cx="50%" cy="50%" r="50%">
+      <stop offset="70%" stop-color="transparent"/>
+      <stop offset="85%" stop-color="#5a5e78" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <!-- LED glow -->
+    <radialGradient id="ledGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#22d3ee" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <!-- LED halo (larger, soft) -->
+    <radialGradient id="ledHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Drop shadow -->
+    <radialGradient id="shadowGrad" cx="50%" cy="50%" r="50%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Floor reflection -->
+    <linearGradient id="reflGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a4e65" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#4a4e65" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Face highlight (top-left lighter) -->
+    <linearGradient id="faceHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.055"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.08"/>
+    </linearGradient>
   </defs>
-  <rect width="480" height="360" fill="url(#bg-TOUCH SWITCH PRO)"/>
-  <ellipse cx="230" cy="175" rx="180" ry="140" fill="url(#gl-TOUCH SWITCH PRO)"/>
-  <rect x="170" y="90" width="140" height="180" rx="10" fill="#0c0f17" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6"/><rect x="190" y="115" width="45" height="65" rx="5" fill="#22d3ee" fill-opacity="0.15" stroke="#22d3ee" stroke-width="0.75" stroke-opacity="0.4"/><rect x="245" y="115" width="45" height="65" rx="5" fill="#22d3ee" fill-opacity="0.08" stroke="#22d3ee" stroke-width="0.75" stroke-opacity="0.3"/>
-  <text x="240" y="316" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#22d3ee" fill-opacity="0.65" text-anchor="middle" letter-spacing="0.06em">TOUCH SWITCH PRO</text>
+
+  <!-- ── Background ── -->
+  <rect width="480" height="360" fill="url(#bgRadial)"/>
+  <rect width="480" height="360" fill="url(#dots)"/>
+
+  <!-- ── Product glow ── -->
+  <ellipse cx="240" cy="180" rx="100" ry="140" fill="url(#productGlow)"/>
+
+  <!-- ── Drop shadow ── -->
+  <ellipse cx="240" cy="322" rx="58" ry="10" fill="url(#shadowGrad)"/>
+
+  <!-- ── Floor reflection ── -->
+  <rect x="200" y="316" width="80" height="28" fill="url(#reflGrad)" rx="2"/>
+
+  <!-- ── Product body: 80×130px centered at 240,175 ── -->
+  <!-- Outer frame body -->
+  <rect x="200" y="60" width="80" height="130" rx="8" fill="url(#bodyAlum)"/>
+  <!-- Brush texture overlay -->
+  <rect x="200" y="60" width="80" height="130" rx="8" fill="url(#brushLines)"/>
+  <!-- Face highlight (3D lighting) -->
+  <rect x="200" y="60" width="80" height="130" rx="8" fill="url(#faceHighlight)"/>
+
+  <!-- Chamfer bevel — top edge (1.5px) -->
+  <rect x="200" y="60" width="80" height="1.5" rx="1" fill="url(#bevelTop)" fill-opacity="0.9"/>
+  <!-- Chamfer bevel — left edge -->
+  <rect x="200" y="60" width="1.5" height="130" rx="1" fill="url(#bevelLeft)" fill-opacity="0.9"/>
+  <!-- Chamfer bevel — right edge -->
+  <rect x="278.5" y="60" width="1.5" height="130" rx="1" fill="url(#bevelRight)" fill-opacity="0.9"/>
+  <!-- Chamfer bevel — bottom edge -->
+  <rect x="200" y="188.5" width="80" height="1.5" rx="1" fill="url(#bevelBottom)" fill-opacity="0.9"/>
+
+  <!-- Outer ring glow (premium edge highlight) -->
+  <rect x="200" y="60" width="80" height="130" rx="8" fill="none" stroke="#606480" stroke-width="0.8" stroke-opacity="0.45"/>
+
+  <!-- ── Touch surface: capacitive ring (embossed circle) ── -->
+  <!-- Very subtle outer glow of capacitive ring -->
+  <circle cx="240" cy="128" r="28" fill="url(#capRing)"/>
+  <!-- Inner capacitive ring: barely visible -->
+  <circle cx="240" cy="128" r="24" fill="none" stroke="#5a5e80" stroke-width="0.6" stroke-opacity="0.35"/>
+  <circle cx="240" cy="128" r="20" fill="none" stroke="#4e5268" stroke-width="0.4" stroke-opacity="0.2"/>
+
+  <!-- ── Zakey "Z" logo (etched, premium subtlety) ── -->
+  <text x="240" y="84" text-anchor="middle"
+        font-family="'SF Pro Display', 'Segoe UI', system-ui, sans-serif"
+        font-size="11" font-weight="700" letter-spacing="0.5"
+        fill="#5a5e78" fill-opacity="0.55">Z</text>
+
+  <!-- ── Status LED: 3mm circle top-center ── -->
+  <!-- Large halo ring (8mm) -->
+  <circle cx="240" cy="71" r="8" fill="url(#ledHalo)"/>
+  <!-- Medium halo (6mm) -->
+  <circle cx="240" cy="71" r="6" fill="none" stroke="#22d3ee" stroke-width="0.5" stroke-opacity="0.2"/>
+  <!-- LED dot -->
+  <circle cx="240" cy="71" r="2.5" fill="url(#ledGlow)"/>
+  <circle cx="240" cy="71" r="1.5" fill="#22d3ee"/>
+
+  <!-- ── Model/grade indicator: tiny text bottom ── -->
+  <text x="240" y="183" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="5.5" letter-spacing="1.5"
+        fill="#3a3e52" fill-opacity="0.7">TOUCH PRO</text>
+
+  <!-- ── Subtle corner inset screws (premium build) ── -->
+  <circle cx="207" cy="67" r="2.5" fill="#3a3d4d" stroke="#505470" stroke-width="0.5"/>
+  <line x1="205.2" y1="67" x2="208.8" y2="67" stroke="#606480" stroke-width="0.4"/>
+  <line x1="207" y1="65.2" x2="207" y2="68.8" stroke="#606480" stroke-width="0.4"/>
+  <circle cx="273" cy="67" r="2.5" fill="#3a3d4d" stroke="#505470" stroke-width="0.5"/>
+  <line x1="271.2" y1="67" x2="274.8" y2="67" stroke="#606480" stroke-width="0.4"/>
+  <line x1="273" y1="65.2" x2="273" y2="68.8" stroke="#606480" stroke-width="0.4"/>
+  <circle cx="207" cy="183" r="2.5" fill="#3a3d4d" stroke="#505470" stroke-width="0.5"/>
+  <line x1="205.2" y1="183" x2="208.8" y2="183" stroke="#606480" stroke-width="0.4"/>
+  <line x1="207" y1="181.2" x2="207" y2="184.8" stroke="#606480" stroke-width="0.4"/>
+  <circle cx="273" cy="183" r="2.5" fill="#3a3d4d" stroke="#505470" stroke-width="0.5"/>
+  <line x1="271.2" y1="183" x2="274.8" y2="183" stroke="#606480" stroke-width="0.4"/>
+  <line x1="273" y1="181.2" x2="273" y2="184.8" stroke="#606480" stroke-width="0.4"/>
+
+  <!-- ── Branding label below ── -->
+  <text x="240" y="340" text-anchor="middle"
+        font-family="system-ui, sans-serif" font-size="8" letter-spacing="2"
+        fill="#2a2e42" fill-opacity="0.9">ZAKEY</text>
 </svg>

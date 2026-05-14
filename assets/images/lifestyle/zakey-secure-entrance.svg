@@ -1,15 +1,124 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <title>Zakey Smart Entrance — Door Lock at Night</title>
   <defs>
-    <linearGradient id="bg-ZAKEY SECURE KIT — ENTRANCE" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05070d"/>
-      <stop offset="100%" stop-color="#0c0f17"/>
+    <linearGradient id="eBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#080b14"/>
+      <stop offset="100%" stop-color="#04060d"/>
     </linearGradient>
-    <radialGradient id="gl-ZAKEY SECURE KIT — ENTRANCE" cx="700" cy="430" r="450" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.15"/>
+    <linearGradient id="eDoor" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0c0e14"/>
+      <stop offset="50%" stop-color="#0f1218"/>
+      <stop offset="100%" stop-color="#0b0d12"/>
+    </linearGradient>
+    <radialGradient id="eSconce1" cx="380" cy="280" r="160" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="eSconce2" cx="900" cy="280" r="160" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="eLockGlow" cx="776" cy="395" r="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.35"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="eInteriorGlow" cx="640" cy="400" r="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="eFloorGlow" cx="640" cy="720" r="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <rect width="1200" height="900" fill="url(#bg-ZAKEY SECURE KIT — ENTRANCE)"/>
-  <ellipse cx="700" cy="430" rx="500" ry="380" fill="url(#gl-ZAKEY SECURE KIT — ENTRANCE)"/>
-  <text x="600" y="460" font-family="system-ui,sans-serif" font-size="28" font-weight="700" fill="#22d3ee" fill-opacity="0.55" text-anchor="middle" letter-spacing="0.08em">ZAKEY SECURE KIT — ENTRANCE</text>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#eBg)"/>
+
+  <!-- Exterior wall left side -->
+  <rect x="0" y="0" width="440" height="720" fill="#080b14"/>
+  <!-- Exterior wall right side -->
+  <rect x="840" y="0" width="440" height="720" fill="#080b14"/>
+
+  <!-- Sconce warm glow -->
+  <ellipse cx="380" cy="280" rx="200" ry="240" fill="url(#eSconce1)"/>
+  <ellipse cx="900" cy="280" rx="200" ry="240" fill="url(#eSconce2)"/>
+
+  <!-- Wall sconce left -->
+  <rect x="354" y="218" width="20" height="30" rx="2" fill="#1c1e2c"/>
+  <polygon points="344,248 384,248 380,268 348,268" fill="#1e2030"/>
+  <ellipse cx="364" cy="258" rx="10" ry="6" fill="#f59e0b" fill-opacity="0.7"/>
+  <!-- Sconce bracket -->
+  <rect x="363" y="208" width="4" height="16" fill="#141626"/>
+
+  <!-- Wall sconce right -->
+  <rect x="906" y="218" width="20" height="30" rx="2" fill="#1c1e2c"/>
+  <polygon points="896,248 936,248 932,268 900,268" fill="#1e2030"/>
+  <ellipse cx="916" cy="258" rx="10" ry="6" fill="#f59e0b" fill-opacity="0.7"/>
+  <!-- Sconce bracket -->
+  <rect x="915" y="208" width="4" height="16" fill="#141626"/>
+
+  <!-- Door frame outer casing -->
+  <rect x="420" y="60" width="440" height="660" rx="2" fill="#141828"/>
+  <!-- Door frame reveal -->
+  <rect x="432" y="72" width="416" height="648" rx="2" fill="#10131e"/>
+
+  <!-- Door surface: dark wood plank effect -->
+  <rect x="440" y="80" width="400" height="640" fill="url(#eDoor)"/>
+  <!-- Wood plank vertical lines -->
+  <line x1="490" y1="80" x2="490" y2="720" stroke="#0e1016" stroke-width="2" stroke-opacity="0.7"/>
+  <line x1="540" y1="80" x2="540" y2="720" stroke="#0c0e12" stroke-width="1.5" stroke-opacity="0.6"/>
+  <line x1="590" y1="80" x2="590" y2="720" stroke="#0e1016" stroke-width="2" stroke-opacity="0.7"/>
+  <line x1="640" y1="80" x2="640" y2="720" stroke="#0c0e12" stroke-width="1.5" stroke-opacity="0.5"/>
+  <line x1="690" y1="80" x2="690" y2="720" stroke="#0e1016" stroke-width="2" stroke-opacity="0.7"/>
+  <line x1="740" y1="80" x2="740" y2="720" stroke="#0c0e12" stroke-width="1.5" stroke-opacity="0.6"/>
+  <line x1="790" y1="80" x2="790" y2="720" stroke="#0e1016" stroke-width="2" stroke-opacity="0.6"/>
+  <!-- Door panel insets top (decorative molding) -->
+  <rect x="460" y="100" width="160" height="240" rx="3" fill="none" stroke="#131620" stroke-width="2"/>
+  <rect x="460" y="360" width="160" height="300" rx="3" fill="none" stroke="#131620" stroke-width="2"/>
+  <rect x="660" y="100" width="160" height="240" rx="3" fill="none" stroke="#131620" stroke-width="2"/>
+  <rect x="660" y="360" width="160" height="300" rx="3" fill="none" stroke="#131620" stroke-width="2"/>
+
+  <!-- Door glass panel: narrow vertical window in door -->
+  <rect x="608" y="100" width="64" height="180" rx="2" fill="#060912"/>
+  <!-- Interior warm glow through glass -->
+  <ellipse cx="640" cy="190" rx="50" ry="90" fill="url(#eInteriorGlow)"/>
+  <rect x="638" y="100" width="2" height="180" fill="#0a0d14" fill-opacity="0.5"/>
+
+  <!-- Smart door lock device -->
+  <!-- Lock glow -->
+  <ellipse cx="776" cy="395" rx="90" ry="100" fill="url(#eLockGlow)"/>
+  <!-- Lock body -->
+  <rect x="748" y="345" width="56" height="104" rx="6" fill="#1e2130"/>
+  <rect x="752" y="349" width="48" height="96" rx="4" fill="#141828"/>
+  <!-- Lock keypad dots -->
+  <circle cx="764" cy="368" r="4" fill="#22d3ee" fill-opacity="0.8"/>
+  <circle cx="776" cy="368" r="4" fill="#22d3ee" fill-opacity="0.6"/>
+  <circle cx="788" cy="368" r="4" fill="#22d3ee" fill-opacity="0.7"/>
+  <circle cx="764" cy="382" r="4" fill="#22d3ee" fill-opacity="0.5"/>
+  <circle cx="776" cy="382" r="4" fill="#22d3ee" fill-opacity="0.9"/>
+  <circle cx="788" cy="382" r="4" fill="#22d3ee" fill-opacity="0.5"/>
+  <circle cx="764" cy="396" r="4" fill="#22d3ee" fill-opacity="0.6"/>
+  <circle cx="776" cy="396" r="4" fill="#22d3ee" fill-opacity="0.5"/>
+  <circle cx="788" cy="396" r="4" fill="#22d3ee" fill-opacity="0.7"/>
+  <!-- Lock indicator bar -->
+  <rect x="756" y="410" width="40" height="4" rx="2" fill="#22d3ee" fill-opacity="0.6"/>
+  <!-- Lock icon (padlock) center of bottom half -->
+  <rect x="769" y="424" width="14" height="12" rx="2" fill="#22d3ee" fill-opacity="0.25"/>
+  <path d="M770,424 Q776,417 782,424" fill="none" stroke="#22d3ee" stroke-width="2" stroke-opacity="0.4"/>
+  <!-- Lock status LED -->
+  <circle cx="776" cy="440" r="3" fill="#22d3ee" fill-opacity="0.9"/>
+
+  <!-- Door handle -->
+  <rect x="730" y="368" width="12" height="60" rx="4" fill="#1a1d2c"/>
+  <rect x="718" y="388" width="12" height="16" rx="2" fill="#1e2030"/>
+
+  <!-- Floor -->
+  <rect x="0" y="680" width="1280" height="40" fill="#060810"/>
+  <rect x="0" y="676" width="1280" height="8" fill="#0c0f1a"/>
+  <!-- Doorstep -->
+  <rect x="420" y="700" width="440" height="20" rx="1" fill="#141828"/>
+  <rect x="420" y="700" width="440" height="4" fill="#1e2030"/>
+  <!-- Welcome light pool on floor from interior glow -->
+  <ellipse cx="640" cy="710" rx="180" ry="20" fill="url(#eFloorGlow)"/>
 </svg>
