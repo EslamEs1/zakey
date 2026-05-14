@@ -22,8 +22,8 @@
 <header class="site-header" data-scrolled="false">
   <div class="site-header__inner">
     <a class="site-header__brand" href="./index.html" aria-label="Zakey — Home">
-      <img class="site-header__wordmark logo-dark" src="./assets/icons/zakey-logo-white.png" alt="Zakey" width="120" height="36">
-      <img class="site-header__wordmark logo-light" src="./assets/icons/zakey-logo-blue.png" alt="Zakey" width="120" height="36">
+      <img class="site-header__wordmark logo-dark" src="./assets/icons/blue-logo.png" alt="Zakey" width="172" height="52">
+      <img class="site-header__wordmark logo-light" src="./assets/icons/blue-logo.png" alt="Zakey" width="172" height="52">
     </a>
 
     <nav class="site-header__nav" aria-label="Primary">
@@ -106,8 +106,8 @@
   <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Site navigation">
     <div class="mobile-drawer__head">
       <a class="mobile-drawer__brand" href="./index.html">
-        <img src="./assets/icons/zakey-logo-white.png" alt="Zakey home" class="logo-dark" width="100" height="32">
-        <img src="./assets/icons/zakey-logo-blue.png" alt="Zakey home" class="logo-light" width="100" height="32">
+        <img src="./assets/icons/blue-logo.png" alt="Zakey home" class="logo-dark" width="132" height="40">
+        <img src="./assets/icons/blue-logo.png" alt="Zakey home" class="logo-light" width="132" height="40">
       </a>
       <button type="button" class="mobile-drawer__close" data-drawer-dismiss="true" aria-label="Close menu">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -170,62 +170,140 @@
        1. HERO
        ============================================================ -->
   <section class="hero" id="hero" aria-labelledby="hero-headline">
-    <div class="hero__bg">
+
+    <!-- ── Background layers ── -->
+    <div class="hero__bg" aria-hidden="true">
       <img src="./assets/images/hero/zakey-smart-home-hero.svg" alt="" width="1280" height="720" decoding="async">
+      <div class="hero__glow hero__glow--cyan"></div>
+      <div class="hero__glow hero__glow--blue"></div>
+      <div class="hero__grid"></div>
     </div>
-    <div class="hero__gradient"></div>
+    <div class="hero__gradient" aria-hidden="true"></div>
+
     <div class="hero__inner">
+
+      <!-- ── Left: Copy ── -->
       <div class="hero__content">
-        <div class="hero__badge">
-          <span class="hero__badge-dot"></span>
-          Now available — Zakey Aura Panel Pro
-        </div>
+
+        <a class="hero__badge" href="./pages/products.html">
+          <span class="hero__badge-dot" aria-hidden="true"></span>
+          New: Zakey Aura Panel Pro
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
         <p class="hero__eyebrow eyebrow">Smart living, refined</p>
-        <h1 class="hero__headline text-balance" id="hero-headline">
-          The intelligence<br>your home deserves
+
+        <h1 class="hero__headline" id="hero-headline">
+          The intelligence<br>
+          <span class="hero__headline-accent">your home</span> deserves
         </h1>
+
         <p class="hero__sub">
           From luxury villas to smart hotels and executive offices &mdash; Zakey automates
           lighting, climate, security, and scenes under one seamless ecosystem.
         </p>
+
         <div class="hero__ctas">
-          <a class="btn btn--primary" href="./index.html#get-quote">Get a Quote</a>
-          <a class="btn btn--secondary" href="./pages/products.html">Explore Products</a>
+          <a class="btn btn--primary btn--lg" href="./index.html#get-quote">Get a Quote</a>
+          <a class="btn btn--ghost" href="./pages/products.html">
+            Explore Products
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
+
+        <div class="hero__trust">
+          <span class="hero__trust-label">Trusted for</span>
+          <span class="hero__trust-tags">
+            <span>Luxury Villas</span>
+            <span>Smart Hotels</span>
+            <span>Smart Offices</span>
+          </span>
+        </div>
+
         <div class="hero__stats" role="list" aria-label="Key figures">
           <div class="hero__stat" role="listitem">
             <span class="hero__stat-value">500+</span>
             <span class="hero__stat-label">Projects delivered</span>
           </div>
+          <div class="hero__stat-sep" aria-hidden="true"></div>
           <div class="hero__stat" role="listitem">
             <span class="hero__stat-value">8</span>
             <span class="hero__stat-label">Product categories</span>
           </div>
+          <div class="hero__stat-sep" aria-hidden="true"></div>
           <div class="hero__stat" role="listitem">
             <span class="hero__stat-value">99.7%</span>
             <span class="hero__stat-label">System uptime</span>
           </div>
         </div>
       </div>
-      <div class="hero__visual">
-        <div class="hero__floating-card hero__floating-card--1">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+
+      <!-- ── Right: Visual ── -->
+      <div class="hero__visual" aria-hidden="true">
+
+        <!-- App device frame -->
+        <div class="hero__device">
+          <div class="hero__device-bar">
+            <div class="hero__device-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="hero__device-label">Zakey &middot; Living Room</span>
+            <span class="hero__device-live">
+              <span class="hero__device-live-dot"></span>Live
+            </span>
+          </div>
+          <div class="hero__device-screen">
+            <img src="./assets/images/hero/zakey-smart-home-hero.svg"
+                 alt="Zakey smart home interface" width="640" height="380" fetchpriority="high">
+            <div class="hero__scenes">
+              <button class="hero__scene hero__scene--on" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
+                Morning
+              </button>
+              <button class="hero__scene" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg>
+                Cinema
+              </button>
+              <button class="hero__scene" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                Night
+              </button>
+              <button class="hero__scene" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Away
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating status cards -->
+        <div class="hero__card hero__card--1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
           <span>Scene activated &mdash; Morning Comfort</span>
         </div>
-        <div class="hero__floating-card hero__floating-card--2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+
+        <div class="hero__card hero__card--2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
           <span>Energy saved &mdash; 34% this week</span>
         </div>
-        <img
-          class="zk-image featured-slider__hero-img"
-          src="./assets/images/hero/zakey-smart-home-hero.svg"
-          alt="Zakey smart control panel in a luxury living space"
-          width="640"
-          height="480"
-          fetchpriority="high"
-        >
+
+        <div class="hero__card hero__card--3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+          <div class="hero__card-detail">
+            <strong>22&deg;C</strong>
+            <small>Climate &middot; Auto</small>
+          </div>
+        </div>
+
       </div>
     </div>
+
+    <!-- Scroll hint -->
+    <div class="hero__scroll" aria-hidden="true">
+      <span class="hero__scroll-bar"></span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+
   </section>
 
   <!-- ============================================================
@@ -1128,8 +1206,8 @@
 <footer class="site-footer">
   <div class="site-footer__inner">
     <div class="site-footer__brand">
-      <img src="./assets/icons/zakey-logo-white.png" alt="" class="logo-dark" width="140" height="46" loading="lazy">
-              <img src="./assets/icons/zakey-logo-blue.png" alt="" class="logo-light" width="140" height="46" loading="lazy">
+      <img src="./assets/icons/blue-logo.png" alt="" class="logo-dark" width="185" height="56" loading="lazy">
+              <img src="./assets/icons/blue-logo.png" alt="" class="logo-light" width="185" height="56" loading="lazy">
       <p class="site-footer__summary">
         Zakey crafts the premium smart-living layer for villas, hotels, offices, and signature homes — hardware, app, scenes, and analytics under one elegant ecosystem.
       </p>
